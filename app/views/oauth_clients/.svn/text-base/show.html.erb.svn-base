@@ -1,0 +1,42 @@
+<% content_for(:page_header) do %>
+  <h2>OAuth details for <%=@client_application.name %></h2>
+  <%= companies_sub_header %>
+<%end%>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('button.edit'),edit_oauth_client_path(@client_application), :class=>"edit") %>
+    or
+    <%= link_to(t('button.delete'),oauth_client_path(@client_application), :confirm =>CONFIRM_DELETE, :method => :delete, :class=>"delete") %>
+  </div>
+<% end %>
+
+<div class="group" id="employee_details">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= "Consumer Key" %></th>
+        <td><%=@client_application.key %></td>
+      </tr>
+      <tr>
+        <th><%= "Consumer Secret" %></th>
+        <td><%=@client_application.secret %></td>
+      </tr>
+      <tr>
+        <th><%= "Request Token URL" %></th>
+        <td>http<%='s' if request.ssl? %>://<%= request.host_with_port %><%=@client_application.oauth_server.request_token_path %></td>
+      </tr>
+      <tr>
+        <th><%= "Access Token URL" %></th>
+        <td>http<%='s' if request.ssl? %>://<%= request.host_with_port %><%=@client_application.oauth_server.access_token_path %></td>
+      </tr>
+      <tr>
+        <th><%= "Authorize URL" %></th>
+        <td>http<%='s' if request.ssl? %>://<%= request.host_with_port %><%=@client_application.oauth_server.authorize_path %></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    We support hmac-sha1 (recommended) as well as plain text in ssl mode.
+  </p>
+</div>
+

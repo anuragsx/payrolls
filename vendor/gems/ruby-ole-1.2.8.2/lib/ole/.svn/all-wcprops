@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole
+END
+file_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/file_system.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/storage.rb
+END
+types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/types.rb
+END
+ranges_io.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/ranges_io.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/base.rb
+END
+support.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/lib/ole/support.rb
+END

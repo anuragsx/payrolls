@@ -1,0 +1,83 @@
+# Be sure to restart your server when you modify this file
+
+# Specifies gem version of Rails to use when vendor/rails is not present
+RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+
+# Bootstrap the Rails environment, frameworks, and default configuration
+require File.join(File.dirname(__FILE__), 'boot')
+
+Rails::Initializer.run do |config|
+  # Settings in config/environments/* take precedence over those specified here.
+  # Application configuration should go into files in config/initializers
+  # -- all .rb files in that directory are automatically loaded.
+
+  config.action_controller.session = {
+    :session_key => '_salaree_session',
+    :secret      => '43f95d7655bc87c3f1832e928d2b4eab824f1c4966058b4a7e63ba8db5f7d8f765fd07b3daeb2a27aeed0f645c18a13c9912b36dcba62cc182cbc82561ca9a42'
+  }
+
+  config.gem "oauth"
+  config.gem "authlogic"
+  config.gem 'prawn'
+  config.gem 'spreadsheet'
+  config.gem 'mbleigh-subdomain-fu',
+             :source => "http://gems.github.com",
+             :lib => "subdomain-fu"
+  config.gem 'fiveruns-memcache-client', :lib => 'memcache'
+  config.gem 'asanghi-fiscali', :lib => 'fiscali'
+  config.gem 'giraffesoft-observational', :lib => 'observational'
+  config.gem 'searchlogic'
+  config.gem 'haml'
+  config.gem "bgetting-hominid", :lib => 'hominid', :source => "http://gems.github.com"
+  config.gem 'actionmessenger',:lib =>'action_messenger',:source => "http://gems.github.com"
+ 
+ 
+  # Add additional load paths for your own custom dirs
+  # config.load_paths += %W( #{RAILS_ROOT}/extras )
+  config.load_paths += %W( #{RAILS_ROOT}/app/models/pension
+                           #{RAILS_ROOT}/app/models/esi
+                           #{RAILS_ROOT}/app/models/gratuity
+                           #{RAILS_ROOT}/app/models/employee_advances
+                           #{RAILS_ROOT}/app/models/incometax
+                           #{RAILS_ROOT}/app/models/dearness_relief
+                           #{RAILS_ROOT}/app/models/allowance_managers
+                           #{RAILS_ROOT}/app/models/expense_claims
+                           #{RAILS_ROOT}/app/models/leave_managers
+                           #{RAILS_ROOT}/app/models/professional_tax
+                           #{RAILS_ROOT}/app/models/subtotals
+                           #{RAILS_ROOT}/app/models/insurance
+                           #{RAILS_ROOT}/app/models/flexible_allowance_manager
+                           #{RAILS_ROOT}/app/models/employee_loans
+                           #{RAILS_ROOT}/app/models/labour_welfares
+                           #{RAILS_ROOT}/app/models/leave_managers/attendances
+                           #{RAILS_ROOT}/app/models/bonus
+                           #{RAILS_ROOT}/app/models/presenters
+                           #{RAILS_ROOT}/app/models/incentives
+                           #{RAILS_ROOT}/app/models/ltas
+                           #{RAILS_ROOT}/app/models/arrears)
+  
+  # Specify gems that this application depends on and have them installed with rake gems:install
+  # config.gem "bj"
+  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
+  # config.gem "sqlite3-ruby", :lib => "sqlite3"
+  # config.gem "aws-s3", :lib => "aws/s3"
+
+  # Only load the plugins named here, in the order given (default is alphabetical).
+  # :all can be used as a placeholder for all plugins not explicitly named
+  # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
+
+  # Skip frameworks you're not going to use. To use Rails without a database,
+  # you must remove the Active Record framework.
+  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+
+  # Activate observers that should always be running
+  # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
+
+  # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+  # Run "rake -D time" for a list of tasks for finding time zone names.
+  #config.time_zone = 'UTC'
+
+  # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+  # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+  # config.i18n.default_locale = :de
+end

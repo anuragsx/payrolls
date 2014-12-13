@@ -1,0 +1,57 @@
+<% content_for(:page_buttons) do  %>
+  <%if @employee_esi.blank?%>
+    <% link_to(new_employee_esi_path(@employee),:class => 'button') do %>
+  <span><%= t('esi.register_for_esi') %></span>
+    <% end %>
+  <%else%>
+    <%= link_to(t('button.edit'),  edit_employee_esi_path(@employee,@employee_esi), :class => 'edit')%>
+    or
+    <%= link_to(t('button.delete'), employee_esi_path(@employee,@employee_esi),:confirm=>CONFIRM_DELETE, :method=>:delete, :class => 'cancel')%>
+  <% end %>
+<%end%>
+
+<%unless @employee_esi.blank?%>
+  <div class="group">
+    <table class="details" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <th><%= t('esi.number') %></th>
+          <td><%= @employee_esi.esi_number %></td>
+        </tr>
+        <% unless @employee_esi.effective_date.try(:end_of_time?)  %>
+          <tr>
+            <th><%= "#{t('common.registration')} #{t('common.date')}"  %></th>
+            <td><%= @employee_esi.effective_date.try(:to_s,:date_month_and_year) %></td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+  <%= annual_navigator(employee_esis_path(@employee,:year => @prev_year),employee_esis_path(@employee,:year => @next_year)) %>
+  <table class="list" width="100%">
+    <caption><%= "#{t('esi.esi_detail')} #{@this_year.formatted_fy}" %></caption>
+    <thead>
+      <tr>
+        <th><%= t('common.month') %></th>
+        <th class="numeric"><%= t('common.wages') %></th>
+        <th class="numeric"><%= t('common.employee_contribution') %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%= t('common.total') %></td>
+        <td class="numeric"><%= @slip_presenters.sum(&:total_base_charge) %></td>
+        <td class="numeric"><%= @slip_presenters.sum(&:total_employee_contribution) %></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% @slip_presenters.each do |presenter| %>
+        <tr class="<%= cycle(:alt,"") %>">
+          <td class="head1"><%= presenter.salary_slip.run_date.to_s(:short_month_and_year) %></td>
+          <td class="numeric head2"><%= presenter.total_base_charge %></td>
+          <td class="numeric head3"><%= presenter.total_employee_contribution %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%end%>

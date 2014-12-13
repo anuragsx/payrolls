@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/cases/spec/1_0-final
+END
+test_construct_request_url.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/cases/spec/1_0-final/test_construct_request_url.rb
+END
+test_signature_base_strings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/cases/spec/1_0-final/test_signature_base_strings.rb
+END
+test_parameter_encodings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/cases/spec/1_0-final/test_parameter_encodings.rb
+END
+test_normalize_request_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/cases/spec/1_0-final/test_normalize_request_parameters.rb
+END

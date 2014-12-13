@@ -1,0 +1,54 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/vendor/ttfunk/data/fonts
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+DejaVuSans.ttf
+file
+
+
+
+
+2010-03-13T02:52:27.593750Z
+7878350f728a9b0c9c259c9c14297561
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+has-props
+
+comicsans.ttf
+file
+
+
+
+
+2010-03-13T02:52:27.609375Z
+a50f9c96a76356e3d01013e0b042989f
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+has-props
+

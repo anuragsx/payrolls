@@ -1,0 +1,6 @@
+<ul class="form">
+  <%= f.error_messages %>
+  <%= f.labelled_collection_select "#{t('common.tax')} #{t('tax.category')}", :tax_category_id, TaxCategory.all, :id, :category %>
+  <%= f.labelled_text_field t('tax.pan'), :pan %>
+  <%= f.labelled_text_field t('tax.monthly_rent_paid'), :monthly_rent_paid %>
+</ul>

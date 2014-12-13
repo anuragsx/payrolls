@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/1189/app/views/bonus
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/922/app/views/bonus/index.html.erb
+END
+employee_bonuses.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/928/app/views/bonus/employee_bonuses.html.erb
+END
+settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/925/app/views/bonus/settings.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/928/app/views/bonus/show.html.erb
+END
+show.xls.rxls
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/741/app/views/bonus/show.xls.rxls
+END
+show.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1189/app/views/bonus/show.pdf.prawn
+END

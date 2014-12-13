@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn
+END
+document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document.rb
+END
+object_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/object_store.rb
+END
+literal_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/literal_string.rb
+END
+stamp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/stamp.rb
+END
+encoding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/encoding.rb
+END
+core.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/core.rb
+END
+byte_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/byte_string.rb
+END
+reference.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/reference.rb
+END
+pdf_object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/pdf_object.rb
+END
+name_tree.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/name_tree.rb
+END
+graphics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/graphics.rb
+END
+measurement_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/measurement_extensions.rb
+END
+images.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/images.rb
+END
+font.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/font.rb
+END
+measurements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/measurements.rb
+END
+compatibility.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/compatibility.rb
+END
+errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/errors.rb
+END

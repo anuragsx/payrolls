@@ -1,0 +1,10 @@
+<% form_for @employee_pf, :url => employee_pf_path(@employee) do |f| %>
+  <ul class="form">
+    <%= f.labelled_text_field(t('pf.exit_date'),:deleted_at, :class => 'datebalks') %>
+    <%= f.labelled_select(t('pf.exit_reason'),:exit_reason,EmployeePension::EXIT_REASONS, {:note => "If employee exits then specify the reason "}) %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class => "btn"  %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'),employee_pfs_path(@employee),:class => "cancel" ) %>
+  </p>
+<% end %>

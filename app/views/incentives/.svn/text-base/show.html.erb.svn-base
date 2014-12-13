@@ -1,0 +1,13 @@
+<% title "incentive" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @incentive.description %>
+  <%=h @incentive.amount %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_employee_incentive_path(@employee,@incentive) %> |
+  <%= link_to "Destroy", [@employee,@incentive], :confirm =>CONFIRM_DELETE, :method => :delete %> |
+  <%= link_to "View All", @incentives_path %>
+</p>

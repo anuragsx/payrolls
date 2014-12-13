@@ -1,0 +1,32 @@
+<% setting_controllers  = ["companies", "departments", "company_allowance_heads", 
+    "company_calculators", "banks", "company_esis", "company_pfs", 
+    "company_leaves", "bonus", "company_loadings", "labour_welfare_categories",
+    "company_professional_taxes", "income_taxes", "company_flexi_packages"]
+%>
+<div id ="nav">
+  <div id ="nav-inner">
+    <ul class="second-nav">
+      <li class="<%= link_active?(params[:controller] == "feedbacks") %>"><%= link_to(t('header.feedback'),new_feedback_path ) %></li>
+      <li class="<%= link_active?(params[:controller] == "users") %>"><%= link_to(t('header.users'),users_path) %></li>
+      <li class="<%= link_active?(setting_controllers.include?(params[:controller])) %>"><%= link_to(t('header.settings'), company_path(current_account)) %></li>
+      <li class="<%= link_active?(params[:controller] == "users" && params[:action] == "edit") %>"><%= link_to(t('header.account'),edit_user_path(@current_user)) %></li>
+<!--      <li><a href="#" class="help" onclick="new Effect.toggle('help-panel', 'blind', {duration: 0.4}); return false;">Help</a></li> -->
+    </ul>
+    <ul class="main-nav">
+      <li class="overview <%= link_active?(params[:controller] == "homes") %>"><span><%= link_to(t('header.overview'),home_path) %></span></li>
+      <li class="employees <%= link_active?((@employee || params[:controller] == "employees") && !(@employee && params[:controller] == "leaves"))%>"><span><%= link_to t('common.employees'), employees_path() %></span></li>
+      
+      <li class="salary <%= link_active?(params[:action] == "graph" ? false : @salary_sheet || params[:controller] == "salary_sheets")
+                             %>"><span><%= link_to t('common.salary_sheets'), salary_sheets_path %></span></li>
+      <li class="salary <%= link_active?(params[:controller] == "leaves" && !@salary_sheet) %>"><span><%= link_to t('common.leaves'), leaves_path  %></span></li>
+      <% if @company.calculator_exists?("attendances")%>
+        <li class="salary <%= link_active?(params[:controller] == "attendances") %>"><span><%= link_to t('common.attendance'), attendances_path  %></span></li>
+      <% end %>
+      <li class="reports <%= link_active?(params[:controller] == "salary_sheets" && params[:action] == "graph") %>"><span><%= link_to t('header.reports'), graph_salary_sheets_path %></span></li>
+      <li class="add-ons">
+        <a href="#"><span><%= t('header.add_ons') %></span></a>
+        <%= company_drop_down_links%>
+      </li>
+     </ul>
+  </div>
+</div>

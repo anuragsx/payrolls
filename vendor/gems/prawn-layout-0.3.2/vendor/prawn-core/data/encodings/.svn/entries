@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/data/encodings
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+win_ansi.txt
+file
+
+
+
+
+2010-03-13T02:51:53.828125Z
+866cac172cf7e1a3f1776d0bfb7771b9
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+

@@ -1,0 +1,32 @@
+<%= render :partial=>'page_header' %>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('company.edit'),edit_company_path(@company), :class=>"edit") %>
+  </div>
+<%end%>
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('common.name') %></th>
+        <td><%=h @company.name %></td>
+      </tr>
+      <tr>
+        <th><%= t('company.url') %></th>
+        <td><%=h "http://#{@company.subdomain}.#{SITE_NAME.downcase}" %></td>
+      </tr>
+      <tr>
+        <th><%= t('tax.pan') %></th>
+        <td><%=h @company.pan %></td>
+      </tr>
+      <tr>
+        <th><%= t('company.tan') %></th>
+        <td><%=h @company.tan %></td>
+      </tr>
+      <tr>
+        <th><%= t('address.address_line1') %></th>
+        <td><%=h @company.complete_address %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+= render :partial=>'companies/page_header'
+- content_for(:page_buttons) do
+  .edit
+    = link_to(t('button.edit'),edit_bank_path, :class=>"edit")
+    or
+    = link_to(t('button.delete'), @bank, :confirm => 'Are you sure?', :method => :delete, :class => 'cancel')
+- title "Company Bank"
+.group
+  %table.details{ :cellspacing => "0", :width => "100%", :cellpadding => "0" }
+    %tbody
+      %tr
+        %th= t('bank.name')
+        %td= @bank.name
+      %tr
+        %th= t('bank.account_number')
+        %td= @bank.company_account_number
+      %tr
+        %th= t('address.address_line1')
+        %td= @bank.complete_address

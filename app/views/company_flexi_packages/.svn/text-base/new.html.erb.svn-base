@@ -1,0 +1,21 @@
+<% content_for(:page_header) do %>
+  <h2>New Package</h2>
+<%end%>
+
+<% form_for(@company_flexi_package) do |f| %>
+  <%= f.error_messages %>
+  <ul class="form">
+    <% f.fields_for(:simple_allowance) do |a| %>
+      <% @company_allowances.each_with_index do |c,i| %>
+        <p> <b><%= check_box_tag("[simple_allowance][#{i}]",c.salary_head.id) %> <%= "#{c.salary_head.name}" %></b><br/>
+          <% lt=((CompanyFlexiPackage::LOOKUP_EXPRESSION.length)) %>
+          <% for link in 1..lt do %>
+              <%= select_tag("[lookup][#{i}][#{link}]",options_for_select(CompanyFlexiPackage::LOOKUP_EXPRESSION))%>
+              <%if (link < lt)%><%= "<"%><%end%>
+            <%end%>
+          </p>
+        <%end%>
+      <%end%>
+    </ul>
+    <%= f.submit 'Create' %>
+  <%end%>

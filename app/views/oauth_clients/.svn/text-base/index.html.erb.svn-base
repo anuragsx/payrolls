@@ -1,0 +1,48 @@
+<% content_for(:page_header) do %>
+  <h2>OAuth Client Applications</h2>
+  <%= companies_sub_header %>
+<%end%>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to("Register your application",new_oauth_client_path,:class=>"new") %>
+  </div>
+<% end %>
+<p>The following tokens have been issued to applications in your name</p>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= "Token" %></th>
+      <th><%= "Issued" %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @tokens.empty? %>
+      <p>
+        Do you have an application you would like to register for use with us using the <a href="http://oauth.net">OAuth</a> standard?
+      </p>
+      <p>
+        You must register your web application before it can make OAuth requests to this service
+      </p>
+    <%else%>
+      <% @tokens.each do |client,tokens| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <th><%= link_to(client.name, oauth_client_path(client)) %></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <% tokens.each do |token| %>
+          <tr class="<%= cycle("",:alt) %>" >
+            <td class="head1"><%= token.type %></td>
+            <td class="head2"><%= token.authorized_at.to_s(:salaree_time) %></td>
+            <td class="head3">
+              <% form_tag revoke_path do %>
+                <%= hidden_field_tag 'token', token.token %>
+                <%= submit_tag "Revoke!" %>
+              <% end %></td>
+          </tr>
+        <%end%>
+      <% end %>
+    <%end%>
+  </tbody>
+</table>

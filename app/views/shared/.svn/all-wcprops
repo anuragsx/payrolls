@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/salaree/!svn/ver/1185/app/views/shared
+END
+_feedback_widget.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/811/app/views/shared/_feedback_widget.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1177/app/views/shared/_header.html.erb
+END
+_help.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1183/app/views/shared/_help.html.erb
+END
+_fetch_logo.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/307/app/views/shared/_fetch_logo.html.erb
+END
+_navigator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1185/app/views/shared/_navigator.html.erb
+END
+_search_box.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/905/app/views/shared/_search_box.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1178/app/views/shared/_footer.html.erb
+END
+_flash_display.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/723/app/views/shared/_flash_display.html.erb
+END
+_subheader.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/856/app/views/shared/_subheader.html.erb
+END
+_scroller.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1022/app/views/shared/_scroller.html.erb
+END

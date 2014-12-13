@@ -1,0 +1,60 @@
+<% content_for(:page_header) do  %>
+  <h2> <%= "New TDS Return #{@date.financial_quarter}" %> </h2>
+  <%= companies_sub_header %>
+<% end %>
+<% content_for(:page_buttons) do %>
+  <%= link_to("Download Form 27A", tds_return_path(@tds_return, :format => :pdf)) %>
+<% end unless @tds_return.new_record? %>
+
+<% form_for(@tds_return) do |f| %>
+  <ul class="form">
+    <%= display_error_messages('attendance') %>
+    <%= f.labelled_text_field t('tds_return.bsr_code'), :bsr_code %>
+    <%= f.labelled_text_field t('tds_return.cheque_number'), :cheque_ya_dd_no %>
+    <%= f.labelled_text_field t('tds_return.date_of_deduction'), :tax_deduction_date,:class => 'datebalks' %>
+    <%= f.labelled_text_field t('tds_return.tax_deposited_date'), :tax_deposited_date,:class => 'datebalks' %>
+    <%= f.labelled_text_field t('tds_return.transfer_voucher'), :challan_serial_no %>
+    <%= f.labelled_text_field t('tds_return.payment_made'), :payment_made %>
+    <%= f.labelled_text_field t('tds_return.interest'), :intrest_amount %>
+    <%= f.labelled_text_field t('tds_return.receipt_number'), :receipt_number %>
+  </ul>
+  <%= f.hidden_field :start_date %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= "#{t('common.employee')} #{t('common.name')}" %> </th>
+        <th class="numeric">TDS Deducted</th>
+        <th>Include?</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td class="numeric">Total Deducted</td>
+        <td class="numeric"><%= @tds_return.total_deducted_from_employees %></td>
+        <td><%= link_to("Download Form 27A", tds_return_path(@tds_return, :format => :pdf)) unless @tds_return.new_record? %></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% f.fields_for :employee_tds_returns do |et| %>
+        <tr>
+          <td class="head1">
+            <%= et.object.employee.name %>
+            <%= et.hidden_field :employee_id %>
+          </td>
+          <td class="head2 numeric">
+            <%= et.object.tds_deposited %>
+          </td>
+          <td class="head3">
+            <%= et.check_box :is_included %>
+          </td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <p class="submit">
+    <%= submit_tag t('button.submit'),:class => "btn"  %>
+    <% unless @tds_return.new_record? %>
+      <%= f.hidden_field :id %>
+    <% end  %>
+  </p>
+<% end %>

@@ -1,0 +1,7 @@
+<% form_for @employee_tax, :url=>employee_tax_path do |f| %>
+  <%= render :partial=>'form', :locals=>{:f=>f} %>
+  <p class="submit">
+    <%= f.submit 'Update',:class=>'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to('Cancel',employee_taxes_path, :class=>'cancel') %>
+  </p>
+<% end %>

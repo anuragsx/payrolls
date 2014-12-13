@@ -1,0 +1,33 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_leafe_path(@employee),:class => 'button') do %>
+    <span>New Employee Leave</span>
+  <% end %>
+
+  <% if @leave.is_editable?  %>
+    or
+    <%= link_to('Edit Leave', edit_employee_leafe_path(@employee,@leave), :class=>"edit") %>
+  <%end%>
+<% end %>
+
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th>Month</th>
+        <td><%= @leave.created_at.to_s(:short_month_and_year) %></td>
+      </tr>
+      <tr>
+        <th>Present</th>
+        <td><%= @leave.present %></td>
+      </tr>
+      <tr>
+        <th>Absent</th>
+        <td><%= @leave.absent %></td>
+      </tr>
+      <tr>
+        <th>Earned Leaves</th>
+        <td><%=@leave.earned_leaves %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

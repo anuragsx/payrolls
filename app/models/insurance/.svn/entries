@@ -1,0 +1,52 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/app/models/insurance
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-07T14:24:22.401571Z
+1207
+asanghi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+insurance_calculator.rb
+file
+
+
+
+
+2010-03-13T02:49:47.375000Z
+aa96d6481dbb9483bbf586b84c137c58
+2009-09-14T12:19:53.868791Z
+815
+pankajb
+
+employee_insurance_policy.rb
+file
+
+
+
+
+2010-03-13T02:49:47.375000Z
+291a6e3b3e82b01a49f0e3e117e25aea
+2010-01-07T14:24:22.401571Z
+1207
+asanghi
+

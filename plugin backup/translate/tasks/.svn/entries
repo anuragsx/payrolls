@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/translate/tasks
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-17T06:36:09.795690Z
+153
+pankajb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+translate.rake
+file
+
+
+
+
+2010-03-13T02:50:29.078125Z
+e7485971d23770ede191a194f211ea23
+2009-07-17T06:36:09.795690Z
+153
+pankajb
+

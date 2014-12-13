@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/153/vendor/plugins/translate/lib
+END
+translate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate.rb
+END
+translate_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate_controller.rb
+END
+translate_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate_helper.rb
+END

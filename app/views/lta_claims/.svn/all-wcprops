@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/salaree/!svn/ver/1279/app/views/lta_claims
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1279/app/views/lta_claims/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1279/app/views/lta_claims/new.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1279/app/views/lta_claims/_form.html.erb
+END

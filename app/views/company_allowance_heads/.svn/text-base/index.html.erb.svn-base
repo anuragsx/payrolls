@@ -1,0 +1,25 @@
+<%= render :partial=>'companies/page_header' %>
+<% unless @all_allowances.blank? %>
+  <div class="salary_heads">
+    <h4><%= t('heads.available') %></h4>
+    <ul id ="selectable" class="droptrue">
+      <% @not_selected.each do |head| %>
+        <li id ="salary_head_<%= head.id %>" class="ui-state-default"><%= t("heads.#{head.code}") %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="salary_heads">
+    <h4><%= t('heads.selected') %></h4>
+    <ul id="selected" class="droptrue">
+      <% @selected.each do |head| %>
+        <li id ="salary_head_<%= head.id %>" class="ui-state-default"><%= t("heads.#{head.code}") %></li>
+      <% end %>
+    </ul>
+    <div id="loader">
+      <input id="submit" class="btn" type="submit" value="<%= t('button.save') %>"/>
+      <img src="images/ajax-loader.gif" id="img_loader" class="btn" alt="Loading" />
+      <span id="success_notice" style="display:none;"><%= t('notice.update.successful') %></span>
+    </div>
+  </div>
+  <div class="clear"></div>
+<% end %>

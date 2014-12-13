@@ -1,0 +1,174 @@
+class AnnuallyEquatedTaxCalculator < Calculator
+
+  def employee_tds(run_date,employee)
+    EmployeeTax.for_employee(employee).after_date(run_date).last
+  end
+
+  def employee_tds_detail
+    EmployeeTaxDetail.for_employee(employee).last
+  end
+
+  def taxable_earnings(run_date,employee)
+    employee.salary_slips.select{|x|x.run_date.financial_year == run_date.financial_year}.sum(0) do |x|
+      (x.taxable_gross || 0)
+    end
+  end
+
+  def future_estimated_earnings(left_months,employee)
+    taxable_income = 0
+    left_months.each do |month|
+      taxable_income += employee.estimated_taxable_income_for_month(month)
+    end
+    taxable_income
+  end
+  
+  def eligible_for_employee?
+    # First check on the employee if on the employee it exist
+    if !!employee_tds(run_date, employee)
+      return @tds = employee_tds(run_date, employee)
+    elsif !!employee_tds_detail
+      financial_months = run_date.financial_year.financial_months
+      left_months = financial_months.delete_if{|y| y if y <= run_date.beginning_of_month}
+      # Total Earnings before this month
+      @previous_income = taxable_earnings(run_date,employee)
+      # Total Earnings this month
+      @current_investemnts = salary_slip.charge_for(SalaryHead.code_for_employee_pf).abs +
+        salary_slip.charge_for(SalaryHead.code_for_insurance).abs
+      @month_income = salary_slip.taxable_allowances - @current_investemnts
+      # Total Earnings for left months in the financial year
+      @future_earnings = future_estimated_earnings(left_months,employee)
+      # Total deductions for this year
+      @investments = (EmployeeInvestment80c.eligible_amount_invested(EmployeeInvestment80c.total_investments(employee,run_date.end_of_financial_year)))
+      @ltas_claim = LtaClaim.total_unbilled(employee,run_date)
+      @fixed_month_incomes = EmployeeOtherIncome.total_other_incomes(employee,run_date)
+      @net_annual_taxable_income = @previous_income + @month_income + @future_earnings + @fixed_month_incomes - @investments - @ltas_claim
+      @annual_tax_liability = employee_tds_detail.tax_amount(@net_annual_taxable_income, run_date)
+      total_tax_paid_already = SalaryHead.charges_for_tds.for_employee(employee).in_fy(run_date.financial_year).sum(:amount)
+      other_income_tax = EmployeeOtherIncome.total_other_tax(employee,run_date)
+      #=> Include current month also
+      @tds_amount_for_month = ([@annual_tax_liability - total_tax_paid_already.abs - other_income_tax, 0.0].max) / (left_months.size + 1)
+      @tds = employee_tds_detail
+      return true
+    end
+    false
+  end
+
+  def calculate
+    if eligible_for_employee?
+      effective_tax = @tds
+      if effective_tax.kind_of?(EmployeeTax)
+        base_charge = effective_amount = effective_tax.amount
+        @net_annual_taxable_income = @previous_income = @month_income = @investments = @fixed_month_incomes = 0
+      elsif effective_tax.kind_of?(EmployeeTaxDetail)
+        effective_amount = @tds_amount_for_month
+        base_charge = @annual_tax_liability
+      end
+      if effective_amount > 0
+        [SalaryHead.charges_for_tds.build(:employee => employee,
+            :amount => -1.0 * effective_amount.round,
+            :base_charge => base_charge.round,
+            :reference => effective_tax,
+            :description => "#{effective_tax.description} based on annual earnings of #{@net_annual_taxable_income} prev : #{@previous_income} this : #{@month_income} investments #{@investments} current invest #{@current_investemnts}")]
+      end
+    end
+  end
+
+  def finalize!
+    EmployeeOtherIncome.finalize_for_slip!(run_date,salary_slip,employee)
+  end
+
+  def unfinalize!
+    EmployeeOtherIncome.unfinalize_for_slip!(salary_slip)
+  end
+
+  def employee_classes
+    [EmployeeTax,EmployeeTaxDetail,EmployeeInvestment80c, EmployeeOtherIncome]
+  end
+
+  def get_income_tax_pdf_content(pdf, presenter, salary_slip, cell_height)
+    space_char = '.'
+    pdf.bounding_box [-10,(640-cell_height)],:width =>560 do
+      pdf.text "<b>Income Tax Worksheet From #{salary_slip.tds.from_date} To #{salary_slip.tds.to_date} (On Annualised Earnings)</b>",:align => :center
+    end
+
+    data_l_side = [["Gross Emoluments".ljust(30, space_char),salary_slip.tds.annual_emoluments[:total_emoluments][:total_amount]]]
+    data_l_side << ["Deductions Under Chap VIA".ljust(30, space_char),salary_slip.tds.eligible_investment_amount]
+    data_l_side << [{:text =>'Total Exemptions'.ljust(30, space_char)},
+          "#{salary_slip.tds.annual_emoluments[:total_exempt_allowance][:total_amount] + salary_slip.tds.eligible_investment_amount}"]
+    (data_l_side << [{:text => "#{salary_slip.tds.annual_emoluments[:lta_claim][:name]}".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:lta_claim][:amount]}"]) unless salary_slip.tds.annual_emoluments[:lta_claim][:amount].zero?
+    data_l_side.concat([        
+        [{:text => "#{salary_slip.tds.annual_emoluments[:taxable_other_income][:name]}".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:taxable_other_income][:amount]}"],
+        [{:text => "Net Taxable Income(Rounded)".ljust(30, space_char),:font_style=>:bold},"<b><u>#{salary_slip.tds.annual_emoluments[:taxable_income]}</u></b>"],
+        [{:text => "Tax On Total Income".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:tax_on_total_income]}"],
+        [{:text => "Tax Already Paid".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:tax_already_paid]}"],
+        [{:text => "Tax Already Paid On Other Income".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:other_income_tax]}"],
+        [{:text => "Tax For The Left Months(#{salary_slip.tds.left_months.size + 1})".ljust(30, space_char)},"#{salary_slip.tds.annual_emoluments[:left_annual_tax]}"],
+        [{:text => "Tax For #{salary_slip.tds.run_date.to_s(:short_month_and_year)}".ljust(30, space_char),:font_style=>:bold},"<b><u>#{salary_slip.tds.current_month}</u></b>"],
+        [{:text => "Edu Cess".ljust(30, space_char),:font_style=>:bold},"<b><u>#{salary_slip.tds.edu_cess(salary_slip.tds.current_month)}</u></b>"]
+      ])
+    pdf.bounding_box [-10,(630-cell_height)], :width=>300 do
+      pdf.table data_l_side,
+        :column_widths => {0 => 214, 1 => 60},
+        :border_width => 0,
+        :align => {0 => :left ,1 => :right},
+        :vertical_padding => 2.5,
+        :font_size => 10,
+        :horizontal_padding => 5
+    end
+    
+    data_r_side = [[{:text => '<u>Deductions Under Chap VIA</u>', :colspan => 2}],
+                [{:text => '<u>80C/ 80CCC/ 80CCD - Investments</u>', :colspan => 2}]]
+
+      data_r_side.concat(salary_slip.tds.employee_investments_80c[:investments].map{|k,v| [k.ljust(30, space_char),v]})
+      data_r_side.concat([
+          [{:text =>"Total Amount Invested".ljust(30, space_char),:font_style=>:bold},"<b><u>#{salary_slip.tds.employee_investments_80c[:investment_amount]}</u></b>"],
+          ["Total Eligible Amount".ljust(30, space_char),salary_slip.tds.eligible_investment_amount],
+          [{:text => '<u>HRA Exemption Calculation</u>',:colspan => 2}],
+          ['Total Basic'.ljust(30, space_char),salary_slip.tds.annual_emoluments[:emoluments_paid]["Basic"][:total_amount]],
+          ['1. Actual HRA'.ljust(30, space_char),salary_slip.tds.annual_emoluments[:emoluments_paid]["Rent"][:total_amount]],
+          ["2. Rent > 10% Basic".ljust(30, space_char),salary_slip.tds.annual_emoluments[:basic10]],
+          ["3. 50%(M) / 40%(NM) Basic".ljust(30, space_char),salary_slip.tds.annual_emoluments[:basic50]],
+          [{:text =>"Least of 1,2,3 is Exempt".ljust(30, space_char),:font_style=>:bold},"<b><u>#{salary_slip.tds.annual_emoluments[:min]}</u></b>"]
+        ])
+
+    pdf.bounding_box [270,(630-cell_height)], :width=>280 do
+      pdf.table data_r_side,
+        :column_widths => {0 => 190, 1 => 90},
+        :border_width => 0,
+        :align => {0 => :left ,1 => :right},
+        :vertical_padding => 2.5,
+        :font_size => 10,
+        :horizontal_padding => 5
+    end
+    
+    pdf.cell [-10, (630-cell_height)], :width => 560, :height=> 485,:border_color =>"a09d9d",:borders => [:left,:top,:bottom, :right]
+    pdf.cell [-10, (430-cell_height)], :width => 560, :height=> 0,:border_color =>"a09d9d",:borders => [:left,:top,:bottom, :right]
+
+    data = [[{:text => "<u>Emoluments</u>"}, {:text => "<u>Paid</u>"}, {:text => "<u>Future</u>"}, {:text => "<u>Total</u>"}]]
+    data.concat(
+      salary_slip.tds.annual_emoluments[:emoluments_paid].map{|k,v| [k.ljust(44, space_char),v[:paid_amount], v[:future_amount], v[:total_amount]]}
+    )
+    data << [{:text => ""}, {:text => ""}, {:text => ""}, {:text => ""}]
+    data << [{:text => "<u>Total</u>"}, {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_emoluments][:paid_amount]}</u></b>"},
+      {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_emoluments][:future_amount]}</u></b>"},
+      {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_emoluments][:total_amount]}</u></b>"}]
+    data << [{:text => "<u>Less: Exemptions</u>"}, {:text => "<u>Paid</u>"}, {:text => "<u>Future</u>"}, {:text => "<u>Total</u>"}]
+    data.concat(
+      salary_slip.tds.annual_emoluments[:exempt_allowance].map{|k,v| [k.ljust(44, space_char),v[:paid_amount], v[:future_amount], v[:total_amount]]}
+    )
+    data << [{:text => "<u>Total</u>"}, {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_exempt_allowance][:paid_amount]}</u></b>"},
+      {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_exempt_allowance][:future_amount]}</u></b>"},
+      {:text => "<b><u>#{salary_slip.tds.annual_emoluments[:total_exempt_allowance][:total_amount]}</u></b>"}]
+
+    pdf.bounding_box [-10,(430-cell_height)], :width=>280 do
+      pdf.table data,
+        :column_widths => {0 => 350, 1 => 70, 2 => 70, 3 => 70},
+        :border_width => 0,
+        :align => {0 => :left ,1 => :right, 2 => :right, 3 => :right},
+        :vertical_padding => 2.5,
+        :font_size => 10,
+        :horizontal_padding => 5
+    end
+
+  end
+end

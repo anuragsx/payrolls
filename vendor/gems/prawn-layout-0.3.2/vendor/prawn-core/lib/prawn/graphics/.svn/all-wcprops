@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics
+END
+color.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics/color.rb
+END
+dash.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics/dash.rb
+END
+join_style.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics/join_style.rb
+END
+cap_style.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics/cap_style.rb
+END
+transparency.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics/transparency.rb
+END

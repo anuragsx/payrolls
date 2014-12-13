@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/fiveruns-memcache-client-1.5.0.5/test
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+test_mem_cache.rb
+file
+
+
+
+
+2010-03-13T02:51:09.843750Z
+0e9af42ae7f370becc4de3628f4e7c3f
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+

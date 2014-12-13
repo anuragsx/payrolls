@@ -1,0 +1,7 @@
+<% form_for @insurance, :url=> employee_insurances_path(@employee) do |form| %>
+  <%= render :partial=>'form', :locals=>{:f=>form} %>
+  <p class="submit">
+    <%= form.submit t('button.save'), :class=>"btn" %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employee_insurances_path(@employee)) %>
+  </p>
+<% end %>

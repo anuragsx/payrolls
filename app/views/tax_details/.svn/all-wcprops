@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/1278/app/views/tax_details
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/899/app/views/tax_details/edit.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1278/app/views/tax_details/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1140/app/views/tax_details/_form.html.erb
+END

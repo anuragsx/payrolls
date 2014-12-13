@@ -1,0 +1,61 @@
+class SalaryHead < ActiveRecord::Base
+
+  has_many :salary_slip_charges
+
+  validates_presence_of :name, :code, :tax_formula
+
+  named_scope :allowance_compatible, :conditions => ["salary_head_type = ?",'Allowance']
+  named_scope :subtotal_compatible, :conditions => ["salary_head_type = ?",'SlipSubtotal']
+  named_scope :deduction_compatible, :conditions => ["salary_head_type = ?",'Deduction']
+
+  defaults :tax_formula => "TaxFormula"
+  
+  # Let everyone know that we respond to code_for_something, in case they ask the class
+  def self.respond_to?(method_sym,*arguments,&block)
+    method_sym.to_s =~ /^(code|charges)_for_(.*)$/ ? true : super
+  end
+
+  # When they invoke code_for_something for the first time it'll end up here
+  def self.method_missing(method_sym,*params)
+    if method_sym.to_s =~ /^(code|charges)_for_(.*)$/
+      # code_for_something not found
+      function = $1 # This give us code or charges
+      code = $2 # regular expression match gives us $2 = something
+      function_code = (function == "code") ? "find_by_code('#{code}')":"code_for_#{code}.salary_slip_charges"
+      # In the class context, let's create this method
+      class_eval <<-RUBY
+      def self.#{method_sym.to_s}
+        #{function_code}
+      end
+    RUBY
+      # Now let's invoke the method we just created
+      # Next time we call SalaryHead.code_for_something, we'll miss all this
+      # and go straight to the method we created above.
+      send(method_sym)
+    else
+      # the missing method is not a code_for_something
+      super
+    end
+  end
+
+  def is_taxable?
+    !["expense","tds"].include?(code)
+  end
+
+  def short_name
+    return code.upcase if code == "tds"
+    name.split.first
+  end
+
+  def calculate_taxable_amount(basic, amount, employee,run_date)
+    return amount if self.tax_formula.nil?
+    object = self.tax_formula.constantize.new
+    object.amount = amount
+    object.basic = basic
+    object.employee = employee
+    object.run_date = run_date
+    object.salary_head = self
+    object.calculate
+  end
+
+end

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/283/vendor/plugins/exception_notifier/lib
+END
+exception_notifier.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/283/vendor/plugins/exception_notifier/lib/exception_notifier.rb
+END
+exception_notifiable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/283/vendor/plugins/exception_notifier/lib/exception_notifiable.rb
+END
+exception_notifier_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/283/vendor/plugins/exception_notifier/lib/exception_notifier_helper.rb
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/1177/app/views/user_mailer
+END
+password_reset_instructions.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/802/app/views/user_mailer/password_reset_instructions.erb
+END
+user_welcome.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/981/app/views/user_mailer/user_welcome.erb
+END
+feedback_thanks.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1024/app/views/user_mailer/feedback_thanks.erb
+END
+email_verification_instructions.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/1177/app/views/user_mailer/email_verification_instructions.erb
+END

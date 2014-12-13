@@ -1,0 +1,11 @@
+<ul class="tabs">
+  <li class="<%= link_active?(params[:controller] == "leaves" && params[:action] == "index") %>">
+    <%= link_to('Details',leaves_path) %>
+  </li>
+  <li class="<%= link_active?(params[:controller] == "leaves" && params[:action] == "bulk") %>">
+    <%= link_to('New',bulk_leaves_path) %>
+  </li>
+  <li class="<%= link_active?(params[:controller] == "leaves" && params[:action] == "excel_bulk") %>">
+    <%= link_to('Bulk using excel',excel_bulk_leaves_path) %>
+  </li>
+</ul>

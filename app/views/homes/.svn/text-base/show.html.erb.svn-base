@@ -1,0 +1,67 @@
+<% content_for(:page_header) do  %>
+  <h2 style="margin:0;"><%=h "Welcome to Salaree.com" %></h2>
+  <p>Salaree simplifies your payroll and generate all the reports you need. So let's start a hassle free payroll. </p>
+<% end %>
+<div class="home-video">
+  <object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000'
+          codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0'
+          width='560' height='345'>
+    <param name='movie' value='http://screenr.com/Content/assets/screenr_0817090731.swf' />
+    <param name='flashvars' value='i=8253' />
+    <param name='allowFullScreen' value='true' />
+    <param name='wmode' value='transparent' />
+    <embed src='http://screenr.com/Content/assets/screenr_0817090731.swf'
+           flashvars='i=8253' allowFullScreen='true' width='560' height='345'
+           pluginspage='http://www.macromedia.com/go/getflashplayer' wmode="transparent">
+    </embed>
+  </object>
+</div>
+  
+  <h2>Steps to Get Started Using Salaree.com</h2>
+  
+  <h3>1. System Setup</h3>
+<p>First of all you need to configure your <%= link_to('calculators',company_calculators_path)%>.
+  Like you have to select one of the Leave Calculators. This tells us how you want <i>"Salaree"</i>  to calculate
+  leaves for your payrolls. Similarly there are other calculators that gives you freedom to customize your
+  <i>"Salaree"</i>. Select the calculator modules that you want to add up in your payroll.</p>
+  
+<p>Next you need to configure <i>"Salaree"</i> with specific about your <%= link_to('company', company_path(@company)) %>
+  information like company address, phone number, <%= link_to('pf type',company_pf_path) %>, pf number,
+  <%= link_to('esi type',company_esi_path) %>, esi number and <%= link_to('company leaves',company_leave_path) %>.</p>
+
+
+<h3>2. Add/Update Departments</h3>
+<p>You can add <%= link_to('departments', departments_path) %> to your company. Similarly you can update existing
+  departments.</p>
+
+
+<h3>3. Add/Update Employees</h3>
+<p>Next you need to add <%= link_to('employees',employees_path) %> to your <i>"Salaree"</i> to run payrolls.</p>
+
+
+<h3>4. Creating Users</h3>
+<p>You can add up as many <%= link_to('users', users_path) %> to your <i>"Salaree"</i> as you wish to. Only if you
+  want others to access your <i>"Salaree"</i>. You can also change <%= link_to("your account's",edit_user_path(@current_user)) %>
+  setting.</p>
+
+
+<h3>5. Prepare details to process payroll</h3>
+<p>Every month before processing payroll you need to prepare details for that month</p>
+<ul>
+  <li>Update Employee related details like his/her promotion/demotion, leveas, status etc.</li>
+  <li>Change status for employee who have resigned.</li>
+  <li>You can also suspend payroll for employee you wish to.</li>
+</ul>
+
+
+<h3>6. Process Payroll</h3>
+<p>If you have completed all the details for Payroll. then go to <%= link_to('Salary Sheet', salary_sheets_path) %>, choose the month, then hit on create button and you are done.</p>
+
+
+<h3>7. Verify Results</h3>
+<p>Go to the salary sheet that you have generated and randomly check some employee's payrolls to see if it is
+  correct.</p>
+
+
+<h3>8. Print Various Statements</h3>
+<p>You can take out salary sheet of any processed payroll and can also export it to excel. There are various other statements that can taken out.(i.e. Bank Statement, LIC Sheet, Loan EMI sheet) </p>

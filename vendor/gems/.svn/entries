@@ -1,0 +1,82 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T13:00:45.124389Z
+1246
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+fiveruns-memcache-client-1.5.0.5
+dir
+
+prawn-core-0.6.3
+dir
+
+actionmessenger-0.2.0
+dir
+
+haml-2.2.4
+dir
+
+oauth-0.3.6
+dir
+
+asanghi-fiscali-1.2.5
+dir
+
+searchlogic-2.3.3
+dir
+
+bgetting-hominid-1.2.0
+dir
+
+ruby-hmac-0.3.2
+dir
+
+prawn-security-0.1.1
+dir
+
+mbleigh-subdomain-fu-0.1.0
+dir
+
+prawn-0.6.3
+dir
+
+authlogic-2.0.13
+dir
+
+prawn-layout-0.3.2
+dir
+
+ruby-ole-1.2.8.2
+dir
+
+giraffesoft-observational-0.2.3
+dir
+
+spreadsheet-0.6.3.1
+dir
+
+prawn-format-0.2.3
+dir
+

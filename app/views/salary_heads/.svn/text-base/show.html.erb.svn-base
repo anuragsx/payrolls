@@ -1,0 +1,24 @@
+<% title "Salary Head" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @salary_head.name %>
+</p>
+<p>
+  <strong>Allowance:</strong>
+  <%=h @salary_head.allowance %>
+</p>
+<p>
+  <strong>Code:</strong>
+  <%=h @salary_head.code %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @salary_head.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_salary_head_path(@salary_head) %> |
+  <%= link_to "Destroy", @salary_head, :confirm =>CONFIRM_DELETE, :method => :delete %> |
+  <%= link_to "View All", salary_heads_path %>
+</p>

@@ -1,0 +1,12 @@
+<%= display_error_messages('loan') %>
+<ul class="form">
+  <%= f.labelled_text_field(t('loan.amount'),:loan_amount) %>
+  <%= f.labelled_text_field("#{t('common.start')} #{t('common.date')}",:created_at, :class => 'datebalks') %>
+  <% f.fields_for :effective_loan_emis do |emi| %>
+    <%= emi.labelled_text_field(t('loan.emi'),:amount) %>
+  <% end %>
+</ul>
+<p class="submit">
+  <%= f.submit t('button.save'),:class=>'btn' %> <%= "#{t('common.or')}" %>
+  <%= link_to(t('button.cancel'), employee_loans_path(@employee)) %>
+</p>

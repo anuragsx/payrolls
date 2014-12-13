@@ -1,0 +1,14 @@
+
+<% form_for(setup_ep(@employee_package),:url => employee_employee_packages_path) do |f| %>
+  <%= display_error_messages('employee_package') %>
+  <ul class="form">
+    <%= render :partial => "new_#{@company.package_calculator.type.downcase}" , :locals => {:f => f} %>
+  </ul>
+  <p class="submit">
+    <% if @employee.employee_packages.size == 1 %>
+      <%= f.submit t('button.create'), :class => "btn" %>
+    <%else%>
+      <%= f.submit t('common.promote'), :class => "btn" %>
+    <%end%>
+  </p>
+<% end %>

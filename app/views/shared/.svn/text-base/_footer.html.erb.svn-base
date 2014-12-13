@@ -1,0 +1,19 @@
+<div id="footer">
+  <div id="footer-inner">
+    <%  form_tag  '',  :id => 'locale',:method  =>  :get  do  %>
+      <%= hidden_field_tag(:locale,not_current_locale.map{|k,v| v}) %>
+    <%end%>
+    <p class="terms">
+      <% if @current_user && !@current_user.activate? %>
+      <span class="error resend_email">
+        You have not verified your Email address. Please verify it. &nbsp;
+      </span>
+        <%= link_to("Resend Confirmation Email", resend_email_accounts_path) %> |
+      <% end %>
+     <%= link_to("#{not_current_locale.map{|k,v| k}}",'',:id =>'change_locale') %> | <%= link_to(t('common.privacy_policy'),"http://salaree.com/privacy",:target=>"_blank") %> | <%= link_to(t('common.tos'),"http://salaree.com/tos",:target=>"_blank") %>
+    </p>
+    <p class="rising-sun">
+      <a href="http://risingsuntech.net" target="_blank"><img src="/images/rising-sun_logo.gif"/></a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<% form_for @employee_esi, :url=>  employee_esi_path(@employee),:method=>:put do |form| %>
+  <%= render :partial=>'form', :locals=>{:f=>form} %>
+  <p class="submit">
+    <%= form.submit t("button.update"), :class=>"btn" %> or
+    <%= link_to(t('button.cancel'), employee_esis_path(@employee), :class => 'cancel') %>
+  </p>
+<% end %>

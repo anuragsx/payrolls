@@ -1,0 +1,5 @@
+<% if @employee.valid? %>
+  jQuery('#<%= @key %>').fadeOut('slow')
+<%  else %>
+  document.getElementById('msg').innerHTML = '<span class ="red_font">There are one or more error(s)</span>';
+<%end%>

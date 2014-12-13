@@ -1,0 +1,12 @@
+<% if @current_package.blank? %>
+  <%= f.labelled_text_field 'Commencment Date', :start_date, :class => 'datebalks', :value => Date.today %>
+<% else %>
+  <%= f.labelled_text_field ["#{t('employees.package.promotion')} #{t('common.date')}"], :start_date, :class => 'datebalks' %>
+  <% designation = @current_package.designation %>
+  <% basic = @current_package.basic %>
+<% end %>
+
+<%= f.labelled_text_field t('employees.designation'), :designation, :value => designation %>
+<%= f.labelled_text_field t('employees.package.basic'), :basic, :value => basic %>
+<%= f.labelled_collection_select("Grade", :company_grade_id,@company.company_grades, :id, :pay_scale_and_name, :include_blank => true) if @company.company_grades %>
+<%= f.hidden_field :employee_id, :value => @employee.id %>

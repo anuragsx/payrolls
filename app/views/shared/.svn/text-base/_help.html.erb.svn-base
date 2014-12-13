@@ -1,0 +1,31 @@
+<div id="shortkeys_help" style="display:none;" class ="help">
+  <table class="help-subtable wf" cellpadding="0">
+    <tbody>
+      <tr>
+        <td class="helpk help-mainheading">Keyboard shortcuts</td>
+        <td class="helpc help-mainheading">
+          <span id="close">Close</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="help-subtable wd">
+    <tr><th colspan="2" class="help-subheading">Actions</th></tr>
+    <tr>
+      <% shortcut_links.to_a.in_groups_of(8).each do |keys| %>
+        <td class="help-pad-t help-pad-l" >
+          <table class="cf" cellspacing ="0" cellpadding="30">
+            <% keys.each do |val|%>
+              <tr>
+                <% if val %>
+                  <td class="wg help-pad-t help-pad-l"><span class="wh"><%= val.to_a.first %></span> :</td>
+                  <td class="we help-pad-t help-pad-l-s"><%= val.to_a.last.to_a.last%></td>
+                <%end%>
+              </tr>
+            <%end%>
+          </table>
+        </td>
+      <%end%>
+    </tr>
+  </table>
+</div>

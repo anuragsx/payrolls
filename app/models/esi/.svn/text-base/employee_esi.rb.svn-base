@@ -1,0 +1,14 @@
+class EmployeeEsi < ActiveRecord::Base
+  belongs_to :employee
+  belongs_to :company
+  has_many :salary_slip_charges, :as => :reference
+  
+  validates_presence_of :esi_number, :on => :update, :if => lambda{|v|v.applicable}
+  validates_presence_of :employee_id, :company_id, :effective_date
+
+  named_scope :for_employee, lambda{|e|{:conditions => ["employee_id = ?",e]}}
+  named_scope :for_company, lambda{|c|{:conditions => ["company_id = ?",c]}}
+  named_scope :for_date, lambda{|d|{:conditions => ["effective_date <= ?",d],
+                                    :order => 'effective_date desc',
+                                    :limit => 1}}
+end

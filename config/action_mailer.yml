@@ -1,0 +1,21 @@
+development:
+  usermailer:
+    domain: "http://salaree.com"
+    user_name: chimps@salaree.com
+    password: caretakers.noreply.!!
+    address: mail.salaree.com
+    port: 587
+    authentication: :plain 
+
+test:
+  
+
+production:
+  usermailer:
+    domain: "http://salaree.com"
+    user_name: chimps@salaree.com
+    password: caretakers.noreply.!!
+    address: mail.salaree.com
+    port: 587
+    authentication: :plain
+ 

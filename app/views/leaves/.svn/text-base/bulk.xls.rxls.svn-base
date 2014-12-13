@@ -1,0 +1,24 @@
+elsheet = workbook.create_worksheet(:name => @sheet_name)
+header_format = Spreadsheet::Format.new :color => :white,
+                                 :weight => :bold,
+                                 :size => 10, :pattern_bg_color => "black",
+                                 :pattern_fg_color => :gray, :pattern => 1
+
+
+index = 1
+5.times do |i|
+  elsheet.column(i).width = 20
+end
+
+elsheet.row(0).push "Employee Name", "Present", "Absent", "Late hours", "Over Time in hours"
+
+elsheet.row(0).default_format = header_format
+
+@leaves.each do |leave|
+  elsheet.row(index).push leave.employee.name
+  elsheet.row(index).push leave.present
+  elsheet.row(index).push leave.absent
+  elsheet.row(index).push leave.late_hours
+  elsheet.row(index).push leave.overtime_hours
+  index += 1
+end

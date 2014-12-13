@@ -1,0 +1,3 @@
+class CalculatorError < Exception
+  
+end

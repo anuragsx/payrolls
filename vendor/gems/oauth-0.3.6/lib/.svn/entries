@@ -1,0 +1,43 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/oauth-0.3.6/lib
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+oauth
+dir
+
+oauth.rb
+file
+
+
+
+
+2010-03-13T02:51:16.328125Z
+378cc4a033996ce1b967ad126fd23906
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+

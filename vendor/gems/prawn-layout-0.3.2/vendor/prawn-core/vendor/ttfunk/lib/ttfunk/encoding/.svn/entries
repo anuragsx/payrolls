@@ -1,0 +1,52 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/vendor/ttfunk/lib/ttfunk/encoding
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+windows_1252.rb
+file
+
+
+
+
+2010-03-13T02:52:21.421875Z
+cf60ab8076eac61357eefed004841971
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+mac_roman.rb
+file
+
+
+
+
+2010-03-13T02:52:21.453125Z
+fb2f740f4fd41a7739fc39f308f5e99d
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+

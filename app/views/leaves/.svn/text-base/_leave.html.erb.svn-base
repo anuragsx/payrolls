@@ -1,0 +1,6 @@
+<% fields_for "leaves[]", leave, :index => nil do |f| %>
+  <tr>
+    <td class="head1"><%= leave.employee.name.titleize %></td>
+    <%= render :partial=>'fields',:locals => {:leave => leave,:f => f} %>
+  </tr>
+<% end %>

@@ -1,0 +1,8 @@
+<%= render :partial=>'companies/page_header' %>
+<% form_for(@company,:url => company_calculator_path(@company),:method => :put) do |f| %>
+  <%= display_error_messages('calculator') %>
+  <%= render :partial=>'form',:locals=>{:f=>f} %>
+  <p>
+    <input title="Submit calculator" name="submitbutton" value="<%= t('button.save') %>" type="submit" class="btn">
+  </p>
+<% end %>

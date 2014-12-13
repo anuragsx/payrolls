@@ -1,0 +1,482 @@
+                      oauth_clients GET    /oauth_clients(.:format)                                         oauth_clients#index
+                                    POST   /oauth_clients(.:format)                                         oauth_clients#create
+                   new_oauth_client GET    /oauth_clients/new(.:format)                                     oauth_clients#new
+                  edit_oauth_client GET    /oauth_clients/:id/edit(.:format)                                oauth_clients#edit
+                       oauth_client GET    /oauth_clients/:id(.:format)                                     oauth_clients#show
+                                    PUT    /oauth_clients/:id(.:format)                                     oauth_clients#update
+                                    DELETE /oauth_clients/:id(.:format)                                     oauth_clients#destroy
+                       test_request        /oauth/test_request(.:format)                                    oauth#test_request
+                       access_token        /oauth/access_token(.:format)                                    oauth#access_token
+                      request_token        /oauth/request_token(.:format)                                   oauth#request_token
+                          authorize        /oauth/authorize(.:format)                                       oauth#authorize
+                             revoke        /oauth/revoke(.:format)                                          oauth#revoke
+                              oauth        /oauth(.:format)                                                 oauth#index
+                    bulk_incentives GET    /incentives/bulk(.:format)                                       incentives#bulk
+             bulk_create_incentives POST   /incentives/bulk_create(.:format)                                incentives#bulk_create
+           detailed_info_incentives GET    /incentives/detailed_info(.:format)                              incentives#detailed_info
+                         incentives GET    /incentives(.:format)                                            incentives#index
+                                    POST   /incentives(.:format)                                            incentives#create
+                      new_incentive GET    /incentives/new(.:format)                                        incentives#new
+                     edit_incentive GET    /incentives/:id/edit(.:format)                                   incentives#edit
+                          incentive GET    /incentives/:id(.:format)                                        incentives#show
+                                    PUT    /incentives/:id(.:format)                                        incentives#update
+                                    DELETE /incentives/:id(.:format)                                        incentives#destroy
+                       bulk_arrears GET    /arrears/bulk(.:format)                                          arrears#bulk
+                bulk_create_arrears POST   /arrears/bulk_create(.:format)                                   arrears#bulk_create
+                            arrears GET    /arrears(.:format)                                               arrears#index
+                                    POST   /arrears(.:format)                                               arrears#create
+                         new_arrear GET    /arrears/new(.:format)                                           arrears#new
+                        edit_arrear GET    /arrears/:id/edit(.:format)                                      arrears#edit
+                             arrear GET    /arrears/:id(.:format)                                           arrears#show
+                                    PUT    /arrears/:id(.:format)                                           arrears#update
+                                    DELETE /arrears/:id(.:format)                                           arrears#destroy
+                        tds_returns GET    /tds_returns(.:format)                                           tds_returns#index
+                                    POST   /tds_returns(.:format)                                           tds_returns#create
+                     new_tds_return GET    /tds_returns/new(.:format)                                       tds_returns#new
+                    edit_tds_return GET    /tds_returns/:id/edit(.:format)                                  tds_returns#edit
+                         tds_return GET    /tds_returns/:id(.:format)                                       tds_returns#show
+                                    PUT    /tds_returns/:id(.:format)                                       tds_returns#update
+                                    DELETE /tds_returns/:id(.:format)                                       tds_returns#destroy
+                     company_grades GET    /company_grades(.:format)                                        company_grades#index
+                                    POST   /company_grades(.:format)                                        company_grades#create
+                  new_company_grade GET    /company_grades/new(.:format)                                    company_grades#new
+                 edit_company_grade GET    /company_grades/:id/edit(.:format)                               company_grades#edit
+                      company_grade GET    /company_grades/:id(.:format)                                    company_grades#show
+                                    PUT    /company_grades/:id(.:format)                                    company_grades#update
+                                    DELETE /company_grades/:id(.:format)                                    company_grades#destroy
+                               bank POST   /bank(.:format)                                                  banks#create
+                           new_bank GET    /bank/new(.:format)                                              banks#new
+                          edit_bank GET    /bank/edit(.:format)                                             banks#edit
+                                    GET    /bank(.:format)                                                  banks#show
+                                    PUT    /bank(.:format)                                                  banks#update
+                                    DELETE /bank(.:format)                                                  banks#destroy
+                          feedbacks GET    /feedbacks(.:format)                                             feedbacks#index
+                                    POST   /feedbacks(.:format)                                             feedbacks#create
+                       new_feedback GET    /feedbacks/new(.:format)                                         feedbacks#new
+                      edit_feedback GET    /feedbacks/:id/edit(.:format)                                    feedbacks#edit
+                           feedback GET    /feedbacks/:id(.:format)                                         feedbacks#show
+                                    PUT    /feedbacks/:id(.:format)                                         feedbacks#update
+                                    DELETE /feedbacks/:id(.:format)                                         feedbacks#destroy
+                               root        /                                                                user_sessions#index
+              swap_user_status_user POST   /users/:id/swap_user_status(.:format)                            users#swap_user_status
+                    send_email_user GET    /users/:id/send_email(.:format)                                  users#send_email
+                              users GET    /users(.:format)                                                 users#index
+                                    POST   /users(.:format)                                                 users#create
+                           new_user GET    /users/new(.:format)                                             users#new
+                          edit_user GET    /users/:id/edit(.:format)                                        users#edit
+                               user GET    /users/:id(.:format)                                             users#show
+                                    PUT    /users/:id(.:format)                                             users#update
+                                    DELETE /users/:id(.:format)                                             users#destroy
+                       user_session POST   /user_session(.:format)                                          user_sessions#create
+                   new_user_session GET    /user_session/new(.:format)                                      user_sessions#new
+                  edit_user_session GET    /user_session/edit(.:format)                                     user_sessions#edit
+                                    GET    /user_session(.:format)                                          user_sessions#show
+                                    PUT    /user_session(.:format)                                          user_sessions#update
+                                    DELETE /user_session(.:format)                                          user_sessions#destroy
+                             logout        /logout(.:format)                                                user_sessions#destroy
+                bulk_expense_claims GET    /expense_claims/bulk(.:format)                                   expense_claims#bulk
+         bulk_create_expense_claims POST   /expense_claims/bulk_create(.:format)                            expense_claims#bulk_create
+       detailed_info_expense_claims GET    /expense_claims/detailed_info(.:format)                          expense_claims#detailed_info
+                     expense_claims GET    /expense_claims(.:format)                                        expense_claims#index
+                                    POST   /expense_claims(.:format)                                        expense_claims#create
+                  new_expense_claim GET    /expense_claims/new(.:format)                                    expense_claims#new
+                 edit_expense_claim GET    /expense_claims/:id/edit(.:format)                               expense_claims#edit
+                      expense_claim GET    /expense_claims/:id(.:format)                                    expense_claims#show
+                                    PUT    /expense_claims/:id(.:format)                                    expense_claims#update
+                                    DELETE /expense_claims/:id(.:format)                                    expense_claims#destroy
+                   import_employees POST   /employees/import(.:format)                                      employees#import
+               new_import_employees GET    /employees/new_import(.:format)                                  employees#new_import
+              bulk_create_employees POST   /employees/bulk_create(.:format)                                 employees#bulk_create
+                new_resign_employee GET    /employees/:id/new_resign(.:format)                              employees#new_resign
+              new_activate_employee GET    /employees/:id/new_activate(.:format)                            employees#new_activate
+               new_suspend_employee GET    /employees/:id/new_suspend(.:format)                             employees#new_suspend
+             identity_card_employee        /employees/:id/identity_card(.:format)                           employees#identity_card
+                    resign_employee PUT    /employees/:id/resign(.:format)                                  employees#resign
+                   suspend_employee PUT    /employees/:id/suspend(.:format)                                 employees#suspend
+                  activate_employee PUT    /employees/:id/activate(.:format)                                employees#activate
+                     employee_loans GET    /employees/:employee_id/loans(.:format)                          loans#index {:has_many=>:emi_overrides}
+                                    POST   /employees/:employee_id/loans(.:format)                          loans#create {:has_many=>:emi_overrides}
+                  new_employee_loan GET    /employees/:employee_id/loans/new(.:format)                      loans#new {:has_many=>:emi_overrides}
+                 edit_employee_loan GET    /employees/:employee_id/loans/:id/edit(.:format)                 loans#edit {:has_many=>:emi_overrides}
+                      employee_loan GET    /employees/:employee_id/loans/:id(.:format)                      loans#show {:has_many=>:emi_overrides}
+                                    PUT    /employees/:employee_id/loans/:id(.:format)                      loans#update {:has_many=>:emi_overrides}
+                                    DELETE /employees/:employee_id/loans/:id(.:format)                      loans#destroy {:has_many=>:emi_overrides}
+            employee_expense_claims GET    /employees/:employee_id/expense_claims(.:format)                 expense_claims#index
+                                    POST   /employees/:employee_id/expense_claims(.:format)                 expense_claims#create
+         new_employee_expense_claim GET    /employees/:employee_id/expense_claims/new(.:format)             expense_claims#new
+        edit_employee_expense_claim GET    /employees/:employee_id/expense_claims/:id/edit(.:format)        expense_claims#edit
+             employee_expense_claim GET    /employees/:employee_id/expense_claims/:id(.:format)             expense_claims#show
+                                    PUT    /employees/:employee_id/expense_claims/:id(.:format)             expense_claims#update
+                                    DELETE /employees/:employee_id/expense_claims/:id(.:format)             expense_claims#destroy
+                employee_insurances GET    /employees/:employee_id/insurances(.:format)                     insurances#index
+                                    POST   /employees/:employee_id/insurances(.:format)                     insurances#create
+             new_employee_insurance GET    /employees/:employee_id/insurances/new(.:format)                 insurances#new
+            edit_employee_insurance GET    /employees/:employee_id/insurances/:id/edit(.:format)            insurances#edit
+                 employee_insurance GET    /employees/:employee_id/insurances/:id(.:format)                 insurances#show
+                                    PUT    /employees/:employee_id/insurances/:id(.:format)                 insurances#update
+                                    DELETE /employees/:employee_id/insurances/:id(.:format)                 insurances#destroy
+                  employee_advances GET    /employees/:employee_id/advances(.:format)                       advances#index
+                                    POST   /employees/:employee_id/advances(.:format)                       advances#create
+               new_employee_advance GET    /employees/:employee_id/advances/new(.:format)                   advances#new
+              edit_employee_advance GET    /employees/:employee_id/advances/:id/edit(.:format)              advances#edit
+                   employee_advance GET    /employees/:employee_id/advances/:id(.:format)                   advances#show
+                                    PUT    /employees/:employee_id/advances/:id(.:format)                   advances#update
+                                    DELETE /employees/:employee_id/advances/:id(.:format)                   advances#destroy
+              employee_salary_slips GET    /employees/:employee_id/salary_slips(.:format)                   salary_slips#index
+                                    POST   /employees/:employee_id/salary_slips(.:format)                   salary_slips#create
+           new_employee_salary_slip GET    /employees/:employee_id/salary_slips/new(.:format)               salary_slips#new
+          edit_employee_salary_slip GET    /employees/:employee_id/salary_slips/:id/edit(.:format)          salary_slips#edit
+               employee_salary_slip GET    /employees/:employee_id/salary_slips/:id(.:format)               salary_slips#show
+                                    PUT    /employees/:employee_id/salary_slips/:id(.:format)               salary_slips#update
+                                    DELETE /employees/:employee_id/salary_slips/:id(.:format)               salary_slips#destroy
+                     employee_bonus GET    /employees/:employee_id/bonus(.:format)                          bonus#index
+                      employee_bonu GET    /employees/:employee_id/bonus/:id(.:format)                      bonus#show
+                    employee_leaves GET    /employees/:employee_id/leaves(.:format)                         leaves#index
+                                    POST   /employees/:employee_id/leaves(.:format)                         leaves#create
+                 new_employee_leafe GET    /employees/:employee_id/leaves/new(.:format)                     leaves#new
+                edit_employee_leafe GET    /employees/:employee_id/leaves/:id/edit(.:format)                leaves#edit
+                     employee_leafe GET    /employees/:employee_id/leaves/:id(.:format)                     leaves#show
+                                    PUT    /employees/:employee_id/leaves/:id(.:format)                     leaves#update
+                                    DELETE /employees/:employee_id/leaves/:id(.:format)                     leaves#destroy
+bulk_update_employee_leave_balances POST   /employees/:employee_id/leave_balances/bulk_update(.:format)     leave_balances#bulk_update
+            employee_leave_balances POST   /employees/:employee_id/leave_balances(.:format)                 leave_balances#create
+        new_employee_leave_balances GET    /employees/:employee_id/leave_balances/new(.:format)             leave_balances#new
+       edit_employee_leave_balances GET    /employees/:employee_id/leave_balances/edit(.:format)            leave_balances#edit
+                                    GET    /employees/:employee_id/leave_balances(.:format)                 leave_balances#show
+                                    PUT    /employees/:employee_id/leave_balances(.:format)                 leave_balances#update
+                                    DELETE /employees/:employee_id/leave_balances(.:format)                 leave_balances#destroy
+      ctc_employee_employee_package GET    /employees/:employee_id/employee_packages/:id/ctc(.:format)      employee_packages#ctc
+         employee_employee_packages GET    /employees/:employee_id/employee_packages(.:format)              employee_packages#index
+                                    POST   /employees/:employee_id/employee_packages(.:format)              employee_packages#create
+      new_employee_employee_package GET    /employees/:employee_id/employee_packages/new(.:format)          employee_packages#new
+     edit_employee_employee_package GET    /employees/:employee_id/employee_packages/:id/edit(.:format)     employee_packages#edit
+          employee_employee_package GET    /employees/:employee_id/employee_packages/:id(.:format)          employee_packages#show
+                                    PUT    /employees/:employee_id/employee_packages/:id(.:format)          employee_packages#update
+                                    DELETE /employees/:employee_id/employee_packages/:id(.:format)          employee_packages#destroy
+                      employee_esis GET    /employees/:employee_id/esis(.:format)                           esis#index
+                                    POST   /employees/:employee_id/esis(.:format)                           esis#create
+                   new_employee_esi GET    /employees/:employee_id/esis/new(.:format)                       esis#new
+                  edit_employee_esi GET    /employees/:employee_id/esis/:id/edit(.:format)                  esis#edit
+                       employee_esi GET    /employees/:employee_id/esis/:id(.:format)                       esis#show
+                                    PUT    /employees/:employee_id/esis/:id(.:format)                       esis#update
+                                    DELETE /employees/:employee_id/esis/:id(.:format)                       esis#destroy
+                   exit_employee_pf GET    /employees/:employee_id/pfs/:id/exit(.:format)                   pfs#exit
+                       employee_pfs GET    /employees/:employee_id/pfs(.:format)                            pfs#index
+                                    POST   /employees/:employee_id/pfs(.:format)                            pfs#create
+                    new_employee_pf GET    /employees/:employee_id/pfs/new(.:format)                        pfs#new
+                   edit_employee_pf GET    /employees/:employee_id/pfs/:id/edit(.:format)                   pfs#edit
+                        employee_pf GET    /employees/:employee_id/pfs/:id(.:format)                        pfs#show
+                                    PUT    /employees/:employee_id/pfs/:id(.:format)                        pfs#update
+                                    DELETE /employees/:employee_id/pfs/:id(.:format)                        pfs#destroy
+               employee_tax_details POST   /employees/:employee_id/tax_details(.:format)                    tax_details#create
+           new_employee_tax_details GET    /employees/:employee_id/tax_details/new(.:format)                tax_details#new
+          edit_employee_tax_details GET    /employees/:employee_id/tax_details/edit(.:format)               tax_details#edit
+                                    GET    /employees/:employee_id/tax_details(.:format)                    tax_details#show
+                                    PUT    /employees/:employee_id/tax_details(.:format)                    tax_details#update
+                                    DELETE /employees/:employee_id/tax_details(.:format)                    tax_details#destroy
+                employee_incentives GET    /employees/:employee_id/incentives(.:format)                     incentives#index
+                                    POST   /employees/:employee_id/incentives(.:format)                     incentives#create
+             new_employee_incentive GET    /employees/:employee_id/incentives/new(.:format)                 incentives#new
+            edit_employee_incentive GET    /employees/:employee_id/incentives/:id/edit(.:format)            incentives#edit
+                 employee_incentive GET    /employees/:employee_id/incentives/:id(.:format)                 incentives#show
+                                    PUT    /employees/:employee_id/incentives/:id(.:format)                 incentives#update
+                                    DELETE /employees/:employee_id/incentives/:id(.:format)                 incentives#destroy
+                          employees GET    /employees(.:format)                                             employees#index
+                                    POST   /employees(.:format)                                             employees#create
+                       new_employee GET    /employees/new(.:format)                                         employees#new
+                      edit_employee GET    /employees/:id/edit(.:format)                                    employees#edit
+                           employee GET    /employees/:id(.:format)                                         employees#show
+                                    PUT    /employees/:id(.:format)                                         employees#update
+                                    DELETE /employees/:id(.:format)                                         employees#destroy
+                              taxes GET    /taxes(.:format)                                                 taxes#index
+                                    POST   /taxes(.:format)                                                 taxes#create
+                          new_taxis GET    /taxes/new(.:format)                                             taxes#new
+                         edit_taxis GET    /taxes/:id/edit(.:format)                                        taxes#edit
+                              taxis GET    /taxes/:id(.:format)                                             taxes#show
+                                    PUT    /taxes/:id(.:format)                                             taxes#update
+                                    DELETE /taxes/:id(.:format)                                             taxes#destroy
+                        investments GET    /investments(.:format)                                           investments#index
+                                    POST   /investments(.:format)                                           investments#create
+                     new_investment GET    /investments/new(.:format)                                       investments#new
+                    edit_investment GET    /investments/:id/edit(.:format)                                  investments#edit
+                         investment GET    /investments/:id(.:format)                                       investments#show
+                                    PUT    /investments/:id(.:format)                                       investments#update
+                                    DELETE /investments/:id(.:format)                                       investments#destroy
+                      other_incomes GET    /other_incomes(.:format)                                         other_incomes#index
+                                    POST   /other_incomes(.:format)                                         other_incomes#create
+                   new_other_income GET    /other_incomes/new(.:format)                                     other_incomes#new
+                  edit_other_income GET    /other_incomes/:id/edit(.:format)                                other_incomes#edit
+                       other_income GET    /other_incomes/:id(.:format)                                     other_incomes#show
+                                    PUT    /other_incomes/:id(.:format)                                     other_incomes#update
+                                    DELETE /other_incomes/:id(.:format)                                     other_incomes#destroy
+                    labour_welfares GET    /labour_welfares(.:format)                                       labour_welfares#index
+        deregister_professional_tax POST   /professional_tax/deregister(.:format)                           professional_taxes#deregister
+                   professional_tax POST   /professional_tax(.:format)                                      professional_taxes#create
+               new_professional_tax GET    /professional_tax/new(.:format)                                  professional_taxes#new
+              edit_professional_tax GET    /professional_tax/edit(.:format)                                 professional_taxes#edit
+                                    GET    /professional_tax(.:format)                                      professional_taxes#show
+                                    PUT    /professional_tax(.:format)                                      professional_taxes#update
+                                    DELETE /professional_tax(.:format)                                      professional_taxes#destroy
+                        attendances GET    /attendances(.:format)                                           attendances#index
+                                    POST   /attendances(.:format)                                           attendances#create
+                     new_attendance GET    /attendances/new(.:format)                                       attendances#new
+                    edit_attendance GET    /attendances/:id/edit(.:format)                                  attendances#edit
+                         attendance GET    /attendances/:id(.:format)                                       attendances#show
+                                    PUT    /attendances/:id(.:format)                                       attendances#update
+                                    DELETE /attendances/:id(.:format)                                       attendances#destroy
+                               ltas GET    /ltas(.:format)                                                  ltas#index
+                                    POST   /ltas(.:format)                                                  ltas#create
+                            new_lta GET    /ltas/new(.:format)                                              ltas#new
+                           edit_lta GET    /ltas/:id/edit(.:format)                                         ltas#edit
+                                lta GET    /ltas/:id(.:format)                                              ltas#show
+                                    PUT    /ltas/:id(.:format)                                              ltas#update
+                                    DELETE /ltas/:id(.:format)                                              ltas#destroy
+                         lta_claims GET    /lta_claims(.:format)                                            lta_claims#index
+                                    POST   /lta_claims(.:format)                                            lta_claims#create
+                      new_lta_claim GET    /lta_claims/new(.:format)                                        lta_claims#new
+                     edit_lta_claim GET    /lta_claims/:id/edit(.:format)                                   lta_claims#edit
+                          lta_claim GET    /lta_claims/:id(.:format)                                        lta_claims#show
+                                    PUT    /lta_claims/:id(.:format)                                        lta_claims#update
+                                    DELETE /lta_claims/:id(.:format)                                        lta_claims#destroy
+                                    GET    /arrears(.:format)                                               arrears#index
+                                    POST   /arrears(.:format)                                               arrears#create
+                                    GET    /arrears/new(.:format)                                           arrears#new
+                                    GET    /arrears/:id/edit(.:format)                                      arrears#edit
+                                    GET    /arrears/:id(.:format)                                           arrears#show
+                                    PUT    /arrears/:id(.:format)                                           arrears#update
+                                    DELETE /arrears/:id(.:format)                                           arrears#destroy
+       forward_leaves_company_leave POST   /company_leave/forward_leaves(.:format)                          company_leaves#forward_leaves
+                      company_leave POST   /company_leave(.:format)                                         company_leaves#create
+                  new_company_leave GET    /company_leave/new(.:format)                                     company_leaves#new
+                 edit_company_leave GET    /company_leave/edit(.:format)                                    company_leaves#edit
+                                    GET    /company_leave(.:format)                                         company_leaves#show
+                                    PUT    /company_leave(.:format)                                         company_leaves#update
+                                    DELETE /company_leave(.:format)                                         company_leaves#destroy
+                        company_esi POST   /company_esi(.:format)                                           company_esis#create
+                    new_company_esi GET    /company_esi/new(.:format)                                       company_esis#new
+                   edit_company_esi GET    /company_esi/edit(.:format)                                      company_esis#edit
+                                    GET    /company_esi(.:format)                                           company_esis#show
+                                    PUT    /company_esi(.:format)                                           company_esis#update
+                                    DELETE /company_esi(.:format)                                           company_esis#destroy
+                         company_pf POST   /company_pf(.:format)                                            company_pfs#create
+                     new_company_pf GET    /company_pf/new(.:format)                                        company_pfs#new
+                    edit_company_pf GET    /company_pf/edit(.:format)                                       company_pfs#edit
+                                    GET    /company_pf(.:format)                                            company_pfs#show
+                                    PUT    /company_pf(.:format)                                            company_pfs#update
+                                    DELETE /company_pf(.:format)                                            company_pfs#destroy
+             send_email_salary_slip GET    /salary_slips/:id/send_email(.:format)                           salary_slips#send_email
+                       salary_slips GET    /salary_slips(.:format)                                          salary_slips#index
+                                    POST   /salary_slips(.:format)                                          salary_slips#create
+                    new_salary_slip GET    /salary_slips/new(.:format)                                      salary_slips#new
+                   edit_salary_slip GET    /salary_slips/:id/edit(.:format)                                 salary_slips#edit
+                        salary_slip GET    /salary_slips/:id(.:format)                                      salary_slips#show
+                                    PUT    /salary_slips/:id(.:format)                                      salary_slips#update
+                                    DELETE /salary_slips/:id(.:format)                                      salary_slips#destroy
+                   package_accounts GET    /packages/:package_id/accounts(.:format)                         accounts#index
+                                    POST   /packages/:package_id/accounts(.:format)                         accounts#create
+                new_package_account GET    /packages/:package_id/accounts/new(.:format)                     accounts#new
+               edit_package_account GET    /packages/:package_id/accounts/:id/edit(.:format)                accounts#edit
+                    package_account GET    /packages/:package_id/accounts/:id(.:format)                     accounts#show
+                                    PUT    /packages/:package_id/accounts/:id(.:format)                     accounts#update
+                                    DELETE /packages/:package_id/accounts/:id(.:format)                     accounts#destroy
+                           packages GET    /packages(.:format)                                              packages#index
+                                    POST   /packages(.:format)                                              packages#create
+                        new_package GET    /packages/new(.:format)                                          packages#new
+                       edit_package GET    /packages/:id/edit(.:format)                                     packages#edit
+                            package GET    /packages/:id(.:format)                                          packages#show
+                                    PUT    /packages/:id(.:format)                                          packages#update
+                                    DELETE /packages/:id(.:format)                                          packages#destroy
+        bank_statement_salary_sheet GET    /salary_sheets/:id/bank_statement(.:format)                      salary_sheets#bank_statement
+            send_email_salary_sheet GET    /salary_sheets/:id/send_email(.:format)                          salary_sheets#send_email
+              send_sms_salary_sheet GET    /salary_sheets/:id/send_sms(.:format)                            salary_sheets#send_sms
+             head_view_salary_sheet GET    /salary_sheets/:id/head_view(.:format)                           salary_sheets#head_view
+                graph_salary_sheets GET    /salary_sheets/graph(.:format)                                   salary_sheets#graph
+           graph_data_salary_sheets GET    /salary_sheets/graph_data(.:format)                              salary_sheets#graph_data
+    premium_salary_sheet_insurances GET    /salary_sheets/:salary_sheet_id/insurances/premium(.:format)     insurances#premium
+       bulk_salary_sheet_insurances GET    /salary_sheets/:salary_sheet_id/insurances/bulk(.:format)        insurances#bulk
+            salary_sheet_insurances GET    /salary_sheets/:salary_sheet_id/insurances(.:format)             insurances#index
+                                    POST   /salary_sheets/:salary_sheet_id/insurances(.:format)             insurances#create
+         new_salary_sheet_insurance GET    /salary_sheets/:salary_sheet_id/insurances/new(.:format)         insurances#new
+        edit_salary_sheet_insurance GET    /salary_sheets/:salary_sheet_id/insurances/:id/edit(.:format)    insurances#edit
+             salary_sheet_insurance GET    /salary_sheets/:salary_sheet_id/insurances/:id(.:format)         insurances#show
+                                    PUT    /salary_sheets/:salary_sheet_id/insurances/:id(.:format)         insurances#update
+                                    DELETE /salary_sheets/:salary_sheet_id/insurances/:id(.:format)         insurances#destroy
+            emis_salary_sheet_loans GET    /salary_sheets/:salary_sheet_id/loans/emis(.:format)             loans#emis
+     bulk_create_salary_sheet_loans POST   /salary_sheets/:salary_sheet_id/loans/bulk_create(.:format)      loans#bulk_create
+            bulk_salary_sheet_loans GET    /salary_sheets/:salary_sheet_id/loans/bulk(.:format)             loans#bulk
+                 salary_sheet_loans GET    /salary_sheets/:salary_sheet_id/loans(.:format)                  loans#index
+                                    POST   /salary_sheets/:salary_sheet_id/loans(.:format)                  loans#create
+              new_salary_sheet_loan GET    /salary_sheets/:salary_sheet_id/loans/new(.:format)              loans#new
+             edit_salary_sheet_loan GET    /salary_sheets/:salary_sheet_id/loans/:id/edit(.:format)         loans#edit
+                  salary_sheet_loan GET    /salary_sheets/:salary_sheet_id/loans/:id(.:format)              loans#show
+                                    PUT    /salary_sheets/:salary_sheet_id/loans/:id(.:format)              loans#update
+                                    DELETE /salary_sheets/:salary_sheet_id/loans/:id(.:format)              loans#destroy
+        salary_sheet_expense_claims GET    /salary_sheets/:salary_sheet_id/expense_claims(.:format)         expense_claims#index {:new=>{:bulk=>:get}}
+              salary_sheet_advances GET    /salary_sheets/:salary_sheet_id/advances(.:format)               advances#index {:new=>{:bulk=>:get}}
+                salary_sheet_leaves GET    /salary_sheets/:salary_sheet_id/leaves(.:format)                 leaves#index {:new=>{:bulk=>:get}}
+tds_challan_salary_sheet_income_tax GET    /salary_sheets/:salary_sheet_id/income_tax/tds_challan(.:format) income_taxes#tds_challan
+    salary_sheet_professional_taxes GET    /salary_sheets/:salary_sheet_id/professional_taxes(.:format)     professional_taxes#index
+          salary_sheet_salary_slips GET    /salary_sheets/:salary_sheet_id/salary_slips(.:format)           salary_slips#index
+            salary_sheet_incentives GET    /salary_sheets/:salary_sheet_id/incentives(.:format)             incentives#index {:new=>{:bulk=>:get}}
+               salary_sheet_arrears GET    /salary_sheets/:salary_sheet_id/arrears(.:format)                arrears#index {:new=>{:bulk=>:get}}
+                      salary_sheets GET    /salary_sheets(.:format)                                         salary_sheets#index
+                                    POST   /salary_sheets(.:format)                                         salary_sheets#create
+                   new_salary_sheet GET    /salary_sheets/new(.:format)                                     salary_sheets#new
+                  edit_salary_sheet GET    /salary_sheets/:id/edit(.:format)                                salary_sheets#edit
+                       salary_sheet GET    /salary_sheets/:id(.:format)                                     salary_sheets#show
+                                    PUT    /salary_sheets/:id(.:format)                                     salary_sheets#update
+                                    DELETE /salary_sheets/:id(.:format)                                     salary_sheets#destroy
+                   welcome_accounts GET    /accounts/welcome(.:format)                                      accounts#welcome
+           check_subdomain_accounts        /accounts/check_subdomain(.:format)                              accounts#check_subdomain
+                  activate_accounts GET    /accounts/activate(.:format)                                     accounts#activate
+              resend_email_accounts GET    /accounts/resend_email(.:format)                                 accounts#resend_email
+                           accounts GET    /accounts(.:format)                                              accounts#index
+                                    POST   /accounts(.:format)                                              accounts#create
+                        new_account GET    /accounts/new(.:format)                                          accounts#new
+                       edit_account GET    /accounts/:id/edit(.:format)                                     accounts#edit
+                            account GET    /accounts/:id(.:format)                                          accounts#show
+                                    PUT    /accounts/:id(.:format)                                          accounts#update
+                                    DELETE /accounts/:id(.:format)                                          accounts#destroy
+                        departments GET    /departments(.:format)                                           departments#index
+                                    POST   /departments(.:format)                                           departments#create
+                     new_department GET    /departments/new(.:format)                                       departments#new
+                    edit_department GET    /departments/:id/edit(.:format)                                  departments#edit
+                         department GET    /departments/:id(.:format)                                       departments#show
+                                    PUT    /departments/:id(.:format)                                       departments#update
+                                    DELETE /departments/:id(.:format)                                       departments#destroy
+                                    GET    /employees(.:format)                                             employees#index
+                                    POST   /employees(.:format)                                             employees#create
+                                    GET    /employees/new(.:format)                                         employees#new
+                                    GET    /employees/:id/edit(.:format)                                    employees#edit
+                                    GET    /employees/:id(.:format)                                         employees#show
+                                    PUT    /employees/:id(.:format)                                         employees#update
+                                    DELETE /employees/:id(.:format)                                         employees#destroy
+                company_calculators GET    /company_calculators(.:format)                                   company_calculators#index
+                 company_calculator PUT    /company_calculators/:id(.:format)                               company_calculators#update
+            company_allowance_heads GET    /company_allowance_heads(.:format)                               company_allowance_heads#index
+                                    POST   /company_allowance_heads(.:format)                               company_allowance_heads#create
+                    reset_passwords GET    /reset_passwords(.:format)                                       reset_passwords#index
+                                    POST   /reset_passwords(.:format)                                       reset_passwords#create
+                 new_reset_password GET    /reset_passwords/new(.:format)                                   reset_passwords#new
+                edit_reset_password GET    /reset_passwords/:id/edit(.:format)                              reset_passwords#edit
+                     reset_password GET    /reset_passwords/:id(.:format)                                   reset_passwords#show
+                                    PUT    /reset_passwords/:id(.:format)                                   reset_passwords#update
+                                    DELETE /reset_passwords/:id(.:format)                                   reset_passwords#destroy
+                delete_logo_company PUT    /companies/:id/delete_logo(.:format)                             companies#delete_logo
+                calculators_company GET    /companies/:id/calculators(.:format)                             companies#calculators
+                          companies POST   /companies(.:format)                                             companies#create
+                       edit_company GET    /companies/:id/edit(.:format)                                    companies#edit
+                            company GET    /companies/:id(.:format)                                         companies#show
+                                    PUT    /companies/:id(.:format)                                         companies#update
+                                    DELETE /companies/:id(.:format)                                         companies#destroy
+                    emi_sheet_loans GET    /loans/emi_sheet(.:format)                                       loans#emi_sheet
+                              loans GET    /loans(.:format)                                                 loans#index
+                                    POST   /loans(.:format)                                                 loans#create
+                           new_loan GET    /loans/new(.:format)                                             loans#new
+                          edit_loan GET    /loans/:id/edit(.:format)                                        loans#edit
+                               loan GET    /loans/:id(.:format)                                             loans#show
+                                    PUT    /loans/:id(.:format)                                             loans#update
+                                    DELETE /loans/:id(.:format)                                             loans#destroy
+                     insurance_bulk GET    /insurances/:insurance_id/bulk(.:format)                         insurances#bulk
+             bulk_create_insurances POST   /insurances/bulk_create(.:format)                                insurances#bulk_create
+                         insurances GET    /insurances(.:format)                                            insurances#index
+                                    POST   /insurances(.:format)                                            insurances#create
+                      new_insurance GET    /insurances/new(.:format)                                        insurances#new
+                     edit_insurance GET    /insurances/:id/edit(.:format)                                   insurances#edit
+                          insurance GET    /insurances/:id(.:format)                                        insurances#show
+                                    PUT    /insurances/:id(.:format)                                        insurances#update
+                                    DELETE /insurances/:id(.:format)                                        insurances#destroy
+                       advance_bulk GET    /advances/:advance_id/bulk(.:format)                             advances#bulk
+               bulk_create_advances POST   /advances/bulk_create(.:format)                                  advances#bulk_create
+                           advances GET    /advances(.:format)                                              advances#index
+                                    POST   /advances(.:format)                                              advances#create
+                        new_advance GET    /advances/new(.:format)                                          advances#new
+                       edit_advance GET    /advances/:id/edit(.:format)                                     advances#edit
+                            advance GET    /advances/:id(.:format)                                          advances#show
+                                    PUT    /advances/:id(.:format)                                          advances#update
+                                    DELETE /advances/:id(.:format)                                          advances#destroy
+                     settings_bonus GET    /bonus/settings(.:format)                                        bonus#settings
+                              bonus GET    /bonus(.:format)                                                 bonus#index
+                                    POST   /bonus(.:format)                                                 bonus#create
+                           new_bonu GET    /bonus/new(.:format)                                             bonus#new
+                          edit_bonu GET    /bonus/:id/edit(.:format)                                        bonus#edit
+                               bonu GET    /bonus/:id(.:format)                                             bonus#show
+                                    PUT    /bonus/:id(.:format)                                             bonus#update
+                                    DELETE /bonus/:id(.:format)                                             bonus#destroy
+                        challan_esi GET    /esis/:id/challan(.:format)                                      esis#challan
+                               esis GET    /esis(.:format)                                                  esis#index
+                                    POST   /esis(.:format)                                                  esis#create
+                            new_esi GET    /esis/new(.:format)                                              esis#new
+                           edit_esi GET    /esis/:id/edit(.:format)                                         esis#edit
+                                esi GET    /esis/:id(.:format)                                              esis#show
+                                    PUT    /esis/:id(.:format)                                              esis#update
+                                    DELETE /esis/:id(.:format)                                              esis#destroy
+                         gratuities GET    /gratuities(.:format)                                            gratuities#index
+                           gratuity GET    /gratuities/:id(.:format)                                        gratuities#show
+                           form5_pf GET    /pfs/:id/form5(.:format)                                         pfs#form5
+                         form12a_pf GET    /pfs/:id/form12a(.:format)                                       pfs#form12a
+                          form10_pf GET    /pfs/:id/form10(.:format)                                        pfs#form10
+                           form2_pf GET    /pfs/:id/form2(.:format)                                         pfs#form2
+                         challan_pf GET    /pfs/:id/challan(.:format)                                       pfs#challan
+                                pfs GET    /pfs(.:format)                                                   pfs#index
+                                    POST   /pfs(.:format)                                                   pfs#create
+                             new_pf GET    /pfs/new(.:format)                                               pfs#new
+                            edit_pf GET    /pfs/:id/edit(.:format)                                          pfs#edit
+                                 pf GET    /pfs/:id(.:format)                                               pfs#show
+                                    PUT    /pfs/:id(.:format)                                               pfs#update
+                                    DELETE /pfs/:id(.:format)                                               pfs#destroy
+                   company_loadings GET    /company_loadings(.:format)                                      company_loadings#index
+                                    POST   /company_loadings(.:format)                                      company_loadings#create
+                new_company_loading GET    /company_loadings/new(.:format)                                  company_loadings#new
+               edit_company_loading GET    /company_loadings/:id/edit(.:format)                             company_loadings#edit
+                    company_loading GET    /company_loadings/:id(.:format)                                  company_loadings#show
+                                    PUT    /company_loadings/:id(.:format)                                  company_loadings#update
+                                    DELETE /company_loadings/:id(.:format)                                  company_loadings#destroy
+             company_flexi_packages GET    /company_flexi_packages(.:format)                                company_flexi_packages#index
+                                    POST   /company_flexi_packages(.:format)                                company_flexi_packages#create
+          new_company_flexi_package GET    /company_flexi_packages/new(.:format)                            company_flexi_packages#new
+         edit_company_flexi_package GET    /company_flexi_packages/:id/edit(.:format)                       company_flexi_packages#edit
+              company_flexi_package GET    /company_flexi_packages/:id(.:format)                            company_flexi_packages#show
+                                    PUT    /company_flexi_packages/:id(.:format)                            company_flexi_packages#update
+                                    DELETE /company_flexi_packages/:id(.:format)                            company_flexi_packages#destroy
+                 slabs_income_taxes GET    /income_taxes/slabs(.:format)                                    income_taxes#slabs
+                       income_taxes GET    /income_taxes(.:format)                                          income_taxes#index
+                                    POST   /income_taxes(.:format)                                          income_taxes#create
+                   new_income_taxis GET    /income_taxes/new(.:format)                                      income_taxes#new
+                  edit_income_taxis GET    /income_taxes/:id/edit(.:format)                                 income_taxes#edit
+                       income_taxis GET    /income_taxes/:id(.:format)                                      income_taxes#show
+                                    PUT    /income_taxes/:id(.:format)                                      income_taxes#update
+                                    DELETE /income_taxes/:id(.:format)                                      income_taxes#destroy
+                               home GET    /home(.:format)                                                  homes#show
+               detailed_info_leaves GET    /leaves/detailed_info(.:format)                                  leaves#detailed_info
+                        bulk_leaves GET    /leaves/bulk(.:format)                                           leaves#bulk
+                  excel_bulk_leaves GET    /leaves/excel_bulk(.:format)                                     leaves#excel_bulk
+                 bulk_create_leaves POST   /leaves/bulk_create(.:format)                                    leaves#bulk_create
+           excel_bulk_create_leaves POST   /leaves/excel_bulk_create(.:format)                              leaves#excel_bulk_create
+                             leaves GET    /leaves(.:format)                                                leaves#index
+                                    GET    /labour_welfares(.:format)                                       labour_welfares#index
+                                    POST   /labour_welfares(.:format)                                       labour_welfares#create
+                 new_labour_welfare GET    /labour_welfares/new(.:format)                                   labour_welfares#new
+                edit_labour_welfare GET    /labour_welfares/:id/edit(.:format)                              labour_welfares#edit
+                     labour_welfare GET    /labour_welfares/:id(.:format)                                   labour_welfares#show
+                                    PUT    /labour_welfares/:id(.:format)                                   labour_welfares#update
+                                    DELETE /labour_welfares/:id(.:format)                                   labour_welfares#destroy
+      slabs_labour_welfare_category GET    /labour_welfare_categories/:id/slabs(.:format)                   labour_welfare_categories#slabs
+          labour_welfare_categories GET    /labour_welfare_categories(.:format)                             labour_welfare_categories#index
+                 professional_taxes GET    /professional_taxes(.:format)                                    professional_taxes#index
+           company_professional_tax POST   /company_professional_tax(.:format)                              company_professional_taxes#create
+       new_company_professional_tax GET    /company_professional_tax/new(.:format)                          company_professional_taxes#new
+      edit_company_professional_tax GET    /company_professional_tax/edit(.:format)                         company_professional_taxes#edit
+                                    GET    /company_professional_tax(.:format)                              company_professional_taxes#show
+                                    PUT    /company_professional_tax(.:format)                              company_professional_taxes#update
+                                    DELETE /company_professional_tax(.:format)                              company_professional_taxes#destroy
+                    bulk_attendance GET    /attendances/:id/bulk(.:format)                                  attendances#bulk
+             bulk_create_attendance POST   /attendances/:id/bulk_create(.:format)                           attendances#bulk_create
+                                    GET    /attendances(.:format)                                           attendances#index
+                           payments GET    /payments(.:format)                                              payments#index
+                                    POST   /payments(.:format)                                              payments#create
+                        new_payment GET    /payments/new(.:format)                                          payments#new
+                       edit_payment GET    /payments/:id/edit(.:format)                                     payments#edit
+                            payment GET    /payments/:id(.:format)                                          payments#show
+                                    PUT    /payments/:id(.:format)                                          payments#update
+                                    DELETE /payments/:id(.:format)                                          payments#destroy

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/salaree/!svn/ver/1306/config
+END
+database.yml.tmp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/163/config/database.yml.tmp
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/salaree/!svn/ver/1304/config/routes.rb
+END
+app_config.yml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/5/config/app_config.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/salaree/!svn/ver/871/config/boot.rb
+END
+production.pill
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1285/config/production.pill
+END
+action_mailer.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1006/config/action_mailer.yml
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/1294/config/environment.rb
+END
+hominid.yml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/1035/config/hominid.yml
+END
+messenger.yml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/salaree/!svn/ver/882/config/messenger.yml
+END
+workling.yml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/172/config/workling.yml
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/salaree/!svn/ver/1306/config/deploy.rb
+END

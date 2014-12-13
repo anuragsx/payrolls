@@ -1,0 +1,170 @@
+--- 
+common: 
+  salary_slips: Salary Slips
+tax: 
+  any_other_income: Any Other Income
+  already_tax_paid_on_other_income: Already Tax Paid On Other Income
+  messages: 
+    tax: 
+      created: Employee Tax has been saved successfully
+      updated: Employee Tax has been updated successfully
+      set_amount: Set your tax amount here
+    investment: 
+      set: Set investment details here.
+      create: Investment Details saved successfully
+      update: Investment Details updated successfully
+    other_income: 
+      set: Set other income details here.
+      create: Other Income Details saved successfully
+      update: Other Income Details updated successfully
+    tax_detail: 
+      set: Set your tax details here.
+      created: Employee Tax Detail successfully created
+      updated: Employee Tax Detail successfully updated
+  investment: Investment
+  category: Category
+  other_income: Other Income
+  slab: 
+    income_bracket: Income Bracket
+    rate: Rate
+  monthly_rent_paid: Monthly Rent Paid
+  scheme: Scheme
+  pan: PAN
+  challan: Challan
+department: 
+  name: Department Name
+  messages: 
+    create: Department was successfully created.
+    update: Department was successfully updated.
+  employees: 
+    number: No. of employees
+  create_new_department: Create a new Department.
+professional_tax: 
+  self: Professional Tax
+  messages: 
+    registered: Successfully Registered Employee
+    set: Please set your zone
+    create: Professional Tax saved successfully
+    deregistered: Successfully Deregistered Employee
+    update: Professional Tax updated successfully
+  zone: Zone
+  register: Register from Professional Tax
+  deregister: Deregister from Professional Tax
+company_grade: 
+  name: Name
+  messages: 
+    create: CompanyGrade was successfully created.
+    update: CompanyGrade was successfully updated.
+  grade: Grade
+  package_amount: Package Amount
+  amount: Amount
+  pay_scale: Pay Scale
+expenses: 
+  register_for: Expense Register For
+gratuity: 
+  self: Gratuity
+  register_for: Gratuity Register For
+employees: 
+  department: Department
+tds_return: 
+  intrest: Intrest
+  transfer_voucher: Transfer voucher/Challan serial Number
+  tax_deposited_date: Date on which tax deposited
+  bsr_code: BSR Code
+  receipt_number: Receipt Number
+  date_of_deduction: Date of Deduction
+  cheque_number: Cheque/DD No.(if any)
+  payment_mode: Section under which payment made
+advance: 
+  note_amount: Total money advanced
+leaves: 
+  late_hours: Late Hours
+  ratio: Ratio
+  override: Override
+  messages: 
+    error_updating: Error updating company leave settings.
+    wrong_parameter: Wrong Parameter
+    set: Set your company leave detail here.
+    employee: 
+      uploaded: Employee Leaves loaded.
+      create: Leaves created successfully
+      update: Leaves updated successfully
+      error_loading: Error uploading Excel file
+    error_creating: Error creating company leave settings.
+    being_carried_forward: Leaves are being carried forward
+    create: Successfully created Company Leave.
+    update: Successfully updated Company Leave.
+    balance: 
+      overridden: Leave Balance has been overridden successfully
+  days: Days
+  carry_forward: Carry Forward Leaves
+  privilege_leave: Privilege Leaves
+  register_for: Leave Register For
+  leave_taken: Leaves Taken
+  default_month_length: Default Month Length
+  edit: Edit Leave Settings
+  rate: Rate of Leave
+  extra_work_days: Extra Work Days
+  month_length_formula: Month Length Formula
+  overtime: Over Time(Hours)
+  casual_leaves: Casual Leaves
+  present: Present
+  absent: Absent
+  sick_leaves: Sick Leaves
+  accrual: Leave Accrual
+  for: For
+  balance: Leave Balance
+calculator: 
+  leaves: Leaves Calculators
+heads: 
+  employer_pf: Employer Pf
+  employer_epf: Employer Epf
+  employer_esi: Employer Esi
+  bonus: Bonus
+  employee_esi: Employee Esi
+pay_grades: 
+  name: Name
+  grade: Grade
+  messages: 
+    create: CompanyGrade was successfully created.
+    update: CompanyGrade was successfully updated.
+  package_amount: Package Amount
+  amount: Amount
+  pay_scale: Pay Scale
+loan: 
+  remaining: 
+    amount: Remaining Amount
+  amount: Loan Amount
+salary_slip: 
+  messages: 
+    under_processing: Salary slip is generating.
+    email_sent: Email sent to
+    created: SalarySlip was successfully created.
+    updated: SalarySlip was successfully updated.
+  tax_exemptions: Tax Exemptions
+  income_tax_details: Year to Date Income Tax Details
+  total_tax_payble: Total Tax Payable
+  education_cess: Education Cess
+  net_tds_for: Net TDS for
+  gross: Gross
+  month_days: Month Days
+  rate: Rate
+  salary_slip_for_month of: Salary Slip for month of
+  allowances: Allowances
+  deduction: Deduction
+  description: Description
+  amount: Amount
+  emoluments_paid: Emoluments Paid
+  net_allowances: Net Allowances
+  payble_days: Payable Days
+  deductions: Deductions
+  net: Net
+  loss_of_pay_days: Loss Of Pay Days
+  gross_earnings: Gross Earnings
+  net_taxable_income: Net Taxable Income (Gross Earnings - Total Deduction)
+  net_deductions: Net Deductions
+  for: for the financial year of
+  total_deduction: Total Deduction
+  income_tax: Income Tax
+  salary_sheet: Salary Sheet
+  net_take_home: Net Take Home

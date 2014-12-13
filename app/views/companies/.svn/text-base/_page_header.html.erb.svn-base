@@ -1,0 +1,4 @@
+<% content_for(:page_header) do  %>
+  <h2><%=h "#{@company.name}: #{t('company.settings')}" %></h2>
+  <%= companies_sub_header %>
+<% end %>

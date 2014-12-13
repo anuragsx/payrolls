@@ -1,0 +1,16 @@
+<%= render :partial=>'companies/page_header' %>
+<% content_for(:page_buttons) do  %>
+  <%= link_to t('button.edit'), edit_company_professional_tax_path, :class => 'edit' %> |
+  <%= link_to t('button.delete'), company_professional_tax_path, :method => :delete,:confirm => CONFIRM_DELETE, :class => 'cancel' %> |
+  <%#= link_to 'Form5', employee_professional_tax_path(@employee,:format => :pdf)%>
+<% end %>
+<div class="group">
+  <table cellpadding="0" cellspacing="0" width="100%" class="details">
+    <tbody>
+      <tr>
+        <th><%= t('professional_tax.zone') %></th>
+        <td><%= @company_professional_tax.zone %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

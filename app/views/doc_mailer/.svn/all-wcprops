@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/salaree/!svn/ver/846/app/views/doc_mailer
+END
+sent_salary_slip.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/846/app/views/doc_mailer/sent_salary_slip.html.erb
+END
+sent_salary_sheet.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/846/app/views/doc_mailer/sent_salary_sheet.html.erb
+END

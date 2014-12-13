@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test
+END
+test_meta_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_meta_data.rb
+END
+test_property_set.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_property_set.rb
+END
+test_SummaryInformation
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_SummaryInformation
+END
+test.doc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test.doc
+END
+test_word_6.doc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_word_6.doc
+END
+test_mbat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_mbat.rb
+END
+test_filesystem.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_filesystem.rb
+END
+test_storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_storage.rb
+END
+test_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_types.rb
+END
+test_ranges_io.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_ranges_io.rb
+END
+oleWithDirs.ole
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/oleWithDirs.ole
+END
+test_word_95.doc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_word_95.doc
+END
+test_support.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_support.rb
+END
+test_word_97.doc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/148/vendor/gems/ruby-ole-1.2.8.2/test/test_word_97.doc
+END

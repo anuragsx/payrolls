@@ -1,0 +1,178 @@
+ActionController::Routing::Routes.draw do |map|
+
+  map.resources :oauth_clients
+
+  map.test_request '/oauth/test_request', :controller => 'oauth', :action => 'test_request'
+  map.access_token '/oauth/access_token', :controller => 'oauth', :action => 'access_token'
+  map.request_token '/oauth/request_token', :controller => 'oauth', :action => 'request_token'
+  map.authorize '/oauth/authorize', :controller => 'oauth', :action => 'authorize'
+  map.revoke '/oauth/revoke', :controller => 'oauth', :action => 'revoke'
+  map.oauth '/oauth', :controller => 'oauth', :action => 'index'
+  map.resources :incentives,:collection=>{:bulk=>:get, :bulk_create=>:post,:detailed_info=>:get}, :only => :index
+  map.resources :arrears,:collection=>{:bulk=>:get, :bulk_create=>:post}, :only => :index
+  map.resources :tds_returns
+ 
+  map.resources :company_grades
+
+  map.resource :bank
+
+  map.resources :feedbacks
+
+  map.root :controller => "user_sessions", :action => "index"
+
+  map.resources :users, :member => {:swap_user_status => :post,:send_email => :get}
+
+  map.resource :user_session
+
+  map.resources :expense_claims,:collection=>{:bulk=>:get, :bulk_create=>:post,:detailed_info=>:get}, :only => :index
+  map.resources :employees,
+    :collection => {:import => :post, :new_import => :get, :bulk_create => :post},
+    :member => {:new_resign => :get, :new_activate => :get, :new_suspend => :get, :identity_card => :any,
+    :resign => :put, :suspend => :put, :activate => :put} do |employee|
+    employee.resources :loans, :has_many => :emi_overrides
+    employee.resources :expense_claims
+    employee.resources :insurances
+    employee.resources :advances
+    employee.resources :salary_slips
+    employee.resources :bonus, :only => [:index, :show]
+    employee.resources :leaves
+    employee.resource :leave_balances, :collection => {:bulk_update => :post}
+    employee.resource :tax_details
+    employee.resources :taxes
+    employee.resources :employee_packages, :member => {:ctc => :get}
+    employee.resources :investments
+    employee.resources :other_incomes
+    employee.resources :esis
+    employee.resources :pfs, :member => {:exit => :get}
+    employee.resources :labour_welfares, :only => [:index]
+    employee.resource :professional_tax, :member => {:deregister => :post}
+    employee.resources :attendances
+    employee.resources :incentives
+    employee.resources :ltas
+    employee.resources :lta_claims
+    employee.resources :arrears
+  end
+
+  map.resource :company_leave, :except => [:destroy], :member => {:forward_leaves => :post}
+
+  map.resource :company_esi
+
+  map.resource :company_pf
+
+  map.resources :salary_slips, :member => {:send_email => :get}
+
+  map.resources :packages, :has_many => :accounts
+
+  map.resources :salary_sheets, :member => {
+                :bank_statement     => :get,
+                :send_email => :get,
+                :send_sms => :get,
+                :head_view => :get
+  }, :collection => {:graph => :get, :graph_data => :get} do |sheet|
+    sheet.resources :insurances, :only => [:index], :collection => {:premium => :get}, :new => {:bulk => :get}
+    sheet.resources :loans, :only => [:index], :collection => {:emis => :get, :bulk_create => :post}, :new => {:bulk => :get}
+    sheet.resources :expense_claims, :only => [:index], :new => {:bulk => :get}
+    sheet.resources :advances, :only => [:index], :new => {:bulk => :get}
+    sheet.resources :leaves, :only => [:index], :new => {:bulk => :get}
+    sheet.resource :income_tax, :only => [:none], :collection => {:tds_challan => :get}
+    sheet.resources :professional_taxes,:only => [:index]
+    sheet.resources :salary_slips,:only => [:index]
+    sheet.resources :incentives, :only => [:index], :new => {:bulk => :get}
+    sheet.resources :arrears, :only => [:index], :new => {:bulk => :get}
+  end
+
+  map.resources :accounts, :collection => {:welcome => :get, :check_subdomain => :any, :activate => :get, :resend_email => :get}
+
+  map.resources :departments
+
+  map.resources :employees
+
+  map.resources :company_calculators, :only => [:index, :update]
+
+  map.resources :company_allowance_heads,:only => [:index, :create]
+
+  map.resources :reset_passwords
+
+  map.resources :companies, :except => [:index, :new], :member => {:delete_logo => :put,:calculators => :get}
+
+  map.resources :loans, :collection => {:emi_sheet => :get}
+
+  map.resources :insurances, :new => {:bulk => :get}, :collection =>{:bulk_create=>:post}
+
+  map.resources :advances, :new => {:bulk => :get} , :collection => {:bulk_create=>:post}
+
+  map.resources :bonus, :collection => {:settings => :get}
+
+  map.resources :esis,:member => {:challan => :get}
+
+  map.resources :gratuities, :only => [:index, :show]
+  
+  map.resources :pfs,:member => {:form12a => :get,
+                                 :form5 => :get,
+                                 :form10 => :get,
+                                 :form2 => :get,
+                                 :challan => :get
+                                 }
+
+  map.resources :company_loadings
+
+  map.resources :company_flexi_packages
+
+  map.resources :income_taxes, :collection => {:slabs => :get}
+
+  map.resource :home, :only => :show  
+
+  map.resources :leaves, :only => :index, :collection => {:detailed_info => :get,
+                                                          :bulk => :get, :excel_bulk => :get,
+                                                          :bulk_create => :post, :excel_bulk_create => :post}
+
+  map.resources :labour_welfares
+  map.resources :labour_welfare_categories, :only => :index, :member => {:slabs => :get}
+  map.resources :professional_taxes, :only => :index
+  map.resource :company_professional_tax
+  map.resources :attendances, :only => :index, :member => {:bulk => :get,:bulk_create=>:post}
+  map.resources :payments
+  Translate::Routes.translation_ui(map) if Rails.env.development?
+
+  # The priority is based upon order of creation: first created -> highest priority.
+
+  # Sample of regular route:
+  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
+  # Keep in mind you can assign values other than :controller and :action
+
+  # Sample of named route:
+  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   map.resources :products
+
+  # Sample resource route with options:
+  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
+
+  # Sample resource route with sub-resources:
+  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+
+  # Sample resource route with more complex sub-resources
+  #   map.resources :products do |products|
+  #     products.resources :comments
+  #     products.resources :sales, :collection => { :recent => :get }
+  #   end
+
+  # Sample resource route within a namespace:
+  #   map.namespace :admin do |admin|
+  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+  #     admin.resources :products
+  #   end
+
+  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
+  # map.root :controller => "welcome"
+
+  # See how all your routes lay out with "rake routes"
+
+  # Install the default routes as the lowest priority.
+  # Note: These default routes make all actions in every controller accessible via GET requests. You should
+  # consider removing the them or commenting them out if you're using named routes and resources.
+  #map.connect ':controller/:action/:id'
+  #map.connect ':controller/:action/:id.:format'
+end

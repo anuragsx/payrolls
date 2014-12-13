@@ -1,0 +1,3 @@
+<% title "New Arrear" %>
+<%= render :partial => 'form' %>
+

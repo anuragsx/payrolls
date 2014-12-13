@@ -1,0 +1,111 @@
+<% f.fields_for :company_calculator,'company_calculator' do |l| %>
+
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.leaves') %></legend>
+    <ul class="checklist">
+      <% @leave_calculators.each do |a,i|%>
+        <% c = a.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <%= check_box_tag("calculator[list][]",a.id,c) %>
+          <a href="#" class="checkbox-select act_as_radio_button"><%= t('button.select') %></a>
+          <h4><%= "#{a.name}" %></h4>
+          <p><%= a.description %></p>
+        </li>
+      <% end %>
+    </ul>
+  </fieldset>
+
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.package') %></legend>
+    <ul class="checklist">
+      <% @package_calculator.each do |a,i|%>
+        <% c = a.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <%= check_box_tag("calculator[list][]",a.id,c) %>
+          <a href="#" class="checkbox-select act_as_radio_button"><%= t('button.select') %></a>
+          <h4><%= "#{a.name}" %></h4>
+          <p><%= a.description %></p>
+        </li>
+      <% end %>
+    </ul>
+  </fieldset>
+
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.income_tax') %></legend>
+    <ul class="checklist">
+      <% @income_tax_calculator.each do |a,i| %>
+        <% c = a.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <%= check_box_tag("calculator[list][]",a.id,c) %>
+          <a href="#" class="checkbox-select act_as_radio_button"><%= t('button.select') %></a>
+          <h4><%= "#{a.name}" %></h4>
+          <p><%= a.description %></p>
+        </li>
+      <% end %>
+    </ul>
+  </fieldset>
+    
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.allowance') %></legend>
+    <ul class="checklist">
+      <% @allowance_calculators.each_with_index do |a,i| %>
+        <% c = a.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <%= check_box_tag("calculator[list][]",a.id,c) %>
+          <a href="#" class="checkbox-select"><%= t('button.select') %></a>
+          <a href="#" class="checkbox-deselect"><%= t('button.cancel') %></a>
+          <h4><%= "#{a.name}" %></h4>
+          <p><%= a.description %></p>
+        </li>
+      <% end %>
+    </ul>
+  </fieldset>
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.deduction') %></legend>
+    <ul class="checklist">
+      <% @deduction_calculators.each_with_index do |d,i| %>
+        <% c = d.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <% c = d.is_company_calculator(@company) %>
+          <%= check_box_tag("calculator[list][]",d.id,c)%>
+          <a href="#" class="checkbox-select"><%= t('button.select') %></a>
+          <a href="#" class="checkbox-deselect"><%= t('button.cancel') %></a>
+          <h4><%= "#{d.name}" %></h4>
+          <p><%= d.description %></p>
+        </li>
+      <%end%>
+    </ul>
+  </fieldset>
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.bonus') %></legend>
+    <ul class="checklist">
+      <% @bonus_calculators.each_with_index do |b,i| %>
+        <% c = b.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <% c = b.is_company_calculator(@company) %>
+          <%= check_box_tag("calculator[list][]",b.id,c)%>
+          <a href="#" class="checkbox-select"><%= t('button.select') %></a>
+          <a href="#" class="checkbox-deselect"><%= t('button.cancel') %></a>
+          <h4><%= "#{b.name}" %></h4>
+          <p><%= b.description %></p>
+        </li>
+      <%end%>
+    </ul>
+  </fieldset>
+  <fieldset class="calculator_list">
+    <legend><%= t('calculator.addon') %></legend>
+    <ul class="checklist">
+      <% @addon_calculators.each_with_index do |b,i| %>
+        <% c = b.is_company_calculator(@company) %>
+        <li class="<%= 'selected' if c %>">
+          <% c = b.is_company_calculator(@company) %>
+          <%= check_box_tag("calculator[list][]",b.id,c)%>
+          <a href="#" class="checkbox-select"><%= t('button.select') %></a>
+          <a href="#" class="checkbox-deselect"><%= t('button.cancel') %></a>
+          <h4><%= "#{b.name}" %></h4>
+          <p><%= b.description %></p>
+        </li>
+      <%end%>
+    </ul>
+  </fieldset>
+<%end%>

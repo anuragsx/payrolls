@@ -1,0 +1,14 @@
+class Package < ActiveRecord::Base
+
+  has_many :companies
+  
+  validates_presence_of :name, :code, :fee, :max_employees
+  
+  def descriptive_name
+    "#{name} at #{fee}"
+  end
+ 
+  def to_param
+    "#{name.to_safe_uri}"
+  end
+end

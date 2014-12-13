@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/.gitignore
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/VERSION
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/install.rb
+END
+.document
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/.document
+END
+fiscali.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/fiscali.gemspec
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/.specification
+END
+README.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/589/vendor/gems/asanghi-fiscali-1.2.5/README.markdown
+END

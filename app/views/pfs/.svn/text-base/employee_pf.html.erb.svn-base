@@ -1,0 +1,76 @@
+<% content_for(:page_buttons) do  %>
+  <%if @employee_pf.blank?%>
+    <% link_to(new_employee_pf_path(@employee),:class => 'button') do %>
+  <span><%= t('pf.add_employee') %></span>
+    <% end %>
+  <%else%>
+    <% unless @employee_pf.deleted? %>
+      <% link_to(exit_employee_pf_path(@employee,@employee_pf),:class => 'button') do %>
+        <span><%= t('pf.deregister') %></span>
+      <% end %>
+      <%= link_to(t('button.edit'), edit_employee_pf_path(@employee,@employee_pf), :class => 'edit')%>
+      |
+      <%= link_to(t('button.cancel'), employee_pf_path(@employee,@employee_pf),:confirm=>CONFIRM_DELETE, :method=>:delete, :class => 'cancel')%>
+      |
+      <%= link_to("#{t('button.print')} #{t('common.form')} 3A",employee_pfs_path(@employee,:format =>:pdf))%>
+    <% end %>
+  <%end%>
+<% end %>
+<%unless @employee_pf.blank?%>
+  <div class="group">
+    <table class="details" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <th><%= t('pf.number') %></th>
+          <td><%= @employee_pf.epf_number %></td>
+        </tr>
+        <tr>
+          <th><%= "#{t('common.registration')} #{t('common.date')}" %></th>
+          <td><%= @employee_pf.created_at.to_date.to_s(:rfc822) %></td>
+        </tr>
+        <tr>
+          <th><%= t('pf.match_company_vpf') %></th>
+          <td><%= @employee_pf.match_company_vpf.pretty_print %></td>
+        </tr>
+        <% if @employee_pf.deleted? %>
+          <tr>
+            <th><%= t('pf.removed') %></th>
+            <td><%= @employee_pf.deleted_at.to_date.to_s(:rfc822) %></td>
+          </tr>
+          <tr>
+            <th><%= t('pf.leaving_reason') %></th>
+            <td><%= @employee_pf.exit_reason %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= annual_navigator(employee_pfs_path(@employee,:year => @prev_year),
+                       employee_pfs_path(@employee,:year => @next_year)) %>
+  <table class="list" width="100%">
+    <caption>PF Details for the financial year <%= @this_year.formatted_fy %></caption>
+    <thead>
+      <tr>
+        <th><%= t('common.month') %></th>
+        <th class="numeric"><%= t('common.wages') %></th>
+        <th class="numeric"><%= t('common.employee_contribution') %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%= t('common.total') %></td>
+        <td class="numeric"><%= @slip_presenters.sum(&:total_base_charge) %></td>
+        <td class="numeric"><%= @slip_presenters.sum(&:total_employee_contribution) %></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% @slip_presenters.each do |presenter| %>
+        <tr class="<%= cycle(:alt,"") %>">
+          <td class="head1"><%= presenter.salary_slip.run_date.to_s(:short_month_and_year) %></td>
+          <td class="numeric head2"><%= presenter.total_base_charge %></td>
+          <td class="numeric head3"><%= presenter.total_employee_contribution %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%end%>

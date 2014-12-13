@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed
+END
+command.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed/command.rb
+END
+performable_method.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed/performable_method.rb
+END
+worker.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed/worker.rb
+END
+job.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed/job.rb
+END
+message_sending.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/lib/delayed/message_sending.rb
+END

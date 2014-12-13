@@ -1,0 +1,27 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('insurance.register_for')} #{@date.to_s(:short_month_and_year)}" %></h2>
+  <%= sub_headers %>
+  <%#= render :partial=>'sub_header' %>
+<% end %>
+<% unless @errors.blank? %>
+  <%= activerecord_error_list(@errors) %>
+<% end %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Policy Number</th>
+      <th>Monthly Premium</th>
+      <th>Expiry Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% form_tag(bulk_create_insurances_path,:method=>:post) do %>
+      <div id="insurances">
+        <%= render :partial => 'employee_insurance_policy', :collection => @insurances %>
+      </div>
+      <tr> <th class="submit" colspan="4"> <%= submit_tag 'Submit', :class => "btn"  %> </th> </tr>
+    <% end %>
+  </tbody>
+</table>

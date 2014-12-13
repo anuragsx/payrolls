@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml
+END
+helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml/helper_test.rb
+END
+engine_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml/engine_test.rb
+END
+html2haml_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml/html2haml_test.rb
+END
+template_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml/template_test.rb
+END
+util_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/test/haml/util_test.rb
+END

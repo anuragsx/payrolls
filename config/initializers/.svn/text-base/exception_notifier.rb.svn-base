@@ -1,0 +1,4 @@
+ExceptionNotifier.sender_address =  %W(no-reply@risingsuntech.net)
+ExceptionNotifier.email_prefix = "[Salaree Exception]"
+ExceptionNotifier.exception_recipients = %W(arun.agrawal@risingsuntech.net
+                                            pooja.gupta@risingsuntech.net)

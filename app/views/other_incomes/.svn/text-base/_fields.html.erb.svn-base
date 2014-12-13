@@ -1,0 +1,6 @@
+<%= display_error_messages('other_incomes') %>
+<ul class="form">
+  <%= f.labelled_text_field t('common.amount'), :amount %>
+  <%= f.labelled_text_field "#{t('tax.other_income')} #{t('common.date')}", :created_at, :class => 'datebalks' %>
+  <%= f.labelled_text_field "#{t('tax.already_tax_paid_on_other_income')}", :already_tax_paid_on_other_income %>
+</ul>

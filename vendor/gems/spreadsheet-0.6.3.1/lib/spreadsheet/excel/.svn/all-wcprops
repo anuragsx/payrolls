@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel
+END
+workbook.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/workbook.rb
+END
+internals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/internals.rb
+END
+reader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/reader.rb
+END
+offset.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/offset.rb
+END
+row.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/row.rb
+END
+error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/error.rb
+END
+sst_entry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/sst_entry.rb
+END
+worksheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/worksheet.rb
+END
+writer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer.rb
+END

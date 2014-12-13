@@ -1,0 +1,17 @@
+<tr>
+  <th><%= @this_year.formatted_fy %></th>
+  <th></th>
+  <th class="numeric"><%= lwf_presenters.sum{|x|x.total_employee_lwf_contribution} %></th>
+  <th class="numeric"><%= lwf_presenters.sum{|x|x.total_employer_lwf_contribution} %></th>
+  <th class="numeric"><%= link_to("Form D for #{@this_year}",labour_welfares_path(:period => "Y" + @this_year.to_s,:format => :pdf)) %></th>
+</tr>
+<% lwf_presenters.each do |presenter|  %>
+  <tr class="<%= cycle("",:alt) %>">
+    <td class="head1"><%= link_to(presenter.month_date,labour_welfare_path(presenter.salary_sheet)) %></td>
+    <td class="numeric head1"><%= presenter.total_employees %>
+    <td class="numeric head2"><%= presenter.total_employee_lwf_contribution %></td>
+    <td class="numeric head3"><%= presenter.total_employer_lwf_contribution %></td>
+    <td></td>
+  </tr>
+<% end %>
+

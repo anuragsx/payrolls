@@ -1,0 +1,1446 @@
+@import 'reset.css';
+
+/*
+================================================================================
+CSS Groupings:
+
+- Main Layout Elements
+- Navigation
+- Headers
+- Links
+- Text and General Elements
+- Lists
+- Tables
+- Form Elements
+- Miscellaneous and items from original Override.css file
+- Self Clearing Floats
+
+================================================================================
+Main Layout Elements
+================================================================================
+*/
+
+html {
+  min-width: 1000px;
+}
+body {
+  text-align: left;
+  background: #eee;
+  color: #5E5E5E;
+  height: 100%;
+  line-height: 18px;
+}
+body, table, input, textarea, select {
+  font-family: "Lucida Grande",tahoma,"Helvetica Neue",helvetica,arial,verdana,sans-serif;
+  font-size: 11px;
+}
+#header {
+  background: #333 url(../images/bg_header.gif) 0 0 repeat-x;
+  color: #999;
+}
+#header-inner {
+  padding: 15px 15px 0 15px;
+  height: 33px;
+  overflow: hidden;
+}
+#header h1 {
+  color: #fff;
+  font-size: 18px;
+}
+div.salaree {
+  float: right;
+  margin: -4px 0 0 20px;
+}
+.salaree_logo{
+  width: 164px !important;
+  height: 61px;
+}
+div.log {
+  float: right;
+}
+div.log a {
+  color: #ccc;
+  text-decoration: none;
+}
+div.log a:hover {
+  color: #fff;
+}
+#main-inner {
+  padding: 5px 5px 15px 15px;
+  position: relative;
+}
+#footer-inner {
+  padding: 5px 15px 20px 15px;
+  font-size: 11px;
+  color: #666;
+}
+p.terms {
+  float: right;
+}
+
+div.content {
+  float: right;
+  background: #fff url(../images/bg_content-left.gif) left repeat-y;
+  width: 82%;
+}
+/* The following divs are to make the shadow fluid with the Content div */
+div.c2 {background: url(../images/bg_content-right.gif) right repeat-y;}
+div.c3 {background: url(../images/bg_content-top.gif) top left repeat-x;}
+div.c4 {background: url(../images/bg_content-bottom.gif) bottom left repeat-x;}
+div.c5 {background: url(../images/bg_content-corner-tl.gif) top left no-repeat;}
+div.c6 {background: url(../images/bg_content-corner-tr.gif) top right no-repeat;}
+div.c7 {background: url(../images/bg_content-corner-bl.gif) bottom left no-repeat;}
+div.c8 {background: url(../images/bg_content-corner-br.gif) bottom right no-repeat; min-height: 500px; padding: 27px 10px 0 10px;}
+
+/* Sidebar Specific */
+div.sidebar {
+  width: 18%;
+  padding: 10px 0;
+  float: left;
+  display: inline;
+  z-index: 200;
+}
+div.sidebar div.group {
+  background: #ddd;
+  padding: 15px 15px 6px 15px;
+  margin: 0;
+  border: 0;
+}
+div.scroller {
+  border: #ccc solid 1px;
+  background: #fff;
+}
+div.scroller ul {
+  margin: 0;
+}
+div.scroller ul li {
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+div.scroller ul li a {
+  display: block;
+  padding: 5px 15px;
+  color: #333;
+  text-decoration: none;
+}
+div.scroller ul.employee_name_list {
+  border-top: 1px solid #ccc;
+}
+div.scroller ul.employee_name_list li a:hover {
+  background: #eee;
+}
+div.scroller ul.employee_name_list li.selected_employee a {
+  background: #006699;
+  color: #fff;
+  font-weight: bold;
+}
+div.scroller ul li.divider {
+  padding: 0;
+  border: #ddd solid;
+  border-width: 1px 0;
+  font-size: 11px;
+  color: #666;
+  display: block;
+}
+div.scroller ul li.divider>a {
+  background: #eee url(../images/bg_li-divider.gif) 0 0 repeat-x;
+  padding: 1px 15px;
+  font-weight: bold;
+}
+
+/* Login Page Specific */
+
+body.login #main-inner {
+  padding: 5px 20px 15px 30px;
+  position: relative;
+}
+body.login div.content {
+  float: none;
+  width: 400px;
+  margin: 0 auto;
+}
+body.login div.c8 {
+  min-height: 100px;
+}
+p.forgot {
+  border-top: #ddd solid 1px;
+  padding: 12px 0 0 0;
+}
+
+/* Miscellaneous */
+
+div.company-logo {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border: #ddd solid 1px;
+  margin: 0 0 9px 0;
+  overflow: hidden;
+}
+div.page-header {
+  background: #cdcbcb url(../images/bg_page-header.gif) top left repeat-x;
+  padding: 3px 20px 0 20px;
+  border-bottom: #999 solid 1px;
+}
+div.page-content {
+  padding: 20px;
+}
+div.edit {
+  float: right;
+  color: #999;
+}
+div.group {
+  padding: 15px 15px 0 15px;
+  background: #fff url(../images/bg_group.gif) 0 0 repeat-x;
+  margin: 0 0 18px 0;
+  border-top: #eee solid 1px;
+  border-right: #ddd solid 1px;
+  border-bottom: #ddd solid 1px;
+  border-left: #eee solid 1px;
+}
+div.buttons {
+  float: right;
+  margin: -5px 0 0 0;
+}
+div.flash-msg {
+  float:right;
+  margin:-9px 10px;
+  padding:10px 10px 10px 35px;
+  background-position: 10px 10px; 
+  font-weight: bold;
+  color: #fff;
+}
+.flash-success, .flash-notice {
+  background: #339933 url(../images/icon_checkmark.png) 20px 10px no-repeat;
+}
+.flash-info {
+  background: #336699 url(../images/icon_info.png) 20px 10px no-repeat;
+}
+.flash-error {
+  background: #990000 url(../images/icon_attention.png) 20px 10px no-repeat;
+}
+
+.error_message{
+  font-size: 12px;
+  padding-left: 15px;
+}
+div.flash-msg p {
+  margin: 0;
+}
+.close {
+  float: right;
+}
+.close a, .close a:hover {
+  color: #fff;
+}
+
+div.col {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+div.home-video {
+  text-align: center;
+  margin: 0 0 18px 0;
+}
+
+/* Help Panel */
+
+#help-panel {
+  background: #222;
+  color: #fff;
+  padding: 0;
+  border: #000 solid 2px;
+}
+#help-panel h2 {
+  color: #fff;
+  font-size: 20px;
+  background: url(../images/icon_help-large.png) left no-repeat;
+  padding: 5px 0 5px 32px;
+}
+#help-panel h3 {
+  color: #ccc;
+  font-size: 18px;
+}
+div.help-content {
+  width: 70%;
+  float: left;
+  margin: 0 0 18px 30px;
+}
+div.help-sidebar {
+  width: 20%;
+  float: right;
+  margin: 0 30px 18px 0;
+}
+div.help-close {
+  clear: both;
+  background: #000;
+  padding: 9px 30px;
+  margin: 0 0 18px 0;
+}
+div.help-close a {
+  background: url(../images/icon_close.png) left no-repeat;
+  padding: 3px 0 3px 20px;
+  color: #fff !important;
+}
+#help-panel a {
+  color: #66ccff;
+}
+#help-panel a:hover {
+  color: #fff;
+}
+#help-panel ol li {
+  list-style: decimal;
+  margin: 0 0 0 20px;
+}
+
+/*
+================================================================================
+Navigation
+================================================================================
+*/
+
+#nav {
+  background: #224364 url(../images/bg_nav.gif) 0 -1px repeat-x;
+  border-top: #5181ac solid 1px;
+}
+#nav-inner {
+  padding: 0 20px 0 15px;
+}
+ul.second-nav {
+  float: right;
+  margin: 0;
+}
+ul.second-nav li {
+  float: left;
+  margin: 13px 0 0 25px;
+  list-style: none;
+}
+ul.second-nav li a {
+  color: #ccc;
+  padding: 0;
+  text-decoration: none;
+}
+ul.second-nav li a:hover {
+  color: #fff;
+}
+ul.second-nav li.active a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+ul.main-nav {
+  float: left;
+  margin: 0;
+  height: 45px;
+}
+ul.main-nav li {
+  float: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+ul.main-nav li span {
+  float: left;
+  margin: 3px 0 0 0;
+}
+ul.main-nav li a {
+  padding: 12px 12px 0 30px;
+  float: left;
+  color: #fff;
+  text-decoration: none;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 30px;
+}
+ul.main-nav li.active a {
+  color: #333 !important;
+  font-weight: bold;
+  background-color: transparent;
+}
+ul.main-nav li.active a:hover {
+  background-color: transparent;
+}
+ul.main-nav li.active span {
+  background: #eee url(../images/bg_navlink-span.gif) 0 0 repeat-x;
+}
+ul.main-nav li a:hover {
+  background-color: #224364;
+  color: #fff;
+}
+ul.main-nav li.overview a {
+  background-image: url(../images/navicon_overview.png);
+}
+ul.main-nav li.employees a {
+  background-image: url(../images/navicon_employees.png);
+}
+ul.main-nav li.salary a {
+  background-image: url(../images/navicon_salary.png);
+}
+ul.main-nav li.reports a {
+  background-image: url(../images/navicon_reports.png);
+}
+
+/* Add-ons Dropdown Navigation */
+
+ul.main-nav li.add-ons a {
+  padding: 9px 12px 0 12px;
+  margin: 3px 0 0 0;
+  height: 33px;
+}
+ul.main-nav li.add-ons a span {
+  padding: 0 24px 0 0;
+  background: url(../images/navicon_add-ons.gif) right no-repeat;
+}
+ul.main-nav li.add-ons a:hover, ul.main-nav li.add-ons a.ddmenu-hover {
+  background: #eee url(../images/bg_navlink-span.gif) 0 0 repeat-x;
+  color: #333;
+}
+ul.main-nav li.add-ons a:hover span, ul.main-nav li.add-ons a.ddmenu-hover span {
+  background: url(../images/navicon_add-ons-hover.gif) right no-repeat;
+}
+.main-nav li ul {
+  display: none;
+  list-style: none;
+  margin: 45px 0 0 -20px;
+  z-index: 90;
+  position: absolute;
+  width: 240px;
+  background: transparent url(../images/bg_ul-dropdown.png) bottom left no-repeat;
+  float: left;
+  clear: both;
+  padding: 5px 0 26px 0;
+}
+* html .main-nav li ul {
+  margin: 1px 0 0 -20px;
+}
+*:first-child+html .main-nav li ul {
+  margin: 1px 0 0 -20px;
+}
+.main-nav li ul li {
+  display: inline;
+  float: none !important;
+  margin: 0;
+  list-style: none;
+}
+.main-nav li ul li a {
+  display: block;
+  padding: 5px 10px !important;
+  height: auto !important;
+  background: none !important;
+  color: #006699 !important;
+  float: none !important;
+  margin: 0 25px !important;
+  font-weight: bold;
+}
+.main-nav li ul li a:hover {
+  color: #000 !important;
+  background: #ddd !important;
+}
+
+/* Tabs */
+
+ul.tabs {
+  margin: -3px 0 -1px 0;
+  float: left;
+  background: url(../images/bg_li-tabs.gif) left bottom no-repeat;
+  padding: 0 0 0 1px;
+}
+*:first-child+html ul.tabs {
+  margin: -3px 0 -19px 0;
+}
+* html ul.tabs {
+  margin: -3px 0 -19px 0;
+}
+ul.tabs li {
+  float: left;
+  padding: 0 1px 0 0;
+  margin: 0;
+  list-style: none;
+  background: url(../images/bg_li-tabs.gif) right bottom no-repeat;
+}
+ul.tabs li a {
+  float: left;
+  padding: 6px 7px;
+  text-decoration: none;
+}
+ul.tabs li a:hover {
+  background: #eee;
+}
+ul.tabs li.active a {
+  background: #fff none;
+  border: #999 solid;
+  border-width: 1px 1px 0 1px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Month Nav */
+
+ul.month-nav {
+  margin: 0;
+}
+ul.month-nav li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  float: left;
+}
+ul.month-nav li a {
+  text-decoration: none;
+  padding: 6px 10px;
+  float: left;
+}
+ul.month-nav li a:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
+ul.month-nav li.active a {
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Salary Sheet Options */
+
+div.salary_sheet_actions {
+  float: right;
+  margin: -5px 0 0 0;
+}
+/* Make our nav list display without bullets */
+ul.salary_sheet_options, ul.salary_sheet_options ul { list-style: none; }
+/* Make it display horizontally */
+ul.salary_sheet_options > li {
+  float: left;
+  padding: 0;
+  list-style: none;
+}
+
+/* This is the magic needed to allow the dropdowns to be wider than the
+ * menu headings. Don't ask me exactly how it works :)
+*/
+ul.salary_sheet_options > li      { position: relative; }
+ul.salary_sheet_options > li > ul { position: absolute; }
+
+/* Here's the hover magic. The hover rule isn't strictly necessary, but it
+ * makes it work in (non-IE) browsers with Javascript disabled and CSS
+ * enabled.
+*/
+ul.salary_sheet_options > li > ul       { display: none; }
+ul.salary_sheet_options > li:hover > ul { display: block; }
+
+/* For demonstration purposes. Replace these with your own styles. */
+ul.salary_sheet_options, ul.salary_sheet_options *  { margin: 0; padding: 0; }
+ul.salary_sheet_options li {list-style: none;}
+ul.salary_sheet_options > li > ul { background-color: #fff; text-align: left; padding: 2px; border: #999 solid 1px;}
+
+ul.salary_sheet_options > li > a {
+  padding: 0 10px 0 5px;
+  background: url(../images/bg_link-options.gif) right no-repeat;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+ul.salary_sheet_options > li > ul > li a {
+  text-decoration: none;
+  padding: 2px 5px;
+  display: block;
+}
+ul.salary_sheet_options > li > ul > li a:hover {
+  background: #eee;
+}
+
+/*
+================================================================================
+Headers
+================================================================================
+*/
+
+h2 {
+  font-size: 16px;
+  margin: 0 0 18px 0;
+  color: #000;
+}
+h3 {
+  font-size: 16px;
+  color: #003366;
+  padding: 9px 0;
+}
+div.sidebar h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  font-size: 14px;
+  padding: 0 0 9px 0;
+}
+
+/*
+================================================================================
+Links
+================================================================================
+*/
+
+a {
+  color: #005A8C;
+}
+a:hover {
+  color: #000;
+}
+a.add {
+  background: url(../images/icon_plus.png) left no-repeat;
+  padding: 2px 0 2px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+a.edit {
+  color: #339933;
+}
+a.edit:hover {
+  color: #000;
+}
+a.cancel {
+  color: #990000;
+}
+a.cancel:hover {
+  color: #000;
+}
+a.delete {
+  color: #990000;
+}
+a.delete:hover {
+  color: #000;
+}
+a.help {
+  background: url(../images/icon_help.png) left no-repeat;
+  padding: 3px 0 3px 20px !important;
+  font-weight: bold;
+}
+a.pdf {
+  background: url(../images/icon_pdf.gif) left no-repeat;
+  padding: 3px 3px 3px 20px !important;
+}
+a.print {
+  background: url(../images/icon_print.png) left no-repeat;
+  padding: 3px 3px 3px 20px !important;
+}
+a.excel {
+  background: url(../images/icon_excel.gif) left no-repeat;
+  padding: 3px 3px 3px 20px !important;
+}
+a.prev {
+  background: url(../images/icon_prev.gif) left no-repeat;
+  padding: 3px 3px 3px 12px !important;
+}
+a.next {
+  background: url(../images/icon_next.gif) right no-repeat;
+  padding: 3px 12px 3px 3px !important;
+}
+
+a.button {
+  background: transparent url(../images/bg_button_a.gif) no-repeat scroll top right;
+  color: #fff;
+  display: block;
+  float: left;
+  height: 24px;
+  margin-right: 6px;
+  padding-right: 15px; /* sliding doors padding */
+  text-decoration: none;
+  font-weight: bold;
+}
+a.button span {
+  background: transparent url(../images/bg_button_span.gif) no-repeat;
+  display: block;
+  line-height: 14px;
+  padding: 5px 0 5px 15px;
+}
+a.button:hover {
+  background-position: bottom right;
+  color: #fff;
+  outline: none; /* hide dotted outline in Firefox */
+}
+a.button:hover span {
+  background-position: bottom left;
+}
+
+/*
+================================================================================
+Text and General Elements
+================================================================================
+*/
+
+p {
+  margin: 0 0 18px 0;
+}
+div.sidebar p {
+  margin: 0 0 9px 0;
+}
+p.submit {
+  padding: 18px 0 0 0;
+  background: url(../images/bg_submit.gif) top left repeat-x;
+  padding: 18px 10px;
+}
+.clear{
+  clear:both;
+}
+.imp {
+  font-weight: bolder;
+}
+span.right {
+  float: right;
+}
+span.running {
+  margin-left: 10px;
+  background-color: #BFB547;
+  color: #FFE900;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  font-weight: normal;
+}
+
+/*
+================================================================================
+Lists
+================================================================================
+*/
+
+ul {
+  margin: 0 0 18px 0;
+}
+ul li {
+  list-style-type: disc;
+  margin: 0 0 0 20px;
+}
+
+dl {
+  margin: 0 0 18px 0;
+}
+dl.form dt {
+  font-weight: bold;
+}
+dl.form dd {
+  margin: 0 0 18px 0;
+}
+
+/*
+================================================================================
+Tables
+================================================================================
+*/
+
+table {
+  margin: 0 0 18px 0;
+}
+
+/* General Table Styles */
+
+th.left {
+  text-align: left;
+}
+th.right {
+  text-align: right;
+}
+th.center {
+  text-align: center;
+}
+td.numeric, th.numeric {
+  text-align: right;
+}
+td.block.done {
+  background-color: #DEEFD1;
+}
+
+td.block.cando {
+  background-color: #D1DFEF;
+}
+
+td.block.doing {
+  background-color: #EFEFD1;
+}
+
+td.block.cannotdo {
+  background-color: #EFD6D1;
+}
+table caption {
+  color:#999999;
+  font-size:14px;
+  font-weight:bold;
+  margin-left:12px;
+  padding:5px;
+  text-align:left;
+}
+table .numeric {
+  text-align: right !important;
+}
+
+table.list tr td.head1 {
+  background-color: #FFDFDF;
+  border-bottom: 1px solid #FFCFCF;
+}
+
+table.list tr td.head2 {
+  background-color: #FFEDDF;
+  border-bottom: 1px solid #FFE4CF;
+}
+
+table.list tr td.head3 {
+  background-color: #FFFFDF;
+  border-bottom: 1px solid #EFEFC2;
+}
+
+table.list tbody tr:hover td {
+  background-color: #DFF4FF;
+  color: #cc0000;
+  border-bottom: 1px solid #A7CCDF;
+}
+
+table.list tbody tr:hover td a, table.list tbody tr td a:hover {
+  text-decoration: underline;
+}
+
+table.list tr td a {
+  text-decoration: none;
+}
+
+/* Details Table */
+
+table.details th {
+  padding: 6px 10px 6px 0;
+  white-space: nowrap;
+  width: 20%;
+  color: #003366;
+  text-align: right;
+}
+table.details tr td {
+  padding: 6px 0;
+  color: #333;
+}
+
+/* List Table */
+
+table.list thead th {
+  padding: 6px 10px;
+  border-bottom: #ddd solid 1px;
+  background: #555 url(../images/bg_tr-list.gif) 0 0 repeat-x;
+  color: #fff;
+  text-align: left;
+}
+table.list thead th a {
+  color: #fff;
+}
+table.list tbody tr th {
+  color: #333;
+  padding: 10px;
+  background: #f3f3f3;
+  border-top: #666 solid 1px;
+  border-bottom: #666 solid 1px;
+}
+table.list tr td {
+  padding: 6px 10px;
+  border-bottom: #ccc solid 1px;
+}
+table.list tfoot tr td {
+  background: #ddd;
+  padding: 10px;
+  border-top: #666 solid 2px;
+  font-weight: bold;
+}
+
+/* Activity Table */
+
+table.activity tr td {
+  padding: 6px 10px;
+  border-bottom: #ddd solid 1px;
+}
+table.activity tr td.label {
+  white-space: nowrap;
+  width: 10%;
+}
+table.activity tr td.label .label {
+  color: #fff;
+  padding: 0px 5px;
+  display: block;
+  text-align: center;
+  font-size: 11px;
+}
+.label-added {
+  background: #336699;
+}
+.label-updated {
+  background: #339933;
+}
+
+/*
+================================================================================
+Form Styles
+================================================================================
+*/
+
+div.errors {
+  padding: 20px 20px 2px 45px;
+  color: #990000;
+  margin: 0 0 18px 0;
+  background: url(../images/icon_attention.png) 20px 20px no-repeat;
+  border: #990000 solid 1px;
+}
+div.errors ul {
+  margin: 0 0 18px 20px;
+}
+div.errors ul li {
+  list-style: disc;
+}
+
+ul.form {
+  margin: 0;
+}
+ul.form li {
+  border-bottom: #eee solid 1px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.form li.highlight {
+  background: #eee;
+}
+ul.form label.main {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+ul.form li.highlight label.main {
+  color: #000;
+}
+ul.form div.field {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+ul.form li label.main {
+  font-weight: bold;
+  color: #003366;
+}
+ul.form li.error {
+  background: #ffffcc;
+}
+ul.form li.error label.main {
+  color: #990000;
+}
+.helper {
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  margin: 5px 0;
+}
+ul.form li.highlight .helper {
+  color: #666;
+}
+.star {
+  color: #990000;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  font-family: Georgia, "Times New Roman", Times, Serif;
+}
+
+#employees ul.form {
+  width: 45%;
+  margin: 10px 5px;
+  border: 1px solid;
+  float:left;
+}
+
+/*
+================================================================================
+Form Elements
+================================================================================
+*/
+
+input, textarea {
+  margin: 3px 0;
+  background: #fff url(../images/bg_form-element.gif) 0 0 repeat-x;
+  border: #ccc solid;
+  border-top: #999 solid 1px;
+  border-right: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  border-left: #999 solid 1px;
+  padding: 3px;
+}
+input:focus, textarea:focus {
+  background: #fff;
+}
+input.img {
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+input.btn {
+  color: #006699;
+  font-weight: bold;
+  border: #ccc solid 2px;
+  padding: 8px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #fff url(../images/bg_input-btn.gif) bottom left repeat-x;
+  outline: none;
+  margin: 0 5px 0 0;
+}
+input.btn:hover {
+  color: #000;
+  background: #eee;
+}
+input.checkbox {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  background: none;
+}
+input.datebalks{
+  margin-right:10px!important;
+}
+input#search_box {
+  width: 67%;
+}
+
+select {
+  margin: 3px 0;
+  background: #fff url(../images/bg_form-element.gif) 0 0 repeat-x;
+  border: #ccc solid;
+  border-top: #999 solid 1px;
+  border-right: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  border-left: #999 solid 1px;
+  padding: 3px;
+}
+
+/*
+================================================================================
+Miscellaneous and items from original Override.css file
+================================================================================
+*/
+
+/* New Page Tabs */
+
+div.page-subnav {
+  float: left;
+  width: 20%;
+}
+div.page-subnav ul.tabs {
+  margin: -3px 0 -1px 0;
+  float: none;
+}
+div.page-subnav ul.tabs li {
+  float: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+div.page-subnav ul.tabs li a {
+  float: none;
+  padding: 6px 7px;
+  text-decoration: none;
+  display: block;
+  border-bottom: #ccc solid 1px;
+}
+div.page-subnav ul.tabs li.active a {
+  background: #eee;
+  border: #ccc solid;
+  border-width: 0 0 1px 0;
+}
+div.page-content-with-subnav {
+  float: right;
+  width: 78%;
+}
+
+
+.highlight{
+  background-color:#BEF781;
+}
+
+.select{
+  /* margin-left: 10px; */
+}
+.empty {
+  padding-left: 24px;
+}
+.block {
+  padding: 20px;
+  background: #e3e1d5;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 75px;
+}
+.block:hover {
+  background-color: #ccc;
+}
+.block.q, .block.total {
+  font-weight: bold;
+}
+
+span.contact_card {
+  float: right;
+  padding: 3px;
+  display: none;
+}
+
+ul.employee_name_list li:hover span.contact_card {
+  display: inline;
+}
+
+span.contact_card a, span.contact_card a:hover {
+  background: none !important;
+  padding: 3px 5px 0 5px !important;
+}
+
+.block.total {
+  text-align: right;
+}
+
+#selectable, #selected {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  float: left;
+  /*margin-right: 10px;*/
+  background: #eee;
+  padding-left: 5px;
+  padding-top: 5px;
+  width: 96%;
+}
+#selected li, #selectable li {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 95%;
+  cursor: move;
+}
+.salary_heads {
+  float: left;
+  margin: 8px;
+  padding: 5px;
+  width: 40%;
+  border: #cccccc solid 1px;
+  background: #eee;
+}
+.salary_heads h4{
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.salary_heads .btn{
+  margin: 5px 0 5px 10px;
+}
+#success_notice{
+  padding-left: 5px;
+  font-weight: 600;
+  color: #339933;
+  font-size: 1.2em;
+}
+
+/*styles for styled checkboxes*/
+
+.calculator_list .checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.calculator_list .checklist li {
+  margin: 0 0 2px 0;
+  list-style: none;
+  padding: 10px;
+}
+.calculator_list .checklist li p {
+  margin: 0;
+  float: left;
+  padding: 0;
+}
+.calculator_list .checklist li h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.calculator_list .checklist li.selected {
+  background: #eee;
+  color: #000;
+}
+a.checkbox-select {
+  float: left;
+  width: 35px;
+  background: #fff url(../images/bg_form-element.gif) 0 0 repeat-x;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border: #ccc solid 1px;
+  margin: 0 20px 0 0;
+}
+a.checkbox-select:hover {
+  border: #666 solid 1px;
+}
+.calculator_list .checklist li.selected .checkbox-select {
+  text-indent: -9999px;
+  background: #fff url(../images/icon_checkmark-large.png) center no-repeat;
+  border: #ccc solid 1px;
+}
+.calculator_list .checklist li input {
+  display: none;
+}
+
+a.checkbox-deselect {
+  display: none;
+}
+.calculator_list .checklist li.selected a.checkbox-deselect {
+  display: inline;
+  color: #990000;
+  float: right;
+  background: url(/images/icon_cancel.png) left no-repeat;
+  padding: 0 0 0 20px;
+  margin: 10px 10px 0 0;
+}
+
+fieldset.calculator_list{
+  border: #ccc solid 1px;
+  padding: 5px 10px 10px 10px;
+  margin: 0 0 18px 0;
+}
+.calculator_list legend{
+  font-size: 16px;
+  color: #003366;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.calculator_list p {
+  width: 75% !important;
+}
+
+/*
+================================================================================
+Self Clearing Floats
+================================================================================
+*/
+
+#nav:after,
+div.page-header:after,
+#main:after,
+div.group:after,
+ul.form li:after,
+.calculator_list .checklist li:after,
+ul.month-nav:after,
+#help-panel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* trigger hasLayout and target ie5+6/win only */
+* html #nav,
+* html div.page-header,
+* html #main,
+* html div.group,
+* html ul.form li,
+* html .calculator_list .checklist li,
+* html ul.month-nav,
+* html #help-panel {
+  height: 1%;
+}
+
+/* trigger hasLayout and target ie7/win only */
+*:first-child+html #nav,
+*:first-child+html div.page-header,
+*:first-child+html #main,
+*:first-child+html div.group,
+*:first-child+html ul.form li,
+*:first-child+html .calculator_list .checklist li,
+*:first-child+html ul.month-nav,
+*:first-child+html #help-panel {
+  min-height: 1px;
+}
+
+/* employee card */
+div.employee-card {
+  background: #fff;
+}
+div.card-header {
+  padding: 8px 0 8px 10px;
+  background: #eee url(../images/bg_page-header.gif) bottom left repeat-x;
+  border-bottom: #ddd solid 1px;
+  line-height: 14px;
+}
+div.employee-card a.name {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.employee-card a.close-card {
+  width: 16px;
+  height: 16px;
+  float: right;
+  background: url(../images/icon_close-card.png) 0 0 no-repeat;
+  text-indent: -9999px;
+  margin: -8px 0 0 0;
+}
+div.card-info {
+  padding: 5px 10px 10px 10px;
+}
+ul.employee-details {
+  margin: 0;
+}
+ul.employee-details li {
+  list-style: none;
+  padding: 5px 0 5px 22px;
+  margin: 0;
+  font-size: 12px;
+}
+ul.employee-details li.department {
+  background: url(../images/icon_department.png) left no-repeat;
+}
+ul.employee-details li.salary {
+  background: url(../images/icon_currency.png) left no-repeat;
+}
+div.card-actions {
+  padding: 5px 10px;
+  background: #eee;
+  border-top: #ddd solid 1px;
+}
+div.card-actions ul li {
+  display: inline;
+  list-style: none;
+  float: left;
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+div.card-actions ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #339933;
+}
+div.card-actions ul li a:hover {
+  color: #000;
+}
+div.card-actions ul li.delete {
+  float: right;
+  padding: 0;
+}
+div.card-actions ul li.delete a {
+  width: 16px;
+  height: 16px;
+  float: right;
+  background: url(../images/icon_trash.png) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+div.card-actions ul li.edit {
+  float: right;
+}
+div.card-actions ul li.edit a {
+  width: 16px;
+  height: 16px;
+  float: right;
+  background: url(../images/icon_edit.png) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+.shortcut-highlight{
+  background-image: url(../images/arrow_right.gif) !important;
+  background-repeat: no-repeat !important;
+  background-position: -3px 50% !important;
+}
+/* help */
+div.help {
+  background:#000000 none repeat scroll 0 50%;
+  color:#FFFFFF;
+  font-family:arial,sans-serif;
+  font-weight:bold;
+  overflow:hidden;
+  position:fixed;
+  text-align:center;
+  text-shadow:1px 1px 7px #000000;
+  top:67%;
+  z-index:1002;
+  padding-bottom:9px;
+  padding-right:16px;
+  left:.3%;
+  bottom:.4%;
+}
+.help {
+  -moz-border-radius-bottomleft:10px;
+  -moz-border-radius-bottomright:10px;
+  -moz-border-radius-topleft:10px;
+  -moz-border-radius-topright:10px;
+  opacity:0.85;
+}
+table.wf, table.wd {
+  width:100%;
+}
+.help-subtable {
+  border-collapse:collapse;
+  margin-bottom:0;
+  margin-top:7px;
+}
+.helpk {
+  font-size:100%;
+  text-align:left;
+  white-space:nowrap;
+  padding-left:10px;
+}
+
+.Dp {
+  padding-bottom:0.8ex;
+}
+.helpc {
+  text-align:right;
+  color:#AA0000;
+  cursor:pointer;
+  text-decoration:underline;
+  padding-right:10px;
+}
+.help-mainheading {
+  padding-bottom:0.8ex;
+}
+table.wd {
+  border-top:1px solid #999999;
+  font-size:80%;
+}
+.help-subheading {
+  color:#DDDD00;
+  padding-top:0.8em;
+  text-align:center;
+}
+table.wd td.wg {
+  font-weight:bold;
+  text-align:right;
+  white-space:nowrap;
+}
+table.wd {
+  font-size:100%;
+}
+span.wh {
+  color:#DDDD00;
+  font-family:courier new;
+}
+table.wd td.wg {
+  font-weight:bold;
+  padding-right:0.3em;
+  text-align:right;
+  white-space:nowrap;
+}
+table.wd td.we {
+  font-weight:normal;
+  text-align:left;
+}
+.help-pad-t {
+  padding-top:0.15em;
+  vertical-align:top;
+}
+.help-pad-l{
+  padding-left:20px;
+}
+.help-pad-l-s {
+  padding-left:2px;
+}

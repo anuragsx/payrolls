@@ -1,0 +1,55 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/oauth-plugin/generators/oauth_consumer
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+oauth_consumer_generator.rb
+file
+
+
+
+
+2010-03-13T02:50:27.734375Z
+bc9f4608389dd3266d040683adb4f7dc
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+USAGE
+file
+
+
+
+
+2010-03-13T02:50:27.734375Z
+973667a061494b667f3c701f85be3fbf
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+templates
+dir
+

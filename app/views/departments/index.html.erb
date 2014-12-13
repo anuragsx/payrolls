@@ -1,0 +1,48 @@
+<%= render :partial=>'companies/page_header' %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.name') %></th>
+      <th class="numeric"><%= t('department.employees.number') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @company.departments.each do |department| %>
+      <% unless department.new_record? %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%=link_to(department.name,edit_department_path(department)) %></td>
+          <td class="numeric head2"><%= department.employees.count %></td>
+          <td class="head3">
+            <%= link_to(t('button.delete'), department, :confirm => 'Are you sure?', :method => :delete, :class => 'cancel') if department.deleteable? %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_for(@company.departments.build) do |f| %>
+  <%#= display_error_messages('department') %>
+  <% if @company.errors.any? %>
+        <div id="error_explanation" class="errors">
+          <h2><%= pluralize(@company.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% @company.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+  <% end %>
+  <ul class="form">
+    <li>
+      <%= f.label(:name, :class=>'main') %>
+      <%= f.text_field(:name, :placeholder => "#{t('department.create_new_department')}") %>
+    </li>
+  </ul>
+  <p class="submit">
+    <%= f.submit(t('button.create'), :class=>'btn') %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), company_path(current_account), :class => 'cancel') %>
+  </p>
+<% end %>

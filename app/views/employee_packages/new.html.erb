@@ -1,0 +1,30 @@
+
+<%= form_for(setup_ep(@employee_package),:url => employee_employee_packages_path) do |f| %>
+  <%#= display_error_messages('employee_package') %>
+    <% if @employee_package.errors.any? %>
+        <div id="error_explanation" class="errors">
+          <h2><%= pluralize(@employee_package.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% @employee_package.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+  <ul class="form">
+    <% if @company.package_calculator.nil?%>
+        <%= render :partial => "new_common" , :locals => {:f => f} %>
+    <%else %>
+    <%= render :partial => "new_#{@company.package_calculator.type.downcase}" , :locals => {:f => f} %>
+
+    <%end%>
+  </ul>
+  <p class="submit">
+    <% if @employee.employee_packages.size == 1 %>
+      <%= f.submit t('button.create'), :class => "btn" %>
+    <%else%>
+      <%= f.submit t('common.promote'), :class => "btn" %>
+    <%end%>
+  </p>
+<% end %>

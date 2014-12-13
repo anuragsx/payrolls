@@ -1,0 +1,8 @@
+
+Register new company
+
+Name:   <%= @name %>
+Subdomain:  <%= @subdomain %>
+Email:  <%= @email %>
+Address:  <%= @address %>
+Mobile Number:   <%= @mobile %>

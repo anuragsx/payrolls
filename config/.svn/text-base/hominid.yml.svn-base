@@ -1,0 +1,24 @@
+# Get your API key at http://admin.mailchimp.com/account/api/
+development:
+  username: arunagw
+  password: risingsun123
+  api_key: bd12f589650915f61c837ca30620fc0a-us1
+  send_goodbye: false
+  send_notify: false
+  double_opt: false
+
+test:
+  username:
+  password:
+  api_key: 
+  send_goodbye: false
+  send_notify: false
+  double_opt: false
+
+production:
+  username: arunagw
+  password: risingsun123
+  api_key: bd12f589650915f61c837ca30620fc0a-us1
+  send_goodbye: false
+  send_notify: false
+  double_opt: false

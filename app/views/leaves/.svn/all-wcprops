@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/salaree/!svn/ver/1274/app/views/leaves
+END
+_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1274/app/views/leaves/_fields.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1146/app/views/leaves/index.html.erb
+END
+excel_bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/618/app/views/leaves/excel_bulk.html.erb
+END
+employee_leaves.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1236/app/views/leaves/employee_leaves.html.erb
+END
+bulk.xls.rxls
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/618/app/views/leaves/bulk.xls.rxls
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/741/app/views/leaves/show.html.erb
+END
+_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/546/app/views/leaves/_details.html.erb
+END
+index.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1149/app/views/leaves/index.pdf.prawn
+END
+_leave.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1146/app/views/leaves/_leave.html.erb
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1236/app/views/leaves/bulk.html.erb
+END
+detailed_info.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/546/app/views/leaves/detailed_info.js.erb
+END
+_sub_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/618/app/views/leaves/_sub_header.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/879/app/views/leaves/sheet_view.html.erb
+END
+employee_leaves.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1037/app/views/leaves/employee_leaves.pdf.prawn
+END
+form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1273/app/views/leaves/form.html.erb
+END

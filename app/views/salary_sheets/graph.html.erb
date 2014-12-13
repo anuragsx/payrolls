@@ -1,0 +1,17 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('salary_sheet.salary_sheet_for')} #{@this_year.formatted_fy}" %></h2>
+<% end %>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th class="left"><%= previous_link(@prev_year.formatted_fy,graph_salary_sheets_path(:year => @prev_year)) %></th>
+      <th class="center" colspan="3"><%= "#{t('salary_sheet.salary_sheet_for')} #{@this_year.formatted_fy}" %></th>
+      <th class="right"><%= next_link(@next_year.formatted_fy,graph_salary_sheets_path(:year => @next_year)) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+<%= @graph %>

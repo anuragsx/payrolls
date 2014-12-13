@@ -1,0 +1,12 @@
+<% title "arrear" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @arrear.description %>
+  <%=h @arrear.amount %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_employee_arrear_path(@employee,@arrear) %> |
+  <%= link_to "Destroy", [@employee,@arrear], :confirm =>CONFIRM_DELETE, :method => :delete %> 
+</p>

@@ -1,0 +1,21 @@
+<%= render :partial=>'companies/page_header' %>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('esi.edit'),edit_company_esi_path, :class=>"edit") %>
+  </div>
+<%end%>
+<% title "Company ESI" %>
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('esi.type') %></th>
+        <td><%=h @company_esi.esi_name %></td>
+      </tr>
+      <tr>
+        <th><%= t('esi.number') %></th>
+        <td><%=h @company_esi.esi_number %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

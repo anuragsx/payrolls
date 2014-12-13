@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/Rakefile
+END
+VERSION.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/VERSION.yml
+END
+hominid.yml.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/hominid.yml.tpl
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/MIT-LICENSE
+END
+hominid.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/hominid.gemspec
+END
+README.textile
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/README.textile
+END
+uninstall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/uninstall.rb
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1035/vendor/gems/bgetting-hominid-1.2.0/.specification
+END

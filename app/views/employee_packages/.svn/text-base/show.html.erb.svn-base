@@ -1,0 +1,42 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_employee_package_path(@employee), :class => 'button') do %>
+  <span><%= t('employees.package.promote') %></span>
+  <% end %> or
+  <%= link_to t('employees.package.edit'), edit_employee_employee_package_path(@employee,@employee_package), :class => 'edit' %>
+<% end %>
+
+<div class="group">
+  <h2><u><%= t('employees.package.current_package') %></u></h2>
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>      
+      <%= render :partial => @company.package_calculator.type.downcase , :locals => {:employee_package => @employee_package } %>
+    </tbody>
+  </table>
+</div>
+
+<%unless @employee_packages.size ==1%>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= t('common.period') %></th>
+        <th><%= t('employees.designation') %></th>
+        <th><%= t('employees.package.basic') %></th>
+        <th><%= t('employees.package.estimated_ctc') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% high = "highlight"%>
+      <% @employee_packages.each do |employee_package| %>        
+        <tr class="<%= cycle("",:alt) %> <%= high %> ">
+          <td><%= employee_package.period %></td>
+          <td><%= link_to(employee_package.designation.try(:titleize), employee_employee_package_path(@employee,employee_package)) %></td>
+          <td><%= employee_package.basic %></td>
+          <td><%= link_to(employee_package.ctc,ctc_employee_employee_package_path(@employee,employee_package), :title => "View CTC Description") %></td>
+          <td><%= link_to(t('button.delete'),employee_employee_package_path(@employee, employee_package), :confirm =>CONFIRM_DELETE, :method => :delete, :class=>"delete") %></td>
+        </tr>
+        <% high = ""%>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

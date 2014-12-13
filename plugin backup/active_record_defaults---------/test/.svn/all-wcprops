@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test
+END
+active_record_defaults_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/active_record_defaults_test.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/schema.rb
+END
+abstract_unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/abstract_unit.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/database.yml
+END

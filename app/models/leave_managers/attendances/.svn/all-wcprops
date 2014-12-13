@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1269/app/models/leave_managers/attendances
+END
+attendance_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/1059/app/models/leave_managers/attendances/attendance_calculator.rb
+END
+company_holiday.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1059/app/models/leave_managers/attendances/company_holiday.rb
+END
+attendance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1269/app/models/leave_managers/attendances/attendance.rb
+END
+approval_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1059/app/models/leave_managers/attendances/approval_status.rb
+END
+attendance_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1146/app/models/leave_managers/attendances/attendance_type.rb
+END
+holiday.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1059/app/models/leave_managers/attendances/holiday.rb
+END
+department_holiday.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/1059/app/models/leave_managers/attendances/department_holiday.rb
+END

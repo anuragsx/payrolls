@@ -1,0 +1,69 @@
+class FlexibleAllowance < ActiveRecord::Base
+  HEAD_TYPE = ['Percentage Of Basic', 'Constant']
+
+  belongs_to :company
+  belongs_to :salary_head
+  has_many :salary_slip_charges, :as => :reference
+  belongs_to :category, :polymorphic => true
+  belongs_to :company_flexi_package
+
+  validate :check_percent_value
+  validates :company_id, :salary_head_id, :value,:company_flexi_package_id, :presence => true
+  validates :head_type, :category_id, :category_type, :presence => true
+  validates_inclusion_of :head_type, :in => ['Percentage Of Basic', 'Constant']
+  #validate_on_create :check_existing
+  before_save :check_existing, :set_leave_dependent
+  before_validation_on_create :assign_company
+
+  scope :for_company, lambda{|c|{:conditions => ["company_id = ?",c]}}
+  scope :for_category, lambda{|c|{:conditions => ["category_type = ? and category_id = ?",c.class.name,c]}}
+  scope :for_head, lambda{|c|{:conditions => ["salary_head_id = ?",c]}}
+
+  def field_charge(basic,leave_ratio)
+    fixed_value(basic) * (leave_dependent ? leave_ratio : 1)
+  end
+
+  def fixed_value(basic)
+    head_type == "Percentage Of Basic" ? basic * value / 100.0 : value
+  end
+
+  def self.category_that_can_be_added(company,salary_head,category)
+    allowance= FlexibleAllowance.find_all_by_company_id_and_salary_head_id(company,salary_head,:conditions => "category_type = '#{category}'").length
+    if(category == "Company")
+      return false if allowance >=1
+    else
+      return false if(company.send(category.downcase.pluralize).length == allowance)
+    end
+    return true
+  end
+
+  private
+  def check_percent_value
+    unless value.blank?
+      if (head_type == "Percentage Of Basic" && (value > 100 || value < 1) )
+        errors.add_to_base("Value should be in 1-100 range")
+        false
+      else
+        true
+      end
+    end
+  end
+
+  def check_existing
+    f=FlexibleAllowance.find_by_company_id_and_category_id_and_category_type_and_company_flexi_package_id_and_salary_head_id(company_id,category_id,category_type,company_flexi_package_id,salary_head_id)
+    if f
+      false
+      errors.add_to_base("#{f.category_type} allowances is already created")
+    end
+    true
+  end
+
+  def assign_company
+    self.company_id = self.company_flexi_package.company_id if self.company.blank?
+  end
+  
+  def set_leave_dependent
+    self.leave_dependent = true unless self.leave_dependent
+  end
+
+end

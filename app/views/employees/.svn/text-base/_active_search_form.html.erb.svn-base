@@ -1,0 +1,16 @@
+<div class="group">
+	<h4>Search Employees</h4>
+<% form_for(@search, :method=>:get) do |f|%>
+    <%= f.hidden_field :status_is %>
+    <div class="col">
+    	<p><%= t('employees.name') %>:<br><%= f.text_field :name_like_any %></p>
+    </div>
+    <div class="col">
+    	<p><%= t('employees.department') %>:<br><%= f.collection_select :department_id_equals, @company.departments,
+      :id, :name, :include_blank => true %></p>
+    </div>
+    <div class="col">
+    	<p><%= t('employees.designation') %>:<br><%= f.text_field :employee_packages_designation_like %> <%= image_submit_tag("btn_go.gif", :class=>"img", :value=>"Go")  %></p>
+    </div>
+<% end %>
+</div>

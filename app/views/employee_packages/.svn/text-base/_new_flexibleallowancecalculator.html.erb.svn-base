@@ -1,0 +1,12 @@
+<% @flexi_package =  CompanyFlexiPackage.search(@company,@employee)%>
+<%= render :partial => 'new_common' , :locals => {:f => f} %>
+<% @flexi_package.each do |c| %>
+  <% fields_for "flexi_allowance[#{c.id}]" do |fa| %>
+    <%= fa.hidden_field :company_flexi_package_id, :value => c.id%>
+    <%= fa.hidden_field :salary_head_id, :value => c.salary_head.id%>
+    <%= fa.hidden_field :category_type, :value => 'Employee'%>
+    <%= fa.hidden_field :category_id, :value => @employee.id %>    
+    <%= fa.labelled_text_field "#{c.salary_head.name}", :value %>
+    <%= fa.labelled_select 'Head Type', :head_type, FlexibleAllowance::HEAD_TYPE %>
+  <%end%>
+<%end%>

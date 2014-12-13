@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/1306/app/models/presenters
+END
+income_tax_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1306/app/models/presenters/income_tax_presenter.rb
+END
+salary_sheet_pt_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1066/app/models/presenters/salary_sheet_pt_presenter.rb
+END
+salary_sheet_income_tax_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/1066/app/models/presenters/salary_sheet_income_tax_presenter.rb
+END
+salary_slip_esi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1066/app/models/presenters/salary_slip_esi.rb
+END
+attendance_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1152/app/models/presenters/attendance_presenter.rb
+END
+salary_sheet_pf_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1066/app/models/presenters/salary_sheet_pf_presenter.rb
+END
+slip_pt_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1066/app/models/presenters/slip_pt_presenter.rb
+END
+salary_sheet_gratuity_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1143/app/models/presenters/salary_sheet_gratuity_presenter.rb
+END
+slip_lwf_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1066/app/models/presenters/slip_lwf_presenter.rb
+END
+monthly_attendance_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/1146/app/models/presenters/monthly_attendance_presenter.rb
+END
+salary_slip_pf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1066/app/models/presenters/salary_slip_pf.rb
+END
+sheet_lwf_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1066/app/models/presenters/sheet_lwf_presenter.rb
+END
+salary_slip_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1300/app/models/presenters/salary_slip_presenter.rb
+END
+salary_sheet_esi_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1066/app/models/presenters/salary_sheet_esi_presenter.rb
+END
+salary_sheet_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1190/app/models/presenters/salary_sheet_presenter.rb
+END
+salary_slip_gratuity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1143/app/models/presenters/salary_slip_gratuity.rb
+END
+employee_income_tax_presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1218/app/models/presenters/employee_income_tax_presenter.rb
+END

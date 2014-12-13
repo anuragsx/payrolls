@@ -1,0 +1,24 @@
+<% employee_package = employee.employee_packages.first %>
+<% fields_for "employees[]",employee do |f| %>
+  
+  <%= f.text_field(:name) %>
+  
+  <%= f.hidden_field(:commencement_date) %>
+  
+  <% f.fields_for 'address', employee.address  do |af| %>
+    <%= af.hidden_field(:address_line1) %>
+    <%= af.hidden_field(:city)%>
+  <%end%>
+
+  <% f.fields_for 'employee_packages', employee_package do |pf| %>
+    <%= pf.text_field :designation%>
+    <%= pf.text_field :basic%>
+    <% employee_package.employee_package_heads.each do |eph| %>
+      <% pf.fields_for 'employee_package_heads',eph do |ephf| %>
+        <%= ephf.text_field :salary_head_id %>
+        <%= ephf.text_field :amount %>
+      <% end %>
+    <% end %>
+  <%end%>
+<% end %>
+

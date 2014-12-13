@@ -1,0 +1,42 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_loan_path(@employee),:class => 'button') do %>
+    <span><%= "#{t('common.add')} #{t('common.loans')}" %></span>
+  <% end %>
+<% end %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= t('loan.emi') %></th>
+      <th class="numeric"><%= t('loan.remaining.amount') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @loans.each_with_index do |loan, index| %>
+      <tr>
+        <th><%= link_to "Loan #{index+1}", edit_employee_loan_path(@employee, loan) %></th>
+        <th class="numeric">
+          <%= loan.effective_loan_emis.last.amount %>
+          <%= link_to t('loan.change_emi'), new_employee_loan_emi_override_path(@employee,loan), :class => 'edit' %>
+        </th>
+        <th class="numeric"><%= loan.loan_amount.round(2) %></th>
+      </tr>
+      <%unless loan.billed_charges.blank?%>
+        <% loan.billed_charges.each_with_index do |charge,i| %>
+          <tr class="<%= cycle("",:alt) %>">
+            <td class="head1"><%= charge.salary_sheet.formatted_run_date %></td>
+            <td class="numeric head2"><%= charge.amount.abs.round %></td>
+            <td class="numeric head3"><%= (charge.base_charge + charge.amount).round %></td>
+          </tr>
+        <%end%>
+      <% end %>
+      <tr>
+        <th class="numeric">Total Paid</th>
+        <th class="numeric"><%= loan.total_paid.abs.round(2) %></th>
+        <th colspan="3"><%= horizontal_graph [["Received Amount",calculate_percent(loan.total_paid.abs.round(2),loan.loan_amount.round(2)),loan.total_paid.abs.round(2),loan.loan_amount.round(2)]] %></th>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

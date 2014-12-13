@@ -1,0 +1,32 @@
+<%= render :partial=>'companies/page_header' %>
+<% unless @company_flexi_packages.blank? %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+
+    <tr>
+      <th>S.No.</th>
+      <th>Salary Head</th>
+      <th>Lookup Expression</th>
+      <th>Position</th>
+    </tr>
+
+    <%@company_flexi_packages.each_with_index do |packages,i| %>
+
+      <tr class="<%= cycle("",:alt) %>">
+        <td><%= i+1%></td>
+        <td><%= packages.salary_head.name %></td>
+        <td><%= packages.lookup_expression %></td>
+        <td><%= packages.position %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<p>
+  <% unless @company_allowances.blank?  %>
+    <%= link_to 'Add New',new_company_flexi_package_path %>
+  <%end%>
+  <% unless @company_flexi_packages.blank?  %>
+    <%= link_to 'Edit',edit_company_flexi_package_path(@company) %>
+  <%end%>
+
+</p>

@@ -1,0 +1,88 @@
+class EmployeeLoan < ActiveRecord::Base
+  extend ActiveSupport::Memoizable
+  
+  belongs_to :employee
+  belongs_to :company
+  has_many :effective_loan_emis, :dependent => :destroy
+  has_many :salary_slip_charges, :as => :reference
+
+  validates :loan_amount, :employee_id, :company_id, :presence => true
+  validates :loan_amount, :greater_than => 0, :numericality => { :only_integer => true }
+  accepts_nested_attributes_for :effective_loan_emis, :allow_destroy => true
+
+  scope :for_employee, lambda{|e|{:conditions => ["employee_id = ?",e]}}
+  scope :after_date, lambda{|d|{:conditions => ["created_at < ?",d]}}
+  scope :in_month, lambda{|d|{:conditions => ["month(created_at) = ? and year(created_at) = ?",d.month,d.year]}}
+  scope :in_fy, lambda{|d|
+    start_date = Date.financial_year_start(d)
+    end_date = start_date.end_of_financial_year
+    {:conditions => ["created_at >= ? and created_at <= ?",start_date,end_date]}
+  }
+
+  def validate
+    effective_loan_emis.each do |emi|
+      errors.add_to_base("EMI must be less than Loan Amount") unless loan_amount && emi.amount && loan_amount > emi.amount
+    end
+  end
+
+  attr_accessor :run_date
+
+  def my_charges
+    salary_slip_charges.billed
+  end
+
+  def total_paid
+    my_charges.billed.sum(:amount).abs.round(2)
+  end
+  memoize :total_paid
+
+  def billed_charges
+    my_charges.all
+  end
+
+  def paid_up?
+    total_paid >= loan_amount
+  end
+
+  def self.active_loans_for_employee(employee,run_date)
+    for_employee(employee).after_date(run_date).select{|loan| !loan.paid_up?}
+  end
+
+  def self.create_multi(attributes,company,date=Date.today)
+    errors = []
+    attributes.reject{|a|a['loan_amount'].blank? or a['loan_amount'].to_i == 0}.each do |attr|
+      transaction do
+        e = self.new(attr)
+        e.created_at = date
+        e.company = company
+        unless e.save
+          errors << e.errors.to_a
+        end
+      end
+    end
+    errors.uniq
+  end
+
+  def total_remaining
+    loan_amount - total_paid
+  end
+  memoize :total_remaining
+
+  def approximate_completion_months
+    (total_remaining / effective_emi).ceil
+  end
+
+  def effective_emi(run_date=Date.today)
+    effective_loan_emis.for_date(run_date).first.try(:amount)
+  end
+  memoize :effective_emi
+
+  def description
+    "Loan of amount #{loan_amount}, paid off #{total_paid}, remaining #{total_remaining}, emi for this month #{effective_emi(run_date).round(2)}"
+  end
+
+  def effective_deduction
+    return [total_remaining,effective_emi(run_date)].min
+  end
+
+end

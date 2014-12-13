@@ -1,0 +1,88 @@
+<%= form_for(setup_company(@company), :url=> package_accounts_path) do |f| %>
+  <div class="group">
+    <div class="group-inner">
+      <h3>Create your Payroll Site Address</h3>
+      <h4 id="subdomain" class="empty">http:// <%= f.text_field(:subdomain, :class => "title subdomain", :size => 20) %> .payrollmaster.com <span id="subdomain_msg"></span></h4>
+      <p>Every Payrollmaster.com account has its own unique web address where you'll login. Enter something that is convenient and easy to remember. Letters and numbers only, no spaces and keep it lowercase.</p>
+      <h3>Create your payrollmaster.com Account</h3>
+      <ul class="form">
+        <%= f.fields_for :owner do |o| %>
+          <li></li>
+
+            <li>
+              <%= f.label 'Company', :class=>'main'%>
+              <div class="field">
+                <%= f.text_field(:name, :class=> 'text_field') %>
+                <%= content_tag(:span, 'E.g. Acme Industries Pvt. Ltd.', :class=>'helper')%>
+              </div>
+
+
+
+         </li>
+         <li></li>
+          <li>
+            <%= f.label 'Username', :class=>'main'%>
+            <div class="field">
+                <%= o.text_field(:login, :class=> 'text_field')  %>
+                <%= content_tag(:span, "A short name like 'admin' that will easily identify you", :class=>'helper')%>
+            </div>
+          <li>
+
+
+
+          <li>
+            <%= f.label 'Email', :class=>'main'%>
+            <div class="field">
+              <%= o.text_field(:email, :class=> 'text_field') %>
+              <%= content_tag(:span, 'Make sure you can reach it, since we will send your credentials and important information there', :class=>'helper')%>
+            </div>
+          </li>
+
+          <li>
+            <%= f.label 'Password', :class=>'main'%>
+            <div class="field">
+              <%= o.password_field(:password, :class=> 'text_field') %>
+              <%= content_tag(:span, 'Keep it secret, do not share it with anyone and change it often', :class=>'helper')%>
+            </div>
+          </li>
+
+          <li>
+            <%= f.label 'Confirm Password', :class=>'main'%>
+            <div class="field">
+              <%= o.password_field(:password_confirmation, :class=> 'text_field') %>
+            </div>
+          </li>
+
+
+          <%= less_reverse_captcha_field :user %>
+          <%= o.fields_for :address do |add| %>
+
+            <li>
+              <%= f.label 'State', :class=>'main'%>
+              <div class="field">
+                <%= add.select(:state, state_options_for_select('Rajasthan',COUNTRY),:class=> 'text_field') %>
+              </div>
+            </li>
+
+            <li>
+              <%= f.label 'Mobile Number', :class=>'main'%>
+              <div class="field">
+                <%= add.text_field(:mobile_number, :note => '+91XXXXXXXXXX', :class=> 'text_field') %>
+                <%= content_tag(:span, '+91XXXXXXXXXX', :class=>'helper')%>
+              </div>
+            </li>
+           </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <p><%= submit_tag("Save",:class=>"signup")%></p>
+<%end%>
+<%= javascript_include_tag 'signup.js'%>
+<script>
+    jQuery( document ).ready(function() {
+        jQuery('form').highlight();
+    });
+
+</script>

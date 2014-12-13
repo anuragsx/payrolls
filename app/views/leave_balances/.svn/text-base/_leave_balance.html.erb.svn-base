@@ -1,0 +1,7 @@
+<% fields_for "leave_balance[]", leave_balance, :index => nil do |f| %>
+  <%=  f.labelled_text_field "#{leave_balance.leave_type} Current Balance for #{leave_balance.financial_year}", :current_balance %>
+  <%= f.hidden_field :id %>
+<%end%>
+
+
+

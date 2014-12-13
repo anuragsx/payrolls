@@ -1,0 +1,28 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "Labour Welfare Registor #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<%= annual_navigator(labour_welfares_path(:year => @prev_year),labour_welfares_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.employee_contribution') %></th>
+      <th class="numeric"><%= t('common.employers_contribution') %></th>
+      <th class="numeric"></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><b><%= "#{t('common.total')}" %></b></td>
+      <td class="numeric"></td>
+      <td class="numeric"><%= @lwf_presenters.sum{|x|x.total_employee_lwf_contribution} %></td>
+      <td class="numeric"><%= @lwf_presenters.sum{|x|x.total_employer_lwf_contribution} %></td>
+      <td class="numeric"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <%= render :partial => "#{get_partial(@count)}",:locals => {:lwf_presenters => @lwf_presenters}unless @count.blank?   %>
+  </tbody>
+</table>

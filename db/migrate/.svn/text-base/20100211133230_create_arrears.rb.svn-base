@@ -1,0 +1,21 @@
+class CreateArrears < ActiveRecord::Migration
+  def self.up
+    create_table :arrears do |t|
+      t.integer :employee_id
+      t.integer :company_id
+      t.integer :salary_slip_id
+      t.float :amount
+      t.string :description
+      t.date :arrear_at
+      t.timestamps
+    end
+    ArrearCalculator.create!(:type => "ArrearCalculator",
+                             :name => "Arrear",:calculator_type => "Allowance",
+                             :description => "This calculator allows the business to give an arrear to an employee.The amount of the arrears is the amount accrued from the date on which the first missed payment was due.")
+    SalaryHead.create!(:name => "Arrear",:code => "arrear",:tax_formula => "TaxFormula")
+  end
+
+  def self.down
+    drop_table :arrears
+  end
+end

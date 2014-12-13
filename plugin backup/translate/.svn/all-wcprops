@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/salaree/!svn/ver/153/vendor/plugins/translate
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/153/vendor/plugins/translate/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/153/vendor/plugins/translate/.gitignore
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/153/vendor/plugins/translate/init.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/153/vendor/plugins/translate/MIT-LICENSE
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/153/vendor/plugins/translate/README
+END

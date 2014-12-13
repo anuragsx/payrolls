@@ -1,0 +1,13 @@
+<tbody>
+  <% lwf_presenters.each do |presenter|  %>
+    <tr class="<%= cycle("",:alt) %>">
+      <td class="head1"><%= link_to(presenter.month_date,labour_welfare_path(presenter.salary_sheet)) %></td>
+      <td class="numeric head1"><%= presenter.total_employees %>
+      <td class="numeric head2"><%= presenter.total_employee_lwf_contribution %></td>
+      <td class="numeric head3"><%= presenter.total_employer_lwf_contribution %></td>
+      <td><%= link_to("Form D",labour_welfares_path(:period => presenter.run_date,:format => :pdf)) %></td>
+    </tr>
+  <% end %>
+</tbody>
+
+

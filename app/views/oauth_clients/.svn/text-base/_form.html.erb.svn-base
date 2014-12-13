@@ -1,0 +1,9 @@
+<%= display_error_messages('client_application') %>
+<ul class="form">
+  <%= f.labelled_text_field "Name", :name %>
+  <%= f.labelled_text_field "Main Application URL",:url%>
+  <%= f.labelled_text_field "Callback URL",:callback_url%>
+  <%= f.labelled_text_field "Support URL", :support_url %>
+</ul>
+
+

@@ -1,0 +1,28 @@
+sheet1 = workbook.create_worksheet
+sheet1.name = "Bonus Register"
+format = Spreadsheet::Format.new :color => :blue,
+                                 :weight => :bold,
+                                 :size => 18,
+                                 :horizontal_align =>  :default
+f2 = Spreadsheet::Format.new :weight => :bold,
+                             :size => 12 
+f3 = Spreadsheet::Format.new :color => :blue,
+                             :size => 11                           
+
+sheet1.row(0).push @company.name.titleize if @company
+sheet1.row(1).push "Bonus Register for #{@bonuses.first.charge_date.year}"
+sheet1.row(0).default_format = format
+sheet1.row(1).default_format = f2
+sheet1.row(3).default_format = f3
+sheet1.row(3).push  "Name","Amount","Base Charge"
+
+index = 4
+
+@bonuses.each do |bonus|  
+    sheet1.row(index).push Employee.find_by_id(bonus.reference_id).name , bonus.amount,bonus.base_charge    
+    index += 1
+end
+
+
+
+

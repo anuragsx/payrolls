@@ -1,0 +1,7 @@
+<% fields_for "advances[]", advance, :index=>nil do |f| %>
+  <tr>
+    <td><%= advance.employee.name %><%= f.hidden_field(:employee_id) %></td>
+    <td><%= f.text_field(:amount) %></td>
+    <td><%= f.text_field(:description) %></td>
+  </tr>
+<% end %>

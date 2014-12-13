@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "salaree.com  -- Your business deserves painless payroll") %></title>
+    <%= stylesheet_link_tag 'screen' %>
+    <%= javascript_include_tag :defaults, 'jquery-1.3.2.min','jquery.highlight','jquery.single-ddm.pack' %>
+    <!--[if IE 6]>
+            <script type="text/javascript" src="javascripts/DD_belatedPNG.js"></script>
+            <script>
+            DD_belatedPNG.fix('.png_bg, img, .main-nav li a');
+            </script>
+    <![endif]-->
+    <%= yield(:head) %>
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <body class="login">
+    <div id="header">
+      <div id="header-inner">
+        <div class="salaree">
+          <%= link_to(image_tag("salaree_logo.png", :alt=>"Salaree.com"),  root_url(:subdomain => false), :target => "_blank") %>
+        </div>
+        <%= render :partial => 'shared/flash_display', :locals => {:flash => flash} %>
+        <div class="company">
+          <h1><%= company_header(@company) %></h1>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="main-inner">
+        <div class="content">
+          <div class="c2">
+            <div class="c3">
+              <div class="c4">
+                <div class="c5">
+                  <div class="c6">
+                    <div class="c7">
+                      <div class="c8">
+                        <div class="page-header">
+                          <div class="buttons">
+                            <%= yield(:page_buttons) %>
+                          </div>
+                          <%= yield(:page_header) %>
+                        </div>
+                        <div class="page-content">
+                          <%= yield %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

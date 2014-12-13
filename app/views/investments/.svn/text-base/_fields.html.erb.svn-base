@@ -1,0 +1,6 @@
+<%= display_error_messages('employee_investment80c') %>
+<ul class="form">
+  <%= f.labelled_collection_select "#{t('tax.investment')} #{t('tax.scheme')}", :employee_investment_scheme_id, EmployeeInvestmentScheme.all, :id, :name %>
+  <%= f.labelled_text_field t('common.amount'), :amount %>
+  <%= f.labelled_text_field "#{t('tax.investment')} #{t('common.date')}", :created_at, :class => 'datebalks' %>
+</ul>

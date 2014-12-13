@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1213/app/views/professional_taxes
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1213/app/views/professional_taxes/index.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/977/app/views/professional_taxes/show.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/982/app/views/professional_taxes/sheet_view.html.erb
+END

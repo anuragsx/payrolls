@@ -1,0 +1,44 @@
+<% content_for(:page_header) do  %>
+  <h2>Leaves for <%= @date.to_s(:month_and_year) %></h2>
+  <%= sub_headers %>
+  <%#= render :partial=>'sub_header' %>
+<% end %>
+<% unless @errors.blank? %>
+  <%= activerecord_error_list(@errors) %>
+<% end %>
+
+<div>
+  <span class="right"><%= next_link(@next_month.to_s(:short_month_and_year),bulk_new_salary_sheet_leafe_path(@next_month.to_s(:for_param))) %></span>
+  <%= previous_link(@prev_month.to_s(:short_month_and_year),bulk_new_salary_sheet_leafe_path(@prev_month.to_s(:for_param))) %>
+</div>
+
+<% unless @leaves.blank? %>
+  <% form_tag(bulk_create_leaves_path,:method=>:post) do %>
+    <table cellpadding="0" cellspacing="0" width="100%" class="list">
+      <thead>
+        <tr>
+          <th><%= t('employees.name') %></th>
+          <th><%= t('leaves.present') %></th>
+          <th><%= t('leaves.absent') %></th>
+          <th><%= t('leaves.casual_leaves') %></th>
+          <th><%= t('leaves.privilege_leave') %></th>
+          <th><%= t('leaves.sick_leaves')%></th>
+          <th><%= t('leaves.late_hours') %></th>
+          <th><%= t('leaves.overtime') %></th>
+          <th><%= t('leaves.extra_work_days') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% content_tag(:div,:id =>'leaves') do %>
+          <%= render :partial=>'leave',:collection => @leaves %>
+        <% end %>
+      </tbody>
+    </table>
+    <%= submit_tag t('button.submit'),:class => "btn"  %>
+  <% end %>
+<% end %>
+<% form_tag(excel_bulk_create_leaves_path, :method => :post, :multipart => true) do %>
+  <strong>Import from Excel</strong>
+  <%= file_field_tag 'excel_file' %>
+  <%= submit_tag 'Upload' %>
+<% end %>

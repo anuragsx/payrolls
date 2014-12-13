@@ -1,0 +1,27 @@
+sheet1 = workbook.create_worksheet
+sheet1.name = "ESI Register"
+format = Spreadsheet::Format.new :color => :blue,
+                                 :weight => :bold,
+                                 :size => 18,
+                                 :horizontal_align =>  :default
+f2 = Spreadsheet::Format.new :weight => :bold,
+                             :size => 12 
+f3 = Spreadsheet::Format.new :color => :blue,
+                             :size => 11                           
+
+sheet1.row(0).push @company.name.titleize
+sheet1.row(1).push "Salary Sheet for the month #{@presenter.month_date}"
+sheet1.row(0).default_format = format
+sheet1.row(1).default_format = f2
+sheet1.row(3).default_format = f3
+sheet1.row(3).push  "Name","Department","Basic","Employees' Total"
+
+index = 5
+@presenter.slips.each do |slip|
+  employee = slip.salary_slip.employee
+  sheet1.row(index).push(employee.name,employee.department.name,
+                         slip.total_base_charge,slip.total_employee_contribution
+                         )
+     index += 1
+end
+

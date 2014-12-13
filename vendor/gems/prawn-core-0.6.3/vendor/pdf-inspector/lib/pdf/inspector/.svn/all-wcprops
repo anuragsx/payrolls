@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector
+END
+xobject.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector/xobject.rb
+END
+graphics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector/graphics.rb
+END
+text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector/text.rb
+END
+extgstate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector/extgstate.rb
+END
+page.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/vendor/pdf-inspector/lib/pdf/inspector/page.rb
+END

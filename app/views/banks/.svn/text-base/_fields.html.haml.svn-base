@@ -1,0 +1,6 @@
+%ul.form
+  = display_error_messages('bank')
+  = f.labelled_text_field(t('bank.name'),:name)
+  = f.labelled_text_field(t('bank.account_number'),:company_account_number)
+  - f.fields_for(:address) do |a|
+    = render(:partial => 'companies/address_form', :locals => {:aform => a,:address => @address})

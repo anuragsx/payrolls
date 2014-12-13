@@ -1,0 +1,42 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to("EMI Sheet", emis_salary_sheet_loans_path(@salary_sheet, :format => :pdf)) %>
+<% end unless @charges.empty? %>
+<% content_for(:page_header) do %>
+  <h2><%=h "EMI Register for #{@salary_sheet.run_date.to_s(:short_month_and_year)}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+
+<%= month_navigator('salary_sheet_loans_path','bulk_new_salary_sheet_loan_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Employee</th>
+      <th class="numeric">Loan Amount</th>
+      <th class="numeric">Total Remaining Previously</th>
+      <th class="numeric">EMI</th>
+      <th class="numeric">Remaining Loan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% total_remaining = 0; total_loaned = 0; remaining = 0; @charges.each_with_index do |charge,i|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= i+1 %></td>
+        <td class="head1"><%= link_to(charge.employee.name,employee_loans_path(charge.employee)) %></td>
+        <td class="numeric head2"><%= charge.reference.loan_amount %><% total_loaned += charge.reference.loan_amount  %></td>
+        <td class="numeric head2"><%= charge.base_charge %><% total_remaining += charge.base_charge  %></td>
+        <td class="numeric head3"><strong><%= charge.amount.abs %></strong></td>
+        <td class="numeric head3"><strong><%=  charge.base_charge - charge.amount.abs %><% remaining += charge.base_charge - charge.amount.abs %></strong></td>
+      </tr>
+    <%end%>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"><b>Grand Total</b></td>
+      <td class="numeric"><b><%= total_loaned %></b></td>
+      <td class="numeric"><b><%= total_remaining.abs %></b></td>
+      <td class="numeric"><b><%= @charges.to_a.sum(&:amount).abs  %></b></td>
+      <td class="numeric"><b><%= remaining  %></b></td>
+    </tr>
+  </tfoot>
+</table>

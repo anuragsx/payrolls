@@ -1,0 +1,28 @@
+<% content_for(:page_header) do  %>
+  <h2><%= t('common.attendance_sheet')%> <%= @this_year %></h2>
+<% end %>
+
+<%=annual_navigator(attendances_path(:year => @prev_year),attendances_path(:year => @next_year))%>
+<table cellpadding="0" cellspacing="0" width="100%" class="list"> 
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @this_year.calendar_months do |date| %>
+      <tr class="<%= cycle("",:alt) %>">
+        <% link_name = date.to_s(:short_month_and_year) %>
+        <th>
+          <%= @salary_sheets[date.month] ?link_name :
+            link_to(date.to_s(:short_month_and_year),bulk_attendance_path(date.to_s(:to_param)))
+        %>
+        </th>
+        <th>
+          <%= link_to(t('button.print'),bulk_attendance_path(date,:format => :pdf)) %>
+        </th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

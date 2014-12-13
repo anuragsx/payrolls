@@ -1,0 +1,7 @@
+<% form_for @employee_esi, :url=> employee_esis_path(@employee) do |form| %>
+  <%= render :partial=>'form', :locals=>{:f=>form} %>
+  <p class="submit">
+    <%= form.submit t('common.save'), :class=>"btn" %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('common.cancel'), employee_esis_path(@employee),:class =>'cancel') %>
+  </p>
+<% end %>

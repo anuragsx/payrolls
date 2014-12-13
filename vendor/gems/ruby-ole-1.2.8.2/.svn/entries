@@ -1,0 +1,88 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/ruby-ole-1.2.8.2
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:52:33.515625Z
+4a17d69513a4fad5fdd5fba28f2c0e57
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+lib
+dir
+
+ChangeLog
+file
+
+
+
+
+2010-03-13T02:52:33.531250Z
+483bd07b3cf9214b2eacada66e9b09b0
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+bin
+dir
+
+data
+dir
+
+README
+file
+
+
+
+
+2010-03-13T02:52:33.546875Z
+d022b9642f5428e263f88afbb8985892
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+.specification
+file
+
+
+
+
+2010-03-13T02:52:33.562500Z
+7685e93a7a66b797a764d3f21437fdad
+2009-07-16T13:41:57.691684Z
+148
+swativ
+

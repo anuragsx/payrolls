@@ -1,0 +1,33 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "Professional Tax Register #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<% content_for(:page_buttons) do  %>
+  <%= link_to 'Form5', professional_taxes_path(:format => :pdf) if @company_pt%>
+<% end %>
+<%= annual_navigator(professional_taxes_path(:year => @prev_year),professional_taxes_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= t('common.employees') %></th>
+      <th class="numeric">Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td class="numeric"></td>
+      <td class="numeric"><%= @presenters.sum{|d|d.grand_total_pt} %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @presenters.each do |presenter|  %>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= link_to(presenter.month_date,salary_sheet_professional_taxes_path(presenter.salary_sheet)) %></td>
+        <td class="numeric head2"><%= presenter.total_employees %>
+        <td class="numeric head3"><%= presenter.grand_total_pt %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

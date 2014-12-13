@@ -1,0 +1,30 @@
+<div class="scroller">
+  <% if @company.active_employees.blank? %>
+  <div class="import_employees">
+    <p><strong><%= t('employees.messages.no_employee') %></strong></p>
+    <p class="forgot">If you wish, please <%= link_to('download this sample excel file', '/employees.xls') %> to assist in bulk upload of data.</p>
+    <% form_tag(import_employees_path, :multipart => true) do %>
+      <dl class="form">
+        <dt><label for="file_import" class="main">Import File</label></dt>
+        <dd><%= file_field_tag(:excel_file) %></dd>
+      </dl>
+      <p><%= submit_tag("Upload", :class => "btn")  %></p>
+    <% end %>
+  </div>
+  <% else %>
+    <ul id="employee_accordion">
+      <% all_active_employees do |k,values| %>
+        <li class="divider <%= "current" if values.include?(@employee) %>"><%= link_to(k,'#') %>
+          <ul class="employee_name_list" id="<%= "#{k}_names" %>">
+            <% values.each do |e| %>
+              <li class="<%= employee_active?(e) %>">
+                <span class="contact_card" id="card"><%= link_to(image_tag("user_red.png"),e,:rel=> identity_card_employee_path(e))%></span>
+                <%= link_to(highlight_lastname(e.name),e) %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

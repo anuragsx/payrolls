@@ -1,0 +1,45 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to("#{t('common.tds')} #{t('tax.challan')}",tds_challan_salary_sheet_income_tax_path(@salary_sheet, :format => :pdf)) %>|
+  <%= link_to(t('button.print'),income_tax_path(@presenter.salary_sheet, :format => :pdf)) %>
+<% end %>
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('common.income')} #{t('common.tax')} #{t('common.register_for')} #{@salary_sheet.formatted_run_date}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+<%= month_navigator('income_tax_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.employee') %></th>
+      <th><%= "#{t('common.income')} #{t('common.tax')}" %></th>
+      <th class="numeric"><%= t('common.edu_cess') %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.income')} #{t('common.tax')}" %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><%= "#{t('common.totals')} #{t('common.employees')} #{@presenter.total_employees}" %></td>
+      <td class="numeric"><%= @presenter.total_tax %></td>
+      <td class="numeric"><%= @presenter.total_edu_cess %></td>
+      <td class="numeric"><%= @presenter.total_tds %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @presenter.departments.each do |dept| %>
+      <tr>
+        <th><%= dept[:name] %></th>
+        <th class="numeric"><%= dept[:total_tax] %></th>
+        <th class="numeric"><%= dept[:total_edu_cess] %></th>
+        <th class="numeric"><%= dept[:total_tds] %></th>
+      </tr>
+      <% dept[:slips].each do |slip| %>
+        <tr>
+          <td class="head1"><%= link_to(slip[:name],employee_tax_details_path(slip[:employee])) %></td>
+          <td class="numeric head2"><%= slip[:tax] %></td>
+          <td class="numeric head3"><%= slip[:edu_cess] %></td>
+          <td class="numeric"><%= slip[:tds] %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

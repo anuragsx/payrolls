@@ -1,0 +1,22 @@
+<tr>
+  <th><%= t('employees.designation') %></th>
+  <td><%= employee_package.designation.try(:titleize) %></td>
+</tr>
+<tr>
+  <th><%= "#{t('common.start')} #{t('common.date')}" %></th>
+  <td><%= employee_package.start_date.to_s(:date_month_and_year) %></td>
+</tr>
+<% unless employee_package.end_date == Date.new(9999,12,30)  %>
+  <tr>
+    <th><%= "#{t('common.end')} #{t('common.date')}" %></th>
+    <td><%= employee_package.end_date.to_s(:date_month_and_year) %></td>
+  </tr>
+<%end%>
+<tr>
+  <th><%= t('employees.package.basic') %></th>
+  <td><%= employee_package.basic %></td>
+</tr>
+<tr>
+  <th><%= link_to(t('employees.package.estimated_ctc'),ctc_employee_employee_package_path(@employee,employee_package), :title => "View CTC Description") %></th>
+  <td><%= employee_package.ctc %></td>
+</tr>

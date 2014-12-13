@@ -1,0 +1,2 @@
+<% title "Editing lta" %>
+<%= render :partial => 'form' %>

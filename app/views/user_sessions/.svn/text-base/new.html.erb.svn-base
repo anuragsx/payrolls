@@ -1,0 +1,19 @@
+<% content_for(:page_header) do %>
+  <h2>Log in to your account</h2>
+<% end %>
+<% if @company.try(:logo_file_name) %>
+  <div class="company-logo">
+    <%= company_icon @company,:medium %>
+  </div>
+<%end%>
+
+<% form_for @user_session, :url => user_session_path(:company => @company) do |f| %>
+  <dl class="form">
+    <dt>Username</dt>
+    <dd><%= f.text_field :login,:wrap=>{:class=>""} %></dd>
+    <dt>Password</dt>
+    <dd><%= f.password_field  :password,:class=>"password_field",:wrap=>{:class=>""} %></dd>
+  </dl>
+  <p><%= submit_tag 'Log In',:class => "btn" %></p>
+  <p class="forgot"><%= link_to 'Forgot Password?', new_reset_password_url %></p>
+<% end %>

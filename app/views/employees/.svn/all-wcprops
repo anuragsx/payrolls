@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/salaree/!svn/ver/1183/app/views/employees
+END
+_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1146/app/views/employees/_fields.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1095/app/views/employees/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1183/app/views/employees/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1095/app/views/employees/new.html.erb
+END
+create.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/486/app/views/employees/create.js.erb
+END
+_employee.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/499/app/views/employees/_employee.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/959/app/views/employees/show.html.erb
+END
+_active_search_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1028/app/views/employees/_active_search_form.html.erb
+END
+employee_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/921/app/views/employees/employee_status.html.erb
+END
+identity_card.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1056/app/views/employees/identity_card.html.erb
+END
+new_import.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1022/app/views/employees/new_import.html.erb
+END

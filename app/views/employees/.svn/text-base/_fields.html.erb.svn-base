@@ -1,0 +1,19 @@
+<%= display_error_messages('employee') %>
+<ul class="form">
+  <%= f.labelled_text_field t("employees.name"), :name %>
+  <%= f.labelled_text_field "#{t('employees.commencement')} #{t('common.date')}",:commencement_date, :class => 'datebalks', :note => "Date of joining"  %>
+  <%= f.labelled_collection_select t('employees.department'), :department_id, @company.departments.all, :id, :name %>
+  <%= f.labelled_text_field t('employees.identification_number'), :identification_number, :note => "Unique employee identification number" %>
+  <%= f.labelled_text_field t('employees.account_number'), :account_number %>
+  <%= f.labelled_collection_select(t('employees.bank'), :bank_id,[@company.bank], :id, :name) if @company.bank %>
+  <% f.fields_for(:address) do |a| %>
+    <%= render('companies/address_form', :aform => a,:address => @address) %>
+  <% end %>
+  <% f.fields_for(:employee_detail) do |ed| %>
+    <%= ed.labelled_text_field t('employees.details.care_of'), :care_of %>
+    <%= ed.labelled_text_field t('employees.details.date_of_birth'), :date_of_birth, :class => 'datebalks' %>
+    <%= ed.labelled_select t('employees.details.sex'), :sex, EmployeeDetail::SEX %>
+  <% end %>
+  <%= f.labelled_text_field t('employees.details.email'), :email %>
+  <%= f.labelled_password_field "Pdf Password", :pdf_password if @company.want_protected_pdf%>
+</ul>

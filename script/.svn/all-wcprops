@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/salaree/!svn/ver/731/script
+END
+delayed_job
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/salaree/!svn/ver/731/script/delayed_job
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/salaree/!svn/ver/1/script/console
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/salaree/!svn/ver/1/script/server
+END
+dbconsole
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/salaree/!svn/ver/1/script/dbconsole
+END
+starling_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/172/script/starling_status.rb
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/salaree/!svn/ver/1/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/salaree/!svn/ver/1/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/salaree/!svn/ver/1/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/salaree/!svn/ver/1/script/generate
+END
+workling_client
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/172/script/workling_client
+END
+workling_starling_client
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/172/script/workling_starling_client
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/salaree/!svn/ver/1/script/plugin
+END

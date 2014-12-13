@@ -1,0 +1,10 @@
+<% form_for [@employee,@lta] do |f| %>
+  <%= display_error_messages('ltas') %>
+  <ul class="form">
+    <%= f.labelled_text_field 'Date', :created_at,:class => 'datebalks' %>
+    <%= f.labelled_text_field 'Amount', :amount %>
+    <%= f.labelled_text_field 'Description', :description %>
+  </ul>
+  <p class="submit"><%= f.submit t('button.save'), :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employee_incentives_path(@employee)) %></p>
+<% end %>

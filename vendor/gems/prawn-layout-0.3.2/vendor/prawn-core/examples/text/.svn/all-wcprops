@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text
+END
+kerning.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/kerning.rb
+END
+simple_text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/simple_text.rb
+END
+alignment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/alignment.rb
+END
+font_size.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/font_size.rb
+END
+span.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/span.rb
+END
+text_box_returning_excess.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/text_box_returning_excess.rb
+END
+font_calculations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/font_calculations.rb
+END
+family_based_styling.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/family_based_styling.rb
+END
+dfont.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/dfont.rb
+END
+simple_text_ttf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/simple_text_ttf.rb
+END
+text_flow.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/text_flow.rb
+END
+text_box.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/examples/text/text_box.rb
+END

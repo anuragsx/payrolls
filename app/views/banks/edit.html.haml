@@ -1,0 +1,7 @@
+= render :partial=>'companies/page_header'
+- form_for(@bank, :url => bank_path) do |f|
+  = render :partial=>"fields", :locals=>{:f=>f}
+  %p.submit
+    = f.submit t('button.update'), :class => "btn"
+    or
+    = link_to t('button.cancel'), bank_path, :class => 'cancel'

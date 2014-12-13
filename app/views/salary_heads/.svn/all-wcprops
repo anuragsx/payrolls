@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/122/app/views/salary_heads
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/12/app/views/salary_heads/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/122/app/views/salary_heads/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/12/app/views/salary_heads/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/122/app/views/salary_heads/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/12/app/views/salary_heads/_form.html.erb
+END

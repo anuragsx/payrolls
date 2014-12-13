@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format
+END
+lexer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/lexer.rb
+END
+state.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/state.rb
+END
+layout_builder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/layout_builder.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/version.rb
+END
+line.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/line.rb
+END
+text_object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/text_object.rb
+END
+parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/1162/vendor/gems/prawn-format-0.2.3/lib/prawn/format/parser.rb
+END

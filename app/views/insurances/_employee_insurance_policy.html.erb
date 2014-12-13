@@ -1,0 +1,11 @@
+<% fields_for "insurances[]", employee_insurance_policy, :index=>nil do |f| %>
+  <tr>
+    <td><%= f.object.employee.name %><%= f.hidden_field :employee_id %></td>
+    <td><%= f.text_field :name %></td>
+    <td><%= f.text_field :monthly_premium %></td>
+    <td><%= f.text_field :expiry_date, :class => 'datebalks' %></td>
+    <% unless employee_insurance_policy.new_record? %>
+      <%= f.hidden_field :id %>
+    <% end  %>
+  </tr>
+<% end %>

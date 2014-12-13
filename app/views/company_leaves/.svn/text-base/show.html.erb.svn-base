@@ -1,0 +1,56 @@
+<%= render :partial=>'companies/page_header' %>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('leaves.edit'),edit_company_leave_path, :class=>"edit") %>
+  </div>
+<%end%>
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('leaves.rate') %></th>
+        <td><%=h @company_leave.rate_of_leave %></td>
+      </tr>
+      <tr>
+        <th><%= t('leaves.accrual') %></th>
+        <td><%=h show_leave_accrual %></td>
+      </tr>
+      <tr>
+        <th><%= t('leaves.month_length_formula') %></th>
+        <td><%=h @company_leave.month_length_desc %></td>
+      </tr>
+      <tr>
+        <th><%= t('leaves.casual_leaves') %></th>
+        <td><%=h @company_leave.casual_leaves %></td>
+      </tr>
+      <tr>
+        <th><%= t('leaves.sick_leaves') %></th>
+        <td><%=h @company_leave.sick_leaves %></td>
+      </tr>
+      <tr>
+        <th><%= t('leaves.default_month_length') %></th>
+        <td><%=h @company_leave.month_length %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<% unless @company.employees.blank? %>
+  <% unless @company_leave.accrue_as_you_go? %>
+    <% form_tag(forward_leaves_company_leave_path) do %>
+    <h3><%= t('leaves.carry_forward') %></h3>
+      <ul class="form">
+        <li>
+          <label class="main" for="from_year"><%= t('common.year.from') %></label>
+          <div class="field"><%= select_tag 'from_year', options_for_select((Date.today.year-10..Date.today.year+2)) %></div>
+        </li>
+        <li>
+          <label class="main" for="to_year"><%= t('common.year.to') %></label>
+          <div class="field"><%= select_tag 'to_year', options_for_select((Date.today.year-9..Date.today.year+3)) %></div>
+        </li>
+      </ul>
+      <p class="submit">
+        <%= submit_tag t('button.save'),:class => 'btn' %>
+      </p>
+    <% end %>
+  <% end %>
+<% end %>

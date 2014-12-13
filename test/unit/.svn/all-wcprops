@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/salaree/!svn/ver/1306/test/unit
+END
+pf_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1107/test/unit/pf_calculator_test.rb
+END
+employee_esi_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1050/test/unit/employee_esi_test.rb
+END
+company_holiday_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1048/test/unit/company_holiday_test.rb
+END
+flexible_allowance_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1062/test/unit/flexible_allowance_test.rb
+END
+esi_type_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/1047/test/unit/esi_type_test.rb
+END
+incentive_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/1220/test/unit/incentive_test.rb
+END
+employee_loan_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1123/test/unit/employee_loan_test.rb
+END
+tds_return_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1220/test/unit/tds_return_test.rb
+END
+salary_process_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1062/test/unit/salary_process_test.rb
+END
+employee_tax_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1050/test/unit/employee_tax_test.rb
+END
+leave_type_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1047/test/unit/leave_type_test.rb
+END
+insurance_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1005/test/unit/insurance_calculator_test.rb
+END
+employee_detail_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1095/test/unit/employee_detail_test.rb
+END
+attendance_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/51/test/unit/attendance_test.rb
+END
+company_esi_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/1050/test/unit/company_esi_test.rb
+END
+employee_expense_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1095/test/unit/employee_expense_test.rb
+END
+company_professional_tax_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1054/test/unit/company_professional_tax_test.rb
+END
+pf_type_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1124/test/unit/pf_type_test.rb
+END
+simple_income_tax_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1005/test/unit/simple_income_tax_calculator_test.rb
+END
+company_bonus_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1049/test/unit/company_bonus_test.rb
+END
+simple_leave_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1000/test/unit/simple_leave_calculator_test.rb
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1118/test/unit/user_test.rb
+END
+employee_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/1120/test/unit/employee_test.rb
+END
+employee_professional_tax_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1054/test/unit/employee_professional_tax_test.rb
+END
+company_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1054/test/unit/company_calculator_test.rb
+END
+admin_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1035/test/unit/admin_mailer_test.rb
+END
+company_leave_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1123/test/unit/company_leave_test.rb
+END
+address_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1048/test/unit/address_test.rb
+END
+approval_status_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1039/test/unit/approval_status_test.rb
+END
+employee_tds_return_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1220/test/unit/employee_tds_return_test.rb
+END
+esi_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1005/test/unit/esi_calculator_test.rb
+END
+salary_slip_charge_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1054/test/unit/salary_slip_charge_test.rb
+END
+loan_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1003/test/unit/loan_calculator_test.rb
+END
+department_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1007/test/unit/department_test.rb
+END
+dearness_relief_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1008/test/unit/dearness_relief_calculator_test.rb
+END
+company_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1004/test/unit/company_test.rb
+END
+employee_investment80c_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1050/test/unit/employee_investment80c_test.rb
+END
+company_grade_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1049/test/unit/company_grade_test.rb
+END
+company_flexi_package_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1031/test/unit/company_flexi_package_test.rb
+END
+mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1062/test/unit/mailer_test.rb
+END
+expense_claim_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1123/test/unit/expense_claim_test.rb
+END
+employee_investment_scheme_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1054/test/unit/employee_investment_scheme_test.rb
+END
+employee_leave_types_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1146/test/unit/employee_leave_types_test.rb
+END
+leave_accounting_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1009/test/unit/leave_accounting_calculator_test.rb
+END
+professional_tax_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1123/test/unit/professional_tax_test.rb
+END
+salary_sheet_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1118/test/unit/salary_sheet_test.rb
+END
+lta_claim_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/1279/test/unit/lta_claim_test.rb
+END
+flexible_allowance_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1012/test/unit/flexible_allowance_calculator_test.rb
+END
+calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1049/test/unit/calculator_test.rb
+END
+labour_welfare_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1047/test/unit/labour_welfare_test.rb
+END
+employee_package_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1120/test/unit/employee_package_test.rb
+END
+labour_welfare_slab_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1062/test/unit/labour_welfare_slab_test.rb
+END
+package_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1047/test/unit/package_test.rb
+END
+company_pf_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1054/test/unit/company_pf_test.rb
+END
+employee_leave_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1135/test/unit/employee_leave_test.rb
+END
+effective_loan_emi_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1118/test/unit/effective_loan_emi_test.rb
+END
+attendance_type_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/51/test/unit/attendance_type_test.rb
+END
+govt_pension_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1105/test/unit/govt_pension_test.rb
+END
+salary_head_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/1054/test/unit/salary_head_test.rb
+END
+arrear_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1294/test/unit/arrear_test.rb
+END
+company_allowance_head_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1123/test/unit/company_allowance_head_test.rb
+END
+lta_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/1279/test/unit/lta_test.rb
+END
+salary_slip_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/1062/test/unit/salary_slip_test.rb
+END
+expense_claim_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1003/test/unit/expense_claim_calculator_test.rb
+END
+simple_allowance_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/998/test/unit/simple_allowance_calculator_test.rb
+END
+holiday_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/salaree/!svn/ver/51/test/unit/holiday_test.rb
+END
+tax_category_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1049/test/unit/tax_category_test.rb
+END
+basic_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1008/test/unit/basic_calculator_test.rb
+END
+tax_slab_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/1306/test/unit/tax_slab_test.rb
+END
+bonus_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1008/test/unit/bonus_calculator_test.rb
+END
+employee_leave_balance_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1054/test/unit/employee_leave_balance_test.rb
+END
+employee_advance_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1049/test/unit/employee_advance_test.rb
+END
+company_loading_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1049/test/unit/company_loading_test.rb
+END
+employee_insurance_policy_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1050/test/unit/employee_insurance_policy_test.rb
+END
+employee_emi_override_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/144/test/unit/employee_emi_override_test.rb
+END
+employee_pension_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1054/test/unit/employee_pension_test.rb
+END
+advance_calculator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1009/test/unit/advance_calculator_test.rb
+END
+employee_package_head_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1049/test/unit/employee_package_head_test.rb
+END
+bank_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1039/test/unit/bank_test.rb
+END
+department_holiday_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1048/test/unit/department_holiday_test.rb
+END
+employee_tax_detail_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1050/test/unit/employee_tax_detail_test.rb
+END

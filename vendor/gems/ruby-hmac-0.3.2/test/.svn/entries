@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/ruby-hmac-0.3.2/test
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T13:00:45.124389Z
+1246
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+test_hmac.rb
+file
+
+
+
+
+2010-03-13T02:51:31.593750Z
+041c74df2266be3516da687d927256d9
+2010-01-22T13:00:45.124389Z
+1246
+poojag
+

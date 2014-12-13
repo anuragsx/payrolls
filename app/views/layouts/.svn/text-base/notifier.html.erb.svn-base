@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>salaree.com  -- Your business deserves painless payroll</title>
+  </head>
+
+  <body bgcolor="#9db7c5">
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Lucida Grande,tahoma,Helvetica Neue,helvetica,arial,verdana,sans-serif;" bgcolor="#9db7c5">
+      <tr>
+        <td align="center">
+
+          <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="left" colspan="2" style="font-size: 11px; padding:10px 20px; color:#fff;">
+                <p><% "You're receiving this email because..." %></p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" width="200" height="89">
+                <%= link_to(image_tag("mailer/logo.gif", :alt => "#{SITE_NAME}", :width=>"200", :height=>"89", :style=>"border:0;"),  root_url(:subdomain => false)) %>
+              </td>
+              <td style="background: #191919; color:#fff; padding: 0;" valign="top" align="right" width="400" height="89">
+                <%= image_tag("mailer/header-top.gif", :width =>"400", :height=>"58") %>
+               	<span style="padding-right: 20px;"><%= yield(:title) %></span>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" colspan="2">
+                <%= image_tag("mailer/header-shadow.gif", :alt => SITE_NAME, :width=>"600", :height=>"19" ) %>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" class="body" colspan="2">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td valign="top" align="left" style="background:#fff; padding:10px 20px 30px 20px; font-size: 12px;">
+                      <h2 style="font-size: 18px; color: #ff6633;"><%= yield(:subject) %></h2>
+
+                      <%= yield %>
+                      <p class="more"><a href="#" style="color:#336699;"><%= yield(:read_more_link) %></a></p>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td valign="middle" align="left" colspan="2" style="background: #949494; color:#fff; font-size: 11px; padding: 15px 20px 0 20px; background-position: bottom center;">
+                <p><%= SITE_NAME %></p>
+              </td>
+            </tr>
+            <tr width="600" height="17">
+              <td colspan="2"><%=  image_tag("mailer/footer-bg.gif", :alt=>"", :width=>"600", :height=>"17" )%></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

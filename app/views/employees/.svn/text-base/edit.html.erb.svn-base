@@ -1,0 +1,7 @@
+<% form_for employee_setup(@employee) do |form| %>
+  <%= render :partial=>"fields", :locals=>{:f=>form} %>
+  <p class="submit">
+    <%= form.submit t('button.update'), :class=>"btn" %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employees_path, :class=>"cancel") %>
+  </p>
+<% end %>

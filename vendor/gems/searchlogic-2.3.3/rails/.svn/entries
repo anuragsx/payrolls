@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/searchlogic-2.3.3/rails
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-09-08T09:43:08.698383Z
+723
+asanghi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+init.rb
+file
+
+
+
+
+2010-03-13T02:51:30.437500Z
+079adf1c95b4d54694f51e38aa8fb67f
+2009-09-08T09:43:08.698383Z
+723
+asanghi
+

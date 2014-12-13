@@ -1,0 +1,6 @@
+class EsiType < ActiveRecord::Base
+
+  validates_presence_of :name, :employee_size, :employee_contrib_percent,
+                        :employer_contrib_percent, :basic_threshold
+
+end

@@ -1,0 +1,28 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_other_income_path(@employee),:class => 'button') do %>
+  <span><%= "#{t('common.add')} #{t('tax.other_income') }" %></span>
+  <% end %>
+<% end %>
+<% unless @other_incomes.blank? %>
+  <% @other_incomes.each do |fy,other_incomes| %>
+    <h3><%= fy.formatted_fy %></h3>
+    <table class="list" cellpadding="0" cellspacing="0" width="100%" >
+      <thead>
+        <tr>
+          <th><%= "#{t('tax.other_income')}" %></th>
+          <th class="numeric"><%= t('common.amount') %></th>
+          <th class="numeric"><%= t('tax.already_tax_paid_on_other_income') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% other_incomes.each_with_index do |other_income, i|%>
+          <tr>
+            <td><%= link_to "#{t('tax.other_income')} #{i+1}", edit_employee_other_income_path(@employee,other_income) %></td>
+            <td class="numeric"><%= other_income.amount %></td>
+            <td class="numeric"><%= other_income.already_tax_paid_on_other_income %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>

@@ -1,0 +1,23 @@
+<% title "Salary Heads" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Allowance</th>
+    <th>Code</th>
+    <th>Description</th>
+  </tr>
+  <% for salary_head in @salary_heads %>
+    <tr>
+      <td><%=h salary_head.name %></td>
+      <td><%=h salary_head.allowance %></td>
+      <td><%=h salary_head.code %></td>
+      <td><%=h salary_head.description %></td>
+      <td><%= link_to "Show", salary_head %></td>
+      <td><%= link_to "Edit", edit_salary_head_path(salary_head) %></td>
+      <td><%= link_to "Destroy", salary_head, :confirm =>CONFIRM_DELETE, :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Salary Head", new_salary_head_path %></p>

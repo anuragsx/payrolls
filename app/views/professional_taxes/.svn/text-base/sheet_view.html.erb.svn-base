@@ -1,0 +1,42 @@
+<% content_for(:page_header) do %>
+  <h2><%=h "Professional Tax Register for #{@salary_sheet.run_date.to_s(:short_month_and_year)}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+<% content_for(:page_buttons) do  %>
+  <%= link_to 'Form5A', salary_sheet_professional_taxes_path(@salary_sheet,:format => :pdf)%>
+<% end %>
+<%= month_navigator('salary_sheet_professional_taxes_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Employee</th>
+      <th class="numeric">Gross Amount</th>
+      <th class="numeric">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @presenter.departments.each do |dept|%>
+      <tr>
+        <th colspan="2"><%= dept[:name] %></th>
+        <th class="numeric"><%= dept[:base_total] %></th>
+        <th class="numeric"><%= dept[:pt_total] %></th>
+      </tr>
+      <% dept[:slips].each_with_index do |slip,i| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= i+1 %></td>
+          <td class="head1"><%= link_to(slip.employee_name,employee_professional_tax_path(slip.employee)) %></td>
+          <td class="numeric head2"><%= slip.base_charge %></td>
+          <td class="numeric head3"><strong><%= slip.tax_deduction %></strong></td>
+        </tr>
+      <%end%>
+    <%end%>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"><%= "#{t('common.grand')} #{t('common.total')}" %></td>
+      <td class="numeric"><%= @presenter.grand_total_base_charge %></td>
+      <td class="numeric"><%= @presenter.grand_total_pt  %></td>
+    </tr>
+  </tfoot>
+</table>

@@ -1,0 +1,12 @@
+<% content_for(:page_header) do %>
+  <h2><%= "#{t(:common)[:new]} #{t('header.feedback')}" %></h2>
+<%end%>
+<% form_for @feedback do |f| %>
+  <%= display_error_messages('feedback') %>
+  <ul class="form">
+    <%= f.labelled_text_area t("feedbacks.feedback"), :feedback, :rows => 10, :cols => 50 %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.create'), :class=>"btn" %>
+  </p>
+<% end %>

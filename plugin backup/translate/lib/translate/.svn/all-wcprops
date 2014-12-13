@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate
+END
+file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate/file.rb
+END
+log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate/log.rb
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate/routes.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate/storage.rb
+END
+keys.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/153/vendor/plugins/translate/lib/translate/keys.rb
+END

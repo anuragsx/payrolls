@@ -1,0 +1,10 @@
+<% content_for(:page_header) do %>
+  <h2>Edit</h2>
+  <%= companies_sub_header %>
+<%end%>
+<% form_for @client_application, :url => oauth_client_path(@client_application) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p class="submit">
+    <%= f.submit "Register", :class=>"btn" %>
+  </p>
+<% end %>

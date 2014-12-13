@@ -1,0 +1,37 @@
+<%= render :partial=>'companies/page_header' %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('company_grade.grade')%> </th>
+      <th class="numeric"><%= t('company_grade.amount')%> </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @company_grades.each do |company_grade| %>
+      <% unless company_grade.new_record? %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= link_to(company_grade.name,edit_company_grade_path(company_grade)) %></td>
+          <td class="numeric head2"><%= company_grade.pay_scale %></td>
+          <td class="head3"><%= link_to 'Destroy', company_grade, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<% form_for(@company.company_grades.build) do |f| %>
+  <%= display_error_messages('company_grade') %>
+  <ul class="form">
+    <%= f.labelled_text_field("#{t('company_grade.grade')}", :name, :note => "#{t('company_grade.name')}") %>
+    <%= f.labelled_text_field("#{t('company_grade.pay_scale')}", :pay_scale, :note => "#{t('company_grade.package_amount')}") %>
+  </ul>
+  <p class="submit">
+    <%= f.submit(t('button.create'), :class=>'btn') %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), company_path(current_account), :class => 'cancel') %>
+  </p>
+<% end %>
+
+

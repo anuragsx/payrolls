@@ -1,0 +1,60 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('leaves.register_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+  <%#= render :partial=>'sub_header' %>
+<% end %>
+<%= annual_navigator(leaves_path(:year => @prev_year),leaves_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('leaves.present') %></th>
+      <th class="numeric"><%= t('leaves.late_hours') %></th>
+      <th class="numeric"><%= t('leaves.overtime') %></th>
+      <th class="numeric"><%= t('leaves.absent') %></th>
+      <th class="numeric"><%= t('leaves.leave_taken') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><%= "#{t('common.totals')} #{t('common.leaves')}" %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="numeric"><%= @leaves.values.flatten.sum(&:absent) %></td>
+      <td class="numeric"><%= @leaves.values.flatten.sum(&:leaves_taken) %></td>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @this_year.calendar_months do |date| %>
+      <% month = date.month %>
+      <tr class="<%= cycle("",:alt) %>">
+        <% link_name = date.to_s(:short_month_and_year) %>
+        <th>
+          <%= @salary_sheets[month] ?link_name :
+            link_to(link_name, bulk_new_salary_sheet_leafe_path(date.to_s(:for_param)))
+        %>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="numeric"><%= @leaves[month].sum(&:absent) if @leaves[month]%></th>
+        <th class="numeric"><%= @leaves[month].sum(&:leaves_taken) if @leaves[month]%></th>
+        <th class="numeric"><%= link_to('Print',salary_sheet_leaves_path(@salary_sheets[month],:format => :pdf))if @salary_sheets[month] %></th>
+      </tr>
+      <% @leaves[month] && @leaves[month].reject{|x|x.absent.zero?}.each do |l| %>
+        <tr class="<%= cycle(:alt,"") %>">
+          <td class="head1"><%= link_to(h(l.try(:employee).try(:name)),employee_leaves_path(l.employee)) %></td>
+          <td class="head2 numeric"><%= l.present %></td>
+          <td class="head2 numeric"><%= l.late_hours %></td>
+          <td class="head3 numeric"><%= l.overtime_hours %></td>
+          <td class="head3 numeric"><%= l.absent %></td>
+          <td class="head3 numeric"><%= l.leaves_taken %></td>
+          <td></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

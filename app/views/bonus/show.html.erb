@@ -1,0 +1,41 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to("Print",bonus_path(:format =>:pdf))%>|
+  <%= link_to("Excel",bonus_path(:format =>:xls))%>
+<% end %>
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('bonus.bonus_for')} #{params[:id]}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.amount') %></th>
+      <th class="numeric"><%= t('bonus.given_bonus') %></th>
+    </tr>
+  </thead>
+  <% total = 0 %>
+  <tbody>
+    <% @bonuses.each_with_index do |bonus,index|%>
+      <% bonus_percent = @given.for_date(bonus.charge_date).first.try(:bonus_percent) %>
+      <% bonus_charge = (bonus.amount * (bonus_percent || 0))/100  %>
+      <% total += bonus_charge  %>
+      <tr>
+        <td class="numeric head1"><%= index+1 %> </td>
+        <% e = bonus.reference %>
+        <td class="head1"><%= link_to(e.name,employee_bonus_index_path(e)) %></td>
+        <td class="numeric head2"><%= bonus.amount %></td>
+        <td class="numeric head3"><%= bonus_charge %></td>
+      </tr>
+    <%end%>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"><%= t('common.total') %></td>
+      <td class="numeric"><%= @bonuses.sum(&:amount) %></td>
+      <td class="numeric"><%= total %></td>
+    </tr>
+  </tfoot>
+</table>
+

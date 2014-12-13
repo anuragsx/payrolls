@@ -1,0 +1,13 @@
+<% fields_for "attendance[]", attendance, :index => nil do |f| %>
+  <tr>
+    <td class="head1"><%= attendance.employee.name.titleize %></td>
+    <td class="head2"><%= f.select(:attendance_type_id, AttendanceType.collection, {:include_blank => true}) %></td>
+    <td class="head2"><%= f.text_field :timein, :size => 5 %></td>
+    <td class="head2"><%= f.text_field :timeout, :size => 5 %></td>
+    <%= f.hidden_field :employee_id, :size => 5 %>
+    <%= f.hidden_field :attendance_date, :size => 5 %>
+    <% unless attendance.new_record? %>
+      <%= f.hidden_field :id %>
+    <% end  %>
+  </tr>
+<% end %>

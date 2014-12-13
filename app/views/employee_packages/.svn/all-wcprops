@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/1259/app/views/employee_packages
+END
+ctc.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1172/app/views/employee_packages/ctc.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1259/app/views/employee_packages/show.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/851/app/views/employee_packages/edit.html.erb
+END
+_common.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/948/app/views/employee_packages/_common.html.erb
+END
+_simpleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/851/app/views/employee_packages/_simpleallowancecalculator.html.erb
+END
+_flexibleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/851/app/views/employee_packages/_flexibleallowancecalculator.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/851/app/views/employee_packages/new.html.erb
+END
+_basiccalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/763/app/views/employee_packages/_basiccalculator.html.erb
+END
+_edit_simpleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/763/app/views/employee_packages/_edit_simpleallowancecalculator.html.erb
+END
+ctc.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1172/app/views/employee_packages/ctc.pdf.prawn
+END
+_edit_flexibleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/salaree/!svn/ver/763/app/views/employee_packages/_edit_flexibleallowancecalculator.html.erb
+END
+_edit_basiccalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/763/app/views/employee_packages/_edit_basiccalculator.html.erb
+END
+_new_common.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1053/app/views/employee_packages/_new_common.html.erb
+END
+_new_simpleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/851/app/views/employee_packages/_new_simpleallowancecalculator.html.erb
+END
+_new_flexibleallowancecalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/793/app/views/employee_packages/_new_flexibleallowancecalculator.html.erb
+END
+_new_basiccalculator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/763/app/views/employee_packages/_new_basiccalculator.html.erb
+END

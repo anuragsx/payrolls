@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/lib/observational
+END
+active_record_observers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/lib/observational/active_record_observers.rb
+END
+observable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/lib/observational/observable.rb
+END
+observer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/lib/observational/observer.rb
+END

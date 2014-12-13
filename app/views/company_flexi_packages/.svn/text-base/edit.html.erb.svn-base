@@ -1,0 +1,33 @@
+<% content_for(:page_header) do %>
+  <h2>Edit Packages</h2>
+<%end%>
+<% form_for(@company,:url => company_flexi_package_path(@company),:html => {:method =>:put}) do |f| %>  
+
+  <div id="company_flexi_packages">
+    <% f.fields_for :company_flexi_packages do |cf| %>
+      <%# if (cf.object.id == @company.company_flexi_packages.scoped_by_salary_head_id(cf.object.salary_head_id).all(:order => :salary_head_id).first.id) %>
+        <h2><%= cf.object.salary_head.name %></h2>
+      <%#end%>
+      <b><%= cf.object.lookup_expression %></b>
+      <%= cf.select :position,(1..((CompanyFlexiPackage::LOOKUP_EXPRESSION.length)))%>
+
+      <div class="flexible_allowances">
+        <div id="<%= cf.object.id%>_flexi_allowances">
+          <% cf.fields_for :flexible_allowances do |form| -%>
+            <%= render :partial => 'flexible_allowance', :locals => {:form => form ,:package =>cf.object} -%>
+          <% end -%>
+        </div>
+      </div><br/>
+      <% if FlexibleAllowance.category_that_can_be_added(@company,cf.object.salary_head_id,cf.object.lookup_expression) %>
+        <%= add_link(cf) %><br/><br/>
+      <%end%>
+      <% if (cf.object.id == @company.company_flexi_packages.find_all_by_salary_head_id(cf.object.salary_head_id).last.id) %>
+        <b><%= link_to 'Destroy All', company_flexi_package_path(cf.object.salary_head_id), :confirm =>CONFIRM_DELETE, :method => :delete %></b>
+      <%end%>
+    <%end%>
+
+  </div><br/>
+  <p class="submit">
+    <%= f.submit 'Update' , :class=>"btn"%>
+  </p>
+<%end%>

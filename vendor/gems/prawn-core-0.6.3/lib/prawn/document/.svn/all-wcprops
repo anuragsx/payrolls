@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document
+END
+annotations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/annotations.rb
+END
+bounding_box.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/bounding_box.rb
+END
+internals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/internals.rb
+END
+snapshot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/snapshot.rb
+END
+span.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/span.rb
+END
+destinations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/destinations.rb
+END
+text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/text.rb
+END
+column_box.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/column_box.rb
+END
+page_geometry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/lib/prawn/document/page_geometry.rb
+END

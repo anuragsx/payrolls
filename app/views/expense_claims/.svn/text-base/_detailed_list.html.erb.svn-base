@@ -1,0 +1,41 @@
+<% if @employee %>
+  <% @expenses.each do |expense| %>
+    <div>
+      <b>Description: </b>
+      <%= expense.description %>
+    </div>
+    <div>
+      <b>Amount</b>
+      <%= expense.amount.round(2) %>
+    </div>
+    <%= link_to('Edit', edit_employee_expense_claim_path(expense.employee,expense)) %>
+    <%= link_to('Destroy',employee_expense_claim_path(expense.employee,expense),:confirm=>CONFIRM_DELETE, :method=>:delete) %>
+  <% end %>
+<% else %>
+<table cellpadding="0" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Description</th>
+      <th>Expensed In</th>
+      <th class="numeric">Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Total for <%= @search_date.to_s(:month_and_year) %></td>
+      <td colspan="3" class="numeric"><%= @expenses.sum(:amount) %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @expenses.each do |expense|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td><%= link_to(expense.employee.name,employee_expense_claims_path(expense.employee)) %></td>
+        <td><%=h truncate(expense.description,:length=>25) %></td>
+        <td><%=h expense.expensed_at.to_s(:month_and_year) %></td>
+        <td class="numeric"><%=h expense.amount.round(2) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

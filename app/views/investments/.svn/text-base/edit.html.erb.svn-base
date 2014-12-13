@@ -1,0 +1,11 @@
+<% content_for(:page_buttons) do  %>
+  <%= link_to(t('button.delete'),employee_investment_path(@employee,@investment), :confirm =>CONFIRM_DELETE, :method => :delete, :class=>"delete") %>
+<% end %>
+<% form_for @investment, :url => employee_investment_path(@employee), :method => :put do |f| %>
+  <%= render :partial => 'fields', :locals => {:f => f} %>
+  <p class="submit">
+    <%= f.submit t('button.update'), :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employee_investments_path(@employee),:class => 'cancel') %>
+  </p>
+
+<% end %>

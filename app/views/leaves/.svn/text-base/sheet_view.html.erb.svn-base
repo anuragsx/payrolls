@@ -1,0 +1,36 @@
+<% content_for(:page_header) do %>
+  <h2><%=h "#{t('leaves.register_for')} #{@salary_sheet.run_date.to_s(:short_month_and_year)}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+
+<%= month_navigator('salary_sheet_leaves_path','bulk_new_salary_sheet_leafe_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('leaves.present') %></th>
+      <th class="numeric"><%= t('leaves.absent') %></th>
+      <th class="numeric"><%= t('leaves.late_hours') %></th>
+      <th class="numeric"><%= t('leaves.overtime') %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><%= t('common.total') %></td>
+      <td colspan="2" class="numeric"><%= @leaves.sum(:absent).round(2) %></td>
+      <td class="numeric"><%= @leaves.sum(:late_hours).round(2) %></td>
+      <td class="numeric"><%= @leaves.sum(:overtime_hours).round(2) %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @leaves.each do |leave|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= link_to(leave.employee.name,employee_leaves_path(leave.employee)) %></td>
+        <td class="numeric head2"><%=h leave.present %></td>
+        <td class="numeric head2"><%=h leave.absent %></td>
+        <td class="numeric head3"><%=h leave.late_hours %></td>
+        <td class="numeric head3"><%=h leave.overtime_hours %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to "Destroy", employee_advance_path(@employee, @advance), :confirm =>CONFIRM_DELETE, :method => :delete %>
+<% end %>
+<% form_for @advance, :url=>employee_advance_path(@employee), :method=>:put do |f| %>
+  <%= render :partial=>'form', :locals=>{:f=>f} %>
+  <p class="submit">
+    <%= f.submit t('button.update'), :class=>"btn" %> or
+    <%= link_to(t('button.cancel'),employee_advances_path(@employee),:class => "cancel") %>
+  </p>
+<% end %>

@@ -1,0 +1,27 @@
+<% content_for(:page_header) do  %>
+  <h2>Loans for <%= @this_year.formatted_fy %></h2>
+  <%= sub_headers %>
+<% end %>
+<%= annual_navigator(loans_path(:year => @prev_year),loans_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th class="numeric">Loan Amount</th>
+      <th class="numeric">Last EMI</th>
+      <th class="numeric">Total Paid</th>
+      <th>Paid Up?</th>
+    </tr>
+  </thead>
+  <% @loans.each do |loan| %>
+    <% last_emi = loan.effective_loan_emis.last %>
+    <tr class="<%= cycle(:even,:alt) %>">
+      <td class="head1"><%=link_to(h(loan.employee.name.titleize),employee_loans_path(loan.employee)) %></td>
+      <td class="head2 numeric"><%=h loan.loan_amount %></td>
+      <td class="head2 numeric"><%=h last_emi.amount %></td>
+      <td class="head3 numeric"><%=h loan.total_paid %></td>
+      <td><%=h loan.paid_up?.pretty_print %></td>
+    </tr>
+  <%end%>
+</table>
+<%= link_to('Add New', new_employee_loan_path(@employee)) if @employee %>

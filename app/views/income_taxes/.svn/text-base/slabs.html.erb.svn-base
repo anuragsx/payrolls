@@ -1,0 +1,29 @@
+<%= render :partial=>'companies/page_header' %>
+<% @slabs.each do |category,slabs| %>
+ <h3>In Case of <%= category %></h3>
+  <table cellspacing="0" cellpadding="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= t('tax.slab.income_bracket') %></th>
+        <th><%= t('tax.slab.rate') %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr><td colspan="2"><address>Note: On final tax amount, a surcharge of 3% (Education Cess 2% and Higher Edu Cess 1%) will be applicable. </address></td></tr>
+    </tfoot>
+    <tbody>
+      <% slabs.group_by{|e| e.financial_year}.each do |year,slab| %>
+        <tr>
+          <th><%= year %></th>
+          <th></th>
+        </tr>
+        <% slab.each do |s|  %>
+          <tr>
+            <td><%= fetch_income_bracket(s) %></td>
+            <td><%= "#{s.tax_rate.round} %" %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

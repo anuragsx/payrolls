@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1207/app/models/employee_loans
+END
+loan_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/815/app/models/employee_loans/loan_calculator.rb
+END
+effective_loan_emi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1207/app/models/employee_loans/effective_loan_emi.rb
+END
+employee_loan.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1207/app/models/employee_loans/employee_loan.rb
+END

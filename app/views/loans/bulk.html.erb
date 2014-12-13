@@ -1,0 +1,25 @@
+<% content_for(:page_header) do  %>
+  <h2>Loans for <%= @date.to_s(:short_month_and_year) %></h2>
+  <%= sub_headers %>
+<% end %>
+<% unless @errors.blank? %>
+  <%= activerecord_error_list(@errors) %>
+<% end %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Loan Amount</th>
+      <th>EMI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% form_tag(bulk_create_salary_sheet_loans_path(@date.to_s(:for_param)),:method=>:post) do %>
+      <div id="loans">
+        <%= render :partial => 'employee_loan', :collection => @loans %>
+      </div>
+      <tr><th class="submit" colspan="4"><%= submit_tag 'Submit', :class => "btn"  %></td></th>
+    <% end %>
+  </tbody>
+</table>

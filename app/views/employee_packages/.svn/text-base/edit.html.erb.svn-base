@@ -1,0 +1,9 @@
+<% form_for(@current_package,:url => employee_employee_package_path(@employee)) do |f| %>
+  <%= display_error_messages('employee_package') %>
+  <ul class="form">
+    <%= render :partial => "edit_#{@company.package_calculator.type.downcase}", :locals => {:f => f} %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.update'), :class => "btn" %>
+  </p>
+<% end %>

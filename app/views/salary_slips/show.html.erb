@@ -1,0 +1,133 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to("Salary Slip PDF",salary_slip_path(@salary_slip,:format =>:pdf))if @salary_slip.doc.path %> |
+  <%= link_to("Email To Employee",send_email_salary_slip_path(@salary_slip)) if !@salary_slip.employee.email.blank?%>
+<% end %>
+
+<div class="navigator">
+  
+</div>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= "#{t('salary_slip.salary_sheet')}" %></th>
+      <th class="numeric"><%= "#{t('salary_slip.month_days')}" %></th>
+      <th class="numeric"><%= "#{t('salary_slip.loss_of_pay_days')}" %></th>
+      <th class="numeric"><%= "#{t('salary_slip.payble_days')}" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="<%= cycle("",:alt) %>">
+      <td class="head1"><%= link_to("Salary Sheet for #{@presenter.month_date}", salary_sheet_path(@presenter.salary_sheet)) %></td>
+      <td class="numeric head2"><%= @presenter.attendance_detail[:total_days] %></td>
+      <td class="numeric head3"><%= @presenter.attendance_detail["L.O.P."] %></td>
+      <td class="numeric head3"><%= @presenter.attendance_detail[:present] %></td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" width="50%" class="list">
+  <caption><%= @presenter.month_date %> <%= "#{t('salary_slip.salary_slip_for_month of')}" %></caption>
+  <thead>
+    <tr>
+      <th class="numeric"><%= "#{t('salary_slip.description')}" %></th>
+      <th class="numeric"><%= "#{t('salary_slip.rate')}" %></th>
+      <th class="numeric"><%= "#{t('salary_slip.amount')}" %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2" class="numeric"><%= "#{t('salary_slip.net_take_home')}" %></td>
+      <td class="numeric"><%=  @presenter.net %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th colspan="3"><%= "#{t('salary_slip.allowances')}" %></th>
+    </tr>
+    <%= render :partial => 'salary_slip_charge', :collection => @presenter.allowances %>
+    <tr class="heading subtotal_row">
+      <th colspan="2" class="numeric"><%= "#{t('salary_slip.net_allowances')}" %></th>
+      <th class="numeric"><%= @presenter.gross %></th>
+    </tr>
+    <tr>
+      <th colspan="3"><%= "#{t('salary_slip.deductions')}" %></th>
+    </tr>
+    <%= render :partial => 'salary_slip_charge', :collection => @presenter.deductions %>
+    <tr class="heading subtotal_row">
+      <th class="numeric" colspan="2"><%= "#{t('salary_slip.net_deductions')}" %></th>
+      <th class="numeric"><%= @presenter.total_deduction %></th>
+    </tr>
+  </tbody>
+</table>
+<% if @company.has_calculator?(IncomeTaxCalculator) %>
+  <table cellpadding="0" cellspacing="0" width="50%" class="list">
+    <caption><%= "#{t('salary_slip.income_tax_details')}" %></caption>
+    <thead>
+      <tr>
+        <th><%= "#{t('salary_slip.description')}" %></th>
+        <th><%= "#{t('salary_slip.amount')}" %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%=@presenter.month_date%> <%= "#{t('salary_slip.net_tds_for')}" %></td>
+        <td class="numeric"><%= @presenter.tds.current_month %></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr class="heading allowance_heading">
+        <th colspan="2"><%= "#{t('salary_slip.emoluments_paid')}" %></th>
+      </tr>
+      <% @presenter.tds.emoluments[:emoluments_paid].each do |key,value|%>
+        <tr class="<%= cycle(:odd,:alt) %>">
+          <td class="head1 numeric"><%= key %></td>
+          <td class="numeric head2"><%= value %></td>
+        </tr>
+      <%end%>
+      <tr>
+        <th class="numeric"><%= "#{t('salary_slip.gross_earnings')}" %></th>
+        <th class="numeric"><%= @presenter.tds.emoluments[:total_emoluments_paid] %></th>
+      </tr>
+      <tr>
+        <th colspan="2"><%= "#{t('salary_slip.tax_exemptions')}" %></th>
+      </tr>
+      <%  @presenter.tds.emoluments[:exempt_allowance].each do |key,value|%>
+        <tr class="<%= cycle(:odd,:alt) %>">
+          <td class="head1 numeric"><%= key %></td>
+          <td class="numeric head2"><%= value %></td>
+        </tr>
+      <%end%>
+      <tr class="<%= cycle(:odd,:alt) %>">
+        <td class="head1">Deductions Under Chap VIA</td>
+        <td class="numeric head2"><%=  @presenter.tds.eligible_investment_amount %></td>
+      </tr>
+      <tr>
+        <th class="numeric"><%= "#{t('salary_slip.total_deduction')}" %></th>
+        <th class="numeric"><%= @presenter.tds.emoluments[:total_exempt_allowance] %></th>
+      </tr>
+      <tr>
+        <th><%= "#{t('salary_slip.net_taxable_income')}" %></th>
+        <th class="numeric"><%= @presenter.tds.emoluments[:gross_total_income] %></th>
+      </tr>
+      <tr>
+        <td class="head1"><%= "#{t('salary_slip.income_tax')}" %></td>
+        <td class="numeric head2"><%= @presenter.tds.current_month %></td>
+      </tr>
+      <% unless @presenter.tds.edu_cess.to_i.zero? %>
+        <tr>
+          <td class="head1"><%= "#{t('salary_slip.education_cess')}" %></td>
+          <td class="numeric head2"><%= @presenter.tds.edu_cess %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <th class="numeric"><%= "#{t('salary_slip.total_tax_payble')}" %></th>
+        <th class="numeric"><%= @presenter.tds.upto_current_month %></th>
+      </tr>
+      <% unless @presenter.tds.last_month.to_i.zero? %>
+        <tr>
+          <th>Total Tax previously paid</th>
+          <th class="numeric"><%= @presenter.tds.last_month %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

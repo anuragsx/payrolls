@@ -1,0 +1,44 @@
+<% content_for(:page_buttons) do  %>
+  <%= link_to t('button.print'), ctc_employee_employee_package_path(@employee,@employee_package,:format => 'pdf'), :class => 'edit' %>
+<% end %>
+
+<div class="group">
+  <h2><u><%= t('employees.package.details') %></u></h2>
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <%= render :partial => @company.package_calculator.type.downcase , :locals => {:employee_package => @employee_package } %>
+    </tbody>
+  </table>
+</div>
+<table class="list" width="100%" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th><%= t('heads.self') %></th>
+      <th><%= t('common.monthly') %></th>
+      <th><%= t('employees.package.ctc') %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><%= "#{t('common.total')} #{t('employees.package.ctc')}" %></td>
+      <td></td>
+      <td class="numeric"><%= @employee_package.ctc %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td><%= t('employees.package.basic') %></th>
+      <td class="numeric"><%= @employee_package.basic %></td>
+      <td class="numeric"><%= @employee_package.basic * 12 %></td>
+    </tr>
+    <% @employee_package.additional_package_for_month.each do |a| %>
+      <% a.each do |head, value| %>
+        <tr>
+          <td><%= t("heads.#{head.code}") %></th>
+          <td class="numeric"><%= value %></td>
+          <td class="numeric"><%= value * 12 %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

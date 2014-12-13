@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 67
+.gitignore
+Makefile
+coverage
+index
+nbproject
+tmp
+.rake_tasks
+.idea
+
+END

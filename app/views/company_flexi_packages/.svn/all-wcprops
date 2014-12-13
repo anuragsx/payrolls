@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1033/app/views/company_flexi_packages
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1033/app/views/company_flexi_packages/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1032/app/views/company_flexi_packages/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/793/app/views/company_flexi_packages/new.html.erb
+END
+_flexible_allowance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/827/app/views/company_flexi_packages/_flexible_allowance.html.erb
+END

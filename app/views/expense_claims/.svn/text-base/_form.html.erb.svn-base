@@ -1,0 +1,10 @@
+<% form_for [@employee,@expense] do |f| %>
+  <%= display_error_messages('expenses') %>
+  <ul class="form">
+    <%= f.labelled_text_field(t('common.description'), :description) %>
+    <%= f.labelled_text_field(t('common.amount'), :amount) %>
+    <%= f.labelled_text_field(t('common.date'), :expensed_at, :class => 'datebalks') %>
+  </ul>
+  <p class="submit"><%= f.submit t('button.save'), :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employee_expense_claims_path(@employee)) %></p>
+<% end %>

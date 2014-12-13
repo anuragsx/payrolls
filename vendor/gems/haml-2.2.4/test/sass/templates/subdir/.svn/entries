@@ -1,0 +1,43 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/haml-2.2.4/test/sass/templates/subdir
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-09-17T14:35:42.057870Z
+873
+asanghi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+subdir.sass
+file
+
+
+
+
+2010-03-13T02:51:23.562500Z
+acde24bd965d15ae3f19bf74b1f1c2a8
+2009-09-17T14:35:42.057870Z
+873
+asanghi
+
+nested_subdir
+dir
+

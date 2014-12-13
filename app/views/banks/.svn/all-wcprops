@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/salaree/!svn/ver/870/app/views/banks
+END
+show.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/870/app/views/banks/show.html.haml
+END
+_fields.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/870/app/views/banks/_fields.html.haml
+END
+edit.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/870/app/views/banks/edit.html.haml
+END

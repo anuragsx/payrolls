@@ -1,0 +1,9 @@
+<%= render :partial => 'new_common' , :locals => {:f => f} %>
+<div id="employee_package_heads">
+  <% f.fields_for :employee_package_heads do |emp_pack|  %>
+    <% amount = @current_package.blank? ? 0 : @current_package.employee_package_heads.for_head(emp_pack.object.salary_head).map{|a| a.amount}%>
+    <%= emp_pack.labelled_text_field t("heads.#{emp_pack.object.salary_head.code}") , :amount, :value => amount %>
+    <%= emp_pack.hidden_field :salary_head_id, :value => emp_pack.object.salary_head.id  %>
+    <%= emp_pack.hidden_field :employee_id %>   
+  <%end%>
+</div>

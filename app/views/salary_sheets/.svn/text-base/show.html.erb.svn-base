@@ -1,0 +1,77 @@
+<% content_for(:page_header) do  %>
+  <h2><%=h "#{t('salary_sheet.salary_sheet_for')} #{@presenter.month_date}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+<% content_for(:page_buttons) do  %>
+  <% link_to(head_view_salary_sheet_path(@salary_sheet), :class => 'button') do %>
+    <span>Switch to Head View</span>
+  <% end %>
+<% end %>
+<% content_for(:page_buttons) do %>
+  <%= [
+    salary_sheet_index(@salary_sheet),
+    link_to(t('button.excel'), salary_sheet_path(:format =>:xls)),
+    (link_to(t('button.sms'), send_sms_salary_sheet_path(@salary_sheet), :confirm=>CONFIRM_DELETE) if Rails.env.production?  && SMS_ENABLED),
+    (link_to(t('button.email'),send_email_salary_sheet_path) if (!@current_user.email.blank? && @salary_sheet.doc.path)),
+    (link_to(t('employees.statement'), bank_statement_salary_sheet_path(@salary_sheet, :format => :pdf)) unless @company.bank.blank?),
+    link_to('Condensed Salary Slips', salary_sheet_salary_slips_path(@salary_sheet, :format => :pdf)),
+    link_to(t('button.delete'), salary_sheet_path(@salary_sheet), :confirm=>CONFIRM_DELETE, :method=>:delete)
+  ].compact.join(" | ") %>
+<% end if @salary_sheet && @salary_sheet.is_finalized? %>
+<%= month_navigator('salary_sheet_path') %>
+<% if @presenter.departments.blank? %>
+  <% @has_running = true  %>
+<% else %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= t('common.employees') %></th>
+        <th class="numeric"><%= t('employees.package.basic') %></th>
+        <th class="numeric"><%= t('common.leaves') %></th>
+        <th class="numeric"><%= t('common.lop') %></th>
+        <th class="numeric"><%= t('salary_slip.gross') %></th>
+        <th class="numeric"><%= t('salary_slip.deductions') %></th>
+        <th class="numeric"><%= t('salary_slip.net') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%= "#{t('common.grand')} #{t('common.total')}" %></td>
+        <td class="numeric"><%= @presenter.grand_basic%></td>
+        <td class="numeric"><%= @presenter.grand_leaves %></td>
+        <td class="numeric"></td>
+        <td class="numeric"><%= @presenter.grand_gross %></td>
+        <td class="numeric"><%= @presenter.grand_deduction %></td>
+        <td class="numeric imp"><%= @presenter.grand_net %></td>
+        <td class="numeric"></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% @presenter.departments.each do |department| %>
+        <%= content_tag(:tr,content_tag(:th,department[:name], :colspan => 8)) unless department[:name].blank? %>
+        <% department[:slips].each do |s| %>
+          <tr class="<%= cycle("",:alt) %>">
+            <td class="head1"><%= link_to(department[s].employee_name,salary_slip_path(s)) %></td>
+            <td class="numeric head1"><%= department[s].basic %></td>
+            <td class="numeric head2"><%= department[s].total_leaves %></td>
+            <td class="numeric head2"><%= department[s].lop %></td>
+            <td class="numeric head3"><%= department[s].gross %></td>
+            <td class="numeric head3"><%= department[s].total_deduction %></td>
+            <td class="numeric imp"><%= department[s].net %></td>
+            <td class="numeric"><%= sheet_status(s) %></td>
+          <%end%>
+        <tr>
+          <th><%= t('common.total') %></th>
+          <th class="numeric"><%= department[:total_basic]%></th>
+          <th class="numeric"><%= department[:total_leaves]%></th>
+          <th class="numeric"></th>
+          <th class="numeric"><%= department[:total_gross]%></th>
+          <th class="numeric"><%= department[:total_deduction] %></th>
+          <th class="numeric imp"><%= department[:total_net]%></th>
+          <th></th>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+<%end%>

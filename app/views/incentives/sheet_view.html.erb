@@ -1,0 +1,32 @@
+<% content_for(:page_header) do %>
+  <h2><%=h "Incentives Register for #{@salary_sheet.run_date.to_s(:short_month_and_year)}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+
+<%= month_navigator('salary_sheet_incentives_path','bulk_new_salary_sheet_incentive_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.description') %></th>
+      <th class="numeric"><%= t('common.amount') %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="3"><b><%= "#{t('common.grand')} #{t('common.total')}" %></b></td>
+      <td class="numeric"><b><%= @charges.to_a.sum(&:amount).abs  %></b></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @charges.each_with_index do |charge,i|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= i+1 %></td>
+        <td class="head1"><%= link_to(charge.employee.name,employee_incentives_path(charge.employee)) %></td>
+        <td class="numeric head2"><%= charge.description %></td>
+        <td class="numeric head3"><strong><%= charge.amount.abs %></strong></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>

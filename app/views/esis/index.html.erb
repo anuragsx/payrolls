@@ -1,0 +1,39 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('esi.register_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<%= annual_navigator(esis_path(:year => @prev_year),esis_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.employee_contribution') %></th>
+      <th class="numeric"><%= t('common.employers_contribution') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @salary_sheet_presenters.each do |fh,salary_sheets| %>
+      <tr>
+        <th><%= fh %></th>
+        <th></th>
+        <th class="numeric"><%= salary_sheets.sum{|d|d.total_employee_contribution} %></th>
+        <th class="numeric"><%= salary_sheets.sum{|d|d.total_employer_contribution} %></th>
+        <th class="numeric"><%= link_to("Form 5 for #{fh}",esis_path(:half => fh,:format => :pdf)) %></th>
+      </tr>
+      <% salary_sheets.each do |presenter| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= link_to(presenter.month_date,esi_path(presenter.salary_sheet)) %></td>
+          <td class="numeric head1"><%= presenter.total_employees %>
+          <td class="numeric head2"><%= presenter.total_employee_contribution %></td>
+          <td class="numeric head3"><%= presenter.total_employer_contribution %></td>
+          <td>
+              <%= link_to("PDF", esi_path(presenter.salary_sheet,:format =>:pdf)) %> |
+              <%= link_to("Excel", esi_path(presenter.salary_sheet,:format =>:xls)) %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<% flexi_allowance = FlexibleAllowance.scoped_by_company_id(@company).for_category(employee_package.employee)%>
+<%= render :partial => 'common' , :locals => {:employee_package => employee_package } %>
+<% flexi_allowance.each do |fa|  %>
+  <tr>
+    <th><%= t("heads.#{fa.salary_head.code}") %></th>
+    <td><%= fa.value %></td>
+  </tr>
+<% end %>

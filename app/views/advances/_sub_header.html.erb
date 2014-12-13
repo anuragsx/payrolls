@@ -1,0 +1,8 @@
+<ul class="tabs">
+  <li class="<%= link_active?(params[:controller] == "advances" && params[:action] == "index") %>">
+    <%= link_to('Details',advances_path) %>
+  </li>
+  <li class="<%= link_active?(params[:controller] == "advances" && params[:action] == "bulk") %>">
+    <%= link_to('New',bulk_new_advance_path) %>
+  </li>
+</ul>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1189/app/views/expense_claims
+END
+_detailed_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/878/app/views/expense_claims/_detailed_list.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/878/app/views/expense_claims/edit.html.erb
+END
+_expense.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/878/app/views/expense_claims/_expense.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/878/app/views/expense_claims/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/878/app/views/expense_claims/new.html.erb
+END
+index.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1189/app/views/expense_claims/index.pdf.prawn
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/878/app/views/expense_claims/bulk.html.erb
+END
+detailed_info.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/878/app/views/expense_claims/detailed_info.js.erb
+END
+_sub_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/878/app/views/expense_claims/_sub_header.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/878/app/views/expense_claims/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/899/app/views/expense_claims/_form.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/878/app/views/expense_claims/sheet_view.html.erb
+END

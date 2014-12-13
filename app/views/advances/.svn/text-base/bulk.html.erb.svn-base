@@ -1,0 +1,62 @@
+<% content_for(:page_header) do  %>
+  <h2>Advances for <%= @date.to_s(:month_and_year) %></h2>
+  <%= sub_headers %>
+  <%#= render :partial=>'sub_header' %>
+<% end %>
+<% unless @errors.blank? %>
+  <%= activerecord_error_list(@errors) %>
+<% end %>
+
+<div>
+  <span class="right"><%= next_link(@next_month.to_s(:short_month_and_year),bulk_new_advance_path(:date => @next_month)) %></span>
+  <%= previous_link(@prev_month.to_s(:short_month_and_year),bulk_new_advance_path(:date => @prev_month)) %>
+</div>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th class="numeric">Description</th>
+      <th class="numeric">Billed?</th>
+      <th class="numeric">Advance Date</th>
+      <th class="numeric">Total Amount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total for <%= @date %></td>
+      <td class="numeric"><%= @advances.sum(:amount) %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @advances.each do |advance| %>
+      <tr class="<%= cycle(:alt,"") %>">
+        <td class="head1"><%= link_to(advance.employee.name,advance.billed? ? employee_advances_path(advance.employee): edit_employee_advance_path(advance.employee,advance)) %></td>
+        <td class="numeric head2"><%= advance.description %></td>
+        <td class="numeric head2"><%= advance.billed?.pretty_print %></td>
+        <td class="numeric head2"><%= advance.created_at.to_date.to_s(:rfc822) %></td>
+        <td class="numeric head3"><%= advance.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  
+<% unless @new_advances.blank? %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% form_tag(bulk_create_advances_path(:date => @date),:method=>:post) do %>
+        <div id="advances">
+          <%= render :partial=>'advance',:collection=>@new_advances %>
+        </div>
+        <tr><th class="submit" colspan="3"><%= submit_tag 'Submit',:class => "btn"  %></th></tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

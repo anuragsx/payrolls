@@ -1,0 +1,427 @@
+@import 'reset.css';
+
+/*
+================================================================================
+Main Layout Elements
+================================================================================
+*/
+
+body {
+  font: 12px/20px helvetica, arial, verdana, sans-serif;
+  text-align: left;
+  background: #9db7c5;
+  color: #444;
+  min-width: 960px;
+}
+#header {
+  background: url(../images/signup_header.gif) top center no-repeat;
+  margin: 10px auto 0 auto;
+}
+#header-inner {
+  width: 940px;
+  margin: 0 auto;
+  background: url(../images/bg_header-inner.gif) 0 35px no-repeat;
+}
+#logo {
+  float: left;
+  margin: 29px 0 0 40px;
+  line-height: 0;
+}
+#main {
+  background: url(../images/bg_main.gif) center repeat-y;
+}
+#main-inner {
+  width: 940px;
+  margin: 0 auto;
+}
+#headline {
+  background: #336699 url(../images/bg_headline.gif) 0 0 no-repeat;
+  padding: 30px 40px;
+  color: #fff;
+}
+div.info {
+  float: left;
+  width: 420px;
+}
+#extra {
+  background: #b2b2b2 url(../images/bg_extra.gif) bottom left no-repeat;
+  clear: both;
+  padding: 30px 20px 0 40px;
+  color: #fff;
+}
+#extra div.col {
+  width: 275px;
+  float: left;
+  margin: 0 20px 0 0;
+}
+#extra div.col-middle {
+  width: 270px;
+}
+#extra p {
+  margin: 0;
+}
+#footer {
+  background: url(../images/bg_footer.gif) top center no-repeat;
+}
+#footer-noextra {
+  background: url(../images/bg_footer-noextra.gif) top center no-repeat;
+}
+#footer-inner {
+  width: 860px;
+  margin: 0 auto;
+  padding: 50px 0;
+  font-size: 11px;
+}
+
+div.content {
+  width: 640px;
+  float: left;
+  margin: 30px 0 10px 40px;
+}
+div.content_page {
+  width: 845px;
+  float: left;
+  margin: 30px 0 10px 40px;
+}
+div.sidebar {
+  width: 200px;
+  float: right;
+  margin: 30px 40px 10px 0;
+}
+div.group {
+  margin: 0 0 20px 0;
+  padding: 13px 0 0 0;
+  background: #ededed url(../images/bg_group-top.gif) top left no-repeat;
+}
+div.group-inner {
+  padding: 7px 20px 20px 20px;
+  background: url(../images/bg_group-bottom.gif) bottom left no-repeat;
+}
+
+/*
+================================================================================
+Navigation
+================================================================================
+*/
+
+#top-nav {
+  height: 35px;
+}
+#top-nav ul {
+  float: right;
+  margin: 5px 30px 0 0;
+}
+#top-nav ul li {
+  float: left;
+  background: none;
+  padding: 0 10px;
+  border-right: #879aa3 solid 1px;
+}
+#top-nav ul li.right {
+  border: 0;
+}
+#top-nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+#top-nav ul li a:hover {
+  color: #336699;
+}
+#top-nav ul li img {
+  margin: -5px 0 0 0;
+}
+
+#nav {
+  float: right;
+  margin: 50px 40px 0 0;
+}
+#nav ul li {
+  float: left;
+  padding: 0 0 0 30px;
+}
+#nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+#nav ul li a:hover {
+  color: #ffd002;
+}
+#nav ul li a.active {
+  color: #f36e20;
+}
+
+/*
+================================================================================
+Headers
+================================================================================
+*/
+
+h2.graphic {
+  text-indent: -9999px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+h2.home-headline {
+  width: 425px;
+  height: 90px;
+  background-image: url(../images/h2_home-headline.gif);
+  margin: 0 0 0 -5px;
+}
+
+h2 {
+  font-size: 24px;
+}
+#headline h2 {
+  color: #fff;
+}
+h3 {
+  font-size: 16px;
+  color: #ff6633;
+  margin: 0 0 10px 0;
+}
+#extra h3 {
+  color: #333;
+}
+h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+/*
+================================================================================
+Text
+================================================================================
+*/
+
+p {
+  margin: 0 0 20px 0;
+}
+
+/*
+================================================================================
+Links
+================================================================================
+*/
+
+/* Buttons */
+
+a.btn {
+  text-indent: -9999px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 47px;
+  float: left;
+}
+a.btn:hover {
+  background-position: 0 -47px;
+}
+a.signup {
+  background-image: url(../images/btn_signup.png);
+  width: 126px;
+}
+div.info a.signup {
+  margin: 0 10px 0 -3px;
+}
+a.tour {
+  background-image: url(../images/btn_tour.png);
+  width: 177px;
+}
+
+
+/*
+================================================================================
+Forms
+================================================================================
+*/
+
+ul.form {
+  margin: 0;
+}
+ul.form li {
+  border-bottom: #eee solid 1px;
+}
+ul.form li.highlight {
+  background: #fff;
+}
+ul.form label.main {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+ul.form li.highlight label.main {
+  color: #000;
+}
+ul.form div.field {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+ul.form li label.main {
+  font-weight: bold;
+  color: #003366;
+}
+ul.form li.error {
+  background: #ffffcc;
+}
+ul.form li.error label.main {
+  color: #990000;
+}
+.helper {
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  margin: 5px 0;
+}
+ul.form li.highlight .helper {
+  color: #666;
+}
+.star {
+  color: #990000;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  font-family: Georgia, "Times New Roman", Times, Serif;
+}
+
+/*
+================================================================================
+Form Elements
+================================================================================
+*/
+
+input, textarea {
+  font: 12px/12px helvetica, arial, sans-serif;
+  margin: 3px 0;
+  background: #fff;
+  border: #ccc solid;
+  border-top: #999 solid 1px;
+  border-right: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  border-left: #999 solid 1px;
+  padding: 3px;
+}
+input:focus, textarea:focus {
+  background: #fff;
+}
+input.img {
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+input.btn {
+  color: #006699;
+  font-weight: bold;
+  border: #ccc solid 2px;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #fff;
+  outline: none;
+  margin: 0 5px 0 0;
+}
+input.btn:hover {
+  color: #000;
+  background: #eee;
+}
+input.checkbox {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  background: none;
+}
+input.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+select {
+  font: 12px/12px helvetica, arial, sans-serif;
+  margin: 3px 0;
+  background: #fff url(../images/bg_form-element.gif) 0 0 repeat-x;
+  border: #ccc solid;
+  border-top: #999 solid 1px;
+  border-right: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  border-left: #999 solid 1px;
+  padding: 3px;
+}
+
+/*
+================================================================================
+Self Clearing Floats
+================================================================================
+*/
+
+#header-inner:after,
+#main-inner:after,
+#extra:after,
+#headline:after,
+ul.form li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* trigger hasLayout and target ie5+6/win only */
+* html #header-inner,
+* html #main-inner,
+* html #extra,
+* html #headline,
+* html ul.form {
+  height: 1%;
+}
+
+/* trigger hasLayout and target ie7/win only */
+*:first-child+html #header-inner,
+*:first-child+html #main-inner,
+*:first-child+html #extra,
+*:first-child+html #headline,
+*:first-child+html ul.form {
+  min-height: 1px;
+}
+/* Add Overrides */
+
+.error{
+  color: #fb2434;
+  background-image: url(../images/icon_attention.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 24px;
+  padding-right: 40px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.available{
+  color: #36b53c;
+  background-image: url(../images/icon_checkmark.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 24px;
+  padding-right: 20px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Signup Page */
+
+input.signup {
+  background-image: url(../images/btn_signup.png);
+  width: 126px;
+  text-indent: -9999px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 47px;
+  float: left;
+  border:none;
+}
+input.signup:hover {
+  background-position: 0 -47px;
+  cursor: pointer;
+}

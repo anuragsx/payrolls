@@ -1,0 +1,25 @@
+  <%= annual_navigator(employee_labour_welfares_path(@employee,:year => @prev_year),
+                       employee_labour_welfares_path(@employee,:year => @next_year)) %>
+  <table class="list" width="100%">
+    <caption>Labour Welfare Details for the financial year <%= @this_year.formatted_fy %></caption>
+    <thead>
+      <tr>
+        <th><%= t('common.month') %></th>
+        <th class="numeric"><%= t('common.employee_contribution') %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%= t('common.total') %></td>
+        <td class="numeric"><%= @lwf_presenters.sum(&:employee_lwf_contribution) %></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% @lwf_presenters.each do |presenter| %>
+        <tr class="<%= cycle(:alt,"") %>">
+          <td class="head1"><%= presenter.month_date %></td>
+          <td class="numeric head3"><%= presenter.employee_lwf_contribution %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

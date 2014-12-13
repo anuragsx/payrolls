@@ -1,0 +1,8 @@
+<ul class="tabs">
+  <li class="<%= link_active?(params[:controller] == "insurances" && params[:action] == "index") %>">
+    <%= link_to('Details',insurances_path) %>
+  </li>
+  <li class="<%= link_active?(params[:controller] == "insurances" && params[:action] == "bulk") %>">
+    <%= link_to('New',bulk_new_insurance_path) %>
+  </li>
+</ul>

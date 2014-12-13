@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "salaree.com  -- Your business deserves painless payroll") %></title>
+    <%= stylesheet_link_tag 'sign_up','overrides','jquery.passStrengthener' %>
+    <%= javascript_include_tag :defaults, 'jquery-1.3.2.min','jquery.highlight','jquery.single-ddm.pack',
+                                'jquery-ui-personalized-1.6rc4.min','jquery.passStrengthener.js','jquery.pushup' %>
+    <link rel="shortcut icon" href="/favicon.ico" />
+     <% javascript_tag do%>
+      var shortcuts;
+    <%end%>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-inner">
+        <div id="top-nav">
+          <ul>
+            <li class="right"><a href="http://risingsuntech.net" target="_blank"><img src="/images/logo_rs.png"/></a></li>
+          </ul>
+        </div>
+        <div id="logo">
+          <h1>
+            <%= link_to(image_tag("logo_salaree.png", :alt=>"Salaree.com", :class => 'salaree_logo'),  root_url(:subdomain => false), :target => "_blank") %>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="main-inner">
+        <div id="headline">
+          <h2>Sign Up for Salaree.com</h2>
+        </div>
+        <div class="content">
+          <%= yield %>
+        </div>
+        <div class="sidebar">
+          <h3>Plan Details</h3>
+          <p>Free usage while in Beta!</p>
+        </div>
+      </div>
+    </div>
+    <div id="footer-noextra">
+      <div id="footer-inner">
+        <p>© Copyright 2009 Salaree.com. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

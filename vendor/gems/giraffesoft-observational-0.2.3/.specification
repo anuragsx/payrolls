@@ -1,0 +1,75 @@
+--- !ruby/object:Gem::Specification 
+name: giraffesoft-observational
+version: !ruby/object:Gem::Version 
+  version: 0.2.3
+platform: ruby
+authors: 
+- James Golick
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-08-05 00:00:00 +05:30
+default_executable: 
+dependencies: []
+
+description: 
+email: james@giraffesoft.ca
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- LICENSE
+- README.rdoc
+files: 
+- .gitignore
+- LICENSE
+- README.rdoc
+- Rakefile
+- VERSION
+- lib/observational.rb
+- lib/observational/active_record_observers.rb
+- lib/observational/observable.rb
+- lib/observational/observer.rb
+- observational.gemspec
+- rails/init.rb
+- spec/active_record_observers_spec.rb
+- spec/observable_spec.rb
+- spec/observational_spec.rb
+- spec/observer_spec.rb
+- spec/spec_helper.rb
+has_rdoc: true
+homepage: http://github.com/giraffesoft/observational
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 2
+summary: TODO
+test_files: 
+- spec/active_record_observers_spec.rb
+- spec/observable_spec.rb
+- spec/observational_spec.rb
+- spec/observer_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,199 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/app/views
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-03-05T09:29:01.238958Z
+1306
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+investments
+dir
+
+accounts
+dir
+
+leaves
+dir
+
+notifier
+dir
+
+gratuities
+dir
+
+oauth
+dir
+
+admin_mailer
+dir
+
+advances
+dir
+
+leave_balances
+dir
+
+departments
+dir
+
+company_loadings
+dir
+
+pfs
+dir
+
+attendances
+dir
+
+company_esis
+dir
+
+doc_mailer
+dir
+
+labour_welfare_categories
+dir
+
+banks
+dir
+
+salary_heads
+dir
+
+company_allowance_heads
+dir
+
+arrears
+dir
+
+layouts
+dir
+
+users
+dir
+
+tax_details
+dir
+
+oauth_clients
+dir
+
+ltas
+dir
+
+user_sessions
+dir
+
+salary_slips
+dir
+
+company_leaves
+dir
+
+shared
+dir
+
+salary_sheets
+dir
+
+user_mailer
+dir
+
+lta_claims
+dir
+
+professional_taxes
+dir
+
+insurances
+dir
+
+homes
+dir
+
+labour_welfares
+dir
+
+tds_returns
+dir
+
+company_pfs
+dir
+
+taxes
+dir
+
+bonus
+dir
+
+exception_mailer
+dir
+
+reset_passwords
+dir
+
+company_flexi_packages
+dir
+
+company_grades
+dir
+
+emi_overrides
+dir
+
+company_professional_taxes
+dir
+
+other_incomes
+dir
+
+expense_claims
+dir
+
+employees
+dir
+
+company_calculators
+dir
+
+esis
+dir
+
+incentives
+dir
+
+feedbacks
+dir
+
+loans
+dir
+
+employee_packages
+dir
+
+income_taxes
+dir
+
+companies
+dir
+

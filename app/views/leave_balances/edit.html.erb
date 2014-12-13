@@ -1,0 +1,6 @@
+<% form_tag(bulk_update_employee_leave_balances_path(@employee),:method=>:post) do %>
+  <ul class="form">
+    <%= render :partial => 'leave_balance',:collection =>  @leave_balances %>
+  </ul>
+  <tr><td class="submit" colspan="4"><%= submit_tag t('button.submit'),:class => "btn"  %></td></tr>
+<%end%>

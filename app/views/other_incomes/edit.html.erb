@@ -1,0 +1,8 @@
+<% form_for @other_income, :url => employee_other_income_path(@employee), :method => :put do |f| %>
+  <%= render :partial => 'fields', :locals => {:f => f} %>
+  <p class="submit">
+    <%= f.submit t('button.update'), :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employee_other_incomes_path(@employee),:class => 'cancel') %>
+  </p>
+  
+<% end %>

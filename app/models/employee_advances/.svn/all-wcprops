@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1207/app/models/employee_advances
+END
+employee_advance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1207/app/models/employee_advances/employee_advance.rb
+END
+advance_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/815/app/models/employee_advances/advance_calculator.rb
+END

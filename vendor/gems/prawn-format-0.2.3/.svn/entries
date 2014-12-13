@@ -1,0 +1,88 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-format-0.2.3
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+prawn-format.gemspec
+file
+
+
+
+
+2010-03-13T02:52:39.796875Z
+285f2ba72ea3b2a8ddb15f9df52bd47d
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:52:39.812500Z
+d711c27f6a6d99cf9a2683c746def4cf
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+lib
+dir
+
+Manifest
+file
+
+
+
+
+2010-03-13T02:52:39.812500Z
+694272ddae53decca63708e13a68a729
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+spec
+dir
+
+manual
+dir
+
+examples
+dir
+
+.specification
+file
+
+
+
+
+2010-03-13T02:52:39.828125Z
+6fb3be38c5b295650475e6d66a05b61d
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+

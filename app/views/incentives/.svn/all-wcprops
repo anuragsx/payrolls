@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/salaree/!svn/ver/1220/app/views/incentives
+END
+_detailed_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1220/app/views/incentives/_detailed_list.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1220/app/views/incentives/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1220/app/views/incentives/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1220/app/views/incentives/new.html.erb
+END
+index.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1220/app/views/incentives/index.pdf.prawn
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1220/app/views/incentives/bulk.html.erb
+END
+detailed_info.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1220/app/views/incentives/detailed_info.js.erb
+END
+_incentive.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1220/app/views/incentives/_incentive.erb
+END
+_sub_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1220/app/views/incentives/_sub_header.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1220/app/views/incentives/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1220/app/views/incentives/_form.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1220/app/views/incentives/sheet_view.html.erb
+END

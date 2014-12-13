@@ -1,0 +1,15 @@
+
+<div class="flexible_allowance">
+  <p>    
+    <% if package.lookup_expression !="Company"%>
+      Name <%= form.select :category_id, @company.send(package.lookup_expression.downcase.pluralize).map{|d| [d.name,d.id]}%>
+    <%else%>
+      <%= form.hidden_field :category_id, :value => @company.id %>
+    <%end%>
+    Head Type <%=  form.select :head_type,FlexibleAllowance::HEAD_TYPE%>
+    Value <span class="value"><%= form.text_field :value %></span>
+    <%= form.hidden_field :company_flexi_package_id,:value =>  package.id %>
+    <%= form.hidden_field :salary_head_id,:value => package.salary_head.id %>
+    <%= form.hidden_field :category_type,:value =>  package.lookup_expression %>    
+  <%= remove_link(form) %></p>
+</div>

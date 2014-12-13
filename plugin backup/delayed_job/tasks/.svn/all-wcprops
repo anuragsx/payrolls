@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/tasks
+END
+tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/tasks/tasks.rb
+END
+jobs.rake
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/tasks/jobs.rake
+END

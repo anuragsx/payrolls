@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1253/app/views/salary_slips
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/899/app/views/salary_slips/index.html.erb
+END
+_salary_slip_charge.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/786/app/views/salary_slips/_salary_slip_charge.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1253/app/views/salary_slips/show.html.erb
+END

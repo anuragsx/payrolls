@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/1243/app/views/oauth
+END
+authorize.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1243/app/views/oauth/authorize.html.erb
+END
+authorize_failure.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1243/app/views/oauth/authorize_failure.html.erb
+END
+authorize_success.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1243/app/views/oauth/authorize_success.html.erb
+END

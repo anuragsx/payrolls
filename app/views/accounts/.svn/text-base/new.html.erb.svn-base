@@ -1,0 +1,26 @@
+<% form_for(setup_company(@company), :url=> package_accounts_path) do |f| %>
+  <div class="group">
+    <div class="group-inner">
+      <h3>Create your Salaree.com Site Address</h3>
+      <h4 id="subdomain" class="empty">http:// <%= f.text_field(:subdomain, :class => "title subdomain", :size => 20) %> .salaree.com <span id="subdomain_msg"></span></h4>
+      <p>Every Salaree.com account has its own unique web address where you'll login. Enter something that is convenient and easy to remember. Letters and numbers only, no spaces and keep it lowercase.</p>
+      <h3>Create your Salaree.com Account</h3>
+      <ul class="form">
+        <% f.fields_for :owner do |o| %>
+          <li><%= f.labelled_text_field('Company', :name, :note => 'E.g. Acme Industries Pvt. Ltd.') %></li>
+          <li><%= o.labelled_text_field 'Username', :login, :note => "A short name like 'admin' that will easily identify you" %></li>
+          <li><%= o.labelled_text_field 'Email', :email, :note => 'Make sure you can reach it, since we will send your credentials and important information there'%></li>
+          <li><%= o.labelled_password_field 'Password', :password, :note => 'Keep it secret, do not share it with anyone and change it often' %></li>
+          <li><%= o.labelled_password_field 'Confirm Password', :password_confirmation %></li>
+          <%= less_reverse_captcha_field :user %>
+          <% o.fields_for :address do |add| %>
+            <li><%= add.labelled_select('State',:state, state_options_for_select('Rajasthan',COUNTRY)) %></li>
+            <li><%= add.labelled_text_field('Mobile Number', :mobile_number, :note => '+91XXXXXXXXXX') %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <p><%= submit_tag("Save",:class=>"signup")%></p>
+<%end%>
+<%= javascript_include_tag 'signup.js'%>

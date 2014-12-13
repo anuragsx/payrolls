@@ -1,0 +1,25 @@
+<td class="head2"><%= f.text_field :present, :size => 5 %></td>
+<td class="head2"><%= f.text_field :absent, :size => 5 %></td>
+<% f.fields_for :casual_leave do |c| %>
+  <td class="head2"><%= c.text_field :leaves, :size => 5 %></td>
+  <%= c.hidden_field :leave_type, :size => 5 %>
+  <%= c.hidden_field :employee_id, :size => 5 %>
+<%end%>
+<% f.fields_for :privilege_leave do |c| %>
+  <td class="head2"><%= c.text_field :leaves, :size => 5 %></td>
+  <%= c.hidden_field :leave_type, :size => 5 %>
+  <%= c.hidden_field :employee_id, :size => 5 %>
+<%end%>
+<% f.fields_for :sick_leave do |c| %>
+  <td class="head2"><%= c.text_field :leaves, :size => 5 %></td>
+  <%= c.hidden_field :leave_type, :size => 5 %>
+  <%= c.hidden_field :employee_id, :size => 5 %>
+<%end%>
+<td class="head2"><%= f.text_field :late_hours, :size => 5 %></td>
+<td class="head2"><%= f.text_field :overtime_hours, :size => 5 %></td>
+<%= f.hidden_field :created_at, :size => 5 %>
+<%= f.hidden_field :employee_id, :size => 5 %>
+<td class="head2"><%= f.text_field :extra_work_days, :size => 5 %></td>
+<% unless leave.new_record? %>
+  <%= f.hidden_field :id %>
+<% end  %>

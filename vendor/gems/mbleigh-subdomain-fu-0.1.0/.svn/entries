@@ -1,0 +1,109 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/mbleigh-subdomain-fu-0.1.0
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-08-13T13:23:44.646470Z
+393
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:51:34.062500Z
+4f89cd75d7d996e790a2aa456bb238b8
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+VERSION
+file
+
+
+
+
+2010-03-13T02:51:34.078125Z
+1347633cdf7cdcb2168d61093630d5ae
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2010-03-13T02:51:34.093750Z
+83bd5216ef8d08b02c6207f367a64bd6
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+MIT-LICENSE
+file
+
+
+
+
+2010-03-13T02:51:34.109375Z
+3c3316214322d1b8e3a5cc13e3b89e29
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+rails
+dir
+
+spec
+dir
+
+README
+file
+
+
+
+
+2010-03-13T02:51:34.125000Z
+e7de77d2bdbe6bae595fc616d32b5360
+2009-08-10T18:33:57.499458Z
+352
+asanghi
+
+.specification
+file
+
+
+
+
+2010-03-13T02:51:34.140625Z
+ef47f0c6a4bbbc4b860734b0b73a58a7
+2009-08-13T13:23:44.646470Z
+393
+poojag
+

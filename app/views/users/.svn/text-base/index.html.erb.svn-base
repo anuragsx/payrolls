@@ -1,0 +1,34 @@
+<% content_for(:page_buttons) do %>
+  <% link_to(new_user_path, :class => 'button') do %>
+    <span><%= t('users.new') %></span>
+  <% end %>
+<% end %>
+<% content_for(:page_header) do %>
+  <h2><%= t('header.users') %></h2>
+<%end%>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('users.name') %></th>
+      <th><%= t('users.login') %></th>
+      <th><%= t('users.email') %></th>
+      <th><%= t('users.action') %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@users.each do |u|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= link_to(u.full_name,edit_user_path(u)) %></td>
+        <td class="head1"><%= u.login %></td>
+        <td class="head2"><%= u.email %></td>
+        <td class="head2"><%= link_to(place_user_action(u),swap_user_status_user_url(u),:method=>:post) %>
+        <td><%= link_to t('users.welcome_email'),send_email_user_path(u) if !u.activate %></td>
+        <td class="head3"><%= link_to t('button.delete'), user_path(u), :confirm =>CONFIRM_DELETE, :method => :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

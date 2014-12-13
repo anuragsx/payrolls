@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/extra
+END
+haml-mode.el
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/extra/haml-mode.el
+END
+sass-mode.el
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/extra/sass-mode.el
+END
+update_watch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/873/vendor/gems/haml-2.2.4/extra/update_watch.rb
+END

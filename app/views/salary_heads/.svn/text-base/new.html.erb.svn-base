@@ -1,0 +1,5 @@
+<% title "New Salary Head" %>
+
+<%= render :partial => 'form' %>
+
+<p><%= link_to "Back to List", salary_heads_path %></p>

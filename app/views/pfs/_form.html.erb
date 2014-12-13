@@ -1,0 +1,9 @@
+<%= display_error_messages('employee_pf') %>
+<ul class="form">
+  <%= f.text_field(t('pf.number'), :epf_number, {:note=>"Testing Help"}) %>
+  <%= f.text_field("#{t('common.registration')} #{t('common.date')}", :created_at, :class => 'datebalks') %>
+  <%= f.text_field("#{t('common.total')} #{t('pf.contribution')}",:total_pf_contribution) %>
+  <%= f.text_field("#{t('pf.voluntary')} #{t('common.amount')}",:vpf_amount) %>
+  <%= f.text_field("#{t('pf.voluntary')} #{t('common.percent')}",:vpf_percent) %>
+  <%= f.labelled_check_box(t('pf.match_company_vpf'), :match_company_vpf) %>
+</ul>

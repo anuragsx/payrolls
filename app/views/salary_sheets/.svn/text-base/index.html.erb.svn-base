@@ -1,0 +1,24 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('salary_sheet.salary_sheet_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th class="left"><%= previous_link(@prev_year.formatted_fy,salary_sheets_path(:year => @prev_year), :rel => 'Previous FY') %></th>
+      <th class="center" colspan="3"><%= "#{t('salary_sheet.salary_sheet_for')} #{@this_year.formatted_fy}" %></th>
+      <th class="right"><%= next_link(@next_year.formatted_fy,salary_sheets_path(:year => @next_year), :rel => 'Next FY') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% i = 0; @first = true %>
+    <% @salary_sheets.in_groups_of(3).each do |g| %>
+      <tr>
+        <td class="block q">Q<%= i += 1; i %></td>
+        <%= render g %>
+        <td class="block total"><%= g.sum(0){|s|s.salary_slips.to_a.sum(&:gross) || 0}.try(:round) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

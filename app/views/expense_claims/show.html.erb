@@ -1,0 +1,13 @@
+<% title "Expense" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @expens.description %>
+  <%=h @expens.amount %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_employee_expense_claim_path(@employee,@expens) %> |
+  <%= link_to "Destroy", [@employee,@expens], :confirm =>CONFIRM_DELETE, :method => :delete %> |
+  <%= link_to "View All", @expenses_path %>
+</p>

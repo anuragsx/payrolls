@@ -1,0 +1,12 @@
+<%= render :partial=>'companies/page_header' %>
+<% form_for(@company_grade) do |f| %>
+  <%= display_error_messages('company_grade') %>
+  <ul class="form">
+    <%= f.labelled_text_field("#{t('company_grade.grade')}", :name) %>
+    <%= f.labelled_text_field("#{t('company_grade.pay_scale')}", :pay_scale) %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class=>'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), company_grades_path,:class => 'cancel') %>
+  </p>
+<% end %>

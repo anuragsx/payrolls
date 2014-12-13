@@ -1,0 +1,43 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/vendor/ttfunk/lib
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+ttfunk
+dir
+
+ttfunk.rb
+file
+
+
+
+
+2010-03-13T02:52:23.218750Z
+6f4d3b8da31f8f32f31d7ef27838670b
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+

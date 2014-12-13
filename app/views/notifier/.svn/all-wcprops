@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/salaree/!svn/ver/990/app/views/notifier
+END
+sign_up_information.plain.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/990/app/views/notifier/sign_up_information.plain.html.erb
+END
+sign_up_information.text.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/990/app/views/notifier/sign_up_information.text.html.erb
+END

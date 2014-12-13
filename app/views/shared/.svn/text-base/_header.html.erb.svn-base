@@ -1,0 +1,15 @@
+<div id="header">
+  <div id="header-inner">
+    <div class="salaree">
+      <%= link_to(image_tag("salaree_logo.png", :alt=>"Salaree.com"),  root_url(:subdomain => false), :target => "_blank") %>
+    </div>
+    <div class="log">
+      <%= "#{t('common.hello')}, #{@current_user.full_name}" %> &ndash;
+      <%= link_to(t('common.logout'), user_session_path, :method=>:delete)%>
+    </div>
+    <%= render :partial => 'shared/flash_display' %>
+    <div class="company">
+      <h1><%= @company.name %></h1>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<% content_for(:page_buttons) do  %>
+  <%= link_to(t('button.edit'),  edit_employee_insurance_path(@employee,@insurance), :class => 'edit')%>
+  or
+  <%= link_to(t('button.cancel'), employee_insurance_path(@employee,@insurance),:confirm=>CONFIRM_DELETE, :method=>:delete, :class => 'cancel')%>
+<% end %>
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('insurance.name') %></th>
+        <td><%= @insurance.name %></td>
+      </tr>
+      <tr>
+        <th><%= t('insurance.premium') %></th>
+        <td><%= @insurance.monthly_premium.round %></td>
+      </tr>
+      <% unless @insurance.expiry_date.end_of_time?  %>
+        <tr>
+          <th><%= t('insurance.expiry_date') %></th>
+          <td><%= @insurance.expiry_date.to_s(:month_and_year) %></td>
+        </tr>
+      <%end%>
+      <tr>
+        <th><%= "#{t('common.total')} #{t('common.paid')}" %></th>
+        <td><%= @insurance.total_premium_paid %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

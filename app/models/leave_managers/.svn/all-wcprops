@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/salaree/!svn/ver/1269/app/models/leave_managers
+END
+leave_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/21/app/models/leave_managers/leave_type.rb
+END
+simple_leave_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/1099/app/models/leave_managers/simple_leave_calculator.rb
+END
+leave_accounting_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/940/app/models/leave_managers/leave_accounting_calculator.rb
+END
+employee_leave_balance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1146/app/models/leave_managers/employee_leave_balance.rb
+END
+company_leave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1208/app/models/leave_managers/company_leave.rb
+END
+employee_leave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1267/app/models/leave_managers/employee_leave.rb
+END
+employee_leave_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1215/app/models/leave_managers/employee_leave_type.rb
+END

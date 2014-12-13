@@ -1,0 +1,52 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/10to1-spreadsheet_on_rails/test
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+test_helper.rb
+file
+
+
+
+
+2010-03-13T02:50:10.968750Z
+0f57f5fd3650bdad64fa70be9fd4f761
+2009-07-16T13:41:57.691684Z
+148
+swativ
+
+spreadsheet_on_rails_test.rb
+file
+
+
+
+
+2010-03-13T02:50:10.968750Z
+b3b805fd48f6d0cb22031fa52484ad75
+2009-07-16T13:41:57.691684Z
+148
+swativ
+

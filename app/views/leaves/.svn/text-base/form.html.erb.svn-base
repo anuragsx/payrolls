@@ -1,0 +1,39 @@
+<%
+if @leave.new_record?
+  url = employee_leaves_path(@employee)
+  method = 'post'
+else
+  url = employee_leafe_path(@employee)
+  method = 'put'
+end
+%>
+<% form_for @leave, :url=>url, :method=>method do |f| %>
+  <%= display_error_messages('leave') %>
+  <ul class="form">
+    <%= f.labelled_text_field("#{t('leaves.present')} #{t('leaves.days')}", :present) %>
+    <%= f.labelled_text_field("#{t('leaves.absent')} #{t('leaves.days')}", :absent) %>
+    <% f.fields_for :casual_leave do |c| %>
+      <td class="numeric head2"><%= c.labelled_text_field('Casual Leaves',:leaves) %></td>
+      <%= c.hidden_field :leave_type, :size => 5 %>
+      <%= c.hidden_field :employee_id, :size => 5 %>
+    <%end%>
+    <% f.fields_for :privilege_leave do |c| %>
+      <td class="numeric head2"><%= c.labelled_text_field("#{t('leaves.privilege_leave')}",:leaves) %></td>
+      <%= c.hidden_field :leave_type, :size => 5 %>
+      <%= c.hidden_field :employee_id, :size => 5 %>
+    <%end%>
+    <% f.fields_for :sick_leave do |c| %>
+      <td class="numeric head2"><%=  c.labelled_text_field('Sick Leaves',:leaves) %></td>
+      <%= c.hidden_field :leave_type, :size => 5 %>
+      <%= c.hidden_field :employee_id, :size => 5 %>
+    <%end%>
+    <%= f.labelled_text_field("#{t('leaves.overtime')}", :overtime_hours) %>
+    <%= f.labelled_text_field("#{t('leaves.late_hours')}", :late_hours) %>
+    <%= f.labelled_text_field("#{t('leaves.extra_work_days')}", :extra_work_days) %>
+    <%= f.labelled_date_select(t('common.month'), :created_at, :discard_day => true) %>
+  </ul>
+  <p class="submit">
+    <%= f.submit f.object.new_record? ? t('button.create') : t('button.update'),:class=>'btn' %> or
+    <%= link_to(t('button.cancel'), employee_leaves_path(@employee),:class =>'cancel') %>
+  </p>
+<% end %>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/generators/delayed_job/templates
+END
+script
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/generators/delayed_job/templates/script
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/182/vendor/plugins/delayed_job/generators/delayed_job/templates/migration.rb
+END

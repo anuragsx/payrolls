@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/models/consumers/services
+END
+twitter_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/models/consumers/services/twitter_token.rb
+END
+fireeagle_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/models/consumers/services/fireeagle_token.rb
+END
+agree2_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/models/consumers/services/agree2_token.rb
+END
+google_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/models/consumers/services/google_token.rb
+END

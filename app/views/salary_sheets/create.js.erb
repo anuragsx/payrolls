@@ -1,0 +1,2 @@
+jQuery('td.cando').replaceWith("<%=escape_javascript(render(:partial => "salary_sheets/salary_sheet",:locals => {:salary_sheet => @salary_sheet }))%>");
+jQuery('#salary_delete').remove();

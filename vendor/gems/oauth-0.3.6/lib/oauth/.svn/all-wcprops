@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth
+END
+oauth_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/oauth_test_helper.rb
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/client.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/helper.rb
+END
+token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/token.rb
+END
+oauth.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/oauth.rb
+END
+signature.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/signature.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/version.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/server.rb
+END
+cli.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/cli.rb
+END
+request_proxy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy.rb
+END
+consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/consumer.rb
+END
+errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/errors.rb
+END

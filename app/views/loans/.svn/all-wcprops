@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/1216/app/views/loans
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/345/app/views/loans/edit.html.erb
+END
+_employee_loan.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/795/app/views/loans/_employee_loan.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/773/app/views/loans/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/345/app/views/loans/new.html.erb
+END
+loans.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1216/app/views/loans/loans.html.erb
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/795/app/views/loans/bulk.html.erb
+END
+emis.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1187/app/views/loans/emis.pdf.prawn
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/899/app/views/loans/_form.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/795/app/views/loans/sheet_view.html.erb
+END

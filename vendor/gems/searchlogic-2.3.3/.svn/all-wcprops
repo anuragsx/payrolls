@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/README.rdoc
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/.gitignore
+END
+VERSION.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/VERSION.yml
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/init.rb
+END
+searchlogic.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/searchlogic.gemspec
+END
+CHANGELOG.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/CHANGELOG.rdoc
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/723/vendor/gems/searchlogic-2.3.3/.specification
+END

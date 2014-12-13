@@ -1,0 +1,38 @@
+<% content_for(:page_header) do  %>
+  <h2>TDS Return</h2>
+  <%= companies_sub_header %>
+<% end %>
+<%= annual_navigator(tds_returns_path(:year => @prev_year),tds_returns_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th></th>
+      <th></th>
+      <th class="numeric">Total Deducted</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @q_years.each do |k,v| %>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1">
+          <b><%= link_to(k,tds_return_path(k)) %></b>
+        </td>
+        <td class="head2">
+          <% unless v.new_record? %>
+            <%= link_to("Form 27A",tds_return_path(k,:format => :pdf)) %>
+          <% end %>
+        </td>
+        <td class="head3">
+          <% form_for(v) do |f| %>
+            <%= f.text_field(:receipt_number) %>
+            <%= f.submit("Update Receipt Number")  %>
+          <% end unless v.new_record? %>
+        </td>
+        <td class="head4 numeric"><%= v.total_deducted_from_employees unless v.new_record? %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

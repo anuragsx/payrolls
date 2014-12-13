@@ -1,0 +1,15 @@
+<% form_for @employee, :url => @form_path, :method => :put do |f| %>
+
+  <ul class="form">
+    <%= f.labelled_text_field [t("common.#{@field_label}"), t('common.date')].join(' '), :resign_date, :class =>'datebalks'%>
+    <% if params[:action]== "new_resign" && @company.has_calculator?(LeaveAccountingCalculator)%>
+      <% employee_leave = EmployeeLeave.earned_leaves(@employee) %>
+      <%= f.labelled_text_field "Year Leaves", :current_balance, :value => employee_leave.try(:current_balance) %>
+      <%= f.labelled_text_field "Leaves", :earned_leaves, :value => employee_leave.try(:earned_leaves) %>
+    <%end%>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class=>"btn" %>or
+    <%= link_to(t('button.cancel'), employee_path(@employee), :class=>"cancel") %>
+  </p>
+<% end %>

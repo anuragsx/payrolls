@@ -1,0 +1,2 @@
+module CompanyProfessionalTaxesHelper
+end

@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec
+END
+destinations_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/destinations_spec.rb
+END
+images_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/images_spec.rb
+END
+font_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/font_spec.rb
+END
+measurement_units_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/measurement_units_spec.rb
+END
+transparency_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/transparency_spec.rb
+END
+stroke_styles_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/stroke_styles_spec.rb
+END
+bounding_box_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/bounding_box_spec.rb
+END
+document_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/document_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/spec_helper.rb
+END
+jpg_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/jpg_spec.rb
+END
+object_store_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/object_store_spec.rb
+END
+text_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/text_spec.rb
+END
+stamp_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/stamp_spec.rb
+END
+png_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/png_spec.rb
+END
+text_box_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/text_box_spec.rb
+END
+annotations_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/annotations_spec.rb
+END
+reference_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/reference_spec.rb
+END
+snapshot_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/snapshot_spec.rb
+END
+pdf_object_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/pdf_object_spec.rb
+END
+name_tree_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/name_tree_spec.rb
+END
+graphics_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/graphics_spec.rb
+END
+span_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/spec/span_spec.rb
+END

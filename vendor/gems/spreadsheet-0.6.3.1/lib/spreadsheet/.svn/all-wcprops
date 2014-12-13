@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet
+END
+column.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/column.rb
+END
+link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/link.rb
+END
+workbook.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/workbook.rb
+END
+datatypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/datatypes.rb
+END
+excel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel.rb
+END
+helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/helpers.rb
+END
+formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/formula.rb
+END
+font.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/font.rb
+END
+row.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/row.rb
+END
+format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/format.rb
+END
+encodings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/encodings.rb
+END
+worksheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/worksheet.rb
+END
+writer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/writer.rb
+END

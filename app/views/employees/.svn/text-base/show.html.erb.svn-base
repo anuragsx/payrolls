@@ -1,0 +1,66 @@
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('button.edit'),edit_employee_path(@employee), :class=>"edit") %>
+    or
+    <%= link_to(t('button.delete'),employee_path(@employee), :confirm =>CONFIRM_DELETE, :method => :delete, :class=>"delete") %>
+  </div>
+  <% possible_status = @employee.next_possible_events %>
+  <% possible_status.each do |s| %>
+    <% link_to(url_for(:controller => "employees", :action => "new_#{s}", :employee => @employee),{:class=>'button'}) do %>
+      <span><%= t("common.#{s.to_sym}") %></span>
+    <% end %>
+  <% end %>
+<% end %>
+
+<div class="group" id="employee_details">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= "#{t('common.employee')} #{t('common.status')}" %></th>
+        <td><%= @employee.status.titleize %></td>
+      </tr>
+      <tr>
+        <th><%= t('employees.identification_number') %></th>
+        <td><%= @employee.identification_number %></td>
+      </tr>
+      <tr>
+        <th><%= "#{t('employees.commencement')} #{t('common.date')}" %></th>
+        <td><%= @employee.commencement_date.to_s(:date_month_and_year) %></td>
+      </tr>
+      <tr>
+        <th><%= t('employees.department') %></th>
+        <td><%= @employee.department.try(:name) %></td>
+      </tr>
+      <tr>
+        <th><%= t('address.address_line1') %></th>
+        <td><%= @employee.complete_address %></td>
+      </tr>
+      <tr>
+        <th><%= t('employees.account_number') %></th>
+        <td><%= @employee.account_number %></td>
+      </tr>
+      <tr>
+        <th><%= t('employees.details.email') %></th>
+        <td><%= @employee.email %></td>
+      </tr>
+      <tr>
+        <th><%= t('address.mobile_number') %></th>
+        <td><%= @employee.address.try(:mobile_number) %></td>
+      </tr>
+      <% unless @employee.employee_detail.blank? %>
+        <tr>
+          <th><%= t('employees.details.care_of') %></th>
+          <td><%= @employee.employee_detail.care_of %></td>
+        </tr>
+        <tr>
+          <th><%= t('employees.details.date_of_birth') %></th>
+          <td><%= @employee.employee_detail.formatted_date_of_birth %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <th><%= t('employees.details.sex') %></th>
+        <td><%= @employee.sex %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

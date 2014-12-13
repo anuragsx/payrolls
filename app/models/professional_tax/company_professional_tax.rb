@@ -1,0 +1,42 @@
+class CompanyProfessionalTax < ActiveRecord::Base
+  extend ActiveSupport::Memoizable
+  
+  belongs_to :company
+  validates :zone, :company_id, :precense => true
+  scope :for_company, lambda{|c|{:conditions => ["company_id = ?",c]}}
+  
+  after_save :create_for_employees
+  after_destroy :delete_for_employees
+
+
+  def eligible?(gross,run_date)
+    s = slab(gross,run_date)
+    !!s && s.tax_amount > 0
+  end
+
+  def slab(gross,run_date)
+    ProfessionalTaxSlab.for_zone(zone).for_gross(gross).for_date(run_date).first
+  end
+  memoize :slab
+
+  def tax_amount(gross,run_date)
+    slab(gross,run_date).tax_amount
+  end
+
+  def description(gross,run_date)
+    slab = slab(gross,run_date)
+    "Professional Tax as per #{zone} for between slab #{slab.salary_min} and #{slab.salary_max}"
+  end
+
+  private
+  def create_for_employees
+    company.employees.map do|employee|
+      EmployeeProfessionalTax.create!(:employee => employee,
+        :company => company)
+    end
+  end
+
+  def delete_for_employees
+    company.employees.map{|emp| EmployeeProfessionalTax.find_by_employee_id(emp).try(:destroy)}
+  end
+end

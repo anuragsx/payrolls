@@ -1,0 +1,28 @@
+	<div class="employee-card">
+		<div class="card-header">
+			<a href="#" class="close-card" title="Close">Close</a>
+			<%= link_to(@employee.name,employee_path(@employee), :class => 'name') %>
+			<small><%= @employee.current_package.try(:designation)  %></small>
+		</div>
+		<div class="card-info">
+			<ul class="employee-details">
+				<li class="department"><%= "#{@employee.department.name.titleize} Department"  %></li>
+				<li class="salary"><%= "Basic Salary  #{@employee.current_package.basic}"  %></li>
+			</ul>
+		</div>
+		<div class="card-actions">
+			<ul>
+				<li class="delete"><%= link_to(t('button.delete'),employee_path(@employee), :confirm =>CONFIRM_DELETE, :method => :delete, :title => 'Delete') %></li>
+				<li class="edit"><%= link_to(t('button.edit'),edit_employee_path(@employee),:title => 'Edit') %></li>
+        <% possible_status = @employee.next_possible_events %>
+        <% possible_status.each do |s| %>
+          <li class="left">
+            <% link_to(url_for(:controller => "employees", :action => "new_#{s}", :employee => @employee)) do %>
+              <%= t("common.#{s.to_sym}") %>
+            <% end %>
+          </li>
+        <% end %>
+			</ul>
+		</div>
+	</div>
+

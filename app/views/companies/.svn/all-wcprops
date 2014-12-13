@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/salaree/!svn/ver/1260/app/views/companies
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/675/app/views/companies/edit.html.erb
+END
+_address_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1260/app/views/companies/_address_form.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/331/app/views/companies/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/865/app/views/companies/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1209/app/views/companies/_form.html.erb
+END
+_page_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/865/app/views/companies/_page_header.html.erb
+END

@@ -1,0 +1,23 @@
+<% content_for(:page_header) do  %>
+  <h2><%=h t('users.new') %></h2>
+<%end%>
+
+<% form_for @user, :url => users_path do |f| %>
+  <%= display_error_messages('user') %>
+  <ul class="form">
+    <%= f.labelled_text_field "#{t('users.first')} #{t('users.name')}",:first_name %>
+    <%= f.labelled_text_field "#{t('users.last')} #{t('users.name')}",:last_name %>
+    <%= f.labelled_text_field t('users.login'),:login %>
+    <%= f.labelled_text_field t('users.email'),:email %>
+    <%= f.labelled_password_field  t('users.passwords'), :password %>
+    <%= f.labelled_password_field t('users.password.confirm'),:password_confirmation %>
+    <%#= f.labelled_check_box t('users.activate'), :activate %>
+    <% f.fields_for :address do |add| %>
+      <%= add.labelled_text_field(t('users.mobile.number'), :mobile_number, :note => '+91XXXXXXXXXX') %>
+    <% end %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.create'), :class=>'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), users_path) %>
+  </p>
+<% end %>

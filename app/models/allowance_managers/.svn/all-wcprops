@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/1223/app/models/allowance_managers
+END
+simple_allowance_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/1223/app/models/allowance_managers/simple_allowance_calculator.rb
+END
+basic_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/948/app/models/allowance_managers/basic_calculator.rb
+END
+employee_package_head.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1207/app/models/allowance_managers/employee_package_head.rb
+END
+company_allowance_head.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/673/app/models/allowance_managers/company_allowance_head.rb
+END

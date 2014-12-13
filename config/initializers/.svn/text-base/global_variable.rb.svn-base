@@ -1,0 +1,139 @@
+I18n.default_locale = 'en'
+LANGUAGES = {
+  'English' => 'en',
+  "\xE0\xA4\xB9\xE0\xA4\xBF\xE0\xA4\x82\xE0\xA4\xA6\xE0\xA5\x80 " => 'hi'
+}
+TLD_LENGTH = 1 if RAILS_ENV == "development"
+TLD_LENGTH = 1 if RAILS_ENV == "production"
+TLD_LENGTH = 0 if RAILS_ENV == "test"
+FINANCIAL_YEAR_START = 4
+COUNTRY = 'INDIA'
+CONFIRM_DELETE = "Are you sure?\nThis can not be undone!"
+DEFAULT_INSURANCE_COMPANY = "Life Insurance Corporation"
+OAUTH_10_SUPPORT = true
+REFRESH_SECONDS = 5
+
+ActionMailer::Base.default_url_options[:host] = 'salaree.com'
+
+Paperclip::Attachment.default_options[:path] = ":rails_root/public/system/:class/:attachment/:id/:style/:basename.:extension"
+Paperclip::Attachment.default_options[:url] = "/system/:class/:attachment/:id/:style/:basename.:extension"
+
+SubdomainFu.tld_sizes = {:development => 1,
+                         :test => 0,
+                         :production => 1} # set all at once (also the defaults)
+
+$subdomain_exclusion = %w{salaree asset asset0 asset1 asset2 asset3 admin sanghi marketing pics docs
+                          www mail mobile static ftp smtp pop pop3 salary administration images image
+                          blog sales risingsun blogs home status url ssh svn make create cms content
+                          signup risingsun} + ('a'..'z').to_a
+
+MonthsForSelect = Date::MONTHNAMES.map{|x|[x,Date::MONTHNAMES.index(x)]}
+YearRange = (5.years.ago.year .. Date.today.year)
+Round = [0,1,2]
+
+EDUCATION_CESS = 0.03
+INDIAN_METROS = ['New Delhi','Delhi','Mumbai','Bombay','Calcutta','Kolkata','Kokatta','Madras','Chennai'].map(&:upcase)
+CONVEYANCE_THRESHOLD = 800
+SMS_ENABLED = true && File.exists?("#{RAILS_ROOT}/config/messenger.yml")
+MAILCHIMP_LIST = "Salaree.com Signups"
+raw_config = File.read(RAILS_ROOT + "/config/app_config.yml")
+APP_CONFIG = YAML.load(raw_config)[RAILS_ENV].symbolize_keys
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:month_and_year => "%B %Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:month_and_year => "%B %Y")
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:short_month_and_year => "%b %Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:short_month_and_year => "%b %Y")
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:short_month => "%b")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:short_month => "%b")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:salaree_time => '%d %b %Y - %I:%M%p')
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:date_month_and_year => "%d %B %Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:date_month_and_year => "%d %B %Y")
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:month_date_and_year => "%B %d %Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:month_date_and_year => "%B %d %Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:for_param => "%b%Y")
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:for_param => "%b%Y")
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:date_and_month => "%d %B")
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:date_and_month => "%d %B")
+
+require 'forms_with_buttons'
+require 'form_helper'
+require 'prawn/format'
+require 'subdomain_company'
+require 'num_to_words'
+require 'short_random'
+require 'prawn/security'
+require 'oauth/controllers/provider_controller'
+MAILER_FROM_ADDRESS = "Friends at Salaree.com <chimps@salaree.com>"
+ADMIN_MAILER_FROM_ADDRESS = %W(no-reply@risingsuntech.net)
+SITE_NAME = "Salaree.com"
+RECIPIENTS = ["arun.agrawal@risingsuntech.net","aditya.sanghi@risingsunbilling.com"]
+MAILER_SUBJECT_PREFIX = "salaree"
+DOMAIN = "salaree.com"
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.1and1.com",
+  :port => 25,
+  :domain => "http://salaree.com",
+  :authentication => :plain,
+  :user_name => "no-reply@risingsuntech.net",
+  :password => "risingsun.noreply"
+}
+
+Date.fiscal_zone = :india
+Time.zone = "Mumbai"
+
+class Fixnum
+  def financial_months(&block)
+    first_date = Date.financial_year_start(self)
+    (1..12).map do |m|
+      d = first_date + (m - 1).months
+      block_given? ? yield(d) : d
+    end
+  end
+
+  def calendar_months(&block)
+    (1..12).map do |m|
+      d = Date.new(self,m,1)
+      block_given? ? yield(d) : d
+    end
+  end
+
+  def formatted_fy
+    "#{self}-#{self+1}"
+  end
+end
+
+class TrueClass
+  def pretty_print
+    "Yes"
+  end
+end
+
+class FalseClass
+  def pretty_print
+    "No"
+  end
+end
+
+class Date
+  def self.end_of_time
+    new(9999,12,30)
+  end
+
+  def end_of_time?
+    self == Date.end_of_time
+  end
+
+  def month_dates
+    (self.beginning_of_month..self.end_of_month).map{|x|x}
+  end
+  
+  def exempt_block
+    first_block_year = 1986
+    return nil if self.year < first_block_year
+    block = first_block_year
+    current_year = Date.today.year
+    while !(block < current_year && (block + 3) > current_year)
+      return (block.to_s + "-" + (block + 3).to_s) if block <=  self.year && (block + 3) >=  self.year
+      block = block + 4
+    end
+  end
+end

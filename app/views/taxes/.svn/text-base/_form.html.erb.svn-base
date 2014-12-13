@@ -1,0 +1,6 @@
+<%= display_error_messages('employee_tax') %>
+<ul class="form">
+  <%= f.labelled_text_field 'Amount', :amount %>
+  <%= f.labelled_text_field 'Description', :description %>
+  <%= f.labelled_date_select 'Effective from', :created_at %>
+</ul>

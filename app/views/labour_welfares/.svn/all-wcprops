@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/920/app/views/labour_welfares
+END
+_quarterly.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/919/app/views/labour_welfares/_quarterly.html.erb
+END
+employee_lwf.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/918/app/views/labour_welfares/employee_lwf.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/917/app/views/labour_welfares/index.html.erb
+END
+_monthly.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/919/app/views/labour_welfares/_monthly.html.erb
+END
+_annual.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/918/app/views/labour_welfares/_annual.html.erb
+END
+_half_yearly.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/919/app/views/labour_welfares/_half_yearly.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/920/app/views/labour_welfares/show.html.erb
+END

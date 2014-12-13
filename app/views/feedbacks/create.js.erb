@@ -1,0 +1,6 @@
+
+<% if @feedback.valid? %>
+  document.getElementById('msg').innerHTML = '<span class ="green_font">Thanks for your interest. Please check your mail.</span>';
+<%else%>
+  document.getElementById('msg').innerHTML = '<span class ="red_font">Sorry. You entered invalid email address. Please renter.</span>';
+<%end%>

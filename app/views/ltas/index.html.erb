@@ -1,0 +1,54 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_lta_path(@employee),:class => 'button') do %>
+    <span>Add Fix Amount for LTA</span>
+  <% end %>
+   <%= link_to("Claim Form",new_employee_lta_claim_path(@employee)) %>
+<% end %>
+<% unless @ltas.blank? %>
+  <table cellspacing="0" cellpadding="0" width="100%" class="list" >
+    <thead>
+      <tr>
+        <th>LTA Amount</th>
+        <th>Description</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @ltas.each do |lta| %>
+        <tr>
+          <td><%= link_to_if(!lta.is_billed?,lta.amount,edit_employee_lta_path(@employee,lta)) %></td>
+          <td><%= lta.description %></td>
+          <td><%= lta.created_at.to_s(:month_and_year) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+<% unless @lta_claims.blank? %>
+  <h2>Claims</h2>
+  <table cellspacing="0" cellpadding="0" width="100%" class="list" >
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Amount</th>
+        <th>Description</th>
+       </tr>
+    </thead>
+    <tbody>
+      <% @lta_claims.each do |block,claims| %>
+       <tr>
+        <th><%= block %></th>
+        <th></th>
+        <th></th>
+       </tr>
+      <% claims.each do |claim| %>
+        <tr>
+          <td><%= link_to_if(!claim.is_billed?,claim.claim_year,edit_employee_lta_claim_path(@employee,claim)) %></td>
+          <td><%= claim.amount %></td>
+          <td><%= claim.description %></td>
+        </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -1,0 +1,8 @@
+class LeaveType < ActiveRecord::Base
+
+  has_many :company_leaves
+  has_many :companies, :through => :company_leaves
+
+  validates_presence_of :name
+
+end

@@ -1,0 +1,27 @@
+<% if @current_package.blank? %>
+    <li id="employee_start_date_input" class="string required">
+      <%= f.label("Commencement Date", :class=>'main')%>
+      <%= f.text_field(:start_date, :class => 'datebalks', :value => Date.today)  %>
+    </li>
+<% else %>
+    <li id="employee_promotion_date_input" class="string required">
+      <%= f.label("Promotion Date", :class=>'main')%>
+      <%= f.text_field(["#{t('employees.package.promotion')} #{t('common.date')}"], :start_date, :class => 'datebalks')  %>
+    </li>
+
+  <% designation = @current_package.designation %>
+  <% basic = @current_package.basic %>
+<% end %>
+<li id="employee_designation_input" class="string required">
+  <%= f.label("Designation", :class=>'main')%>
+  <%= f.text_field(:designation, :value => designation)  %>
+</li>
+<li id="employee_basic_input" class="string required">
+  <%= f.label("Basic", :class=>'main')%>
+  <%= f.text_field(:basic, :value => basic)  %>
+</li>
+<li id="employee_grade_input" class="string required">
+  <%= f.label("Grade", :class=>'main')%>
+  <%= f.collection_select(:company_grade_id,@company.company_grades, :id, :pay_scale_and_name, :include_blank => true) if @company.company_grades %>
+</li>
+<%= f.hidden_field(:employee_id, :value => @employee.id)  %>

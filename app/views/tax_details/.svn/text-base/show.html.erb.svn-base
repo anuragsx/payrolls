@@ -1,0 +1,42 @@
+<% content_for(:page_buttons) do  %>
+  <%= link_to(t('button.edit'),edit_employee_tax_details_path(@employee), :class=>'edit') %> |
+  <%= link_to(t('button.delete'), employee_tax_details_path(@employee),:method => :delete, :confirm => CONFIRM_DELETE,:class=>'cancel') %> |
+  <%= link_to('Form16', employee_tax_details_path(@employee,:format => :pdf)) %>
+<% end %>
+<div class="group">
+  <h4><%= "#{t('common.tax')} #{t('common.details')}" %></h4>
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('tax.category') %></th>
+        <td><%=h @tax_detail.description %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th><%= t('tax.pan') %></th>
+        <td><%=h @tax_detail.pan %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th><%= t('tax.monthly_rent_paid') %></th>
+        <td><%=h @tax_detail.monthly_rent_paid %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th><%= "#{t('tax.investment')} #{t('common.in_fy')} #{Date.today.financial_year.formatted_fy}" %></th>
+        <td><%=h @investment_for_current_fy %></td>
+        <td><%= link_to(t('common.details'),employee_investments_path,:class=>'edit') %></td>
+      </tr>
+      <tr>
+        <th><%= "#{t('tax.other_income')} #{t('common.in_fy')} #{Date.today.financial_year.formatted_fy}" %></th>
+        <td><%=h @other_incomes_for_current_fy %></td>
+        <td><%= link_to(t('common.details'),employee_other_incomes_path,:class=>'edit') %></td>
+      </tr>
+      <tr>
+        <th><%= "#{t('common.active')} #{t('common.fix')} #{t('common.amount')} #{t('salary_slip.deduction')}" %></th>
+        <td><%=h @active_fix_amount_deduction %></td>
+        <td><%= link_to(t('common.details'),employee_taxes_path,:class=>'edit') %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

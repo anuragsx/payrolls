@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/salaree/!svn/ver/1294/app/views/arrears
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1294/app/views/arrears/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1294/app/views/arrears/index.html.erb
+END
+_arrear.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/1294/app/views/arrears/_arrear.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1294/app/views/arrears/new.html.erb
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1294/app/views/arrears/bulk.html.erb
+END
+_sub_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1294/app/views/arrears/_sub_header.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1294/app/views/arrears/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1294/app/views/arrears/_form.html.erb
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1294/app/views/arrears/sheet_view.html.erb
+END

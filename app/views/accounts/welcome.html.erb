@@ -1,0 +1,13 @@
+<% content_for(:page_header) do %>
+  <h2>Account Activation</h2>
+<% end %>
+<% form_tag(url_for(:controller => :accounts, :action => :activate), :method => :get) do %>
+  <dl class="form">
+    <dt>Activation Code</dt>
+    <dd><%= text_field_tag 'code', nil, :class => "title", :size => 40 %></dd>
+  </dl>
+  <p>
+    <%= submit_tag 'Submit', :class=>'btn' %>
+  </p>
+  <p class="forgot">Please check your email and click on the link provided within or insert your activation code here.</p>
+<% end %>

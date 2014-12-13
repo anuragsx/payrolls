@@ -1,0 +1,36 @@
+<% if salary_sheet == @can_be_created %>
+  <td class="block cando">
+  	<div class="salary_sheet_actions">
+        <%= salary_sheet_actions(salary_sheet) %>
+      </div>
+    <% form_for(salary_sheet,:html => {:id => "sheet_form"}) do |f| %>
+      Month of <%= f.text_field :month_length,:size => 2 %> days
+      <%= f.hidden_field(:run_date) %> <br/>
+      <%= f.submit "Create for #{salary_sheet.run_date.to_s(:short_month_and_year)}",
+        :class=>"btn", :id =>"create_salary_sheet"  %><br/>
+    <% end %>
+  </td>
+<% elsif salary_sheet.new_record? %>
+  <td class="block cannotdo">
+    <h6><%=salary_sheet.run_date.to_s(:month_and_year) %></h6>
+    <div><strong><%= salary_sheet.errors.full_messages%></strong></div>
+  </td>
+<% elsif salary_sheet.error? %>
+  <td class="block <%= "cannotdo" %>">
+    <h6><%= salary_sheet.run_date.to_s(:month_and_year) %>
+    <%= content_tag(:span,"Something went wrong", :class => 'error') %></h6>
+    <div>has <em><strong><%= pluralize(salary_sheet.salary_slips.size,"Salary Slip") %></strong></em></div>
+    <div>totalling a gross of <em><strong><%= salary_sheet.salary_slips.sum(:gross).round %></strong></em></div>
+    <div>totalling company expenditure of <em><strong><%= salary_sheet.salary_slip_charges.select{|e| e.amount > 0}.sum(&:amount).round %></strong></em></div>
+    <%= link_to('Delete', salary_sheet_path(salary_sheet), :confirm=>CONFIRM_DELETE, :method=>:delete, :id => 'salary_delete') %>
+  </td>
+<% else %>
+  <td class="block <%= salary_sheet.initial? ? "doing" : "done" %>">
+    <h6><%=link_to(salary_sheet.run_date.to_s(:month_and_year),salary_sheet) %>
+    <%= sheet_index_status(salary_sheet) %></h6>
+    <div>has <em><strong><%= pluralize(salary_sheet.salary_slips.size,"Salary Slip") %></strong></em></div>
+    <div>totalling a gross of <em><strong><%= salary_sheet.salary_slips.sum(:gross).round %></strong></em></div>
+    <div>totalling company expenditure of <em><strong><%= salary_sheet.salary_slip_charges.select{|e| e.amount > 0}.sum(&:amount).round %></strong></em></div>
+    <%= link_to('Delete', salary_sheet_path(salary_sheet), :confirm=>CONFIRM_DELETE, :method=>:delete, :id => 'salary_delete') if !salary_sheet.initial? && @last == salary_sheet %>
+  </td>
+<% end %>

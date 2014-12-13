@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/162/config/templates
+END
+nginx_virtual_host.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/162/config/templates/nginx_virtual_host.erb
+END

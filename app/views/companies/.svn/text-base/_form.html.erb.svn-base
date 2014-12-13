@@ -1,0 +1,25 @@
+<% form_for(@company, :html => {:multipart => true }) do |f| %>
+  <%= display_error_messages('company') %>
+  <ul class="form">
+    <%= f.labelled_text_field t('common.name'),:name %>
+    <%= f.labelled_file_field t('company.logo'), :logo %>
+    <%= f.labelled_text_field t('tax.pan'), :pan %>
+    <%= f.labelled_text_field t('company.tan'), :tan %>
+    <% f.fields_for(:address) do |a| %>
+      <%= render(:partial => 'address_form', :locals => {:aform => a,:address => @address}) %>
+    <% end %>
+    <% if @company.logo_file_name %>
+      <%= company_icon @company,:thumb %>
+      <%= link_to t('button.delete'), delete_logo_company_path(@company),:method=>:put, :confirm=>CONFIRM_DELETE  %><br/>
+    <% end %>
+    <%= f.labelled_select t('company.round_by'), :round_by, Round %>
+    <%= f.labelled_check_box "Do you want Password Protected Payslips?", :want_protected_pdf%>
+    <%= f.labelled_password_field "Master Password", :pdf_password %>
+    <%= f.labelled_password_field "Default Employee Password", :default_employee_pdf_password %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to t('button.cancel'), company_path(current_account), :class => 'cancel' %>
+  </p>
+
+<% end %>

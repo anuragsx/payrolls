@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1223/app/models/flexible_allowance_manager
+END
+flexible_allowance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/1136/app/models/flexible_allowance_manager/flexible_allowance.rb
+END
+company_flexi_package.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/763/app/models/flexible_allowance_manager/company_flexi_package.rb
+END
+flexible_allowance_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1223/app/models/flexible_allowance_manager/flexible_allowance_calculator.rb
+END

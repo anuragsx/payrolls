@@ -1,0 +1,44 @@
+<li>
+  <%= aform.label(:address_line1, :class=>'main') %>
+  <%= aform.text_field(:address_line1)%>
+</li>
+
+<li>
+  <%= aform.label(:address_line2, :class=>'main')%>
+  <%= aform.text_field(:address_line2)%>
+</li>
+
+<li>
+  <%= aform.label(:address_line3, :class=>'main')%>
+  <%= aform.text_field(:address_line3)%>
+</li>
+
+<li>
+  <%= aform.label(:city,:class=>'main') %>
+  <%= aform.text_field(:city)%>
+</li>
+
+<li>
+  <%= aform.label(:pincode, :class=>'main')%>
+  <%= aform.text_field(:pincode)%>
+</li>
+
+
+
+<%#= aform.label t("address.pincod"), :class=>'main'%>
+<%#= aform.text_field(:pincod)%>
+
+<li>
+  <%= aform.label(:phone_number, :class=>'main')%>
+  <%= aform.text_field(:phone_number)%>
+</li>
+
+<li>
+  <%= aform.label(:mobile_number, :class=>'main') %>
+  <%= aform.text_field(:mobile_number, :note => '+91XXXXXXXXXX') %>
+</li>
+
+<li>
+  <%= aform.label(:state, :class=>'main') %>
+  <%= aform.select(:state, STATE,{:prompt => "Select a State"}) %>
+</li>

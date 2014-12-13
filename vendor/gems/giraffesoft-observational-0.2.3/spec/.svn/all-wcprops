@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec
+END
+active_record_observers_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec/active_record_observers_spec.rb
+END
+observable_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec/observable_spec.rb
+END
+observer_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec/observer_spec.rb
+END
+observational_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec/observational_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/654/vendor/gems/giraffesoft-observational-0.2.3/spec/spec_helper.rb
+END

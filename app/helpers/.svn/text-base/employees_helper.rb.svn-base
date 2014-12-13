@@ -1,0 +1,118 @@
+module EmployeesHelper
+
+  def fetch_data(employee)
+    label = "label-updated"
+    string = "Updated"
+    if employee.created_at == employee.updated_at
+      label = "label-added"
+      string = "Added"
+    end
+    "<span class='label #{label}'>#{string}</span>"
+  end
+
+  def all_active_employees(&block)
+    employee_groups = @company.active_employees.group_by{|n| n.name.strip.first.upcase }
+    employee_groups.keys.sort.each do |k|
+      yield(k,employee_groups[k])
+    end
+  end
+
+  def highlight_lastname(name)
+    components = name.split(" ")
+    components[components.size-1] = "<strong>#{components.last}</strong>"
+    components.join(" ")
+  end
+
+  def employee_setup(employee)
+    returning(employee) do |emp|
+      employee.build_employee_detail unless employee.employee_detail
+      employee.build_address unless employee.address
+    end
+  end
+
+  def employee_status_header
+    links = []
+    Employee::EMPLOYEE_STATUS.each do |status|
+      links << {:name => status, :path => employees_path('search[status_is]' => status.first.downcase),
+                :controller => 'employees', :status_is => status.first}
+    end
+    content_tag(:ul, links.map do |entries|
+        status_check = params[:search].blank? ?  false : params[:search][:status_is]
+        status_check ||= @search.try(:status_is)
+        content_tag(:li,link_to(t(:common)["#{entries[:name]}".to_sym],entries[:path]),
+          :class => link_active?(params[:controller] == entries[:controller] &&
+              status_check == entries[:status_is]))
+      end.join(" "), :class => 'tabs')
+  end
+
+  def active_status?  
+    ((@search.try(:status_is)) || (params[:search] && params[:search][:status_is])) == "Active"
+  end
+
+  def employee_links
+    @links  ||= []
+    if @employee
+      @links = [
+        {:path => employee_esis_path(@employee), :name => t('common.esi'), :controller => "esis"},
+        {:path => employee_pfs_path(@employee), :name => t('common.pf'), :controller => "pfs"},
+        {:path => employee_advances_path(@employee), :name => t('common.advance'), :controller => "advances"},
+        {:path => employee_tax_details_path(@employee), :name => t('common.tax'), :controller => ["tax_details", "investments", "taxes", "other_incomes"], :group => "income_tax"},
+        {:path => employee_tax_details_path(@employee), :name => t('common.tax'), :controller => ["tax_details", "investments", "taxes", "other_incomes"], :group =>"simple_income_tax"},
+        {:path => employee_tax_details_path(@employee), :name => t('common.tax'), :controller => ["tax_details", "investments", "taxes", "other_incomes"], :group =>"annually_equated_tax"},
+        {:path => employee_expense_claims_path(@employee), :name => t('common.expenses'), :controller => "expense_claims"},
+        {:path => employee_incentives_path(@employee), :name => t('common.incentives'), :controller => "incentives"},
+        {:path => employee_insurances_path(@employee), :name => t('common.insurance'), :controller => "insurances"},
+        {:path => employee_loans_path(@employee), :name => t('common.loans'), :controller => ["loans", "emi_overrides"], :group => "loans"},
+        {:path => employee_bonus_index_path(@employee), :name => t('common.bonus'), :controller => "bonus"},
+        {:path => employee_labour_welfares_path(@employee), :name => t('labour_welfare.self'), :controller => "labour_welfares"},
+        {:path => employee_professional_tax_path(@employee), :name => t('professional_tax.self'), :controller => "professional_taxes"},
+        {:path => employee_attendances_path(@employee), :name => t('common.attendance'), :controller => "attendances"},
+        {:path => employee_ltas_path(@employee), :name => t('common.lta'), :controller => "ltas"},
+        {:path => employee_arrears_path(@employee), :name => t('common.arrears'), :controller => "arrears"}
+        ].select{|v| @company.calculator_exists?(v[:group] || v[:controller])}
+    end
+    @links
+  end
+
+  def employee_header_defaults
+    [{:name => t('common.details'), :path => employee_path(@employee), :controller => 'employees'},
+      {:name => t('common.salary_package'),
+        :path => (@employee.current_package && !@employee.current_package.new_record?) ?
+          employee_employee_package_path(@employee,@employee.current_package) : new_employee_employee_package_path(@employee) ,
+        :controller => 'employee_packages'},
+      {:name => t('common.salary_slips'), :path => employee_salary_slips_path(@employee), :controller => 'salary_slips'},
+      {:name => t('common.leaves'), :path => employee_leaves_path(@employee), :controller => ['leaves', 'leave_balances']}
+    ]
+  end
+
+  def employee_sub_header
+    employee_links
+    content_tag(:ul,  :class => 'tabs') do
+      (employee_header_defaults + employee_links).map do |entries|
+        content_tag(:li,link_to(entries[:name],entries[:path]),
+          :class => link_active?(entries[:controller].include?(params[:controller])))
+      end.join(" ")
+    end
+  end
+
+  def calculate_percent(amount=0,total=0)
+    return "0.00" if (amount==0 or total == 0)
+    return (amount*100/total).round(2)
+  end
+
+  def horizontal_graph(data)
+    str = ""
+    data.each do |d|
+      if d[1].to_f > 60
+        anchor = 49
+      elsif d[1].to_f == 0.0
+        anchor = 0.5
+      else
+        anchor = d[1].to_f - 2
+      end
+      str +="<div class='graph'><strong class='bar' style='width: #{d[1]}%;' title='#{d[0].to_s.humanize}'><span style=' position: absolute;left: #{anchor}em;'>#{d[1]}% (<span class='rec_amount'>#{d[2]}</span> of <span class='total_amount'>#{d[3]}</span>)</span></strong></div>"
+    end
+    return str
+  end
+
+end

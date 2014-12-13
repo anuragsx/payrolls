@@ -1,0 +1,52 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/aasm/spec/functional
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-22T04:10:07.134110Z
+178
+pankajb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+conversation_spec.rb
+file
+
+
+
+
+2010-03-13T02:50:17.843750Z
+246ff74680c84c789221e70a42f044da
+2009-07-22T04:10:07.134110Z
+178
+pankajb
+
+conversation.rb
+file
+
+
+
+
+2010-03-13T02:50:17.859375Z
+10507a39ba7dece9101bcc6edd73ce95
+2009-07-22T04:10:07.134110Z
+178
+pankajb
+

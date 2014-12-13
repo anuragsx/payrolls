@@ -1,0 +1,65 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(edit_employee_leave_balances_path(@employee),:class => 'button') do %>
+    <span><%= "#{t('leaves.override')} #{t('leaves.balance')}" %></span>
+  <% end %>
+  | <%= link_to("print",employee_leaves_path(@employee,:format => :pdf)) %>
+<% end %>
+<div>
+  <span class="right"><%= next_link(@next_year,employee_leaves_path(:year => @next_year)) %></span>
+  <%= previous_link(@prev_year,employee_leaves_path(:year => @prev_year)) %>
+</div>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <caption><%= "#{t('common.employees')} #{t('common.leaves')} #{t('leaves.for')}"%> <%= @this_year %></caption>
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th><%= t('leaves.present') %></th>
+      <th><%= t('leaves.absent') %></th>
+      <th><%= t('leaves.casual_leaves') %></th>
+      <th><%= t('leaves.privilege_leave')%></th>
+      <th><%= t('leaves.sick_leaves') %></th>
+      <th><%= t('leaves.overtime') %></th>
+      <th><%= t('leaves.late_hours') %></th>
+      <th><%= t('leaves.extra_work_days') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td><%= "#{t('common.total')} #{t('common.leaves')}" %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.present || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.absent || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.casual_leave.try(:leaves) || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.privilege_leave.try(:leaves) || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.sick_leave.try(:leaves) || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.overtime_hours || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.late_hours || 0} %></td>
+      <td class="numeric"><%= @monthlies.sum(0){|x|x.extra_work_days || 0} %></td>
+      <td class="numeric"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @monthlies.each do |leave| %>
+      <tr class="<%= cycle(:alt,"") %>">
+        <% unless leave.new_record? %>
+          <td class="head1"><%= leave.created_at.to_s(:short_month_and_year) %></td>
+          <td class="numeric head2"><%=h leave.present %></td>
+          <td class="numeric head2"><%=h leave.absent %></td>
+          <td class="numeric head2"><%=h leave.casual_leave.try(:leaves)  %></td>
+          <td class="numeric head2"><%=h leave.privilege_leave.try(:leaves) %></td>
+          <td class="numeric head2"><%=h leave.sick_leave.try(:leaves) %></td>
+          <td class="numeric head2"><%=h leave.overtime_hours %></td>
+          <td class="numeric head2"><%=h leave.late_hours %></td>
+          <td class="numeric head2"><%=h leave.extra_work_days %></td>
+          <td class="numeric head3"><%= link_to(t('button.edit'),edit_employee_leafe_path(@employee,leave)) %></td>
+        <% else %>
+          <% form_for(leave) do |f| %>
+            <td class="head1"><%= leave.created_at.to_s(:short_month_and_year) %></td>
+            <%= render :partial=>'fields',:locals => {:leave => leave,:f => f} %>
+            <td class="numeric head3"><%= f.submit(t('button.save')) %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,31 @@
+<% company_loadings = CompanyLoading.scoped_by_company_id(@company).sort{|a,b| b.created_at <=> a.created_at} %>
+<%= render :partial=>'companies/page_header' %>
+<table class="list" width="100%" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th class="numeric"><%= t('common.effective_from') %></th>
+      <th class="numeric"><%= t('dearness_relief.loading_percent') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% company_loadings.each do |d_relief| %>
+      <tr>
+        <td class="numeric"><%= link_to(d_relief.created_at.to_s(:short_month_and_year),edit_company_loading_path(d_relief)) %></td>
+        <td class="numeric"><%=h d_relief.loading_percent %></td>
+        <td><%= link_to('Destroy',d_relief, :confirm => 'Are you sure?', :method => :delete, :class => 'cancel') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% form_for(CompanyLoading.new(:company => @company)) do |f| %>
+  <ul class="form">
+    <%= f.labelled_text_field(t('dearness_relief.loading_percent'),:loading_percent, :note => 'Loading percentage as per Govt. ruling e.g. 15%') %>
+    <%= f.labelled_text_field(t('common.effective_from'), :created_at, :class => 'datebalks') %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class => 'btn' %> or
+    <%= link_to(t('button.cancel'), company_path(@company), :class => 'cancel') %>
+  </p>
+<% end %>

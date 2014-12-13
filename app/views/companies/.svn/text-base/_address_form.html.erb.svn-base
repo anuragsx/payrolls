@@ -1,0 +1,8 @@
+<%= aform.labelled_text_field t('address.address_line1'), :address_line1%>
+<%= aform.labelled_text_field t('address.address_line2'), :address_line2%>
+<%= aform.labelled_text_field t('address.address_line3'), :address_line3%>
+<%= aform.labelled_text_field t('address.city'), :city%>
+<%= aform.labelled_text_field t('address.pincode'), :pincode%>
+<%= aform.labelled_text_field t('address.phone_number'), :phone_number%>
+<%= aform.labelled_text_field t('address.mobile_number'), :mobile_number, :note => '+91XXXXXXXXXX'%>
+<%= aform.labelled_state_select(t('address.state'),:state, COUNTRY,{:prompt => "Select a State"}) %>

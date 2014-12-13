@@ -1,0 +1,86 @@
+class EmployeeLeaveType < ActiveRecord::Base
+  
+  belongs_to :employee_leave
+  belongs_to :employee
+  belongs_to :company
+  
+  CASUAL_LEAVE = 'Casual'
+  PRIVILEGE_LEAVE = 'Privilege'
+  SICK_LEAVE  =  'Sick'
+  LEAVE_TYPES = [CASUAL_LEAVE, PRIVILEGE_LEAVE,SICK_LEAVE ]
+  
+  validates_presence_of :company, :employee,:leave_type
+  validates_numericality_of :leaves
+
+  attr_accessor :run_date
+  named_scope :for_type, lambda{|type|{:conditions => ["leave_type = ?",type]}}
+  
+  def present_days
+    employee_leave.try(:present) || 0
+  end
+      
+  def leave_balance
+    return nil if !company.has_calculator?(LeaveAccountingCalculator)
+    elb = EmployeeLeaveBalance.for_employee(employee).for_type(leave_type)
+    @earning ||= company_info.accrue_as_you_go? ? elb.no_financial_year.last : elb.for_financial_year(run_date.year).last
+  end
+  
+  def is_privilege_leave?
+    leave_type == PRIVILEGE_LEAVE
+  end
+
+
+  def update_leave_balance!
+    leave_balance.update_earning!(earning)
+    leave_balance.update_current!(earning) if company_info.accrue_as_you_go?
+    spending_leaves = leave_balance
+    current_leave_balance = leave_balance.current_balance
+    if current_leave_balance > 0
+      if current_leave_balance > leaves
+        self.paid = leaves
+        self.unpaid = 0
+      else
+        self.paid = current_leave_balance
+        self.unpaid = leaves - current_leave_balance
+      end
+    else
+      self.paid = 0
+      self.unpaid = leaves
+    end
+    spending_leaves.update_spend!(self.paid)
+    self.earned = earning
+    self.spent = self.paid
+    self.save
+  end
+
+ 
+  def current_balance
+    leave_balance.current_balance || 0 
+  end
+
+  def earned_leaves
+    leave_balance.earned_leaves || 0 
+  end
+
+  def earning
+    return 0 if company_info.rate_of_leave.zero?
+    company.has_calculator?(LeaveAccountingCalculator) &&
+      is_privilege_leave?  ?  present_days / company_info.rate_of_leave  :  0
+  end
+
+  def degrade_leave_balances!
+    transaction do
+      earned = self.earned || 0
+      spent = self.spent || 0
+      leave_balance.degrade_earning!(earned)
+      leave_balance.degrade_current!(earned) if company_info.accrue_as_you_go?
+      leave_balance.degrade_spend!(spent)
+      self.spent = self.earned = 0
+      self.save
+    end
+  end
+
+  def company_info
+    company_info ||= CompanyLeave.for_company(company).first
+  end
+end

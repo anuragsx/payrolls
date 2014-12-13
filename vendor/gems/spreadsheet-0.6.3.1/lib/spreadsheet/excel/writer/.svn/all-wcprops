@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer
+END
+workbook.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer/workbook.rb
+END
+biff8.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer/biff8.rb
+END
+format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer/format.rb
+END
+worksheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/148/vendor/gems/spreadsheet-0.6.3.1/lib/spreadsheet/excel/writer/worksheet.rb
+END

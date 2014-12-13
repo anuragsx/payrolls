@@ -1,0 +1,12 @@
+<% fields_for "expenses[]", expense, :index=>nil do |f| %>
+  <tr>
+    <td><%= f.object.employee.name %></td>
+    <td><%= f.text_field :amount %></td>
+    <td><%= f.text_field :description %></td>
+    <%= f.hidden_field :employee_id %>
+    <%= f.hidden_field :expensed_at %>
+    <% unless expense.new_record? %>
+      <%= f.hidden_field :id %>
+    <% end  %>
+  </tr>
+<% end %>

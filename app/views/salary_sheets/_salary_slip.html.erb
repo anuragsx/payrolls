@@ -1,0 +1,11 @@
+<tr class="<%= cycle(:odd,:even) %>">
+  <td><%= link_to(salary_slip.employee.name,salary_slip_path(salary_slip)) %></td>
+  <td align="right"><%= salary_slip.employee.effective_package(@salary_sheet.run_date).basic %></td>
+  <td align="right"><%= salary_slip.leave_ratio %></td>
+  <td align="right"><%= salary_slip.leaves %></td>
+  <td align="right"><%= salary_slip.gross %></td>
+  <td align="right"><%= salary_slip.deduction %></td>
+  <td align="right"><%= salary_slip.net %></td>
+</tr>
+
+

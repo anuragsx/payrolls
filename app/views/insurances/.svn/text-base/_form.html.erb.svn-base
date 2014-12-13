@@ -1,0 +1,7 @@
+<%= display_error_messages('insurance_policy') %>
+<ul class="form">
+  <%= f.labelled_text_field(t('insurance.name'), :name) %>
+  <%= f.labelled_text_field(t('insurance.premium'), :monthly_premium) %>
+  <%= f.labelled_text_field("#{t('common.start')} #{t('common.date')}", :created_at, :class => 'datebalks') %>
+  <%= f.labelled_text_field(t('insurance.expiry_date'), :expiry_date, :class => 'datebalks') %>
+</ul>

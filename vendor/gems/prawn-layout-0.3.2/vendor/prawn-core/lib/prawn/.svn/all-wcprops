@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn
+END
+document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/document.rb
+END
+object_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/object_store.rb
+END
+literal_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/literal_string.rb
+END
+stamp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/stamp.rb
+END
+encoding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/encoding.rb
+END
+core.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/core.rb
+END
+byte_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/byte_string.rb
+END
+reference.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/reference.rb
+END
+pdf_object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/pdf_object.rb
+END
+name_tree.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/name_tree.rb
+END
+graphics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/graphics.rb
+END
+measurement_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/measurement_extensions.rb
+END
+images.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/images.rb
+END
+font.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/font.rb
+END
+measurements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/measurements.rb
+END
+compatibility.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/compatibility.rb
+END
+errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/salaree/!svn/ver/1162/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core/lib/prawn/errors.rb
+END

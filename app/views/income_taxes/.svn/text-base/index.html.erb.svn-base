@@ -1,0 +1,44 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('common.income')} #{t('common.tax')} #{t('common.register_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+
+<%= annual_navigator(income_taxes_path(:year => @prev_year),income_taxes_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.employees')}" %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.income')} #{t('common.tax')}" %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.edu_cess')}" %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.tax')}" %></th>
+    </tr>
+  </thead>
+  <% total_tds = 0; total_tax = 0; total_edu_cess = 0  %>
+  <tfoot>
+    <tr>
+      <td colspan="2"><%= t('common.total') %></td>
+      <td class="numeric"><%= total_tax %></td>
+      <td class="numeric"><%= total_edu_cess %></td>
+      <td class="numeric"><%= total_tds %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @salary_sheet_presenters.each do |fh,salary_sheets| %>
+      <tr>
+        <th><%= fh %></th>
+        <th colspan="4"></th>
+      </tr>
+      <% salary_sheets.each do |sheet|  %>
+        <% presenter = SalarySheetIncomeTaxPresenter.new(@company,sheet) %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= link_to(presenter.month_date,income_tax_path(presenter.salary_sheet)) %></td>
+          <td class="numeric head2"><%= presenter.total_employees %>
+          <td class="numeric head3"><%= presenter.total_tax %><% total_tax += presenter.total_tax  %></td>
+          <td class="numeric head3"><%= presenter.total_edu_cess %><% total_edu_cess += presenter.total_edu_cess  %></td>
+          <td class="numeric"><strong><%= presenter.total_tds %><% total_tds += presenter.total_tds  %></strong></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody> 
+</table>

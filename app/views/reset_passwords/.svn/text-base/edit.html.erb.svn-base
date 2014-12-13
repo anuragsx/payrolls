@@ -1,0 +1,16 @@
+<% content_for(:page_header) do %>
+  <h2>Change My Password</h2>
+<% end %>
+
+<% form_for @user, :url => reset_password_path, :method => :put do |f| %>
+  <dl class="form">
+    <dt>Password</dt>
+    <dd><%= f.password_field :password, :wrap=>{:class=>""}%></dd>
+    <dt>Password Confirmation</dt>
+    <dd><%= f.password_field :password_confirmation, :wrap=>{:class=>""}%></dd>
+  </dl>
+
+  <p><%= submit_tag 'Save',:class => "btn" %> or
+    <%= link_to 'Cancel', new_user_session_path, :class => 'cancel' %>
+  </p>
+<% end %>

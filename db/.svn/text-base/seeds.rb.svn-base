@@ -1,0 +1,340 @@
+puts("Cleaning up Basic ->")
+Calculator.delete_all
+EsiType.delete_all
+PfType.delete_all
+SalaryHead.delete_all
+ApprovalStatus.delete_all
+AttendanceType.delete_all
+LeaveType.delete_all
+Package.delete_all
+Holiday.delete_all
+TaxSlab.delete_all
+TaxCategory.delete_all
+ProfessionalTaxSlab.delete_all
+EmployeeInvestmentScheme.delete_all
+LabourWelfare.delete_all
+LabourWelfareSlab.delete_all
+
+
+puts("Cleaning up Salary ->")
+SalarySlip.delete_all
+SalarySheet.delete_all
+SalarySlipCharge.delete_all
+SalarySheet.delete_all
+EmployeeAdvance.delete_all
+ExpenseClaim.delete_all
+Attendance.delete_all
+EmployeeLeave.delete_all
+
+puts("Cleaning up Company ->")
+User.delete_all
+Company.delete_all
+CompanyPf.delete_all
+CompanyFlexiPackage.delete_all
+EmployeePension.delete_all
+CompanyEsi.delete_all
+EmployeeEsi.delete_all
+EmployeeProfessionalTax.delete_all
+CompanyLoading.delete_all
+Department.delete_all
+Employee.delete_all
+EmployeeTaxDetail.delete_all
+EmployeeLoan.delete_all
+EffectiveLoanEmi.delete_all
+EmployeePackage.delete_all
+CompanyAllowanceHead.delete_all
+EmployeePackageHead.delete_all
+CompanyCalculator.delete_all
+CompanyHoliday.delete_all
+CompanyLeave.delete_all
+DepartmentHoliday.delete_all
+CompanyLeave.delete_all
+EmployeeLeaveBalance.delete_all
+EmployeeInsurancePolicy.delete_all
+FlexibleAllowance.delete_all
+
+
+
+
+puts "Generating Salaree Basic Data"
+SalaryHead.create(:name => "Basic", :code => "basic", :salary_head_type => 'Special',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Dearness", :code => "da", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Medical", :code => "medical", :salary_head_type => 'Allowance',:tax_formula=>'MedicalReimbursementTaxFormula')
+SalaryHead.create(:name => "Rent", :code => "rent", :salary_head_type => 'Allowance',:tax_formula=>'HraTaxFormula')
+SalaryHead.create(:name => "Conveyance", :code => "conveyance", :salary_head_type => 'Allowance',:tax_formula=>'TvlTaxFormula')
+SalaryHead.create(:name => "Laundry", :code => "laundry", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Adhoc", :code=>"adhoc", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+
+SalaryHead.create(:name => "Tribal/Scheduled Area", :code=>"tribal", :salary_head_type => 'Allowance',:tax_formula=>'TribalTaxFormula')
+SalaryHead.create(:name => "Underground Allowance", :code=>"underground", :salary_head_type => 'Allowance',:tax_formula=>'UndergroundTaxFormula')
+
+SalaryHead.create(:name => "LWF Employee Contribution", :code => "employee_lwf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "LWF Employer Contribution", :code => "employer_lwf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "ESI Employee Contribution", :code => "employee_esi",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "ESI Employer Contribution", :code => "employer_esi",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "PF Employee Contribution", :code => "employee_pf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Voluntary Employee PF Contribution", :code => "employee_vpf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Voluntary Employer PF Contribution", :code => "employer_vpf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "EPF Employer Contribution", :code => "employer_epf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Pension Fund Contribution", :code => "employer_pf",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "PF Admin Charge Contribution", :code => "employer_pf_admin",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "PF EDLI Charge Contribution", :code => "employer_pf_edli",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "PF Inspection Contribution", :code => "employer_pf_inspection",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Income Tax", :code => "tds",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Bonus", :code => "bonus",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Advance", :code => "advance",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Dearness Relief", :code => "dearness_relief",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Insurance Policy", :code => "insurance",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Reimbursement", :code => "reimbursement",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Expense Claim", :code => "expense", :tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Employee Loan", :code => "loan",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Salary Slip Net", :code => "net", :salary_head_type => 'SlipSubtotal',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Salary Slip Deduct", :code => "deduct", :salary_head_type => 'SlipSubtotal',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Salary Slip Gross", :code => "gross", :salary_head_type => 'SlipSubtotal',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Salary Slip CTC", :code => "extra_ctc", :salary_head_type => 'SlipSubtotal',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Professional Tax", :code => "professional_tax",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Gratuity Earned", :code => "gratuity_earned",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Gratuity Withheld", :code => "gratuity_withheld",:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Cleaning Expenses", :code => "cleaning_expense", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Special Allowance", :code=>"special_allowance", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Other Allowance", :code=>"other_allowance", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Out Station Allowance", :code=>"out_station", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "Telephone Allowance", :code=>"communication", :salary_head_type => 'Allowance',:tax_formula=>'TaxFormula')
+SalaryHead.create(:name => "LTA",:code => "lta",:tax_formula => "TaxFormula")
+SalaryHead.create(:name => "Arrear",:code => "arrear",:tax_formula => "TaxFormula")
+
+LabourWelfare.create(:zone => 'Tamil Nadu',:submissions_count => 1, :paid_to => 'THE SECRETARY, TAMIL NADU WELFARE FUND BOARD, DMS COMPLEX, TEYNAMPET')
+LabourWelfare.create(:zone => 'Maharashtra',:submissions_count => 2, :paid_to => 'MAHARASHTRA LABOUR WELFARE FUND')
+LabourWelfare.create(:zone => 'Karnataka',:submissions_count => 1, :paid_to => 'WELFARE COMMISSIONER PAYABLE AT BANGLORE')
+LabourWelfare.create(:zone => 'Andhra Pradesh',:submissions_count => 1, :paid_to => 'WELFARE COMMISSIONER PAYABLE AT HYDERABAD')
+LabourWelfare.create(:zone => 'Haryana',:submissions_count => 4, :paid_to => 'WELFARE COMMISSIONER PAYABLE AT CHANDIGARH')
+LabourWelfare.create(:zone => 'West Bengal',:submissions_count => 2, :paid_to => 'WELFARE COMMISSIONER PAYABLE AT KOLKATTA')
+LabourWelfare.create(:zone => 'Gujarat',:submissions_count => 2, :paid_to => 'GUJARAT LABOUR WELFARE FUND')
+LabourWelfare.create(:zone => 'New Delhi',:submissions_count => 2, :paid_to => 'WELFARE COMMISSIONER')
+LabourWelfare.create(:zone => 'Kerala',:submissions_count => 2, :paid_to => 'KERALA LABOUR WELFARE FUND BOARD')
+LabourWelfare.create(:zone => 'Madhya Pradesh',:submissions_count => 2, :paid_to => 'WELFARE COMMISSIONER PAYABLE AT JABALPUR')
+LabourWelfare.create(:zone => 'Punjab',:submissions_count => 12, :paid_to => 'WELFARE COMMISSIONER')
+LabourWelfare.create(:zone => 'Goa',:submissions_count => 12, :paid_to => 'WELFARE COMMISSIONER')
+
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Tamil Nadu'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 5.00,:employer_contribution =>10.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Maharashtra'),:salary_min => 0,:salary_max => 3000,:employee_contribution => 6.00,:employer_contribution =>18.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Maharashtra'),:salary_min => 3001,:salary_max => 999999999.00,:employee_contribution => 12.00,:employer_contribution =>36.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Karnataka'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 3.00,:employer_contribution =>6.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Andhra Pradesh'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 2.00,:employer_contribution =>5.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Haryana'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 1.00,:employer_contribution =>2.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('West Bengal'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 3.00,:employer_contribution =>6.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Gujarat'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 3.00,:employer_contribution =>6.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('New Delhi'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 0.75,:employer_contribution =>2.25)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Kerala'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 4.00,:employer_contribution =>8.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Madhya Pradesh'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 6.00,:employer_contribution =>18.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Punjab'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 1.00,:employer_contribution =>2.00)
+LabourWelfareSlab.create(:labour_welfare => LabourWelfare.find_by_zone('Goa'),:salary_min => 0,:salary_max => 999999999.00,:employee_contribution => 5.00,:employer_contribution =>10.00)
+
+ApprovalStatus.create(:name => "Approved")
+ApprovalStatus.create(:name => "Entered")
+ApprovalStatus.create(:name => "Rejected")
+
+AttendanceType.create!(:name => "Present",:type => AttendanceType::PRESENT)
+AttendanceType.create!(:name => "Absent without Leave",:type => AttendanceType::ABSENT)
+AttendanceType.create!(:name => "Casual Leave",:type => AttendanceType::CASUAL_LEAVE)
+AttendanceType.create!(:name => "Privilege Leave",:type => AttendanceType::PRIVILEGE_LEAVE)
+AttendanceType.create!(:name => "Sick leave",:type =>  AttendanceType::SICK_LEAVE )
+
+Package.create(:name => "Silver", :code => "SLVR", :fee => 1000.0, :max_employees => 20)
+Package.create(:name => "Gold", :code => "GOLD", :fee => 1500.0, :max_employees => 50)
+Package.create(:name => "Platinum", :code => "PLTN", :fee => 2000.0, :max_employees => 100)
+
+Holiday.create(:name => "New Years Eve", :day => 1, :month => 1, :year => 2009, :region => "Global")
+Holiday.create(:name => "Republic Day", :day => 26, :month => 1, :year => 2009, :region => "India")
+Holiday.create(:name => "Mahashivratri", :day => 23, :month => 2, :year => 2009, :region => "India")
+Holiday.create(:name => "Easter Monday", :day => 13, :month => 4, :year => 2009, :region => "Global")
+Holiday.create(:name => "Janmashtmi", :day => 14, :month => 8, :year => 2009, :region => "India")
+Holiday.create(:name => "Independence Day", :day => 15, :month => 8, :year => 2009, :region => "India")
+Holiday.create(:name => "Deepawali", :day => 17, :month => 10, :year => 2009, :region => "India")
+Holiday.create(:name => "Christmas Day", :day => 25, :month => 12, :year => 2009, :region => "Global")
+
+GovtPension.create(:name => "Govt. Municipality", :pension_percent => 8.33,
+                   :epf_percent => 0, :pf_basic_threshold => 999999999.00)
+PrivatePension.create(:name => "Private Sector", :pension_percent => 8.33,
+                      :epf_percent => (12.0-8.33),
+                      :pf_basic_threshold => 6500.00,
+                      :admin_percent => 1.1, :edli_percent => 0.5,
+                      :inspection_percent => 0.01)
+
+EsiType.create(:name => "Factory Act", :employee_size => 10,
+  :employee_contrib_percent => 1.75, :employer_contrib_percent => 4.75,
+  :basic_threshold => 10000.0)
+EsiType.create(:name => "Shops Act", :employee_size => 20,
+  :employee_contrib_percent => 1.75, :employer_contrib_percent => 4.75,
+  :basic_threshold => 10000.0)
+
+SimpleLeaveCalculator.create(:name => "Simple Leave Manager", :calculator_type => 'Leave')
+LeaveAccountingCalculator.create(:name => "Accounting Leave Manager", :calculator_type => 'Leave')
+BasicCalculator.create(:name => "Leave Adjusted Basic (default)", :calculator_type => 'Package')
+SimpleAllowanceCalculator.create(:name => "Simple Employee Package designer (default)", :calculator_type => 'Package')
+FlexibleAllowanceCalculator.create(:name => "Flexible Allowance Manager", :calculator_type => 'Package')
+DearnessReliefCalculator.create(:name => "Dearness Relief on Basic + DA", :calculator_type => 'Allowance')
+LoanCalculator.create(:name => "Employee Loan Manager", :calculator_type => 'Deduction')
+AdvanceCalculator.create(:name => "Employee Advances", :calculator_type => 'Deduction')
+EsiCalculator.create(:name => "ESI", :calculator_type => 'Deduction')
+IncomeTaxCalculator.create(:name => "Income Tax", :calculator_type => 'Deduction')
+SimpleIncomeTaxCalculator.create(:name => "Simple Income Tax", :calculator_type => 'Deduction')
+PfCalculator.create(:name => "Provident Fund", :calculator_type => 'Deduction')
+InsuranceCalculator.create(:name => "LIC", :calculator_type => 'Deduction')
+ExpenseClaimCalculator.create(:name => "Expense Claim", :calculator_type => 'Deduction')
+BonusCalculator.create(:name => "Bonus", :calculator_type => 'Subtotal')
+ProfessionalTaxCalculator.create(:name => "Professional Tax", :calculator_type => 'Deduction')
+GratuityCalculator.create(:name => "Gratuity", :calculator_type => 'Subtotal')
+LabourWelfareCalculator.create(:name => "Labour Welfare", :calculator_type => 'Deduction')
+AttendanceCalculator.create(:name => "Attendance Calculator", :calculator_type => 'Addon')
+AnnuallyEquatedTaxCalculator.create(:name => "Annually Equated Tax Calculator", :calculator_type => "Deduction",
+          :description => "This calculator automatically deducts the TDS on an employee on equal basis based on annual calculation.")
+LtaCalculator.create(:name =>"LTA",:calculator_type => "Allowance")
+ArrearCalculator.create(:type => "ArrearCalculator",
+                        :name => "Arrear",:calculator_type => "Allowance",
+                        :description => "This calculator allows the business to give an arrear to an employee.The amount of the arrears is the amount accrued from the date on which the first missed payment was due.")
+women = TaxCategory.create(:category => "Females")
+women.tax_slabs.create(:min_threshold => 0, :max_threshold => 190000.0, :tax_rate => 0.0)
+women.tax_slabs.create(:min_threshold => 190001.0, :max_threshold => 300000.0, :tax_rate => 10.0)
+women.tax_slabs.create(:min_threshold => 300001.0, :max_threshold => 500000.0, :tax_rate => 20.0)
+women.tax_slabs.create(:min_threshold => 500001.0, :tax_rate => 30.0)
+male = TaxCategory.create(:category => "Males")
+male.tax_slabs.create(:min_threshold => 0, :max_threshold => 160000.0, :tax_rate => 0.0)
+male.tax_slabs.create(:min_threshold => 160001.0, :max_threshold => 300000.0, :tax_rate => 10.0)
+male.tax_slabs.create(:min_threshold => 300001.0, :max_threshold => 500000.0, :tax_rate => 20.0)
+male.tax_slabs.create(:min_threshold => 500001.0, :tax_rate => 30.0)
+over65 = TaxCategory.create(:category => "Senior Citizen(Over 65)")
+over65.tax_slabs.create(:min_threshold => 0, :max_threshold => 240000.0, :tax_rate => 0.0)
+over65.tax_slabs.create(:min_threshold => 240001.0, :max_threshold => 300000.0, :tax_rate => 10.0)
+over65.tax_slabs.create(:min_threshold => 300001.0, :max_threshold => 500000.0, :tax_rate => 20.0)
+over65.tax_slabs.create(:min_threshold => 500001.0, :tax_rate => 30.0)
+
+ProfessionalTaxSlab.create_slabs_for('Maharashtra',
+  [[0,0.0,2500.99],
+    [2501.00,60.0,3500.99],
+    [3501.0,5000.99,120.0],
+    [5001.0,175.0,10000.99],
+    [10001.00,200.0],
+    [10001.00,300.0,nil,nil,3]])
+ProfessionalTaxSlab.create_slabs_for('Kerala',
+  [[       0,  0.00,  599.99],
+    [  600.00,  1.50,  899.99],
+    [  900.00,  2.50, 1299.99],
+    [ 1300.00,  4.00, 1799.99],
+    [ 1800.00,  6.17, 2399.99],
+    [ 2400.00,  8.34, 2999.99],
+    [ 3000.00, 12.50, 3999.99],
+    [ 4000.00, 16.67, 4999.99],
+    [ 5000.00, 20.84, 5999.99],
+    [ 6000.00, 29.17, 6999.99],
+    [ 7000.00, 41.67, 7999.99],
+    [ 8000.00, 83.34,11999.99],
+    [12000.00,125.00,16999.99],
+    [17000.00,166.67,20999.99],
+    [21000.00,208.34]])
+ProfessionalTaxSlab.create_slabs_for('Gujarat',
+  [[       0,  0.00, 2999.99],
+    [ 3000.00, 20.00, 5999.99],
+    [ 6000.00, 80.00, 8999.99],
+    [ 9000.00,150.00,11999.99],
+    [12000.00,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Andhra Pradesh',
+  [[       0,  0.00, 4999.99],
+    [ 5000.00, 60.00, 5999.99],
+    [ 6000.00, 80.00, 9999.99],
+    [10000.00,100.00,14999.99],
+    [15000.00,150.00,19999.99],
+    [20000.00,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Karnataka',
+  [[       0,  0.00, 4999.99],
+    [ 5000.00, 60.00, 7999.99],
+    [ 8000.00,100.00, 9999.99],
+    [10000.00,150.00,14999.99],
+    [15000.00,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Chattisgarh',
+  [[       0,  0.00,12500.00],
+    [12500.01,150.00,16667.00],
+    [16667.01,180.00,20833.00],
+    [20833.01,190.00,25000.00],
+    [25001.01,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Tripura',
+  [[       0,  0.00, 2499.99],
+    [ 2500.00, 55.00, 3500.99],
+    [ 3501.00, 85.00, 4500.99],
+    [ 4501.00,100.00, 6500.99],
+    [ 6501.00,140.00,10000.99],
+    [10001.00,180.00]])
+ProfessionalTaxSlab.create_slabs_for('Orissa',
+  [[       0,  0.00, 5000.00],
+    [ 5000.01, 30.00, 6000.00],
+    [ 6000.01, 50.00, 8000.00],
+    [ 8000.01, 75.00,10000.00],
+    [10000.01,100.00,15000.00],
+    [15000.01,150.00,20000.00],
+    [20000.01,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Tamilnadu',
+  [[       0,  0.00, 3500.99],
+    [ 3501.00, 12.50, 5000.99],
+    [ 5001.00, 31.33, 7500.99],
+    [ 7501.00, 62.50,10000.99],
+    [10001.00, 93.83,12500.99],
+    [12501.00,125.00]])
+ProfessionalTaxSlab.create_slabs_for('Chennai City',
+  [[       0,  0.00, 3500.99],
+    [ 3501.00, 12.50, 5000.99],
+    [ 5001.00, 31.33, 7500.99],
+    [ 7501.00, 65.00,10000.99],
+    [10001.00, 97.50,12500.99],
+    [12501.00,135.00]])
+ProfessionalTaxSlab.create_slabs_for('Assam',
+  [[       0,  0.00, 3499.99],
+    [ 3500.00, 40.00, 3999.99],
+    [ 4000.00, 50.00, 4999.99],
+    [ 5000.00, 65.00, 5999.99],
+    [ 6000.00, 80.00, 6999.99],
+    [ 7000.00, 95.00, 7999.99],
+    [ 8000.00,110.00, 8999.99],
+    [ 9000.00,125.00, 9999.99],
+    [10000.00,140.00,11499.99],
+    [11500.00,155.00,12999.99],
+    [13000.00,170.00,14999.99],
+    [15000.00,185.00]])
+ProfessionalTaxSlab.create_slabs_for('Madhya Pradesh',
+  [[    0.00,  0.00,10000.99],
+    [10001.00, 83.00,12500.99],
+    [10001.00, 87.00,12500.99,nil,12],
+    [12501.00,125.00,15000.99],
+    [15001.00,208.00],
+    [15001.00,212.00,nil,nil,12]])
+ProfessionalTaxSlab.create_slabs_for('West Bengal',
+  [[       0,  0.00, 1500.99],
+    [ 1501.00, 18.00, 2000.99],
+    [ 2001.00, 25.00, 3000.99],
+    [ 3001.00, 30.00, 5000.99],
+    [ 5001.00, 40.00, 6000.99],
+    [ 6001.00, 45.00, 7000.99],
+    [ 7001.00, 50.00, 8000.99],
+    [ 8001.00, 90.00, 9000.99],
+    [ 9001.00,110.00,14000.99],
+    [15001.00,130.00,25000.99],
+    [25001.00,150.00,40000.99],
+    [40001.00,200.00]])
+ProfessionalTaxSlab.create_slabs_for('Mehgalaya',
+  [[       0,  0.00, 4999.99],
+    [ 5000.00, 23.00, 5417.00],
+    [ 5418.00, 25.00, 5833.00],
+    [ 5834.00, 29.00, 6250.00],
+    [ 6251.00, 32.00, 6667.00],
+    [ 6668.00, 33.00, 7500.00],
+    [ 7501.00, 35.00, 8333.00],
+    [ 8334.00, 38.00,10000.00],
+    [10001.00, 42.00,12500.00],
+    [12501.00,125.00,16667.00],
+    [16668.00,167.00,20833.00],
+    [20834.00,208.00]])
+
+['LIP','Employee Provident Fund','Public Provident Fund',
+ 'ULIP','NSC','ELSS','Tution Fees','NSC Interest','LIC Pension Plan(80 CCC)',
+ 'LIC Pension Scheme(80 CCD)','Others'].each do |scheme|
+  EmployeeInvestmentScheme.create(:name => scheme)
+end

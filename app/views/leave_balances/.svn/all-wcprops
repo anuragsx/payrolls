@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1215/app/views/leave_balances
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1151/app/views/leave_balances/edit.html.erb
+END
+_leave_balance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1215/app/views/leave_balances/_leave_balance.html.erb
+END

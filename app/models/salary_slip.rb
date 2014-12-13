@@ -1,0 +1,195 @@
+class SalarySlip < ActiveRecord::Base
+  extend ActiveSupport::Memoizable
+  
+  belongs_to :employee
+  belongs_to :company
+  belongs_to :salary_sheet
+  has_many :salary_slip_charges,:dependent=>:destroy, :include => [:salary_head]
+  has_many :employee_charges, :class_name => 'SalarySlipCharge',
+            :conditions => ["employee_id is not null"]
+  has_many :allowance_charges, :class_name => 'SalarySlipCharge',
+            :conditions => ["employee_id is not null and amount > 0"]
+  has_many :deduction_charges, :class_name => 'SalarySlipCharge',
+            :conditions => ["employee_id is not null and amount < 0"]
+
+  attr_accessor :run_date, :charges, :earned_leaves
+  before_save :set_financial_year
+  
+  #scope :in_fy, lambda { |fy| {:conditions => {:financial_year => fy} }}
+
+  scope :in_fy, lambda { |fy| where(:financial_year => fy) }
+  
+  after_create :generate_charges,:finalize!,:generated_and_attached_pdf
+
+  #TODO need to check paper clip gem
+  #has_attached_file :doc
+
+    
+  def charges=(charge)
+    @charges ||= {}
+    return if charge.blank?
+    charge.reject{|b|b.blank?}.each do |c|
+      unless c.blank?
+        @charges[c.salary_head] ||= []
+        @charges[c.salary_head] << c
+      end
+    end
+  end
+  
+  def billed_charge_for(*heads)
+    salary_slip_charges.select{|s|[*heads].include?(s.salary_head)}.sum{|x|x.amount}
+  end
+
+  def charge_for(head)
+    charge = charges[head].try(:first)
+    (charge && charge.amount) || 0
+  end
+
+  def total_for_head(head)
+    salary_slip_charges.under_head(head).sum(:amount).try(:round,2) || 0
+  end
+  
+  def base_charge_for_head(head)
+    salary_slip_charges.under_head(head).sum(:base_charge).try(:round,2) || 0
+  end
+
+  def self.department_wise_contribution(salary_slips,code)
+    salary_slips.inject(0){|a,s| a+s.salary_slip_charges.under_head(code).sum(:amount)}.round(2)
+  end
+
+  def charges
+    @charges || {}
+  end
+
+  def taxable_allowances
+    all_charges = []
+    charges.each_pair do |key,values|
+      if key.is_taxable?
+        all_charges << values.flatten.select{|a|!a.employee.blank?}
+      end
+    end
+    all_charges.flatten!
+    #TODO need to confirm if we need to add DA also.
+    basic = charge_for(SalaryHead.code_for_basic)# + charge_for(SalaryHead.code_for_da)
+    return all_charges.sum(0) do |a|
+      taxable_amount = a.salary_head.calculate_taxable_amount(basic, a.amount.abs, employee, run_date)
+      a.taxable_amount = taxable_amount
+      taxable_amount
+    end
+  end
+
+  def deductions
+    charges.values.flatten.select{|a|a.amount<0 && !a.employee.blank?}
+  end
+
+  def allowances
+    charges.values.flatten.select{|a|a.amount>0 && !a.employee.blank?}
+  end
+
+  def extra_subtotals
+    charges.values.flatten.select{|a| a.employee.blank?  }
+  end
+
+  def run_date
+    @run_date ||= salary_sheet.run_date
+  end
+
+  def package_calculator
+    c = company.package_calculator
+    c.salary_slip = self
+    c
+  end
+  
+  def allowance_calculators
+    company.allowance_calculators.uniq.each{|c|c.salary_slip = self}
+  end
+  
+  def deduction_calculators
+    company.deduction_calculators.uniq.each{|c|c.salary_slip = self}
+  end
+
+  def leave_calculator
+    c = company.leave_calculator
+    c.salary_slip = self
+    c
+  end
+
+  def subtotals
+    company.subtotal_calculators.uniq.each{|c|c.salary_slip = self}
+  end
+
+  def finalize!
+    company.calculators.each do |calculator|
+      calculator.salary_slip = self
+      calculator.finalize_for_slip!
+    end
+  end
+
+  def unfinalize!
+    company.calculators.each do |calculator|
+      calculator.salary_slip = self
+      calculator.unfinalize!
+    end
+  end
+
+  def company_committment_charges
+    salary_slip_charges.select{|a| a.employee.blank? }
+  end
+
+  def extra_cost_to_company
+    company_committment_charges.sum(&:amount)
+  end
+
+  def full_and_final(earned_leaves)
+    amount = (earned_leaves * employee.current_package.basic/26).round(company.round) || 0
+    [SalaryHead.charges_for_encashment.build( :amount => amount,
+                                              :base_charge => 0,
+                                              :reference => employee,
+                                              :description => "Leave Encashed #{earned_leaves}",
+                                              :employee => employee)]
+  end
+
+  def slip_state
+    (self.leave_ratio,self.leaves,self.earned_leaves) = leave_calculator.slip_leave_ratio
+    self.charges = package_calculator.calculate_for_slip   
+    self.charges = full_and_final(self.earned_leaves) if self.earned_leaves && self.earned_leaves > 0
+    # Find applicable AllowanceCalculator
+    (allowance_calculators + deduction_calculators + subtotals).each do |calc|
+      self.charges = calc.calculate_for_slip
+    end
+    state = {}
+    state[:gross] = allowances.sum(&:amount)
+    state[:total_deductions] = deductions.sum(&:amount)
+    state[:taxable_gross] = taxable_allowances
+    state
+  end
+
+  def generate_charges
+    state = slip_state
+    round = company.round
+    charges.values.flatten!.each do |shc|
+      shc.salary_sheet = self.salary_sheet
+      shc.salary_slip = self
+      shc.company = company
+      shc.amount = shc.amount.round(round)
+      shc.charge_date = run_date
+      shc.taxable_amount = (shc.taxable_amount || 0.0).round(1)
+      shc.save!
+    end
+    net = [0,state[:gross]+state[:total_deductions]].max
+    self.update_attributes(:gross => state[:gross].round, :deduction => state[:total_deductions].round,
+                           :taxable_gross => state[:taxable_gross].round,
+                           :leave_ratio => leave_ratio, :leaves => leaves,
+                           :net => net.round)
+    state
+  end
+
+  def set_financial_year
+    self.financial_year = self.salary_sheet.financial_year
+  end
+  
+  def generated_and_attached_pdf
+    SalaryProcess.send_later(:salary_slip_generator,self) if self
+  end  
+ 
+end

@@ -1,0 +1,18 @@
+<% content_for(:page_header) do  %>
+  <h2>Leaves</h2>
+  <%= render :partial=>'sub_header' %>
+<% end %>
+
+<% form_tag(excel_bulk_create_leaves_path, :multipart => true) do %>
+  <dl class="form">
+    <dt><label for="file_import" class="main">Import File</label></dt>
+    <dd><%= file_field_tag(:excel_file) %></dd>
+  </dl>
+  <p><%= submit_tag("Upload", :class => "btn")  %></p>
+<% end %>
+
+<% form_tag(bulk_leaves_path(:format => :xls), :method => :get) do %>
+  <p class="forgot">If you wish, please select date and get the excel to assist in bulk upload of data.</p>
+  <%= date_select('range','start_date', :discard_day => true) %>
+  <%= submit_tag 'Excel' %>
+<% end %>

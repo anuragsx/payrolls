@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy
+END
+jabber_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/jabber_request.rb
+END
+mock_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/mock_request.rb
+END
+net_http.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/net_http.rb
+END
+action_controller_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/action_controller_request.rb
+END
+rack_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/rack_request.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/lib/oauth/request_proxy/base.rb
+END

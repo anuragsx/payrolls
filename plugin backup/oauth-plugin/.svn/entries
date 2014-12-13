@@ -1,0 +1,148 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/oauth-plugin
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:50:27.859375Z
+57a7e9a00379e69ecfecc28cbbd9af02
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+README.rdoc
+file
+
+
+
+
+2010-03-13T02:50:27.875000Z
+dbab2eff7e46fb050c471eb786e5e2fa
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+tasks
+dir
+
+VERSION
+file
+
+
+
+
+2010-03-13T02:50:27.890625Z
+07c293c846bcb05b59babf73a865cb1e
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+init.rb
+file
+
+
+
+
+2010-03-13T02:50:27.890625Z
+3c65f2f67012a50b5ad8a4405ac3907d
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2010-03-13T02:50:27.906250Z
+67f188b62c029c7784592dea97fc5d42
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+install.rb
+file
+
+
+
+
+2010-03-13T02:50:27.921875Z
+d0cc0dd4495c84b192d90f1337c52160
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+generators
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2010-03-13T02:50:27.921875Z
+04e2b267690865cd147644a684bd5b83
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+rails
+dir
+
+uninstall.rb
+file
+
+
+
+
+2010-03-13T02:50:27.937500Z
+2a5fc883fe7f8dfe22ced24643d59ad4
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+oauth-plugin.gemspec
+file
+
+
+
+
+2010-03-13T02:50:27.953125Z
+b1d7c7a21414281896e24e0941b1f613
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+

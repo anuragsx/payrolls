@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1021/app/views/admin_mailer
+END
+feedback_detail_to_admin.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1021/app/views/admin_mailer/feedback_detail_to_admin.erb
+END
+signup_information_to_admin.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1021/app/views/admin_mailer/signup_information_to_admin.erb
+END
+salary_sheet_information_to_admin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1021/app/views/admin_mailer/salary_sheet_information_to_admin.html.erb
+END

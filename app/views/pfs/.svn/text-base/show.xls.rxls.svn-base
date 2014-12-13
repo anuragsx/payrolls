@@ -1,0 +1,32 @@
+sheet1 = workbook.create_worksheet
+sheet1.name = "PF Register"
+format = Spreadsheet::Format.new :color => :blue,
+                                 :weight => :bold,
+                                 :size => 18,
+                                 :horizontal_align =>  :default
+f2 = Spreadsheet::Format.new :weight => :bold,
+                             :size => 12 
+f3 = Spreadsheet::Format.new :color => :blue,
+                             :size => 11                           
+
+sheet1.row(0).push @company.name.titleize if @company
+sheet1.row(1).push "Salary Sheet for the month #{@salary_sheet.formatted_run_date}"
+sheet1.row(0).default_format = format
+sheet1.row(1).default_format = f2
+sheet1.row(3).default_format = f3
+sheet1.row(3).push  "Name","Department","Basic","Employees' PF","Employer's EPF","Employer's PF","Employer's Total","Total Contribution"
+
+index = 5
+@presenter.slips.each do |slip|
+   sheet1.row(index).push(
+      slip.employee.name,
+      slip.employee.department.name,
+      slip.total_base_charge,
+      slip.total_employee_contribution,
+      slip.total_employer_pf_contribution,
+      slip.total_employer_epf_contribution,
+      slip.total_employer_contribution,
+      slip.total_contribution)
+   index += 1
+end
+

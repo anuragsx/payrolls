@@ -1,0 +1,21 @@
+<%= render :partial=>'companies/page_header' %>
+<% content_for(:page_buttons) do  %>
+  <div class="edit">
+    <%= link_to(t('pf.edit'),edit_company_pf_path, :class=>"edit") %>
+  </div>
+<%end%>
+<% title "Company PF Detail" %>
+<div class="group">
+  <table class="details" width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <th><%= t('pf.type') %></th>
+        <td><%=h @company_pf.pf_name %></td>
+      </tr>
+      <tr>
+        <th><%= t('pf.number') %></th>
+        <td><%=h @company_pf.pf_number %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

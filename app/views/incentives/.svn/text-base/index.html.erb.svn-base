@@ -1,0 +1,54 @@
+<% unless @employee %>
+  <% content_for(:page_header) do  %>
+    <h2><%= "#{t('incentives.register_for')} #{@this_year.formatted_fy}" %></h2>
+    <%= sub_headers %>
+    <%#= render :partial=>'sub_header' %>
+  <% end %>
+  <% content_for(:page_buttons) do %>
+    <%= link_to "Print",incentives_path(:format =>:pdf) %>
+  <% end %>
+<%else%>
+  <% content_for(:page_buttons) do  %>
+    <% link_to(new_employee_incentive_path(@employee),:class => 'button') do %>
+      <span><%= "#{t('common.add')} #{t('common.incentives')}" %></span>
+    <% end %>
+  <% end %>
+<%end%>
+
+<%= annual_navigator(incentives_path(:year => @prev_year),incentives_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.employee') %></th>
+      <th><%= t('common.description') %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.amount')}" %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2"><%= "#{t('common.grand')} #{t('common.total')}" %></td>
+      <td class="numeric"><%= @incentives.values.flatten.sum(&:amount) %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+  
+        
+    <% @this_year.financial_months do |date| %>
+      <% month = date.month %>
+      <tr class="<%= cycle("",:alt) %>">
+        <% link_name = date.to_s(:short_month_and_year) %>
+        <th colspan="2"><%= @salary_sheets[month]  ? link_name :
+          link_to(link_name, bulk_new_salary_sheet_incentive_path(date.to_s(:for_param)))%></th>
+        <th class="numeric"><%= @incentives[month].sum(&:amount) if @incentives[month]%></th>
+      </tr>
+      <% @incentives[month] && @incentives[month].each do |r| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%=link_to(r.employee.name, r.billed? ? employee_incentives_path(r.employee) :
+                                    edit_employee_incentive_path(r.employee,r)) %></td>
+          <td class="head2"><%=h r.description %></td>
+          <td class="head3 numeric"><%=h r.amount %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<% content_for(:page_header) do  %>
+  <h2><%= t('common.bonus') %></h2>
+  <%= sub_headers %>
+<% end %>
+<% unless @total.blank? %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= t('common.financial_year') %></th>
+        <th class="numeric"><%= t('common.amount') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @total.each do |year,bonus| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><b><%= link_to(year.to_i,bonus_path(year)) %></b></td>
+          <td class="numeric head2"><%= bonus %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h3>No Records Found</h3>
+<% end %>

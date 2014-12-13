@@ -1,0 +1,58 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/oauth-plugin/generators/oauth_provider
+http://svn.risingsuntech.net/salaree
+
+
+
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+oauth_provider_generator.rb
+file
+
+
+
+
+2010-03-13T02:50:27.343750Z
+0d1ccf1ade754c86992b802d98fe9387
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+USAGE
+file
+
+
+
+
+2010-03-13T02:50:27.343750Z
+66fae73f969e7dc4088d97a89e2ac868
+2010-01-22T12:19:49.016594Z
+1243
+poojag
+
+lib
+dir
+
+templates
+dir
+

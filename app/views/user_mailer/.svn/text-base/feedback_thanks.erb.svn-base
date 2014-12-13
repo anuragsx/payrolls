@@ -1,0 +1,9 @@
+Hello <%= @user.first_name.blank? ? @user.login : @user.first_name %>,
+
+Thanks for submitting your feedback, "<%= @feedback.feedback %>" on <%= root_url(:subdomain => false) %>
+
+We value it immensely and will get back to you as nececssary within 48 hours.
+
+Regards,
+
+Salaree.com Team

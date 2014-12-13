@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures
+END
+people.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/people.yml
+END
+address.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/address.rb
+END
+person.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/person.rb
+END
+school.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/school.rb
+END
+person_with_default_school_id.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/person_with_default_school_id.rb
+END
+schools.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/schools.yml
+END
+group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/group.rb
+END
+person_with_default_school.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/459/vendor/plugins/active_record_defaults/test/fixtures/person_with_default_school.rb
+END

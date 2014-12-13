@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text
+END
+kerning.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/kerning.rb
+END
+simple_text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/simple_text.rb
+END
+alignment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/alignment.rb
+END
+font_size.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/font_size.rb
+END
+span.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/span.rb
+END
+text_box_returning_excess.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/text_box_returning_excess.rb
+END
+font_calculations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/font_calculations.rb
+END
+family_based_styling.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/family_based_styling.rb
+END
+dfont.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/dfont.rb
+END
+simple_text_ttf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/simple_text_ttf.rb
+END
+text_flow.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/text_flow.rb
+END
+text_box.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1146/vendor/gems/prawn-core-0.6.3/examples/text/text_box.rb
+END

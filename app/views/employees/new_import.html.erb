@@ -1,0 +1,12 @@
+<% content_for(:page_header) do %>
+  <h2>Import Employees</h2>
+<% end %>
+
+<% form_tag(import_employees_path, :multipart => true) do %>
+  <dl class="form">
+    <dt><label for="file_import" class="main">Import File</label></dt>
+    <dd><%= file_field_tag(:excel_file) %></dd>
+  </dl>
+  <p><%= submit_tag("Upload", :class => "btn")  %></p>
+  <p class="forgot">If you wish, please <%= link_to('download this sample excel file', '/employees.xls') %> to assist in bulk upload of data.</p>
+<% end %>

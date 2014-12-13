@@ -1,0 +1,70 @@
+<% content_for(:page_buttons) do %>
+  <%= link_to(t('button.print'), esi_path(@salary_sheet,:format =>:pdf)) %> |
+  <%= link_to(t('button.excel'), esi_path(@salary_sheet,:format =>:xls)) %> |
+  <%= link_to(t('tax.challan'), challan_esi_path(@salary_sheet,:format =>:pdf)) %>
+<% end %>
+<% content_for(:page_header) do  %>
+  <h2><%=h "#{t('esi.register_for')} #{@presenter.month_date}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+<%= month_navigator('esi_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.salary') %></th>
+      <th class="numeric"><%= t('common.employee_contribution') %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2"><b><%= "#{t('common.grand')} #{t('common.total')}" %></b></td>
+      <td class="numeric"><b><%= @presenter.total_base_charge %></b></td>
+      <td class="numeric"><b><%= @presenter.total_employee_contribution  %></b></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @presenter.departments.each do |dept|%>
+      <tr>
+        <th colspan="2"><%= dept[:name] %></th>
+        <th class="numeric"><%= dept[:total_base_charge] %></th>
+        <th class="numeric"><%= dept[:total_employee_contribution] %></th>
+      </tr>
+      <% dept[:slips].each_with_index do |slip,i| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= i+1 %></td>
+          <td class="head1"><%= link_to(slip.employee_name,employee_esis_path(slip.salary_slip.employee)) %></td>
+          <td class="numeric head2"><%= slip.total_base_charge %></td>
+          <td class="numeric head3"><strong><%= slip.total_employee_contribution %></strong></td>
+        </tr>
+      <%end%>
+    <%end%>
+  </tbody>
+</table>
+
+  <h3><%= "#{t('common.esi')} #{t('common.summary')}" %></h3>
+<div class="group">
+  <table cellpadding="0" cellspacing="0" width="100%" class="details">
+    <tfoot>
+      <tr>
+        <th><%= t('esi.payable_as') %></th>
+        <th class="numeric"><%= @presenter.total_contribution %></th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td><%= "#{t('common.totals')} #{t('common.employees')}" %></td>
+        <td class="numeric"><%= @presenter.total_employees %></td>
+      </tr>
+      <tr>
+        <td><%= "#{t('common.totals')} #{t('common.employee_contribution')}" %></td>
+        <td class="numeric"><%=@presenter.total_employee_contribution %></td>
+      </tr>
+      <tr>
+        <td><%= "#{t('common.totals')} #{t('common.employers_contribution')} #{@presenter.employer_contribution_percent} #{t('esi.of')} #{@presenter.total_base_charge}" %></td>
+        <td class="numeric"><%= @presenter.total_employer_contribution%></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

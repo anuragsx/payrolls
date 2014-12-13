@@ -1,0 +1,94 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/active_record_defaults
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:50:16.046875Z
+61510572c34ed4810b2036f6a08e422b
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+
+init.rb
+file
+
+
+
+
+2010-03-13T02:50:16.062500Z
+537a598e6ab48d8ddf84ffa251c7cfdd
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2010-03-13T02:50:16.062500Z
+334f09755a15e4d8897b586cbb281faf
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+
+MIT-LICENSE
+file
+
+
+
+
+2010-03-13T02:50:16.078125Z
+4143f4eef4987df3fdaaa8ce839a5d18
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+
+README
+file
+
+
+
+
+2010-03-13T02:50:16.093750Z
+83863523783bb3eec17b3bbd37684ee9
+2009-08-22T13:09:57.013984Z
+459
+pankajb
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/salaree/!svn/ver/1247/app/views/layouts
+END
+notifier.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/803/app/views/layouts/notifier.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1239/app/views/layouts/application.html.erb
+END
+sign_up.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1247/app/views/layouts/sign_up.html.erb
+END
+user_sessions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/871/app/views/layouts/user_sessions.html.erb
+END

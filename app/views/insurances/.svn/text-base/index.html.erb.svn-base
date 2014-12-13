@@ -1,0 +1,26 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_insurance_path(@employee),:class => 'button') do %>
+  <span><%= "#{t('common.add')} #{t('insurance.policy')}" %></span>
+  <% end %>
+<% end %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('insurance.name') %></th>
+      <th><%= t('insurance.expiry_date') %></th>
+      <th class="numeric"><%= t('insurance.premium') %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.paid')}" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @insurances.each do |insurance| %>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%= link_to(insurance.name, employee_insurance_path(@employee,insurance)) %></td>
+        <td class="head2"><%= insurance.expiry_date.try(:to_s,:month_and_year) %></td>
+        <td class="head2 numeric"><%= insurance.monthly_premium.round %></td>
+        <td class="head3 numeric"><%= insurance.total_premium_paid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

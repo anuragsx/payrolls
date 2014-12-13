@@ -1,0 +1,64 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:52:31.812500Z
+41daa6726c51c716d823115dd49b4e87
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+lib
+dir
+
+spec
+dir
+
+vendor
+dir
+
+examples
+dir
+
+.specification
+file
+
+
+
+
+2010-03-13T02:52:31.828125Z
+182fb6f9a1686e76d00b49fa24b7e162
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+

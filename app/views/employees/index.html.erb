@@ -1,0 +1,40 @@
+<% content_for(:page_buttons) do %>
+  <% link_to new_employee_path(:company=>params[:company]),{:class=>'button'} do %>
+    <span><%= "#{t('common.new')} #{t('common.employee')}" %></span>
+  <% end %>
+  <% link_to new_import_employees_path(:company=>params[:company]),{:class=>'button'} do %>
+    <span><%= t('common.bulk_import_employees') %></span>
+  <% end %>
+<%end%>
+<% content_for(:page_header) do %>
+  <h2><%= t('common.employee') %></h2>
+  <%= employee_status_header %>
+<% end %>
+<%= render :partial => 'active_search_form'  if active_status? %>
+<% unless @employees.blank? %>
+  <h3>
+    <%= @department %>
+    <%= "#{t(:common)[@search.status_is.try(:to_sym)]} #{t('common.employees')} (#{@employees.size})" %>
+  </h3>
+
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <thead>
+      <tr>
+        <th><%= order @search, :by => :name, :as => t('employees.name') %></th>
+        <th><%= order @search, :by => :commencement_date, :as => "#{t('employees.commencement')} #{t('common.date')}" %></th>
+        <th><%= order @search, :by => :employee_packages_designation, :as => t('employees.designation') %></th>
+        <th><%= order @search, :by => :department_name, :as => t('employees.department') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employees.each do |employee| %>
+        <tr class="<%= cycle("",:alt) %> row" id =<%= employee.id %>>
+          <td class="head1"><%= link_to(employee.name, employee_path(employee)) %></td>
+          <td class="head2"><%= employee.commencement_date.to_s(:date_month_and_year) %></td>
+          <td class="head2"><%= employee.current_package.try(:designation)%></td>
+          <td class="head3"><%= employee.department_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

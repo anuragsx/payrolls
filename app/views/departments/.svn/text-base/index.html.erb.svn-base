@@ -1,0 +1,34 @@
+<%= render :partial=>'companies/page_header' %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.name') %></th>
+      <th class="numeric"><%= t('department.employees.number') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @company.departments.each do |department| %>
+      <% unless department.new_record? %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%=link_to(department.name,edit_department_path(department)) %></td>
+          <td class="numeric head2"><%= department.employees.count %></td>
+          <td class="head3">
+            <%= link_to(t('button.delete'), department, :confirm => 'Are you sure?', :method => :delete, :class => 'cancel') if department.deleteable? %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<% form_for(@company.departments.build) do |f| %>
+  <%= display_error_messages('department') %>
+  <ul class="form">
+    <%= f.labelled_text_field(t('department.name'), :name, :note => "#{t('department.create_new_department')}") %>
+  </ul>
+  <p class="submit">
+    <%= f.submit(t('button.create'), :class=>'btn') %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), company_path(current_account), :class => 'cancel') %>
+  </p>
+<% end %>

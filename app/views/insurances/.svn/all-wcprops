@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/salaree/!svn/ver/1189/app/views/insurances
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/899/app/views/insurances/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1141/app/views/insurances/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/899/app/views/insurances/new.html.erb
+END
+index.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1189/app/views/insurances/index.pdf.prawn
+END
+bulk.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1128/app/views/insurances/bulk.html.erb
+END
+_sub_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/709/app/views/insurances/_sub_header.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/854/app/views/insurances/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/851/app/views/insurances/_form.html.erb
+END
+list_insurance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/879/app/views/insurances/list_insurance.html.erb
+END
+premium.pdf.prawn
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1189/app/views/insurances/premium.pdf.prawn
+END
+sheet_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/795/app/views/insurances/sheet_view.html.erb
+END
+_employee_insurance_policy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/709/app/views/insurances/_employee_insurance_policy.html.erb
+END

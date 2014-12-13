@@ -1,0 +1,23 @@
+<% @bonuses.each do |year,bonuses| %>
+<b><%= year.to_i.formatted_fy %></b>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th><%= t('common.amount') %></th>
+      <th><%= t('bonus.given_bonus') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% bonuses.each do |bonus| %>
+      <% bonus_percent = @given.for_date(bonus.charge_date).first.try(:bonus_percent) %>
+      <% bonus_charge = (bonus.amount * (bonus_percent || 0))/100  %>
+      <tr>
+        <td class="head1"><b><%= bonus.charge_date.to_s(:short_month_and_year) %></b></td>
+        <td class="numeric head2"><%= bonus.amount %></td>
+        <td class="numeric head3"><%= bonus_charge %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

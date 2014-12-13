@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/1306/app/controllers
+END
+loans_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1258/app/controllers/loans_controller.rb
+END
+employee_packages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1259/app/controllers/employee_packages_controller.rb
+END
+income_taxes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1306/app/controllers/income_taxes_controller.rb
+END
+companies_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1304/app/controllers/companies_controller.rb
+END
+investments_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1302/app/controllers/investments_controller.rb
+END
+accounts_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1243/app/controllers/accounts_controller.rb
+END
+leaves_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1273/app/controllers/leaves_controller.rb
+END
+gratuities_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1143/app/controllers/gratuities_controller.rb
+END
+oauth_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1265/app/controllers/oauth_controller.rb
+END
+advances_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/1276/app/controllers/advances_controller.rb
+END
+leave_balances_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1199/app/controllers/leave_balances_controller.rb
+END
+departments_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/995/app/controllers/departments_controller.rb
+END
+company_loadings_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/995/app/controllers/company_loadings_controller.rb
+END
+pfs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1258/app/controllers/pfs_controller.rb
+END
+attendances_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1268/app/controllers/attendances_controller.rb
+END
+company_esis_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/995/app/controllers/company_esis_controller.rb
+END
+banks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/984/app/controllers/banks_controller.rb
+END
+labour_welfare_categories_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/913/app/controllers/labour_welfare_categories_controller.rb
+END
+company_allowance_heads_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/984/app/controllers/company_allowance_heads_controller.rb
+END
+arrears_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/1294/app/controllers/arrears_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1250/app/controllers/users_controller.rb
+END
+tax_details_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1278/app/controllers/tax_details_controller.rb
+END
+oauth_clients_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1294/app/controllers/oauth_clients_controller.rb
+END
+ltas_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1286/app/controllers/ltas_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1267/app/controllers/application_controller.rb
+END
+user_sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1243/app/controllers/user_sessions_controller.rb
+END
+presenter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1299/app/controllers/presenter.rb
+END
+salary_slips_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1263/app/controllers/salary_slips_controller.rb
+END
+company_leaves_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/995/app/controllers/company_leaves_controller.rb
+END
+salary_sheets_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1271/app/controllers/salary_sheets_controller.rb
+END
+professional_taxes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1213/app/controllers/professional_taxes_controller.rb
+END
+lta_claims_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1286/app/controllers/lta_claims_controller.rb
+END
+insurances_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1258/app/controllers/insurances_controller.rb
+END
+homes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/850/app/controllers/homes_controller.rb
+END
+labour_welfares_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1258/app/controllers/labour_welfares_controller.rb
+END
+tds_returns_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1241/app/controllers/tds_returns_controller.rb
+END
+company_pfs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/995/app/controllers/company_pfs_controller.rb
+END
+taxes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/995/app/controllers/taxes_controller.rb
+END
+bonus_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/1258/app/controllers/bonus_controller.rb
+END
+reset_passwords_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1243/app/controllers/reset_passwords_controller.rb
+END
+calculator_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/984/app/controllers/calculator_controller.rb
+END
+company_flexi_packages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/995/app/controllers/company_flexi_packages_controller.rb
+END
+company_grades_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1137/app/controllers/company_grades_controller.rb
+END
+emi_overrides_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/995/app/controllers/emi_overrides_controller.rb
+END
+company_professional_taxes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/995/app/controllers/company_professional_taxes_controller.rb
+END
+other_incomes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1216/app/controllers/other_incomes_controller.rb
+END
+expense_claims_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/1262/app/controllers/expense_claims_controller.rb
+END
+employees_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1304/app/controllers/employees_controller.rb
+END
+company_calculators_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1223/app/controllers/company_calculators_controller.rb
+END
+esis_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1258/app/controllers/esis_controller.rb
+END
+incentives_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1262/app/controllers/incentives_controller.rb
+END
+feedbacks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1021/app/controllers/feedbacks_controller.rb
+END

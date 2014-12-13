@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/controllers
+END
+provider_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/controllers/provider_controller.rb
+END
+consumer_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/controllers/consumer_controller.rb
+END
+application_controller_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/lib/oauth/controllers/application_controller_methods.rb
+END

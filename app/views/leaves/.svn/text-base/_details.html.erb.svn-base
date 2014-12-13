@@ -1,0 +1,53 @@
+<% if params[:employee] %>
+  <% @leaves.each do |leave| %>
+    <div>
+      <b>Present: </b>
+      <%= leave.present %>
+    </div>
+    <div>
+      <b>Absent</b>
+      <%= leave.absent %>
+    </div>
+    <div>
+      <b>Late Hours</b>
+      <%= leave.late_hours %>
+    </div>
+    <div>
+      <b>Overtime</b>
+      <%= leave.overtime_hours %>
+    </div>
+    <%= link_to('Edit', edit_employee_leafe_path(leave.employee,leave)) %>
+    <%= link_to('Destroy',employee_leafe_path(leave.employee,leave),:confirm=>CONFIRM_DELETE, :method=>:delete) %>
+  <% end %>
+<% else %>
+<table cellpadding="0" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th class="numeric">Present</th>
+      <th class="numeric">Absent</th>
+      <th class="numeric">Late Hours</th>
+      <th class="numeric">Overtime (In Hours)</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Total for <%= @search_date.to_s(:month_and_year) %></td>
+      <td colspan="2" class="numeric"><%= @leaves.sum(:absent).round(2) %></td>
+      <td class="numeric"><%= @leaves.sum(:late_hours).round(2) %></td>
+      <td class="numeric"><%= @leaves.sum(:overtime_hours).round(2) %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @leaves.each do |leave|%>
+      <tr class="<%= cycle("",:alt) %>">
+        <td><%= link_to(leave.employee.name,employee_leaves_path(leave.employee)) %></td>
+        <td class="numeric"><%=h leave.present %></td>
+        <td class="numeric"><%=h leave.absent %></td>
+        <td class="numeric"><%=h leave.late_hours %></td>
+        <td class="numeric"><%=h leave.overtime_hours %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

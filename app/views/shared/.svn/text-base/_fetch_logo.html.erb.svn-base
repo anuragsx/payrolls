@@ -1,0 +1,5 @@
+<% if @company.logo_file_name %>
+  <div class="company-logo">
+    <%= image_tag @company.logo.url(:medium) %>
+  </div>
+<% end %>

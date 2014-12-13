@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/178/vendor/plugins/aasm
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/178/vendor/plugins/aasm/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/178/vendor/plugins/aasm/README.rdoc
+END
+aasm.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/178/vendor/plugins/aasm/aasm.gemspec
+END
+aasm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/178/vendor/plugins/aasm/aasm.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/salaree/!svn/ver/178/vendor/plugins/aasm/.gitignore
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/salaree/!svn/ver/178/vendor/plugins/aasm/TODO
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/178/vendor/plugins/aasm/CHANGELOG
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/178/vendor/plugins/aasm/MIT-LICENSE
+END

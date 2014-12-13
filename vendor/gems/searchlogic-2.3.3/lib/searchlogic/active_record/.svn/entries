@@ -1,0 +1,52 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/searchlogic-2.3.3/lib/searchlogic/active_record
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-09-08T09:43:08.698383Z
+723
+asanghi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+named_scopes.rb
+file
+
+
+
+
+2010-03-13T02:51:30.140625Z
+474a09eb7dfd983b8ddd44f3b37198a7
+2009-09-08T09:43:08.698383Z
+723
+asanghi
+
+consistency.rb
+file
+
+
+
+
+2010-03-13T02:51:30.156250Z
+1d310072fd0ae17bcced431488339829
+2009-09-08T09:43:08.698383Z
+723
+asanghi
+

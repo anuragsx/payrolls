@@ -1,0 +1,3 @@
+jQuery('#detail').remove();
+var html ="<tr id='detail'><td colspan='4'><%= escape_javascript(render(:partial => "details")) %></td></tr>"
+jQuery(html).insertAfter(jQuery('tr#group_<%= @search_date %>'));

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/salaree/!svn/ver/1066/app/models/professional_tax
+END
+employee_professional_tax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/977/app/models/professional_tax/employee_professional_tax.rb
+END
+professional_tax_slab.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/109/app/models/professional_tax/professional_tax_slab.rb
+END
+company_professional_tax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/977/app/models/professional_tax/company_professional_tax.rb
+END
+form5.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/987/app/models/professional_tax/form5.rb
+END
+form5a.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/987/app/models/professional_tax/form5a.rb
+END
+professional_tax_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/977/app/models/professional_tax/professional_tax_calculator.rb
+END

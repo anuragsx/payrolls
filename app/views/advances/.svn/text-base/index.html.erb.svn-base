@@ -1,0 +1,57 @@
+<% content_for(:page_buttons) do  %>
+  <% if @employee %>
+    <% link_to(new_employee_advance_path(@employee),:class => 'button') do %>
+    <span><%= t('advance.money') %></span>
+    <% end %>
+  <% else %>
+    <% link_to(bulk_new_advance_path,:class => 'button') do %>
+      <span><%= t('advance.bulk_insert') %></span>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% unless @employee %>
+  <% content_for(:page_header) do  %>
+    <h2><%= "#{t('advance.advances_for')} #{@this_year.formatted_fy}" %></h2>
+    <%= sub_headers %>
+  <% end %>
+<%end%>
+
+<%= annual_navigator(advances_path(:year => @prev_year),advances_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.employee') %></th>
+      <th class="numeric"><%= t('common.description') %></th>
+      <th class="numeric"><%= t('advance.billed') %>?</th>
+      <th class="numeric"><%= "#{t('common.advances')} #{t('common.date')}" %></th>
+      <th class="numeric"><%= "#{t('common.total')} #{t('common.amount')}" %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="4"><%= "#{t('common.grand')} #{t('common.total')} (#{@this_year})" %></td>
+      <td class="numeric"><%= @advances.values.flatten.sum{|x|x.amount} %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @this_year.financial_months do |date| %>
+      <% month = date.month %>
+      <tr class="<%= cycle("",:alt) %>">
+        <% link_name = date.to_s(:short_month_and_year) %>
+        <th colspan="4"><%= @salary_sheets[month] ? link_name :
+                                            link_to(link_name, bulk_new_salary_sheet_advance_path(date.to_s(:for_param)))%></th>
+        <th class="numeric"><%= @advances[month].sum(&:amount) if @advances[month]%></th>
+      </tr>
+      <% @advances[month] && @advances[month].each do |advance| %>
+        <tr class="<%= cycle(:alt,"") %>">
+          <td class="head1"><%= link_to(advance.employee.name,advance.billed? ? employee_advances_path(advance.employee): edit_employee_advance_path(advance.employee,advance)) %></td>
+          <td class="numeric head2"><%= advance.description %></td>
+          <td class="numeric head2"><%= advance.billed?.pretty_print %></td>
+          <td class="numeric head2"><%= advance.created_at.to_date.to_s(:rfc822) %></td>
+          <td class="numeric head3"><%= advance.amount %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

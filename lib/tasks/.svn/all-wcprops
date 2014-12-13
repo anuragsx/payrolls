@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/salaree/!svn/ver/1166/lib/tasks
+END
+user.rake
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/236/lib/tasks/user.rake
+END
+reset_salary_heads.rake
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/765/lib/tasks/reset_salary_heads.rake
+END
+demo.rake
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/salaree/!svn/ver/839/lib/tasks/demo.rake
+END
+migration.rake
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/salaree/!svn/ver/1166/lib/tasks/migration.rake
+END
+salaree.rake
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/salaree/!svn/ver/839/lib/tasks/salaree.rake
+END

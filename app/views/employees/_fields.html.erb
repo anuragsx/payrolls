@@ -1,0 +1,71 @@
+<%#= display_error_messages('employee') %>
+<% if @employee.errors.any? %>
+    <div id="error_explanation" class="errors">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% @employee.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<ol>
+  <ul class="form">
+    <li id="employee_name_input" class="string required">
+      <%= f.label(:name, :class=>'main')%>
+      <%= f.text_field(:name) %>
+    </li>
+
+    <li id="employee_commencement_date" class="string required">
+      <%= f.label t('employees.commencement'), :class=>'main'%>
+      <%= f.text_field(:commencement_date, :note => "Date of joining" ) %>
+    </li>
+
+     <li id="employee_employee_tax_details_attributes_0_tax_category_id">
+       <%= f.label t('employees.department'), :class=>'main'%>
+       <%= f.collection_select(:department_id, @company.departments.all, :id, :name) %>
+     </li>
+
+    <li id="employee_employee_tax_details_attributes_0_pan">
+      <%= f.label t('employees.identification_number'), :class=>'main'%>
+      <%= f.text_field(:identification_number, :note => "Unique employee identification number")%>
+    </li>
+
+    <li id="employee_account_number_input">
+      <%= f.label t('employees.account_number'), :class=>'main'%>
+      <%= f.text_field(:account_number) %>
+    </li>
+
+    <li id="employee_account_number_input">
+      <%= f.label(:bank, :class=>'main') %>
+      <%=f.collection_select(:bank_id,[@company.bank], :id, :name) if @company.bank %>
+    </li>
+
+
+    <%= f.fields_for(:address) do |a| %>
+        <%= render('companies/address_form', :aform => a,:address => @address) %>
+    <% end %>
+    <%= f.fields_for(:employee_detail) do |ed| %>
+        <li>
+          <%= ed.label(:care_of, :class=>'main')%>
+          <%= ed.text_field(:care_of) %>
+        </li>
+        <li>
+          <%= ed.label t('employees.details.date_of_birth'), :class=>'main'%>
+          <%= ed.text_field(:date_of_birth, :class => 'datebalks') %>
+        </li>
+        <li>
+          <%= ed.label t('employees.details.sex'), :class=>'main'%>
+          <%= ed.select(:sex, EmployeeDetail::SEX)  %>
+        </li>
+    <% end %>
+    <li>
+      <%= f.label t('employees.details.email'), :class=>'main'%>
+      <%= f.text_field :email %>
+    </li>
+    <%#= f.label t("Pdf Password"), :class=>'main'%>
+    <%#= f.password_field(:pdf_password) if @company.want_protected_pdf%>
+  </ul>
+</ol>
+

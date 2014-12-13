@@ -1,0 +1,767 @@
+--- 
+en: 
+  tax: 
+    investment: Investment
+    other_income: Other Income
+    already_tax_paid_on_other_income: Already Tax Paid On Other Income
+    messages: 
+      tax: 
+        created: Employee Tax has been saved successfully
+        updated: Employee Tax has been updated successfully
+        set_amount: Set your tax amount here
+      investment: 
+        set: Set investment details here.
+        create: Investment Details saved successfully
+        update: Investment Details updated successfully
+        destroy: Successfully destroyed investment details.
+      other_income:
+        set: Set other income details here.
+        create: Other Income Details saved successfully
+        update: Other Income Details updated successfully
+      tax_detail: 
+        set: Set your tax details here.
+        created: Employee Tax Detail successfully created
+        updated: Employee Tax Detail successfully updated
+    category: Category
+    slab: 
+      income_bracket: Income Bracket
+      rate: Rate
+    scheme: Scheme
+    pan: PAN
+    monthly_rent_paid: Monthly Rent Paid
+    any_other_income: Any Other Income
+    challan: Challan
+  button: 
+    delete: Delete
+    submit: Submit
+    sms: Send SMS
+    edit: Edit
+    cancel: Cancel
+    excel: Excel
+    print: Print
+    create: Create
+    save: Save
+    update: Update
+    select: Select
+    email: Email
+  company: 
+    tan: TAN
+    messages: 
+      select_applicable: Please select calculators that are applicable to your company.
+      created: Company was successfully created.
+      updated: Company was successfully updated.
+    profile: Profile
+    edit: Edit Company Profile
+    logo: Company Logo
+    url: Account's URL
+    settings: Company Settings
+    round_by: Round charges by
+  department: 
+    name: Department Name
+    create_new_department: Create a new Department.
+    messages: 
+      create: Department was successfully created.
+      update: Department was successfully updated.
+    employees: 
+      number: Number of employees
+  gratuity:
+    self: Gratuity
+    register_for: Gratuity Register For
+  company_grade:
+    grade: Grade
+    name: Name
+    messages: 
+      create: CompanyGrade was successfully created.
+      update: CompanyGrade was successfully updated.
+    pay_scale: Pay Scale
+    package_amount: Package Amount
+    amount: Amount
+  tds_return:
+    receipt_number: Receipt Number
+    interest: Interest
+    bsr_code: BSR Code
+    cheque_number: Cheque/DD Number (if any)
+    tax_deposited_date: Date on which tax was deposited
+    date_of_deduction: Date of Deduction
+    transfer_voucher: Transfer Voucher / Challan Serial Number
+    payment_made: Section under which payment is made
+  pf: 
+    removed: Removed At
+    messages: 
+      error_updating: Error updating Company PF details.
+      set: St your Company PF Details
+      employee: 
+        no_one_left: No employee left Provision Fund in
+        create: Employee PF was successfuly created
+        no_joining: No employee joined Provision Fund in
+        update: Employee PF was successfuly updated
+      destroy: Successfully destroyed company PF details.
+      error_creating: Error creating Company PF details.
+      create: Successfully created company pf details.
+      update: Successfully updated company pf details.
+    number: EPF Number
+    register_for: PF Register For
+    inspection_charges: Inspection Charges (0.010% of Total Salary/Wages) (A/C No. 22)
+    employer_contribution: Total Employer's contribution to Pension (A/C No. 10)
+    edit: Edit PF Settings
+    exit_date: Exit Date
+    payable_as: Total payable as PF
+    leaving_reason: Reason for Leaving Services
+    voluntary: Voluntary PF
+    total_contribution: Total Employee's contribution to EPF A/C No. 1
+    type: PF Type
+    match_company_vpf: Match Company VPF
+    epf: EPF
+    add_employee: Add Employee PF
+    exit_reason: Exit Reason
+    administrative_charges: Administrative Charges (1.10% of Total Salary/Wages) (A/C No. 2)
+    deregister: Deregister from PF
+    contribution: PF Contribution
+    epf_contribution: Total Employer's contribution to EPF(A/C No. 1)
+    edli_charges: EDLI Charges (0.50% of Total Salary/Wages) (A/C No. 21)
+  common: 
+    description: Description
+    create: Create new
+    effective_from: Effective From
+    save: Save
+    total: Total
+    employee_contribution: Employee's Contribution
+    salary_sheet: Salary Sheet
+    in_fy: in Financial Year
+    update: Update
+    activation: Activation
+    search: 
+      employees: Search Employees
+      go: Go
+    expenses: Expenses
+    lta: LTA
+    incentives: Incentives
+    arrears: Arrears
+    salary_heads: Salary Heads
+    form: Form
+    leaves: Leaves
+    employees: Employees
+    insurance: Insurance
+    new: New
+    employers_pf: Employer's PF
+    initial: Initial
+    sno: S.no.
+    chart: Chart
+    date: Date
+    download: Download
+    delete: Delate
+    privacy_policy: Privacy Policy
+    advance: Advance
+    details: Details
+    percent: Percent
+    Suspended: Suspended
+    in_year: in Year
+    suspended: Suspend
+    paid: Paid
+    employers: Employers
+    sheets: Sheets
+    contribution: Contribution
+    dearness_relief: Dearness Relief
+    wages: Wages
+    financial_year: Financial Year
+    suspension: Suspension
+    amount: Amount
+    edit: Edit
+    loans: Loans
+    lop: LOP Days
+    status: Status
+    pf: PF
+    totals: Total
+    suspend: Suspend
+    employers_contribution: Employer's Contribution
+    employee_earned: Employee Earned
+    employers_withheld: Employee Withheld
+    esi: ESI
+    cancel: Delete
+    insurances: Insurances
+    salary_sheets: Salary Sheets
+    advances: Advances
+    calculators: Calculators
+    salary: Salary
+    name: Name
+    month: Month
+    employee: Employee
+    expense_claims: Expenses Claims
+    hello: Hello
+    tax: Tax
+    salary_package: Salary Package
+    fix: Fix
+    resigned: Resign
+    summary: Summary
+    or: or
+    grand: Grand
+    active: Active
+    activate: Activate
+    attendance: Attendance
+    attendance_sheet: Attendances Sheet For
+    type: Type
+    timein: Time In
+    timeout: Time Out
+    year: 
+      from: From Year
+      to: To Year
+    logout: Logout
+    register_for: Register For
+    salary_slips: Salary Slips
+    resign: Resign
+    banks: Bank
+    period: Period
+    monthly: Monthly
+    reimbursements: Reimbursements
+    to: to
+    edu_cess: Edu Cess
+    tds: TDS
+    promote: Promote
+    end: End
+    flexi_package: Flexi Package
+    start: Start
+    Active: Active
+    registration: Registration
+    employee_pf: Employee's PF
+    Resigned: Resigned
+    tos: Terms of Service
+    bulk_import_employees: Bulk Import Employee
+    add: Add
+    income: Income
+    departments: Departments
+    base_charge: Base Charge
+    resignation: Resignation
+    bonus: Bonus
+    pay_grades: Pay Grades
+    tds_return: TDS Return
+  activerecord: 
+    errors: 
+      messages: 
+        taken: has already been taken
+        accepted: must be accepted
+        not_a_number: is not a number
+        blank: can't be blank
+        record_invalid: "Validation failed: {{errors}}"
+        greater_than_or_equal_to: must be greater than or equal to {{count}}
+        less_than_or_equal_to: must be less than or equal to {{count}}
+        exclusion: is reserved
+        confirmation: doesn't match confirmation
+        odd: must be odd
+        invalid: is invalid
+        too_short: is too short (minimum is {{count}} characters)
+        wrong_length: is the wrong length (should be {{count}} characters)
+        empty: can't be empty
+        less_than: must be less than {{count}}
+        too_long: is too long (maximum is {{count}} characters)
+        even: must be even
+        equal_to: must be equal to {{count}}
+        inclusion: is not included in the list
+        greater_than: must be greater than {{count}}
+      template: 
+        body: "There were problems with the following fields:"
+        header: 
+          one: 1 error prohibited this {{model}} from being saved
+          other: "{{count}} errors prohibited this {{model}} from being saved"
+      full_messages: 
+        format: "{{attribute}} {{message}}"
+      models: 
+        attributes: 
+          base: ""
+        salary_sheet: 
+          attributes: 
+            base: ""
+  professional_tax: 
+    self: Professional Tax
+    zone: Zone
+    messages: 
+      registered: Successfully Registered Employee
+      set: Please set your zone
+      create: Professional Tax saved successfully
+      deregistered: Successfully Deregistered Employee
+      update: Professional Tax updated successfully
+    register: Register from Professional Tax
+    deregister: Deregister from Professional Tax
+  expenses:
+    register_for: Expense Register For
+  expense:
+    messages: 
+      not_exists: No expenses exist, create new ones?
+      destroy: Successfully destroyed expense.
+      billed: The expense has been billed already and hence cannot be deleted
+      create: Expenses created successfully
+      update: Successfully updated expense.
+  incentive:
+    register_for: Incentive Register For
+  incentive:
+    messages:
+      not_exists: No incentives exist, create new ones?
+      destroy: Successfully destroyed incentive.
+      billed: The incentive has been billed already and hence cannot be deleted
+      create: Incentives created successfully
+      update: Successfully updated incentive.
+  arrears:
+    register_for: Arrears Register For
+  arrear:
+    messages:
+      not_exists: No arrears exist, create new ones?
+      destroy: Successfully destroyed arrear.
+      billed: The arrear has been billed already and hence cannot be deleted
+      create: Arrears created successfully
+      update: Successfully updated arrear.
+  number: 
+    format: 
+      separator: .
+      delimiter: ","
+      precision: 3
+    human: 
+      format: 
+        delimiter: ""
+        precision: 1
+      storage_units: 
+        format: "%n %u"
+        units: 
+          kb: KB
+          tb: TB
+          gb: GB
+          byte: 
+            one: Byte
+            other: Bytes
+          mb: MB
+    percentage: 
+      format: 
+        delimiter: ""
+    precision: 
+      format: 
+        delimiter: ""
+    currency: 
+      format: 
+        format: "%u%n"
+        unit: $
+        separator: .
+        delimiter: ","
+        precision: 2
+  notice: 
+    update: 
+      successful: Salary Heads Updated successfully
+  time: 
+    am: am
+    formats: 
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm
+  user_session: 
+    wrong_parameter: Either the username or password are wrong
+    logged_in: Logged in Successfully
+    no_activate_users: No active users for this company found. Please activate your primary account.
+    unverified: You have not verified your Email address
+  date: 
+    order: 
+    - :day
+    - :month
+    - :year
+    abbr_day_names: 
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    formats: 
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    day_names: 
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    abbr_month_names: 
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    month_names: 
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+  reset_password: 
+    password_email: Instructions to reset your password have been emailed to you. Please check your email.
+    wrong_perishable_token: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
+    updated: Password successfully updated
+    no_user: No user was found with that email address
+  exceptions: 
+    calculator: 
+      pf: Please select your company pf details.
+  feedbacks:
+    feedback: Feedback
+  insurance:
+    name: Policy Name
+    policy: Insurance Policy
+    messages: 
+      not_exists: No insurances exist, create new ones?
+      billed: Unable to destroy this insurance as there are existing billed charges against it.
+      create: Insurance was successfuly created
+      update: Insurance was successfuly updated
+    premium: Monthly Premium
+    register_for: Insurance Register For
+    expiry_date: Expiry Date
+  esi: 
+    of: of
+    messages: 
+      employee: 
+        create: Employee ESI was successfuly created
+        update: Employee ESI was successfuly updated
+      destroy: Successfully destroyed company esi detail.
+      set_company_esi: Set your company's ESI details
+      create: Successfully created Company ESI details.
+      error_in_updating: Error updating ESI details.
+      update: Successfully updated ESI details.
+      error_in_creating: Error updating Company ESI details.
+    number: ESI Number
+    register_for: ESI Register For
+    esi_detail: ESI Details for the financial year
+    edit: Edit ESI Settings
+    payable_as: Total payable as ESI
+    type: ESI Type
+    esi_number: ESI no.
+    applicable: Applicable
+    register_for_esi: Register for ESI
+  labour_welfare: 
+    self: Labour Welfare
+    payable_to: Payable To
+    salary_slab: Salary Slab
+    frequency_of_deduction: Frequency of Deduction
+  employees: 
+    department: Department
+    name: Name
+    messages: 
+      cant_add_employee: You are not allowed to add more employees. Please Upgrade your package.
+      loading_success: All employee loaded successfully.
+      no_employee: Seems like you do not have any employees as yet. Bulk Upload?
+      create: Employee was successfully created.
+      error_loading: Error in loading employees.
+      update: Employee was successfully updated.
+      error_uploading: Error uploading Excel file
+    designation: Designation
+    details: 
+      care_of: C/o
+      sex: Sex
+      date_of_birth: Date of Birth
+      email: Email
+    commencement_date: Commencement Date
+    commencement: Commencement
+    package: 
+      current_package: Current Package
+      promote: Promote Employe
+      messages: 
+        error_updating: Error in Updating
+        employee_pkg: 
+          error_updating: Error in updating employee package.
+          error_creating: Error in creating employee package.
+          create: EmployeePackage was successfully created.
+          update: EmployeePackage was successfully updated.
+          destroy: EmployeePackage was successfully destroyed.
+          error_destroying: Error in destroying package.
+        create: Company Package was successfully created
+        update: Company Package was successfully updated
+      details: Package Details
+      edit: Edit Current Salary Package
+      promotion: Promotion
+      estimated_ctc: Estimated CTC
+      ctc: CTC
+      basic: Basic
+    statement: Bank Statement
+    identification_number: Identification Number
+    account_number: Account Number
+    bank: Bank
+  reimbursements: 
+    register_for: Reimbursement For
+    date: Reimbursement Date
+  advance: 
+    money: Advance Money
+    messages: 
+      error_updating: Error updating the advance
+      no_advance: No advances exists. Create a new one?
+      create: Advance was created successfully
+      updated: Advance was updated successfully
+      bulk_create: Employee Advances created successfully
+      error_saving: Error saving the advance
+    register_for: Advance Register For
+    note_amount: Total money advanced
+    advances_for: Advances For
+    billed: Billed?
+    bulk_insert: Bulk Insert Advances
+    note_description: What is the advance for?
+    note_date: Money advanced on
+  leaves: 
+    ratio: Ratio
+    late_hours: Late Hours
+    days: Days
+    carry_forward: Carry Forward Leaves
+    messages: 
+      error_updating: Error updating company leave settings.
+      wrong_parameter: Wrong Parameter
+      set: Set your company leave detail here.
+      employee: 
+        uploaded: Employee Leaves loaded.
+        create: Leaves created successfully
+        error_loading: Error uploading Excel file
+        update: Leaves updated successfully
+      error_creating: Error creating company leave settings.
+      being_carried_forward: Leaves are being carried forward
+      create: Successfully created Company Leave.
+      update: Successfully updated Company Leave.
+      balance: 
+        overridden: Leave Balance has been overridden successfully
+    override: Override
+    leave_taken: Leaves Taken
+    register_for: Leave Register For
+    default_month_length: Default Month Length
+    edit: Edit Leave Settings
+    rate: Rate of Leave
+    present: Present
+    overtime: Over Time(Hours)
+    extra_work_days: Extra Work Days
+    privilege_leave: Privilege Leaves
+    sick_leaves: Sick Leaves
+    casual_leaves: Casual Leaves
+    month_length_formula: Month Length Formula
+    absent: Absent
+    accrual: Leave Accrual
+    for: For
+    balance: Leave Balance
+  header: 
+    account: Account
+    overview: Overview
+    add_ons: Add-ons
+    settings: Settings
+    users: Users
+    feedback: Feedback
+    reports: Reports
+  calculator: 
+    self: Calculator
+    messages: 
+      unavailable_module: You are trying to access a module that is not enabled on the company
+      create: Company calculators was successfully updated.
+    allowance: Allowance Calculators
+    deduction: Deduction Calculators
+    leaves: Leaves Calculators
+    package: Package Calculators
+    plural: Calculators
+    bonus: Bonus Calculators
+    income_tax: Income Tax Calculators
+    addon: Addon Calculator  
+  hello: Hello world
+  dearness_relief: 
+    messages: 
+      create: Dearness Relief created successfully
+      update: Dearness Relief updated successfully
+    loading_percent: Loading Percent
+  support: 
+    array: 
+      last_word_connector: ", and "
+      words_connector: ", "
+      two_words_connector: " and "
+    select: 
+      prompt: Please select
+  users: 
+    new: New User
+    name: Name
+    error_updating: Error updating user
+    messages: 
+      select_package: Please select a package
+      error_registering: Error in registering
+      already_logged_in: You are already logged in
+    passwords: Password
+    deactivate: Deactivate
+    welcome_email: Send welcome email
+    edit: "Edit User "
+    action: Action
+    last: Last
+    email_sent: Email sent.
+    error_creating: Error creating user
+    cant_destroy_self: You can not delete yourself
+    first: First
+    cant_deactivate_self: You can not deactivate yourself
+    mobile: 
+      number: Mobile no.
+    destroyed: User destroyed successfully
+    activate: Activate
+    created: User Created
+    updated: User Updated
+    password: 
+      confirm: Confirm Password
+      change: Change Password
+    login: Login
+    email: Email
+  heads: 
+    laundry: Laundry
+    special_allowance: Special Allowance
+    self: Salary Head
+    messages: 
+      created: Salary Heads updated successfully
+    underground: Underground
+    other_allowance: Other Allowance
+    available: Available Salary Heads
+    adhoc: Adhoc
+    communication: Telephone Allowance
+    conveyance: Conveyance
+    selected: Selected Salary Heads
+    tribal: Tribal/Scheduled Area
+    rent: Rent
+    cleaning_expense: Cleaning Expenses
+    da: Dearness
+    out_station: Out Station Allowance
+    medical: Medical
+    employee_esi: Employee Esi
+    employer_esi: Employer Esi
+    employer_epf: Employer Epf
+    employer_pf:  Employer Pf
+    bonus: Bonus
+    lta: LTA
+  datetime: 
+    distance_in_words: 
+      less_than_x_minutes: 
+        one: less than a minute
+        other: less than {{count}} minutes
+      x_days: 
+        one: 1 day
+        other: "{{count}} days"
+      x_minutes: 
+        one: 1 minute
+        other: "{{count}} minutes"
+      x_seconds: 
+        one: 1 second
+        other: "{{count}} seconds"
+      about_x_hours: 
+        one: about 1 hour
+        other: about {{count}} hours
+      less_than_x_seconds: 
+        one: less than 1 second
+        other: less than {{count}} seconds
+      x_months: 
+        one: 1 month
+        other: "{{count}} months"
+      about_x_months: 
+        one: about 1 month
+        other: about {{count}} months
+      about_x_years: 
+        one: about 1 year
+        other: about {{count}} years
+      over_x_years: 
+        one: over 1 year
+        other: over {{count}} years
+      half_a_minute: half a minute
+    prompts: 
+      month: Month
+      minute: Minute
+      second: Seconds
+      hour: Hour
+      day: Day
+      year: Year
+  loan: 
+    messages: 
+      emis: 
+        paid: This Overridden EMI has been paid!
+        overridden: EMI was successfully overridden
+        update: EMI override was successfully updated
+      not_exists: No loans exists for the month
+      create: Loan was successfully created!
+      bulk_create: Loans created successfully
+      update: Loan was successfully updated!
+    emi: EMI
+    remaining: 
+      amount: Remaining Amount
+    amount: Loan Amount
+    change_emi: Change EMI
+  bonus: 
+    messages: 
+      create: Bonus Settings have been saved successfully
+    bonus_for: Bonus For
+    given_bonus: Given Bonus
+    percent: Bonus Percent
+    release_date: Release Date
+  address: 
+    address_line1: Address Line 1
+    city: City
+    address_line2: Address Line 2
+    pincode: Pincode
+    address_line3: Address Line 3
+    phone_number: Phone Number
+    mobile_number: Mobile Number
+    state: State
+  salary_slip:
+    messages: 
+      under_processing: Salary slip is generating.
+      email_sent: Email sent to
+      created: SalarySlip was successfully created.
+      updated: SalarySlip was successfully updated.
+    gross: Gross
+    deduction: Deduction
+    net: Net
+    deductions: Deductions
+    for: for the financial year of
+    salary_sheet: Salary Sheet
+    month_days: Month Days
+    loss_of_pay_days: Loss Of Pay Days
+    payble_days: Payable Days
+    description: Description
+    rate: Rate
+    amount: Amount
+    net_allowances: Net Allowances
+    allowances: Allowances
+    net_deductions: Net Deductions
+    net_take_home: Net Take Home
+    emoluments_paid: Emoluments Paid
+    gross_earnings: Gross Earnings
+    tax_exemptions: Tax Exemptions
+    total_deduction: Total Deduction
+    net_taxable_income: Net Taxable Income (Gross Earnings - Total Deduction)
+    income_tax: Income Tax
+    total_tax_payble: Total Tax Payable
+    education_cess: Education Cess
+    salary_slip_for_month of: Salary Slip for month of
+    income_tax_details: Year to Date Income Tax Details
+    net_tds_for: Net TDS for
+  salary_sheet: 
+    messages: 
+      sms_sent: SMS Sent Successfully.
+      being_processed: A salary sheet is already being processed at the moment
+      under_processing: Salary Sheet is generating.
+      email_sent: Email sent.
+      exists_in_future: Salary Sheet in the future exist, please remove future sheets first.
+      created: Salary Sheet was successfully created.
+      no_bank: There is no bank in
+      updated: SalarySheet was successfully updated.
+    salary_sheet_for: Salary Sheet For
+  bank: 
+    name: Bank Name
+    messages: 
+      set_bank: Set your company bank
+      created: Bank was created successfully
+      updated: Bank was updated successfully
+    account_number: Account Number

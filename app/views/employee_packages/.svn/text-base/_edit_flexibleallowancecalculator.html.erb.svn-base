@@ -1,0 +1,8 @@
+<%= render :partial => 'new_common' , :locals => {:f => f} %>
+<% @flexi_allowance = FlexibleAllowance.scoped_by_company_id(@company).for_category(@employee)%>
+<% @flexi_allowance.each do |fa| %>
+  <% fields_for "flexi_allowance[#{fa.id}]" do |flex|  %>
+    <%= flex.labelled_text_field "#{fa.salary_head.name}",:value, :value => fa.value %><br/>
+    <%= flex.labelled_select 'Head Type',:head_type,FlexibleAllowance::HEAD_TYPE,:selected => fa.head_type %>
+  <%end%>
+<%end%>

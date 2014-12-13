@@ -1,0 +1,30 @@
+class CompanyAllowanceHead < ActiveRecord::Base
+
+  attr_accessible :company, :salary_head, :position
+
+  belongs_to :company
+  belongs_to :salary_head
+  has_many :salary_slip_charges, :as => :reference
+
+  scope :for_company, lambda{|c|{:conditions => ["company_id = ?",c]}}
+  
+  validates :company_id, :salary_head_id, :presence => true
+  
+  def self.allowances_for_slip(company,employee_package)
+    for_company(company).all(:order => "position").map do |allowance|
+      EmployeePackageHead.for_company(company).for_head(allowance.salary_head).for_package(employee_package)
+    end.reject{|f|f.blank?}
+  end
+
+  def self.bulk_create(list,company)
+    errors = []
+    transaction do
+      list.each_with_index do |head,i|
+        e = new(:company => company, :salary_head => SalaryHead.find(head.to_i), :position => i+1)
+        errors << Array(e.errors) unless e.save
+      end
+    end
+    errors.uniq
+  end
+
+end

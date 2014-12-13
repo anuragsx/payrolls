@@ -1,0 +1,17 @@
+
+<%= @user.login %> submmitted feedback
+
+======User Details=========
+
+Login:   <%= @user.login %>
+email:  <%= @user.email %>
+
+======Company Details=========
+
+Company Name:   <%= @company.name %>
+Subdomain:  <%= @company.subdomain %>
+Total Employees: <%= @company.employees.count %>
+
+======feedback================
+
+feedback: <%= @feedback.feedback %>

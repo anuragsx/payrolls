@@ -1,0 +1,40 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/Prawnto/lib/prawnto/template_handler
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-10T13:52:51.303109Z
+90
+swativ
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+compile_support.rb
+file
+
+
+
+
+2010-03-13T02:50:23.859375Z
+83121952c37d4b283db2273e1ef0ef10
+2009-07-10T13:52:51.303109Z
+90
+swativ
+

@@ -1,0 +1,25 @@
+<% content_for(:page_buttons) do  %>
+  <% link_to(new_employee_tax_path(@employee),:class => 'button') do %>
+    <span>Add Fix Amount for Tax</span>
+  <% end %>
+<% end %>
+<% unless @employee_taxes.blank? %>
+  <table cellspacing="0" cellpadding="0" width="100%" class="list" >
+    <thead>
+      <tr>
+        <th>Tax Amount</th>
+        <th>Description</th>
+        <th>Effective From</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employee_taxes.each do |tax| %>
+        <tr>
+          <td><%= link_to(tax.amount,edit_employee_tax_path(@employee,tax)) %></td>
+          <td><%= tax.description %></td>
+          <td><%= tax.created_at.to_s(:month_and_year) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

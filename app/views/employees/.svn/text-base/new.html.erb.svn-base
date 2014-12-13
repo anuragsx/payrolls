@@ -1,0 +1,10 @@
+<% content_for(:page_header) do %>
+  <h2><%= "#{t(:common)[:new]} #{t(:common)[:employee]}" %></h2>
+<%end%>
+<% form_for employee_setup(@employee) do |f| %>
+  <%= render :partial=>"fields", :locals=>{:f=>f} %>
+  <p class="submit">
+    <%= f.submit t('button.create'), :class=>"btn" %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'), employees_path, :class=>"cancel") %>
+  </p>
+<% end %>

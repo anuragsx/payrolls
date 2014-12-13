@@ -1,0 +1,118 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/gems/prawn-layout-0.3.2/vendor/prawn-core
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+bench
+dir
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:52:30.750000Z
+c05742737716fbad37b76b728927503f
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+LICENSE
+file
+
+
+
+
+2010-03-13T02:52:30.734375Z
+5ae0366893907c7dfb7a9ed771c0f20b
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+www
+dir
+
+meta
+dir
+
+spec
+dir
+
+README
+file
+
+
+
+
+2010-03-13T02:52:30.781250Z
+cecc62cdf530ccea0c24503c8492e8a0
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+vendor
+dir
+
+bugs
+dir
+
+HACKING
+file
+
+
+
+
+2010-03-13T02:52:30.765625Z
+bf6420b61d81e3c81674f45fa527fddf
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+lib
+dir
+
+COPYING
+file
+
+
+
+
+2010-03-13T02:52:30.765625Z
+94d55d512a9ba36caa9b7df079bae19f
+2009-12-05T13:26:45.347680Z
+1162
+arunag
+
+data
+dir
+
+reference_pdfs
+dir
+
+examples
+dir
+

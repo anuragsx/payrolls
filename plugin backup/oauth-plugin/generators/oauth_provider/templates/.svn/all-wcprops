@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates
+END
+clients_controller_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/clients_controller_spec.rb
+END
+oauth_token_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_token_test.rb
+END
+oauth_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_token.rb
+END
+authorize.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize.html.erb
+END
+oauth_nonces.yml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_nonces.yml
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/controller.rb
+END
+index.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/index.html.haml
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/show.html.erb
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/migration.rb
+END
+authorize.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize.html.haml
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/edit.html.erb
+END
+controller_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/controller_spec.rb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/new.html.erb
+END
+client_application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/client_application.rb
+END
+oauth_tokens.yml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_tokens.yml
+END
+show.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/show.html.haml
+END
+authorize_failure.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize_failure.html.haml
+END
+clients_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/clients_controller_test.rb
+END
+clients_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/clients_controller.rb
+END
+authorize_success.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize_success.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/_form.html.erb
+END
+client_application_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/client_application_spec.rb
+END
+oauth_nonce_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_nonce_spec.rb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/index.html.erb
+END
+controller_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/controller_test_helper.rb
+END
+client_applications.yml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/client_applications.yml
+END
+controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/controller_test.rb
+END
+authorize_success.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize_success.html.haml
+END
+_form.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/_form.html.haml
+END
+request_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/request_token.rb
+END
+authorize_failure.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/authorize_failure.html.erb
+END
+oauth_token_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_token_spec.rb
+END
+controller_spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/controller_spec_helper.rb
+END
+client_application_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/client_application_test.rb
+END
+oauth_nonce_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_nonce_test.rb
+END
+access_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/access_token.rb
+END
+oauth_nonce.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/oauth_nonce.rb
+END
+edit.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/edit.html.haml
+END
+new.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/salaree/!svn/ver/1243/vendor/plugins/oauth-plugin/generators/oauth_provider/templates/new.html.haml
+END

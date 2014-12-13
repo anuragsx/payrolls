@@ -1,0 +1,34 @@
+<% content_for(:page_header) do  %>
+  <h2><%=h "Total Expenditure for #{@salary_sheet.formatted_run_date}" %></h2>
+  <%= salaries_sub_header %>
+<% end %>
+<% content_for(:page_buttons) do  %>
+  <% link_to(salary_sheet_path(@salary_sheet), :class => 'button') do %>
+    <span>Switch to Sheet View</span>
+  <% end %>
+<% end %>
+<%= month_navigator('salary_sheet_path') %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th class="numeric">Salary Head</th>
+      <th class="numeric">Expenditure</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Grand Total</td>
+      <td class="numeric"><%= @total.round %></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @expenditure.each do |salary_head| %>
+      <% salary_head.each do |sh,exp| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= sh.name %></td>
+          <td class="numeric head2"><%= exp.round %></td>
+        </tr>
+       <% end %>
+    <%end%>
+  </tbody>
+</table>

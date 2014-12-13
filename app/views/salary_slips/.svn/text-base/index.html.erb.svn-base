@@ -1,0 +1,46 @@
+<%= annual_navigator(employee_salary_slips_path(@employee,:year => @prev_year),
+                     employee_salary_slips_path(@employee,:year => @next_year)) %>
+<% unless @salary_slips.blank? %>
+  <table cellpadding="0" cellspacing="0" width="100%" class="list">
+    <caption><%= "#{t('common.salary_slips')} #{t('salary_slip.for')} #{@this_year.formatted_fy}" %></caption>
+    <thead>
+      <tr>
+        <th><%= t('common.salary_slips') %></th>
+        <th class="numeric"><%= t('common.leaves') %></th>
+        <th class="numeric"><%= t('salary_slip.gross') %></th>
+        <th class="numeric"><%= t('salary_slip.deduction') %></th>
+        <th class="numeric"><%= t('salary_slip.net') %></th>
+        <th class="numeric"><%= t('common.download') %></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td><%= t('common.total') %></td>
+        <td class="numeric"><%= @salary_slips.sum{|x|x.leaves || 0} %></td>
+        <td class="numeric"><%= @salary_slips.sum{|x|x.gross || 0} %></td>
+        <td class="numeric"><%= @salary_slips.sum{|x|x.deduction || 0} * -1 %></td>
+        <td class="numeric"><%= @salary_slips.sum{|x|x.net || 0} %></td>
+        <td></td>
+      </tr>
+    </tfoot>
+    <% @salary_slips.each do |salary_slip| %>
+      <tr class="<%= cycle("",:alt) %>">
+        <td class="head1"><%=link_to(h(salary_slip.salary_sheet.formatted_run_date),employee_salary_slip_path(@employee,salary_slip)) %></td>
+        <td class="numeric head1"><%=h salary_slip.leaves %></td>
+        <td class="numeric head2"><%=h salary_slip.gross %></td>
+        <td class="numeric head2"><%=h(salary_slip.deduction * -1) %></td>
+        <td class="numeric head3"><%=h salary_slip.net %></td>
+        <td class="numeric">
+          <% if salary_slip.doc.path %>
+            <%= link_to("Download PDF",salary_slip_path(salary_slip,:format =>:pdf)) %>
+          <% else %>
+            Salary Sheet not yet generated
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  No Salary Slips have been generated for the financial year of <%= @this_year %>
+<% end %>
+

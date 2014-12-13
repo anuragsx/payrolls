@@ -1,0 +1,35 @@
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <caption><%= t('common.attendance_sheet') %> <%= @date.to_s(:short_month_and_year) %></caption>
+  <thead>
+    <tr>
+      <th><%= t('common.date') %></th>
+      <th><%= "#{t('common.attendance')} #{t('common.type')}"%> </th>
+      <th><%= t('common.timein')%></th>
+      <th><%= t('common.timeout')%></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dates.each do |att| %>
+      <tr class="<%= cycle("",:alt) %>">
+        <% unless att.new_record? %>
+          <td class="head1"><%= att.attendance_date.to_s(:date_and_month) %></td>
+          <td class="head2"><%= att.attendance_type.name%></td>
+          <td class="head2"><%= att.timein%></td>
+          <td class="head2"><%= att.timeout%></td>
+          <td class="numeric head3"><%= link_to(t('button.edit'),edit_employee_attendance_path(@employee,att)) %></td>
+        <% else %>
+          <% form_for([@employee,att]) do |f| %>
+          <tr>
+            <td class="head1"><%= att.attendance_date.to_s(:date_and_month) %></td>
+            <td class="head2"><%= f.select(:attendance_type_id, AttendanceType.collection,{:include_blank=>true}) %></td>
+            <td class="head2"><%= f.text_field :timein, :size => 5 %></td>
+            <td class="head2"><%= f.text_field :timeout, :size => 5 %></td>
+            <%= f.hidden_field :attendance_date, :size => 5 %>
+            <td class="numeric head3"><%= f.submit(t('button.save')) %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

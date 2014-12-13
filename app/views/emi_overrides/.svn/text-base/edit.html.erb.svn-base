@@ -1,0 +1,13 @@
+<% form_for @emi_override,:url=> employee_loan_emi_override_path(@employee,@loan),:method=>:put do |f| %>
+
+  <ul class="form">
+    <%= display_error_messages('emi_override') %>
+    <%= f.labelled_text_field 'Amount',:amount %>
+    <%= f.labelled_text_field  'For Month of' ,:created_at, :class => 'datebalks' %>
+  </ul>
+
+  <p class="submit">
+    <%= f.submit 'Submit', :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to 'Cancel', employee_loans_path(@employee), :class => 'cancel' %>
+  </p>
+<% end %>

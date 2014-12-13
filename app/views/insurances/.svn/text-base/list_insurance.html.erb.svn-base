@@ -1,0 +1,27 @@
+<% content_for(:page_header) do  %>
+  <h2><%="#{t('insurance.register_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<% content_for(:page_buttons) do %>
+  <%= link_to t('button.print'), insurances_path(:format =>:pdf) %>
+<% end %>
+
+<%= annual_navigator(insurances_path(:year => @prev_year),insurances_path(:year => @next_year)) %>
+<table class="list" width="100%">
+  <thead>
+    <tr>
+      <th><%= t('common.employees') %></th>
+      <th><%= t('insurance.name') %></th>
+      <th class="numeric"><%= t('insurance.premium') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @insurances.each do |insurance| %>
+      <tr class="<%= cycle(:even,:alt) %>">
+        <td class="head1"><%=link_to(h(insurance.employee.name),employee_insurances_path(insurance.employee))%></td>
+        <td class="head2"><%=h insurance.description %></td>
+        <td class="numeric head3"><%=h insurance.monthly_premium.round(2) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

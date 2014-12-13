@@ -1,0 +1,25 @@
+Hello <%= @user %>
+
+Welcome to <%= @company %>.
+
+Now you have an account in our company.You can login to your account with following details
+
+Login: <%= @login %>
+Activation Code: <%= @token %>
+
+Click on this url and enter your activation code
+
+<%= @welcome_url %>
+
+
+Alternatively you can click on the following url for direct activation
+
+<%= @activate_account_url %>
+
+If the above URL does not work try copying and pasting it into your browser.
+
+
+Note: After activation, you will be requested to log in to your account for extra security.
+
+If you continue to have problem with logging in, please feel free to contact us at friends@salaree.com
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib
+END
+state.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/state.rb
+END
+aasm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/aasm.rb
+END
+event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/event.rb
+END
+persistence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/persistence.rb
+END
+state_machine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/state_machine.rb
+END
+state_transition.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/178/vendor/plugins/aasm/lib/state_transition.rb
+END

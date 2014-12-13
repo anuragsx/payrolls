@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/salaree/!svn/ver/1066/app/models/labour_welfares
+END
+labour_welfare_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/907/app/models/labour_welfares/labour_welfare_calculator.rb
+END
+form_d.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/salaree/!svn/ver/929/app/models/labour_welfares/form_d.rb
+END
+labour_welfare.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/759/app/models/labour_welfares/labour_welfare.rb
+END
+labour_welfare_slab.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/710/app/models/labour_welfares/labour_welfare_slab.rb
+END

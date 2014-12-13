@@ -1,0 +1,10 @@
+class AddAnnualTaxCalculator < ActiveRecord::Migration
+  def self.up
+    AnnuallyEquatedTaxCalculator.create(:name => "Annually Equated Tax Calculator", :calculator_type => "Deduction",
+          :description => "This calculator automatically deducts the TDS on an employee on equal basis based on annual calculation.")
+  end
+
+  def self.down
+    AnnuallyEquatedTaxCalculator.first.destroy
+  end
+end

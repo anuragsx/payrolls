@@ -1,0 +1,7 @@
+<%= render :partial => 'common' , :locals => {:employee_package => employee_package } %>
+<% employee_package.employee_package_heads.each do |eph|  %>
+  <tr>
+    <th><%= t("heads.#{eph.salary_head.code}") %></th>
+    <td><%= eph.amount %></td>
+  </tr>
+<% end %>

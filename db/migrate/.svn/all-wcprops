@@ -1,0 +1,713 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/salaree/!svn/ver/1306/db/migrate
+END
+20090903175848_rename_employee_advance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/660/db/migrate/20090903175848_rename_employee_advance.rb
+END
+20090627141915_create_employee_packages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/3/db/migrate/20090627141915_create_employee_packages.rb
+END
+20090709152048_create_employee_leaves.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/73/db/migrate/20090709152048_create_employee_leaves.rb
+END
+20090721090240_add_column_status_to_salary_sheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/178/db/migrate/20090721090240_add_column_status_to_salary_sheet.rb
+END
+20090922070928_rename_column_in_company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/902/db/migrate/20090922070928_rename_column_in_company.rb
+END
+20090707102046_create_employee_expenses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/340/db/migrate/20090707102046_create_employee_expenses.rb
+END
+20090627142018_create_departments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/3/db/migrate/20090627142018_create_departments.rb
+END
+20090701141326_create_employee_pensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/107/db/migrate/20090701141326_create_employee_pensions.rb
+END
+20090922093522_add_employer_pf_head_to_salary_head.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/906/db/migrate/20090922093522_add_employer_pf_head_to_salary_head.rb
+END
+20090905112522_add_column_to_employee_leave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/704/db/migrate/20090905112522_add_column_to_employee_leave.rb
+END
+20090628135021_create_department_holidays.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/9/db/migrate/20090628135021_create_department_holidays.rb
+END
+20090903181542_rename_employee_loan.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/662/db/migrate/20090903181542_rename_employee_loan.rb
+END
+20090702135552_create_company_calculators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/40/db/migrate/20090702135552_create_company_calculators.rb
+END
+20090701142654_create_employee_esis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/110/db/migrate/20090701142654_create_employee_esis.rb
+END
+20090712130923_create_professional_tax_slabs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/108/db/migrate/20090712130923_create_professional_tax_slabs.rb
+END
+20090822100306_add_address_id_to_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/460/db/migrate/20090822100306_add_address_id_to_employees.rb
+END
+20090702111702_create_employee_insurance_policies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/93/db/migrate/20090702111702_create_employee_insurance_policies.rb
+END
+20091121111641_create_employee_leave_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1146/db/migrate/20091121111641_create_employee_leave_types.rb
+END
+20090701143410_create_salary_slip_charges.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/128/db/migrate/20090701143410_create_salary_slip_charges.rb
+END
+20090715143356_create_flexible_allowances.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/206/db/migrate/20090715143356_create_flexible_allowances.rb
+END
+20090718054051_create_feedbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/161/db/migrate/20090718054051_create_feedbacks.rb
+END
+20090702200812_create_tax_slabs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/31/db/migrate/20090702200812_create_tax_slabs.rb
+END
+20090905064443_add_columns_to_addresses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/692/db/migrate/20090905064443_add_columns_to_addresses.rb
+END
+20091014111642_add_grade_id_in_employee_package.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/1043/db/migrate/20091014111642_add_grade_id_in_employee_package.rb
+END
+20090921115538_add_description_to_calculators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/926/db/migrate/20090921115538_add_description_to_calculators.rb
+END
+20091128100647_add_rent_paid_to_employee_tax_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/1140/db/migrate/20091128100647_add_rent_paid_to_employee_tax_details.rb
+END
+20090627141701_create_packages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/6/db/migrate/20090627141701_create_packages.rb
+END
+20090905073123_create_labour_welfare_slabs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/710/db/migrate/20090905073123_create_labour_welfare_slabs.rb
+END
+20090629105736_create_company_leaves.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/73/db/migrate/20090629105736_create_company_leaves.rb
+END
+20090827122742_remove_column_financial_year_from_employee_tax_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/salaree/!svn/ver/517/db/migrate/20090827122742_remove_column_financial_year_from_employee_tax_details.rb
+END
+20090914074732_add_column_mobile_number_in_address.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/827/db/migrate/20090914074732_add_column_mobile_number_in_address.rb
+END
+20100108135631_create_employee_other_incomes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/1216/db/migrate/20100108135631_create_employee_other_incomes.rb
+END
+20090930083245_add_indexes_to_salaree.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/939/db/migrate/20090930083245_add_indexes_to_salaree.rb
+END
+20090902130305_create_banks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/687/db/migrate/20090902130305_create_banks.rb
+END
+20100119053917_add_extra_work_days_to_employee_leaves.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/salaree/!svn/ver/1232/db/migrate/20100119053917_add_extra_work_days_to_employee_leaves.rb
+END
+20090922060228_add_column_round_in_charges_in_company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/900/db/migrate/20090922060228_add_column_round_in_charges_in_company.rb
+END
+20090628093554_create_approval_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/4/db/migrate/20090628093554_create_approval_statuses.rb
+END
+20090702201049_create_employee_tax_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/236/db/migrate/20090702201049_create_employee_tax_details.rb
+END
+20090904122255_remove_bank_and_account_number_from_companies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/salaree/!svn/ver/687/db/migrate/20090904122255_remove_bank_and_account_number_from_companies.rb
+END
+20090628100647_create_attendance_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/6/db/migrate/20090628100647_create_attendance_types.rb
+END
+20090729073807_add_column_tax_formula_to_salary_head.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/224/db/migrate/20090729073807_add_column_tax_formula_to_salary_head.rb
+END
+20090827114725_remove_column_code_number_from_company_pf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/salaree/!svn/ver/509/db/migrate/20090827114725_remove_column_code_number_from_company_pf.rb
+END
+20090701145535_create_employee_package_heads.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/18/db/migrate/20090701145535_create_employee_package_heads.rb
+END
+20100106065144_create_employee_tds_returns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1218/db/migrate/20100106065144_create_employee_tds_returns.rb
+END
+20090904095020_add_column_bank_id_in_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/687/db/migrate/20090904095020_add_column_bank_id_in_employees.rb
+END
+20090901060434_add_month_length_to_salary_sheets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/614/db/migrate/20090901060434_add_month_length_to_salary_sheets.rb
+END
+20090704074441_create_company_allowance_heads.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/40/db/migrate/20090704074441_create_company_allowance_heads.rb
+END
+20090825080411_create_employee_investment_schemes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/479/db/migrate/20090825080411_create_employee_investment_schemes.rb
+END
+20090628093353_create_attendances.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/4/db/migrate/20090628093353_create_attendances.rb
+END
+20100119094511_create_oauth_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/1243/db/migrate/20100119094511_create_oauth_tables.rb
+END
+20100211133230_create_arrears.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1294/db/migrate/20100211133230_create_arrears.rb
+END
+20090827123533_add_columns_to_employee_leaves.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/518/db/migrate/20090827123533_add_columns_to_employee_leaves.rb
+END
+20090829124727_add_financial_year_to_salary_sheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/588/db/migrate/20090829124727_add_financial_year_to_salary_sheet.rb
+END
+20090627141401_create_companies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/142/db/migrate/20090627141401_create_companies.rb
+END
+20090702135335_create_calculators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/35/db/migrate/20090702135335_create_calculators.rb
+END
+20090627142428_create_salary_slips.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/48/db/migrate/20090627142428_create_salary_slips.rb
+END
+20090915053234_add_identification_number_to_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/salaree/!svn/ver/825/db/migrate/20090915053234_add_identification_number_to_employees.rb
+END
+20100215134235_add_comapny_id_to_client_application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/salaree/!svn/ver/1292/db/migrate/20100215134235_add_comapny_id_to_client_application.rb
+END
+20091027112704_add_addon_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/1146/db/migrate/20091027112704_add_addon_calculator.rb
+END
+20100305065332_add_financial_year_to_tax_slabs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/salaree/!svn/ver/1306/db/migrate/20100305065332_add_financial_year_to_tax_slabs.rb
+END
+20090720094013_create_delayed_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/182/db/migrate/20090720094013_create_delayed_jobs.rb
+END
+20100118112950_add_already_tax_paid_to_employee_other_incomes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/salaree/!svn/ver/1230/db/migrate/20100118112950_add_already_tax_paid_to_employee_other_incomes.rb
+END
+20090721062536_create_employee_taxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/185/db/migrate/20090721062536_create_employee_taxes.rb
+END
+20090702115158_create_effective_loan_emis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/144/db/migrate/20090702115158_create_effective_loan_emis.rb
+END
+20091014080443_create_company_grades.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1043/db/migrate/20091014080443_create_company_grades.rb
+END
+20090709151047_create_employee_leave_balances.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/73/db/migrate/20090709151047_create_employee_leave_balances.rb
+END
+20090905065649_remove_address_id_from_bank.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/692/db/migrate/20090905065649_remove_address_id_from_bank.rb
+END
+20090804071346_add_logo_column_in_companies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/256/db/migrate/20090804071346_add_logo_column_in_companies.rb
+END
+20090918104353_rename_reimbursement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/878/db/migrate/20090918104353_rename_reimbursement.rb
+END
+20090702200903_create_tax_categories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/31/db/migrate/20090702200903_create_tax_categories.rb
+END
+20090702154506_create_company_flexi_packages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/salaree/!svn/ver/142/db/migrate/20090702154506_create_company_flexi_packages.rb
+END
+20090905072959_create_labour_welfares.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/713/db/migrate/20090905072959_create_labour_welfares.rb
+END
+20090708115031_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/69/db/migrate/20090708115031_create_users.rb
+END
+20100106065122_create_tds_returns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/salaree/!svn/ver/1218/db/migrate/20100106065122_create_tds_returns.rb
+END
+20090901094812_add_column_status_in_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/salaree/!svn/ver/623/db/migrate/20090901094812_add_column_status_in_employees.rb
+END
+20091008094224_add_feedback_to_feedbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1027/db/migrate/20091008094224_add_feedback_to_feedbacks.rb
+END
+20091104063522_add_column_to_company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/1108/db/migrate/20091104063522_add_column_to_company.rb
+END
+20090812195341_add_exit_reason_to_employee_pension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/salaree/!svn/ver/388/db/migrate/20090812195341_add_exit_reason_to_employee_pension.rb
+END
+20090804094632_add_column_to_company_pf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/269/db/migrate/20090804094632_add_column_to_company_pf.rb
+END
+20090628144333_create_esi_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/11/db/migrate/20090628144333_create_esi_types.rb
+END
+20090903104021_create_employee_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/656/db/migrate/20090903104021_create_employee_details.rb
+END
+20090716112635_add_columns_to_salary_sheet.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/172/db/migrate/20090716112635_add_columns_to_salary_sheet.rb
+END
+20090812194444_add_delete_at_to_employee_pension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/387/db/migrate/20090812194444_add_delete_at_to_employee_pension.rb
+END
+20090724104133_add_column_to_salary_slip.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/salaree/!svn/ver/200/db/migrate/20090724104133_add_column_to_salary_slip.rb
+END
+20090702103940_create_company_loadings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/25/db/migrate/20090702103940_create_company_loadings.rb
+END
+20090826191655_add_labour_welfare_seed_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/490/db/migrate/20090826191655_add_labour_welfare_seed_data.rb
+END
+20091002101439_create_company_professional_taxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/973/db/migrate/20091002101439_create_company_professional_taxes.rb
+END
+20100205062514_create_ltas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/salaree/!svn/ver/1279/db/migrate/20100205062514_create_ltas.rb
+END
+20090628142736_create_company_pfs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/10/db/migrate/20090628142736_create_company_pfs.rb
+END
+20090829073518_add_columns_exempt_amount_to_salary_slip_charges.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/salaree/!svn/ver/630/db/migrate/20090829073518_add_columns_exempt_amount_to_salary_slip_charges.rb
+END
+20100206123332_create_lta_claims.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1279/db/migrate/20100206123332_create_lta_claims.rb
+END
+20090825071333_create_employee_investment_80cs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/479/db/migrate/20090825071333_create_employee_investment_80cs.rb
+END
+20090702084259_create_employee_advances.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/95/db/migrate/20090702084259_create_employee_advances.rb
+END
+20090629105648_create_leave_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/13/db/migrate/20090629105648_create_leave_types.rb
+END
+20090628141544_create_pf_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/37/db/migrate/20090628141544_create_pf_types.rb
+END
+20090829131142_add_financial_year_to_salary_slip.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/salaree/!svn/ver/588/db/migrate/20090829131142_add_financial_year_to_salary_slip.rb
+END
+20090922060243_add_match_company_vpf_to_employee_pensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/salaree/!svn/ver/901/db/migrate/20090922060243_add_match_company_vpf_to_employee_pensions.rb
+END
+20100113083546_create_incentives.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1221/db/migrate/20100113083546_create_incentives.rb
+END
+20090924103428_create_salary_head_leave_encashament.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/salaree/!svn/ver/932/db/migrate/20090924103428_create_salary_head_leave_encashament.rb
+END
+20090627141603_create_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/142/db/migrate/20090627141603_create_employees.rb
+END
+20090628145625_create_company_esis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/11/db/migrate/20090628145625_create_company_esis.rb
+END
+20090831114727_modify_companies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/598/db/migrate/20090831114727_modify_companies.rb
+END
+20090627142243_create_salary_sheets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/3/db/migrate/20090627142243_create_salary_sheets.rb
+END
+20090628173731_create_salary_heads.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/44/db/migrate/20090628173731_create_salary_heads.rb
+END
+20090713112827_add_column_to_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/salaree/!svn/ver/172/db/migrate/20090713112827_add_column_to_employees.rb
+END
+20090716101932_add_columns_to_salary_slip.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/172/db/migrate/20090716101932_add_columns_to_salary_slip.rb
+END
+20091123112303_add_cloumn_to_company_leave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/1167/db/migrate/20091123112303_add_cloumn_to_company_leave.rb
+END
+20090712163805_create_employee_professional_taxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/salaree/!svn/ver/107/db/migrate/20090712163805_create_employee_professional_taxes.rb
+END
+20090628140007_create_holidays.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/9/db/migrate/20090628140007_create_holidays.rb
+END
+20090905113846_add_state_to_addresses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/710/db/migrate/20090905113846_add_state_to_addresses.rb
+END
+20090702114917_create_employee_loans.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/144/db/migrate/20090702114917_create_employee_loans.rb
+END
+20090925123626_add_tax_formula_to_medical_head.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/salaree/!svn/ver/932/db/migrate/20090925123626_add_tax_formula_to_medical_head.rb
+END
+20100113064255_add_annual_tax_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/salaree/!svn/ver/1223/db/migrate/20100113064255_add_annual_tax_calculator.rb
+END
+20090822091109_create_addresses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/salaree/!svn/ver/455/db/migrate/20090822091109_create_addresses.rb
+END
+20090903183104_rename_expense_claim.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/663/db/migrate/20090903183104_rename_expense_claim.rb
+END
+20090628134956_create_company_holidays.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/salaree/!svn/ver/9/db/migrate/20090628134956_create_company_holidays.rb
+END
+20090627141736_create_employee_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/salaree/!svn/ver/3/db/migrate/20090627141736_create_employee_statuses.rb
+END
+20090924071651_create_company_bonus.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/salaree/!svn/ver/922/db/migrate/20090924071651_create_company_bonus.rb
+END

@@ -1,0 +1,6 @@
+<%= display_error_messages('employee_esi') %>
+<ul class="form">
+  <%= f.labelled_text_field(t('esi.number'), :esi_number) %>
+  <%= f.labelled_text_field("#{t('common.registration')} #{t('common.date')}", :effective_date, :class => 'datebalks') %>
+  <%= f.labelled_check_box(t('esi.applicable'), :applicable) %>
+</ul>

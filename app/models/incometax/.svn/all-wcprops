@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/salaree/!svn/ver/1306/app/models/incometax
+END
+employee_tax_detail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1306/app/models/incometax/employee_tax_detail.rb
+END
+form27a.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/salaree/!svn/ver/1222/app/models/incometax/form27a.rb
+END
+tribal_tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/523/app/models/incometax/tribal_tax_formula.rb
+END
+annually_equated_tax_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/salaree/!svn/ver/1306/app/models/incometax/annually_equated_tax_calculator.rb
+END
+tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/630/app/models/incometax/tax_formula.rb
+END
+employee_tds_return.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/salaree/!svn/ver/1241/app/models/incometax/employee_tds_return.rb
+END
+tds_return.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/1241/app/models/incometax/tds_return.rb
+END
+tax_category.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/31/app/models/incometax/tax_category.rb
+END
+employee_tax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/salaree/!svn/ver/1305/app/models/incometax/employee_tax.rb
+END
+underground_tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/523/app/models/incometax/underground_tax_formula.rb
+END
+tax_slab.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/salaree/!svn/ver/1306/app/models/incometax/tax_slab.rb
+END
+income_tax_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1306/app/models/incometax/income_tax_calculator.rb
+END
+medical_reimbursement_tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/salaree/!svn/ver/934/app/models/incometax/medical_reimbursement_tax_formula.rb
+END
+tvl_tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/salaree/!svn/ver/658/app/models/incometax/tvl_tax_formula.rb
+END
+employee_investment80c.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/salaree/!svn/ver/1218/app/models/incometax/employee_investment80c.rb
+END
+simple_income_tax_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/salaree/!svn/ver/1263/app/models/incometax/simple_income_tax_calculator.rb
+END
+form16.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/salaree/!svn/ver/1278/app/models/incometax/form16.rb
+END
+employee_other_income.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/salaree/!svn/ver/1303/app/models/incometax/employee_other_income.rb
+END
+hra_tax_formula.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/salaree/!svn/ver/1263/app/models/incometax/hra_tax_formula.rb
+END
+tds_challan.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/salaree/!svn/ver/789/app/models/incometax/tds_challan.rb
+END

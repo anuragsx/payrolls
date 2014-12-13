@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/salaree/!svn/ver/1286/app/models/ltas
+END
+lta.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/salaree/!svn/ver/1279/app/models/ltas/lta.rb
+END
+lta_claim.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/salaree/!svn/ver/1286/app/models/ltas/lta_claim.rb
+END
+lta_calculator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1286/app/models/ltas/lta_calculator.rb
+END

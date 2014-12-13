@@ -1,0 +1,16 @@
+Bluepill.application("salaree") do |app|
+  app.process("salaree_delayed_job") do |process|
+    process.working_dir = "/u/salaree/current"
+
+    process.start_grace_time    = 10.seconds
+    process.stop_grace_time     = 10.seconds
+    process.restart_grace_time  = 10.seconds
+
+    process.start_command = "ruby script/delayed_job start production"
+    process.stop_command  = "ruby script/delayed_job stop production"
+
+    process.pid_file = "/u/salaree/shared/pids/delayed_job.pid"
+    process.uid = "arunagw"
+    process.gid = "deployers"
+  end
+end

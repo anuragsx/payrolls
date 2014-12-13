@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Salaree.com</title>
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/screen.css">
+		<!--[if IE 6]>
+			<script type="text/javascript" src="javascripts/DD_belatedPNG.js"></script>
+			<script>
+			DD_belatedPNG.fix('.png_bg, img, .main-nav li a');
+			</script>
+		<![endif]-->
+	</head>
+	<body class="login">
+
+	<div id="header"><div id="header-inner">
+		<div class="salaree">
+			<a href="http://salaree.com" target="_blank"><img src="images/salaree_logo.png" alt="Salaree.com"></a>
+		</div>
+	</div></div>
+
+	<div id="main"><div id="main-inner">
+
+		<div class="content"><div class="c2"><div class="c3"><div class="c4"><div class="c5"><div class="c6"><div class="c7"><div class="c8">
+
+			<div class="page-header">
+				<h2 class="error">An Error Has Occurred</h2>
+			</div>
+
+			<div class="page-content">
+
+				<p>We've been notified about issue and will look to correct it as quickly as possible. If the error is persistent, please <a href="http://salaree.com/contact">contact us</a> with any details you may have.</p>
+
+				<p><a href="#" onClick="history.back(); return false;">Back to previous page</a></p>
+
+			</div>
+
+		</div></div></div></div></div></div></div></div>
+
+	</div></div>
+
+	</body>
+</html>

@@ -1,0 +1,6 @@
+<%= display_error_messages('advance') %>
+<ul class="form">
+  <%= f.labelled_text_field(t('common.amount'),:amount, :note => "#{t('advance.note_amount')}") %>
+  <%= f.labelled_text_field(t('common.date'), :created_at, :class => 'datebalks', :note => "#{t('advance.note_date')}") %>
+  <%= f.labelled_text_field(t('common.description'), :description, {:note => "#{t('advance.note_description')}"}) %>
+</ul>

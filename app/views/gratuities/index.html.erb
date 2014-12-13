@@ -1,0 +1,37 @@
+<% content_for(:page_header) do  %>
+  <h2><%= "#{t('gratuity.register_for')} #{@this_year.formatted_fy}" %></h2>
+  <%= sub_headers %>
+<% end %>
+<% content_for(:page_buttons) do %>
+  
+<%end%>
+
+<%= annual_navigator(gratuities_path(:year => @prev_year),gratuities_path(:year => @next_year)) %>
+<table cellpadding="0" cellspacing="0" width="100%" class="list">
+  <thead>
+    <tr>
+      <th><%= t('common.month') %></th>
+      <th class="numeric"><%= t('common.employees') %></th>
+      <th class="numeric"><%= t('common.employee_earned') %></th>
+      <th class="numeric"><%= t('common.employers_withheld') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @salary_sheet_presenters.each do |fh,salary_sheets| %>
+      <tr>
+        <th><%= fh %></th>
+        <th></th>
+        <th class="numeric"><%= salary_sheets.sum{|x|x.total_employee_earned} %></th>
+        <th class="numeric"><%= salary_sheets.sum{|x|x.total_employer_withheld} %></th>
+      </tr>
+      <% salary_sheets.each do |presenter| %>
+        <tr class="<%= cycle("",:alt) %>">
+          <td class="head1"><%= link_to(presenter.month_date,gratuity_path(presenter.salary_sheet)) %></td>
+          <td class="numeric head1"><%= presenter.total_employees %></td>
+          <td class="numeric head2"><%= presenter.total_employee_earned %></td>
+          <td class="numeric head3"><%= presenter.total_employer_withheld %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

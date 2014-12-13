@@ -1,0 +1,63 @@
+class User < ActiveRecord::Base
+  acts_as_authentic do |c|
+    c.validations_scope = :company_id
+    c.disable_perishable_token_maintenance = true # for direct activation
+    #c.validate_email_field = false
+  end
+  
+  attr_accessor :terms_of_service
+  
+  belongs_to :company
+  has_one :address, :as => :addressable, :dependent => :destroy
+  accepts_nested_attributes_for :address, :allow_destroy => true
+  has_many :client_applications
+  has_many :tokens, :class_name=>"OauthToken",:order=>"authorized_at desc",:include=>[:client_application]
+  validates_less_reverse_captcha
+  validates_presence_of :email, :message => "Cannot be left blank"
+  validates_presence_of :login, :message => "Cannot be left blank"
+  #validates_uniqueness_of :email, :message => "Already taken"
+  validates_format_of :email, :with => /^([^@\s]{1}+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+                              :message=>'does not look like an email address.'
+
+  before_save :add_user_to_mailchimp
+
+  def add_user_to_mailchimp
+    if self.activate_changed? && self.activate_was != true
+      self.send_later(:add_user_to_mailchimp_list) if Rails.env.production?
+    end
+  end
+
+  def add_user_to_mailchimp_list
+    MailChimp.subscribe_user(self) if MAILCHIMP_LIST
+  end
+
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    UserMailer.deliver_password_reset_instructions(self)
+  end
+
+  def deliver_email_verification_instructions!
+    reset_perishable_token!
+    UserMailer.send_later(:deliver_email_verification_instructions,self)
+    self.send_later(:send_signup_sms)
+    AdminMailer.send_later(:deliver_signup_information_to_admin,self.company) if Rails.env.production?
+  end
+
+  def send_signup_sms
+    SmsNotifier.send_signup(self, self.address.try(:mobile_number)) if self.address.try(:mobile_number)&& Rails.env.production?  && SMS_ENABLED
+  end
+  
+  def full_name
+    full_name = [first_name,last_name].compact.join(' ').titleize
+    full_name.blank? ?  login : full_name
+  end
+  
+  def company_name
+    self.company.name if self.company
+  end
+
+  def complete_address
+    [address.address_line1,address.address_line2,address.address_line3,address.city, address.pin_code_with_label, address.state].compact.reject{|x|x.blank?}.join(", ")
+  end
+
+end

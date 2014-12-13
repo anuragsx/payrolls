@@ -1,0 +1,16 @@
+You have registered an account on <%= SITE_NAME %>.
+This mail has been sent to verify your email address.
+If you did not make this request, simply ignore this email.
+If you did make this request just click the link below:
+
+<%= @activate_account_url %>
+
+If the above URL does not work try copying and pasting it into your browser.
+
+Alternatively you can visit <%= welcome_accounts_url(:subdomain => @subdomain) %> and enter this token <%= @token %> to activate your account.
+
+Your username is <%= @username %>
+
+Note: After activation, you will be requested to log in to your account for extra security.
+
+If you continue to have problem with logging in, please feel free to contact us at friends@salaree.com

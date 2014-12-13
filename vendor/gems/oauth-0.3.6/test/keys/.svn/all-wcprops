@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/keys
+END
+rsa.cert
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/keys/rsa.cert
+END
+rsa.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/salaree/!svn/ver/1243/vendor/gems/oauth-0.3.6/test/keys/rsa.pem
+END

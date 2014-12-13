@@ -1,0 +1,37 @@
+sheet1 = workbook.create_worksheet
+sheet1.name = "Salary Sheet"
+format = Spreadsheet::Format.new :color => :blue,
+                                 :weight => :bold,
+                                 :size => 18,
+                                 :horizontal_align =>  :default
+f2 = Spreadsheet::Format.new :weight => :bold,
+                             :size => 12 
+f3 = Spreadsheet::Format.new :color => :blue,
+                             :size => 11                           
+
+sheet1.row(0).push @company.name.titleize if @company
+sheet1.row(1).push "Salary Sheet for the month #{@salary_sheet.formatted_run_date}"
+sheet1.row(0).default_format = format
+sheet1.row(1).default_format = f2
+sheet1.row(3).default_format = f3
+sheet1.row(3).push  "Name","Department","Basic","Leaves"
+
+CompanyAllowanceHead.for_company(@company).each do |allowance|
+ sheet1.row(3).push allowance.salary_head.name
+end
+
+sheet1.row(3).push "Gross","Deductions","Net"
+index =5
+
+@presenter.departments.each do |department| 
+  department[:slips].each do |slip|
+    sheet1.row(index).push department[slip].employee_name,department[slip].department,department[slip].basic,department[slip].total_leaves
+    CompanyAllowanceHead.for_company(@company).each do |allowance|
+      sheet1.row(index).push slip.billed_charge_for(allowance.salary_head)
+    end
+    sheet1.row(index).push department[slip].gross,department[slip].total_deduction,department[slip].net
+    index += 1
+  end
+end
+
+

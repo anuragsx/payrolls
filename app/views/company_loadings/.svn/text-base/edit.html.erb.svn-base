@@ -1,0 +1,11 @@
+<%= render :partial=>'companies/page_header' %>
+<% form_for(@dearness_relief) do |f| %>
+  <ul class="form">
+    <%= f.labelled_text_field("Loading Percent",:loading_percent, :note => 'Loading percentage as per Govt. ruling e.g. 15%') %>
+    <%= f.labelled_text_field("Effective From", :created_at, :class => 'datebalks') %>
+  </ul>
+  <p class="submit">
+    <%= f.submit 'Save', :class => 'btn' %> <%= "#{t('common.or')}" %>
+    <%= link_to('Cancel', company_loadings_path, :class => 'cancel') %>
+  </p>
+<% end %>

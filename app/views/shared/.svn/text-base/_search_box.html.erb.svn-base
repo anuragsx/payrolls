@@ -1,0 +1,13 @@
+<div class="group">
+  <h3><%= t('common.search.employees') %></h3>
+  <% form_tag(employees_path, :method=>:get) do %>
+    <p>
+      <%= text_field_tag('search[name_like_any]',@search ? @search.name_like_any : '',:size=>20, :id => 'search_box') %>
+      <%= hidden_field_tag('search[status_is]',"Active") %>
+      <%= image_submit_tag("btn_go-sidebar.gif", :class=>"img", :value=>t("common.search.go"))  %>
+    </p>
+  <% end %>
+  <p>
+    <%= link_to("Add Employee", new_employee_path, :class => 'add png_bg') %>
+  </p>
+</div>

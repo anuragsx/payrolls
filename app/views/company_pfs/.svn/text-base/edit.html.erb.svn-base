@@ -1,0 +1,14 @@
+<%= render :partial=>'companies/page_header' %>
+<% title "Edit Company PF" %>
+<% form_for @company_pf, :url => company_pf_path do |f| %>
+  <%= display_error_messages('company_pf') %>
+  <ul class="form">
+    <%= f.labelled_collection_select t('pf.type'), :pf_type_id,PfType.all,
+      :id, :name,{:prompt => true} %>
+    <%= f.labelled_text_field t('pf.number'), :pf_number %>
+  </ul>
+  <p class="submit">
+    <%= f.submit t('button.save'), :class=>"btn" %> <%= "#{t('common.or')}" %>
+    <%= link_to(t('button.cancel'),company_pf_path, :class => 'cancel') %>
+  </p>
+<% end %>

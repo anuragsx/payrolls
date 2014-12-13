@@ -1,0 +1,196 @@
+class Calculator < ActiveRecord::Base
+
+  extend ActiveSupport::Memoizable
+
+  observes :company_calculator, :before => :destroy, :invokes => :destroy_me
+  observes :employee, :before => :destroy,  :invokes => :destroy_employee
+  observes :company_calculator, :after => :create, :invokes => :leave_balance
+
+  LEAVE = 'Leave'
+  DEDUCTION = 'Deduction'
+  PACKAGE = 'Package'
+  ALLOWANCE = 'Allowance'
+  SUBTOTAL = 'Subtotal'
+  
+  validates_presence_of :name, :type, :calculator_type
+
+  attr_accessor :company, :employee, :salary_sheet, :salary_slip, :run_date
+
+  named_scope :by_leave, :conditions => ["calculator_type = ?",'Leave']
+  named_scope :by_package, :conditions => ["calculator_type = ?",'Package']
+  named_scope :by_allowance, :conditions => ["calculator_type = ?",'Allowance']
+  named_scope :by_deduction, :conditions => ["calculator_type = ?",'Deduction']
+  named_scope :by_subtotal, :conditions => ["calculator_type = ?",'Subtotal']
+  named_scope :by_addon, :conditions => ["calculator_type = ?",'Addon']
+  named_scope :in_type, lambda{|d| {:conditions => ["calculators.type in (?)",d]}}
+
+  def is_leave?
+    calculator_type == LEAVE
+  end
+
+  def is_package?
+    calculator_type == PACKAGE
+  end
+
+  def is_deduction?
+    calculator_type == DEDUCTION
+  end
+
+  def is_allowance?
+    calculator_type == ALLOWANCE
+  end
+
+  def is_subtotal?
+    calculator_type == SUBTOTAL
+  end
+
+  def calculate_package_ctc(company, employee, emp_package)
+    {}
+  end
+
+  def calculate_income(company, employee, emp_package, run_date)
+    {}
+  end
+
+  def calculate
+    []
+  end
+
+  def calculate_charge_for_sheet
+    []
+  end
+
+  def eligible_for_employee?
+    true
+  end
+
+  def eligible_for_sheet?
+    true
+  end
+
+  def leave_ratio
+    1
+  end
+
+  def finalize!
+    true
+  end
+
+  def unfinalize!
+    true
+  end
+
+  def employee_added!(employee)
+    true
+  end
+
+  def promote!(employee_package)
+    true
+  end
+
+  def suspend!(employee_package)
+    true
+  end
+
+  def promote_employee!(employee_package)
+    self.employee = employee_package.employee
+    self.company = employee_package.company
+    promote!(employee_package)
+    true
+  end
+
+  def suspend_employee!(employee_package)
+    self.employee = employee_package.employee
+    self.company =  employee_package.company
+    suspend!(employee_package)
+    true
+  end
+
+  def resume!(employee_package)
+    true
+  end
+
+  def resume_employee!(employee_package)
+    self.employee = employee_package.employee
+    self.company =  employee_package.company
+    resume!(employee_package)
+    true
+  end
+
+  def is_company_calculator(company)
+    company.calculators.include?(self)
+  end
+
+  def finalize_for_slip!
+    self.run_date = salary_slip.salary_sheet.run_date
+    self.employee = salary_slip.employee
+    finalize!
+  end
+
+  def slip_leave_ratio
+    self.employee = salary_slip.employee
+    self.company = salary_slip.company
+    self.run_date = salary_slip.salary_sheet.run_date
+    leave_ratio
+  end
+
+  def calculate_for_slip
+    self.employee = salary_slip.employee
+    self.company = salary_slip.company
+    self.salary_sheet = salary_slip.salary_sheet
+    self.run_date = salary_slip.salary_sheet.run_date
+    calculate if eligible_for_employee?
+  end
+  
+  def calculate_for_sheet
+    self.company = salary_sheet.company
+    self.run_date = salary_sheet.run_date
+    calculate_charge_for_sheet if eligible_for_sheet?
+  end
+
+  def lookup_amount_for(package,code)
+    self.employee = package.employee
+    self.employee_package = package
+    amount_lookup(code)
+  end
+
+  def self.destroy_employee(employee)
+    employee.company.try(:calculators).each do |calculator|
+      Array(calculator.employee_classes).each do |c|
+        c.destroy_all(:employee_id => employee)
+      end
+    end
+  end
+
+  def employee_classes
+  end
+
+  def self.destroy_me(company_calculator)
+    Array(company_calculator.calculator.delete_classes).each do |c|
+      c.destroy_all(:company_id => company_calculator.company)
+    end
+  end
+
+  def self.leave_balance(company_calculator)   
+    company_calculator.calculator.company = company_calculator.company    
+    company_calculator.calculator.bulk_create_leave_balance
+  end
+
+  def bulk_create_leave_balance  
+    true
+  end
+
+  def delete_classes
+    (Array(company_classes) + Array(employee_classes)).flatten
+  end
+
+  def company_classes
+  end
+
+  def controller_name
+    (self.class.name.gsub(/Calculator/,'').pluralize)
+  end
+
+  def is_ready?
+  end
+end

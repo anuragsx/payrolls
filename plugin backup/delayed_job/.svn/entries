@@ -1,0 +1,127 @@
+8
+
+dir
+1306
+http://svn.risingsuntech.net/salaree/vendor/plugins/delayed_job
+http://svn.risingsuntech.net/salaree
+
+
+
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29f9cd11-940d-40c6-bad3-8e94d8e9f889
+
+Rakefile
+file
+
+
+
+
+2010-03-13T02:50:21.375000Z
+1df20ce7e35316f77a36c4e4383cf834
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+delayed_job.gemspec
+file
+
+
+
+
+2010-03-13T02:50:21.390625Z
+0a864790ae7d47c7d08b7e7fc8f0a3d1
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+tasks
+dir
+
+.gitignore
+file
+
+
+
+
+2010-03-13T02:50:21.390625Z
+830bb52aee8b942736ac8dab10a7560c
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+VERSION
+file
+
+
+
+
+2010-03-13T02:50:21.406250Z
+709edc8586242d571564a7723b189790
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+init.rb
+file
+
+
+
+
+2010-03-13T02:50:21.406250Z
+0c7710a5f52c5665a7f923018f9fea37
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+lib
+dir
+
+generators
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2010-03-13T02:50:21.421875Z
+34aecfc1946ecdad2af3b512e90f7167
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
+recipes
+dir
+
+spec
+dir
+
+README.textile
+file
+
+
+
+
+2010-03-13T02:50:21.437500Z
+e36585fe998a118c53f9449db7f1daeb
+2009-07-22T11:10:04.864548Z
+182
+poojag
+
