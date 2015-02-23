@@ -4,7 +4,9 @@ class CompanyCalculatorsController < ApplicationController
     @leave_calculators = Calculator.by_leave
     @package_calculator = Calculator.by_package
     @allowance_calculators = Calculator.by_allowance
-    @income_tax_calculator = Calculator.type_equals(['SimpleIncomeTaxCalculator','IncomeTaxCalculator', 'AnnuallyEquatedTaxCalculator'])
+    #TODO
+    #@income_tax_calculator = Calculator.type_equals(['SimpleIncomeTaxCalculator','IncomeTaxCalculator', 'AnnuallyEquatedTaxCalculator'])
+    #@income_tax_calculator = 'SimpleIncomeTaxCalculator'
     @deduction_calculators = Calculator.by_deduction -  @income_tax_calculator
     @bonus_calculators = Calculator.by_subtotal
     @addon_calculators = Calculator.by_addon

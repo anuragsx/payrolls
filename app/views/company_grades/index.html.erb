@@ -23,10 +23,28 @@
 </table>
 
 <%= form_for(@company.company_grades.build) do |f| %>
-  <%= display_error_messages('company_grade') %>
+  <%#= display_error_messages('company_grade') %>
+    <% if @company.company_grades.build.errors.any? %>
+        <div id="error_explanation" class="errors">
+          <h2><%= pluralize(@company.company_grades.build.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% @company.company_grades.build.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
   <ul class="form">
-    <%= f.text_field("#{t('company_grade.grade')}", :name, :note => "#{t('company_grade.name')}") %>
-    <%= f.text_field("#{t('company_grade.pay_scale')}", :pay_scale, :note => "#{t('company_grade.package_amount')}") %>
+    <li>
+      <%= f.label(:name, :class=>'main') %>
+      <%= f.text_field(:name, :note => "#{t('company_grade.name')}") %>
+    </li>
+    <li>
+      <%= f.label(:pay_scale, :class=>'main') %>
+      <%= f.text_field(:pay_scale, :note => "#{t('company_grade.package_amount')}") %>
+    </li>
   </ul>
   <p class="submit">
     <%= f.submit(t('button.create'), :class=>'btn') %> <%= "#{t('common.or')}" %>
